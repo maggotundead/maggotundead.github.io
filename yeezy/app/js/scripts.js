@@ -255,10 +255,4 @@ function parallaxIt(target, movement) {
 
 $(window).on('resize scroll', function(){
   rect = $('.shoe-image')[0].getBoundingClientRect();
-});
-
-$('#input-name, #input-phone').change(function() {
-    $('#input-name').val() != '' && $('#input-phone').val() != '' ? $('.address-label').show() : $('.address-label').hide();
-});
-
-
+})

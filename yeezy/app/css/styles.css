@@ -1488,8 +1488,7 @@
             color: transparent;
             transition: none;
             background: transparent;
-            width: 100%;
-            user-select: none; } }
+            width: 100%; } }
         .block-catalog-list .catalog-item-inner .quick-view:hover {
           background-color: rgba(233, 84, 44, 0.8);
           color: #fff; }
@@ -1499,7 +1498,6 @@
               color: transparent; } }
         @media screen and (max-width: 1024px) {
           .block-catalog-list .catalog-item-inner .quick-view:focus {
-            opacity: 1;
             background-color: rgba(233, 84, 44, 0.2); } }
       .block-catalog-list .catalog-item-inner .info {
         margin-top: 10px; }
@@ -3491,7 +3489,7 @@ p {
     border: 0;
     border-radius: 0;
     transition: 0.5s; }
-    .modal-close:hover, .modal-close:focus {
+    .modal-close:hover {
       filter: invert(100%); }
     @media screen and (max-width: 1024px) {
       .modal-close {
@@ -4088,8 +4086,7 @@ p {
     height: 30px;
     border: 1px solid #e5e5e5;
     width: 70px;
-    position: relative;
-    flex-shrink: 0; }
+    position: relative; }
     @media screen and (max-width: 480px) {
       .modal-cart .cart-items .size-select {
         width: 90px; } }
@@ -4113,15 +4110,11 @@ p {
       outline: none;
       -moz-outline: none;
       -moz-user-focus: none;
-      padding-left: 8px;
-      padding-right: 33px;
+      padding-left: 0;
+      padding-right: 25px;
       line-height: 28px;
       font-size: 16px;
       text-align: center; }
-      @media screen and (max-width: 1024px) {
-        .modal-cart .cart-items .size-select select:focus {
-          outline: none;
-          background-color: rgba(233, 84, 44, 0.2); } }
   .modal-cart .cart-items .few-models-option {
     margin-top: 10px; }
     @media screen and (max-width: 480px) {
@@ -4151,7 +4144,7 @@ p {
       justify-content: center;
       user-select: none;
       transition: 0.5s; }
-      .modal-cart .cart-items .quantity-button:hover, .modal-cart .cart-items .quantity-button:focus {
+      .modal-cart .cart-items .quantity-button:hover {
         background-color: #252525;
         color: #fff; }
       .modal-cart .cart-items .quantity-button.quantity-down {
@@ -4326,13 +4319,6 @@ p {
     @media screen and (max-width: 480px) {
       .modal-cart .order-form .input-label {
         width: 100%; } }
-    .modal-cart .order-form .input-label.address-label {
-      width: 100%;
-      display: none;
-      margin-top: 15px; }
-      @media screen and (max-width: 640px) {
-        .modal-cart .order-form .input-label.address-label {
-          margin-top: 10px; } }
     .modal-cart .order-form .input-label:before {
       display: block;
       content: '';
@@ -4360,11 +4346,7 @@ p {
       font-family: "Roboto Condensed";
       font-style: italic;
       font-weight: 300;
-      text-transform: uppercase;
-      box-shadow: none;
-      user-select: none; }
-      .modal-cart .order-form .input-label input:invalid {
-        border-color: #E9542C; }
+      text-transform: uppercase; }
   .modal-cart .order-form .social-contact-option {
     margin-top: 20px; }
   .modal-cart .order-form .order {

@@ -53,8 +53,7 @@
         border: 0;
         border-radius: 0;
         transition: 0.5s;
-        &:hover,
-        &:focus {
+        &:hover {
             filter: invert(100%);
         }
         @include maxw1024 {
@@ -771,7 +770,6 @@
             border: 1px solid $grey;
             width: 70px;
             position: relative;
-            flex-shrink: 0;
             @include maxw480 {
                 width: 90px;
             }
@@ -796,17 +794,11 @@
                 outline: none;
                 -moz-outline: none;
                 -moz-user-focus: none;
-                padding-left: 8px;
-                padding-right: 33px;
+                padding-left: 0;
+                padding-right: 25px;
                 line-height: 28px;
                 font-size: 16px;
                 text-align: center;
-                &:focus {
-                    @include maxw1024 {
-                        outline: none;
-                        background-color: rgba($orange, 0.2);
-                    }
-                }
             }
         }
         .few-models-option {
@@ -841,8 +833,7 @@
                 justify-content: center;
                 user-select: none;
                 transition: 0.5s;
-                &:hover,
-                &:focus {
+                &:hover {
                     background-color: $grey-black;
                     color: #fff;
                 }
@@ -1040,14 +1031,6 @@
             @include maxw480 {
                 width: 100%;
             }
-            &.address-label {
-                width: 100%;
-                display: none;
-                margin-top: 15px;
-                @include maxw640 {
-                    margin-top: 10px;
-                }
-            }
             &:before {
                 display: block;
                 content: '';
@@ -1079,14 +1062,6 @@
                 font-style: italic;
                 font-weight: 300;
                 text-transform: uppercase;
-                box-shadow: none;
-                user-select: none;
-                &:invalid {
-                    border-color: $orange;
-                }
-                // &:placeholder-shown {
-                //     border-color: #000;
-                // }
             }
         }
         .social-contact-option {
