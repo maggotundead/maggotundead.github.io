@@ -65,7 +65,8 @@ p {
     margin: 0 auto;
 	padding: 0 20px;
 	@include maxw768 {
-		padding: 0 10px;
+		// padding: 0 10px;
+		padding: 0 25px;
 	}
 }
 
@@ -160,4 +161,3 @@ p {
 .wow {
 	visibility: hidden;
 }
-

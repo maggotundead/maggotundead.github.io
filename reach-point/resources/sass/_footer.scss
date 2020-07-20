@@ -8,9 +8,12 @@
     position: relative;
     z-index: 2;
     @include maxw768 {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        margin-top: -50px;
+        // padding-top: 50px;
+        padding-top: 80px;
+        // padding-bottom: 50px;
+        padding-bottom: 80px;
+        // margin-top: -50px;
+        margin-top: -80px;
     }
     .wrap {
         display: flex;

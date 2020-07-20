@@ -12,7 +12,8 @@
         padding-bottom: 100px;
     }
     @include maxw768 {
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
+        padding-bottom: 80px;
     }
     .wrap {
         display: flex;
@@ -74,7 +75,8 @@
     background-size: cover;
     padding-bottom: 85px;
     @include maxw768 {
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
+        padding-bottom: 80px;
     }
     .wrap {
         display: flex;
@@ -177,8 +179,10 @@
         padding-bottom: 100px;
     }
     @include maxw768 {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        // padding-top: 50px;
+        // padding-bottom: 50px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
     .block-title {
         text-align: center;
@@ -221,13 +225,15 @@
         break-inside: avoid;
         &:not(:last-child) {
             @include maxw768 {
-                margin-bottom: 20px;
+                // margin-bottom: 20px;
+                margin-bottom: 40px;
             }
         }
         &:nth-child(3) {
             margin-top: 90px;
             @include maxw768 {
-                margin-top: 20px;
+                // margin-top: 20px;
+                margin-top: 40px;
             }
         }
         .group-title {
@@ -258,10 +264,10 @@
         @include maxw768 {
             margin-top: 20px;
         }
-        .title {
+        .animation-outer {
             position: relative;
-            transform: rotate(-6.56deg);
             z-index: 2;
+            display: block;
             max-width: 80%;
             @include maxw860 {
                 max-width: 100%;
@@ -269,6 +275,19 @@
             @include maxw768 {
                 max-width: initial;
                 display: inline-block;
+            }
+        }
+        .title {
+            // position: relative;
+            transform: rotate(-6.56deg);
+            // z-index: 2;
+            // max-width: 80%;
+            @include maxw860 {
+                max-width: 100%;
+            }
+            @include maxw768 {
+                // max-width: initial;
+                // display: inline-block;
                 transform: none;
             }
             &:before {
@@ -353,7 +372,8 @@
             padding-bottom: 150px;
         }
         @include maxw768 {
-            padding-top: 50px;
+            // padding-top: 50px;
+            padding-top: 80px;
             padding-bottom: 100px;
         }
         .title-descr {
@@ -392,8 +412,10 @@
         @include maxw640 {
             flex-direction: column;
             // padding-left: 30px;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            // padding-top: 15px;
+            // padding-bottom: 15px;
+            padding-top: 40px;
+            padding-bottom: 40px;
             text-align: center;
         }
         &:before {
@@ -720,12 +742,26 @@
         display: flex;
         align-items: center;
         position: relative;
-        .title-label {
+        .animation-outer {
             position: absolute;
             bottom: 70%;
+            right: calc(100% - 12px);
+            @include maxw860 {
+                right: 50%;
+            }
+            @include maxw768 {
+                bottom: 100%;
+            }
+            @include maxw480 {
+                right: 30px;
+            }
+        }
+        .title-label {
+            // position: absolute;
+            // bottom: 70%;
+            // right: calc(100% - 12px);
             border-radius: 25px;
             transform: rotate(-6.56deg);
-            right: calc(100% - 12px);
             padding: 15px 25px 15px;
             background-color: $green;
             color: #fff;
@@ -735,16 +771,17 @@
             z-index: 1;
             white-space: nowrap;
             text-align: center;
-            @include maxw860 {
-                right: 50%;
-            }
+            transition: transform $duration;
+            // @include maxw860 {
+            //     right: 50%;
+            // }
             @include maxw768 {
                 transform: none;
-                bottom: 100%;
+                // bottom: 100%;
             }
-            @include maxw480 {
-                right: 30px;
-            }
+            // @include maxw480 {
+            //     right: 30px;
+            // }
             &:after {
                 display: block;
                 content: '';
@@ -769,6 +806,9 @@
         .block-title {
             position: relative;
             z-index: 2;
+            @include maxw768 {
+                text-align: center;
+            }
         }
     }
     .title-descr {
@@ -817,7 +857,8 @@
         border-radius: 15px;
         position: relative;
         @include maxw480 {
-            max-width: 360px;
+            // max-width: 360px;
+            max-width: 245px;
             justify-self: center;
             width: 100%;
         }
@@ -936,7 +977,8 @@
         padding-top: 100px;
     }
     @include maxw768 {
-        padding-top: 50px;
+        // padding-top: 50px;
+        padding-top: 80px;
     }
     .wrap {
         display: flex;
@@ -1026,8 +1068,21 @@
         padding-top: 100px;
     }
     @include maxw768 {
-        padding-top: 50px;
+        // padding-top: 50px;
+        padding-top: 80px;
     }
+
+    //temporary, until faq & reviews hidden
+    padding-bottom: 140px;
+        @include maxw1024 {
+            padding-bottom: 100px;
+        }
+        @include maxw768 {
+            // padding-top: 50px;
+            padding-bottom: 80px;
+        }
+    //end temporary
+
     .wrap {
         display: flex;
         flex-direction: column;
@@ -1126,7 +1181,8 @@
         padding-top: 100px;
     }
     @include maxw768 {
-        padding-top: 50px;
+        // padding-top: 50px;
+        padding-top: 80px;
     }
     .block-title {
         text-align: center;
@@ -1275,6 +1331,10 @@
         background-size: 7px 12px;
         font-size: 0;
         color: transparent;
+        transition: background-color $duration;
+        &:hover {
+            background-color: $blue-light;
+        }
         @include maxw480 {
             top: initial;
             bottom: -16px;
@@ -1303,8 +1363,10 @@
         padding-bottom: 100px;
     }
     @include maxw768 {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        // padding-top: 50px;
+        // padding-bottom: 50px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
     .block-title {
         text-align: center;
@@ -1324,7 +1386,7 @@
         border: 1px solid $border-color-dark;
         padding: 20px 30px 18px;
         background-color: $grey-light;
-        transition: background-color 0.3s;
+        transition: background-color $duration;
         cursor: pointer;
         user-select: none;
         @include maxw1024 {
@@ -1374,7 +1436,7 @@
         .answer-wrapper {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s;
+            transition: max-height $duration;
         }
         .answer {
             color: $accordeon-text-color;
@@ -1395,8 +1457,9 @@
         padding-bottom: 150px;
     }
     @include maxw768 {
-        padding-top: 50px;
-        padding-bottom: 100px;
+        // padding-top: 50px;
+        padding-top: 80px;
+        padding-bottom: 150px;
     }
     .wrap {
         display: flex;
@@ -1412,7 +1475,8 @@
         @include maxw768 {
             max-width: 560px;
             width: 100%;
-            margin-top: 30px;
+            // margin-top: 30px;
+            margin-top: 50px;
         }
     }
     .form-group {
@@ -1651,25 +1715,118 @@
     color: $title-color;
     .block-title {
         text-align: center;
+        // margin-bottom: 60px;
+    }
+    .title-descr {
+        font-size: 16px;
+        line-height: 1.7;
+        font-weight: 300;
+        margin-top: 20px;
         margin-bottom: 60px;
+        text-align: center;
+        @include maxw768 {
+            margin-bottom: 50px;
+            margin-top: 10px;
+        }
+    }
+    h2 {
+        font-size: 26px;
+        line-height: 1.3;
+        font-weight: 600;
+        + h3 {
+            margin-top: 60px;
+            @include maxw768 {
+                margin-top: 50px;
+            }
+        }
+        + p {
+            margin-top: 30px;
+            @include maxw768 {
+                margin-top: 20px;
+            }
+        }
+    }
+    h3 {
+        font-size: 21px;
+        line-height: 1.3;
+        font-weight: 600;
+        + p {
+            margin-top: 30px;
+            @include maxw768 {
+                margin-top: 20px;
+            }
+        }
+        + ul,
+        + ol {
+            margin-top: 30px;
+            @include maxw768 {
+                margin-top: 20px;
+            }
+        }
     }
     p {
         font-size: 16px;
         line-height: 1.7;
         font-weight: 300;
+        @include maxw768 {
+            line-height: 1.6;
+        }
         + p {
             margin-top: 27px;
+            @include maxw768 {
+                margin-top: 20px;
+            }
         }
-        + .subtitle {
+        + h2 {
             margin-top: 60px;
+            @include maxw768 {
+                margin-top: 50px;
+            }
         }
+        + h3 {
+            margin-top: 60px;
+            @include maxw768 {
+                margin-top: 50px;
+            }
+        }
+
     }
-    .subtitle {
-        font-size: 22px;
-        line-height: 1.3;
-        font-weight: 600;
+    a {
+        color: $text-link-color;
+        text-decoration: underline;
+    }
+    b, strong {
+        font-weight: 500;
+    }
+    ul, ol {
+        list-style: none;
+        font-size: 16px;
+        line-height: 1.7;
+        font-weight: 300;
+        @include maxw768 {
+            line-height: 1.6;
+        }
         + p {
             margin-top: 30px;
+        }
+        + h2 {
+            margin-top: 60px;
+            @include maxw768 {
+                margin-top: 50px;
+            }
+        }
+        + h3 {
+            margin-top: 60px;
+            @include maxw768 {
+                margin-top: 50px;
+            }
+        }
+    }
+    ul {
+        li {
+            &:before {
+                content: '-';
+            }
         }
     }
 }

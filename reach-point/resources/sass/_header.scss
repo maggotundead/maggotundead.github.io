@@ -47,7 +47,7 @@
             padding-top: 100px;
             opacity: 0;
             pointer-events: none;
-            transition: top 0.5s, opacity 0.5s;
+            transition: top $duration, opacity $duration;
             border-bottom: 1px solid $border-color-dark;
         }
         @include maxw480 {
@@ -57,13 +57,13 @@
             font-size: 18px;
             line-height: 1.4;
             color: $title-color;
-            transition: color 0.3s;
+            transition: color $duration;
             @include maxw768 {
                 font-size: 22px;
                 text-transform: uppercase;
                 opacity: 0;
-                transition: opacity 0.5s;
-                transition-delay: 0.5s;
+                transition: opacity $duration;
+                transition-delay: $duration;
             }
             &:not(:last-child) {
                 margin-right: 40px;
@@ -104,7 +104,7 @@
         }
         &.open {
             span {
-                // transition: transform 0.5s, left 0.5s;
+                // transition: transform $duration, left $duration;
                 left: -3px;
                 &:nth-child(1) {
                     transform: rotate(-45deg);
@@ -118,12 +118,13 @@
             }
         }
         span {
-            width: 100%;
+            display: block;
+            width: 30px;
             height: 2px;
             border-radius: 1px;
             background-color: $title-color;
             position: relative;
-            transition: transform 0.5s, left 0.5s, opacity 0.5s;
+            transition: transform $duration, left $duration, opacity $duration;
             left: 0;
             &:nth-child(1) {
                 transform-origin: right bottom;
