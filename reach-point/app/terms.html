@@ -466,7 +466,7 @@
                     </p>
                 </div>
             </section>
-            <section class="block-cta">
+            <section class="block-cta" id="contacts">
                 <div class="wrap">
                     <div class="contacts-group">
                         <h2 class="block-title">
@@ -497,21 +497,34 @@
                         <div class="title-descr">
                             Leave your contacts here or leave a message on our <a href="/">Facebook account.</a> We will reply shortly!
                         </div>
-                        <form class="cta-form">
-                            <input type="text" placeholder="Name" class="input">
-                            <input type="email" placeholder="E-mail" class="input">
-                            <textarea placeholder="Your message..."></textarea>
-                            <label class="checkbox-label">
-                                <input type="checkbox" hidden>
-                                <span class="checkbox-custom"></span>
-                                <span class="checkbox-text">
-                                    By clicking the button, you agree to the <a href="policy.html" target="_blank">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>
-                                </span>
-                            </label>
-                            <button type="submit" class="btn blue">
-                                Send a question
-                            </button>
-                        </form>
+                        <div class="form-holder">
+                            <form class="cta-form">
+                                <input type="text" placeholder="Name" class="input" required>
+                                <input type="email" placeholder="E-mail" class="input" required>
+                                <textarea placeholder="Your message..."></textarea>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" hidden>
+                                    <span class="checkbox-custom"></span>
+                                    <span class="checkbox-text">
+                                        By clicking the button, you agree to the <a href="policy.html" target="_blank">Privacy Policy</a> and <a href="terms.html">Terms of Service</a>
+                                    </span>
+                                </label>
+                                <button type="submit" class="btn blue">
+                                    Send a question
+                                </button>
+                            </form>
+                            <div class="form-popup">
+                                <button class="close"></button>
+                                <div class="text-wrapper">
+                                    <div class="text success-text">
+                                        Thanks! Your message has been sent successfully.
+                                    </div>
+                                    <div class="text error-text">
+                                        Ooops! Something gone wrong.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
