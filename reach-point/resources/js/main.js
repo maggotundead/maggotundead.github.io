@@ -103,13 +103,13 @@ $('.cta-form').on('submit', function(e) {
         data: $('.cta-form').serialize(),
         success: function () {
             // console.log('success');
-            $('.form-popup').fadeIn(300).delay(5000).fadeOut(300);
-            $('.form-popup .success-text').fadeIn(300).delay(5000).fadeOut(300);
+            $('.form-popup').fadeIn(300);
+            $('.form-popup .success-text').show();
         },
         error: function () {
             // console.log('error');
-            $('.form-popup').fadeIn(300).delay(5000).fadeOut(300);
-            $('.form-popup .error-text').fadeIn(300).delay(5000).fadeOut(300);
+            $('.form-popup').fadeIn(300);
+            $('.form-popup .error-text').show();
         }
     });
 
@@ -117,5 +117,5 @@ $('.cta-form').on('submit', function(e) {
 
 $('.form-popup .close').click(function() {
     $('.form-popup .text').hide();
-    $('.form-popup').fadeOut();
+    $('.form-popup').fadeOut(300);
 });

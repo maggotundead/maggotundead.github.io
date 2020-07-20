@@ -1677,6 +1677,9 @@ p {
     padding: 40px;
     display: none;
     min-height: 180px; }
+    @media screen and (max-width: 768px) {
+      .block-cta .form-popup {
+        top: 20px; } }
     .block-cta .form-popup .close {
       border: 0;
       width: 14px;

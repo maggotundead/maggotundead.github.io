@@ -1616,6 +1616,9 @@
         padding: 40px;
         display: none;
         min-height: 180px;
+        @include maxw768 {
+            top: 20px;
+        }
         .close {
             border: 0;
             width: 14px;

@@ -2,3 +2,6 @@
 yeezy/.DS_Store
 .DS_Store
 yeezy/resources/sass/_header-v0.9.9-old.scss
+
+**/**/node_modules
+
