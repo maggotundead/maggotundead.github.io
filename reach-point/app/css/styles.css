@@ -1036,7 +1036,7 @@ p {
       font-size: 16px;
       color: #fff;
       font-weight: 600;
-      background-color: #0000A2; }
+      background-color: #D100D1; }
       @media screen and (max-width: 480px) {
         .block-prices .price-item-label {
           top: -10px; } }
@@ -1667,7 +1667,8 @@ p {
         height: 22px;
         position: relative;
         flex-shrink: 0;
-        margin-right: 10px; }
+        margin-right: 10px;
+        transition: border-color 0.3s; }
         .block-cta .cta-form .checkbox-label .checkbox-custom:before {
           display: block;
           content: '';
@@ -1677,17 +1678,24 @@ p {
           left: 3px;
           right: 3px;
           border-radius: 4px;
-          background-color: transparent; }
+          background-color: transparent;
+          transition: background-color 0.3s; }
+      .block-cta .cta-form .checkbox-label input:not(:valid):not(:focus) + .checkbox-custom {
+        border-color: #ff0000; }
       .block-cta .cta-form .checkbox-label input:checked + .checkbox-custom:before {
-        background: linear-gradient(0deg, #0084FF, #0084FF), #B0B0C3; }
+        background-color: #4396F7; }
       .block-cta .cta-form .checkbox-label .checkbox-text {
         font-size: 14px;
         line-height: 160%;
         color: rgba(153, 153, 153, 0.7);
-        font-weight: 300; }
+        font-weight: 300;
+        user-select: none; }
         .block-cta .cta-form .checkbox-label .checkbox-text a {
           font-weight: 400;
           text-decoration: underline; }
+          .block-cta .cta-form .checkbox-label .checkbox-text a.disabled {
+            cursor: initial;
+            pointer-events: none; }
     .block-cta .cta-form .btn {
       width: 100%;
       margin-top: 20px; }
@@ -1896,6 +1904,9 @@ p {
     @media screen and (max-width: 640px) {
       .footer .link {
         margin-top: 20px; } }
+    .footer .link.disabled {
+      cursor: initial;
+      pointer-events: none; }
 
 /* Slider */
 .slick-slider {

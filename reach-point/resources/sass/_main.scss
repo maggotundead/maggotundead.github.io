@@ -874,7 +874,8 @@
             font-size: 16px;
             color: #fff;
             font-weight: 600;
-            background-color: $blue-dark;
+            // background-color: $blue-dark;
+            background-color: $violet;
             @include maxw480 {
                 top: -10px;
             }
@@ -1605,6 +1606,9 @@
                     margin-bottom: 20px;
                 }
             }
+            // &:not(:valid) {
+            //     border-color: $red;
+            // }
         }
         textarea {
             border-radius: 26px;
@@ -1638,6 +1642,7 @@
                 position: relative;
                 flex-shrink: 0;
                 margin-right: 10px;
+                transition: border-color $duration;
                 &:before {
                     display: block;
                     content: '';
@@ -1648,19 +1653,36 @@
                     right: 3px;
                     border-radius: 4px;
                     background-color: transparent;
+                    transition: background-color $duration;
                 }
             }
-            input:checked + .checkbox-custom:before {
-                background: linear-gradient(0deg, #0084FF, #0084FF), #B0B0C3;
+            input {
+                &:not(:valid) {
+                    &:not(:focus) {
+                        + .checkbox-custom {
+                            border-color: $red;
+                        }
+                    }
+                }
+                &:checked {
+                    + .checkbox-custom:before {
+                        background-color: $blue;
+                    }
+                }
             }
             .checkbox-text {
                 font-size: 14px;
                 line-height: 160%;
                 color: rgba(153, 153, 153, 0.7);
                 font-weight: 300;
+                user-select: none;
                 a {
                     font-weight: 400;
                     text-decoration: underline;
+                    &.disabled {
+                        cursor: initial;
+                        pointer-events: none;
+                    }
                 }
             }
         }

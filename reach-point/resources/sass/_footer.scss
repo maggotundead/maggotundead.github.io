@@ -82,5 +82,9 @@
         @include maxw640 {
             margin-top: 20px;
         }
+        &.disabled {
+            cursor: initial;
+            pointer-events: none;
+        }
     }
 }
