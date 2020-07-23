@@ -502,13 +502,15 @@
                                 <input type="text" placeholder="Name" class="input" required>
                                 <input type="email" placeholder="E-mail" class="input" required>
                                 <textarea placeholder="Your message..."></textarea>
-                                <label class="checkbox-label">
-                                    <input type="checkbox" hidden checked required>
-                                    <span class="checkbox-custom"></span>
+                                <div class="checkbox-wrapper">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" hidden>
+                                        <span class="checkbox-custom"></span>
+                                    </label>
                                     <span class="checkbox-text">
-                                        By clicking the button, you agree with the <a href="policy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank" class="disabled">Terms of Service</a>
+                                        By clicking the button, you agree with the <a href="policy.html" target="_blank">Privacy Policy</a> and <a href="terms.html" target="_blank">Terms of Service</a>
                                     </span>
-                                </label>
+                                </div>
                                 <button type="submit" class="btn blue">
                                     Send a question
                                 </button>
@@ -546,7 +548,7 @@
                 <a href="policy.html" class="link policy">
                     Privacy Policy
                 </a>
-                <a href="terms.html" class="link terms disabled">
+                <a href="terms.html" class="link terms">
                     Terms of Service
                 </a>
             </div>

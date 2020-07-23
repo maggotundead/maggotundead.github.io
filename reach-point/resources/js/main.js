@@ -95,24 +95,32 @@ if ($('.parallax')) {
 }
 
 $('.cta-form').on('submit', function(e) {
-    e.preventDefault();
+    var checkbox = $('.cta-form input[type="checkbox"]');
 
-    $.ajax({
-        type: 'post',
-        url: 'send.php',
-        data: $('.cta-form').serialize(),
-        success: function () {
-            // console.log('success');
-            $('.form-popup').fadeIn(300);
-            $('.form-popup .success-text').show();
-        },
-        error: function () {
-            // console.log('error');
-            $('.form-popup').fadeIn(300);
-            $('.form-popup .error-text').show();
-        }
-    });
+    if( ! checkbox.is(':checked')) {
+        e.preventDefault();
+        
+        checkbox.attr('required', true);
+    }
+    else {
+        e.preventDefault();
 
+        $.ajax({
+            type: 'post',
+            url: 'send.php',
+            data: $('.cta-form').serialize(),
+            success: function () {
+                // console.log('success');
+                $('.form-popup').fadeIn(300);
+                $('.form-popup .success-text').show();
+            },
+            error: function () {
+                // console.log('error');
+                $('.form-popup').fadeIn(300);
+                $('.form-popup .error-text').show();
+            }
+        });
+    }
 });
 
 $('.form-popup .close').click(function() {

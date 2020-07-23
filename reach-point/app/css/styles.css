@@ -174,6 +174,12 @@ p {
 
 .wow {
   visibility: hidden; }
+  @media screen and (max-width: 768px) {
+    .wow {
+      -webkit-animation-name: initial !important;
+      animation-name: initial !important;
+      animation-delay: initial !important;
+      visibility: visible !important; } }
 
 .header {
   padding-top: 40px;
@@ -1655,11 +1661,15 @@ p {
       @media screen and (max-width: 768px) {
         .block-cta .cta-form textarea {
           padding: 13px 15px; } }
-    .block-cta .cta-form .checkbox-label {
+    .block-cta .cta-form .checkbox-wrapper {
       display: flex;
       align-items: center;
       margin-top: 20px; }
-      .block-cta .cta-form .checkbox-label .checkbox-custom {
+      .block-cta .cta-form .checkbox-wrapper .checkbox-label {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0; }
+      .block-cta .cta-form .checkbox-wrapper .checkbox-custom {
         background: #fff;
         border: 1px solid #d8d8d8;
         border-radius: 6px;
@@ -1668,8 +1678,9 @@ p {
         position: relative;
         flex-shrink: 0;
         margin-right: 10px;
-        transition: border-color 0.3s; }
-        .block-cta .cta-form .checkbox-label .checkbox-custom:before {
+        transition: border-color 0.3s;
+        display: block; }
+        .block-cta .cta-form .checkbox-wrapper .checkbox-custom:before {
           display: block;
           content: '';
           position: absolute;
@@ -1680,20 +1691,21 @@ p {
           border-radius: 4px;
           background-color: transparent;
           transition: background-color 0.3s; }
-      .block-cta .cta-form .checkbox-label input:not(:valid):not(:focus) + .checkbox-custom {
+      .block-cta .cta-form .checkbox-wrapper input:not(:valid) + .checkbox-custom {
         border-color: #ff0000; }
-      .block-cta .cta-form .checkbox-label input:checked + .checkbox-custom:before {
+      .block-cta .cta-form .checkbox-wrapper input:checked + .checkbox-custom:before {
         background-color: #4396F7; }
-      .block-cta .cta-form .checkbox-label .checkbox-text {
+      .block-cta .cta-form .checkbox-wrapper .checkbox-text {
+        padding-top: 2px;
         font-size: 14px;
         line-height: 160%;
         color: rgba(153, 153, 153, 0.7);
         font-weight: 300;
         user-select: none; }
-        .block-cta .cta-form .checkbox-label .checkbox-text a {
+        .block-cta .cta-form .checkbox-wrapper .checkbox-text a {
           font-weight: 400;
           text-decoration: underline; }
-          .block-cta .cta-form .checkbox-label .checkbox-text a.disabled {
+          .block-cta .cta-form .checkbox-wrapper .checkbox-text a.disabled {
             cursor: initial;
             pointer-events: none; }
     .block-cta .cta-form .btn {

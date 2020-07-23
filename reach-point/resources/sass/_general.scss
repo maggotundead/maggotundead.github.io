@@ -160,4 +160,13 @@ p {
 
 .wow {
 	visibility: hidden;
+	@include maxw768 {
+		-webkit-animation-name: initial !important;
+		animation-name: initial !important;
+		animation-delay: initial !important;
+		visibility: visible !important;
+	}
 }
+
+// *[class|="animate"] {
+// }
