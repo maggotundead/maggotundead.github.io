@@ -1,37 +1,9 @@
 
-.DS_Store
+/.DS_Store
 **/*/.DS_Store
 
-node_modules
+/node_modules
 **/**/node_modules
 
-#list   
-# adalant
-# ahmangal
-# aplugs
-# artinua
-# axell-kraft
-# axell-kraft-new
-# breezephoto
-# bridge2china
-# elan-ads-platform
-# family-supps-vitamins
-# fast-build
-# fix-404
-# frankly
-# geoprofcom-kadastr
-# ibp-partner
-# kanekalon
-# kron-koin
-# levelsand
-# logistika-rs
-# lookin-casino
-# main-street
-# mels-landing
-# more-remonta
-# rda
-# reach-point
-# remontodessa
-# ses-balashiha
-# top-staff
-# yeezy
+#list
+
