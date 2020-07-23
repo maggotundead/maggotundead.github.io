@@ -1,0 +1,10 @@
+.loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff url('../img/loader.svg') center no-repeat;
+    background-size: 150px 150px;
+    z-index: 99999;
+}

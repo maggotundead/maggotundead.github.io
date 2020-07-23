@@ -1,0 +1,393 @@
+/* slider casino item */
+    .establishment-item {
+        width: 150px;
+        position: relative;
+    }
+    .establishment-item .add-to-wishlist {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+        width: 23px;
+        height: 21px;
+        border: 0;
+        background: transparent url('../img/icon-wishlist-white-empty.png') center no-repeat;
+        background-size: contain;
+    }
+    .establishment-item .info {
+        margin-top: 9px;
+    }
+    .establishment-item .title {
+        font-size: 12px;
+    }
+    .establishment-item .rating {
+        margin-top: 4px;
+        display: flex;
+    }
+    .establishment-item .rate-number {
+        color: var(--grey-dark);
+        line-height: 1;
+    }
+    .establishment-item .location {
+        font-size: 10px;
+        color: var(--grey-dark);
+        display: flex;
+        align-items: center;
+        margin-top: 7px;
+    }
+    .establishment-item .location .icon {
+        font-size: 12px;
+        margin-right: 4px;
+    }
+/* slider casino item */
+
+
+/* tournament item */
+    .block-tournaments .tournaments-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-tournaments .tournament-items {
+        width: 100%;
+    }
+    .block-tournaments .tournament-item {
+        position: relative;
+    }
+    .block-tournaments .tournament-item:not(:last-child) {
+        margin-bottom: 42px;
+    }
+    .block-tournaments .tournament-item:not(:last-child):after {
+        display: block;
+        content: '';
+        width: 100%;
+        border-bottom: 1px solid var(--grey-border);
+        position: absolute;
+        bottom: -22px;
+    }
+    .block-tournaments .tournament-item .date-title {
+        display: flex;
+        align-items: flex-start;
+    }
+    .block-tournaments .tournament-item .date-title .date {
+        display: flex;
+        color: var(--grey-text);
+        line-height: normal;
+        width: 80px;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    .block-tournaments .tournament-item .date-title .title {
+        position: relative;
+        font-size: 15px;
+        line-height: normal;
+    }
+    .block-tournaments .tournament-item .date-title .title:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -11px;
+        background-color: var(--blue-light);
+        height: 2px;
+        width: 50px;
+        content: '';
+    }
+    .block-tournaments .tournament-item .date-title .title.orange {
+        color: var(--orange);
+    }
+    .block-tournaments .tournament-item .date-title .title.orange:after {
+        background-color: var(--orange);
+    }
+    .block-tournaments .tournament-item .info-head {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .block-tournaments .tournament-item .info-head .logo {
+        width: 80px;
+        margin-right: 12px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-tournaments .tournament-item .info-head .params {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .block-tournaments .tournament-item .info-head .title-stars-location {
+        margin-top: -4px;
+    }
+    .block-tournaments .tournament-item .info-head .title {
+        font-size: 12px;
+    }
+    .block-tournaments .tournament-item .info-head .rating {
+        margin-top: 4px;
+        display: flex;
+    }
+    .block-tournaments .tournament-item .info-head .rate-number {
+        color: var(--grey-dark);
+        line-height: 1;
+    }
+    .block-tournaments .tournament-item .info-head .location {
+        font-size: 10px;
+        color: var(--grey-dark);
+        display: flex;
+        align-items: center;
+        margin-top: 7px;
+    }
+    .block-tournaments .tournament-item .info-head .location .icon {
+        font-size: 12px;
+        margin-right: 4px;
+    }
+    .block-tournaments .tournament-item .info-head .rate {
+        text-align: right;
+    }
+    .block-tournaments .tournament-item .info-head .rate-value {
+        font-size: 28px;
+        line-height: 22px;
+    }
+    .block-tournaments .tournament-item .info-head .rate-title {
+        line-height: 1.09;
+        margin-top: 8px;
+    }
+    .block-tournaments .tournament-item .info-body {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-top: 8px;
+    }
+    .block-tournaments .tournament-item .info-body .photo {
+        width: 80px;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    .block-tournaments .tournament-item .info-body .descr {
+        line-height: 17px;
+    }
+    .block-tournaments .tournament-item .info-controls {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        align-items: center;
+    }
+    .block-tournaments .tournament-item .info-controls .map {
+        width: 80px;
+        flex-shrink: 0;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-tournaments .tournament-item .info-controls .map-link {
+        position: relative;
+        text-decoration: underline;
+        color: var(--blue);
+        display: block;
+        padding-left: 20px;
+    }
+    .block-tournaments .tournament-item .info-controls .map-link:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 8px);
+        background: transparent url('../img/icon-map-pin.svg') center no-repeat;
+        background-size: contain;
+        width: 11px;
+        height: 15px;
+    }
+    .block-tournaments .tournament-item .info-controls .buttons {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .block-tournaments .tournament-item .info-controls .join-link {
+        min-width: 120px;
+        max-width: 150px;
+        margin-right: 10px;
+        flex-grow: 1;
+    }
+    .block-tournaments .tournament-item .info-controls .rating-link {
+        min-width: 85px;
+        max-width: 150px;
+        flex-grow: 1;
+    }
+/* tournament item */
+
+
+/* poker search map */
+    .block-poker-search-map .filter-selectors {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 18px;
+    }
+    .block-poker-search-map .filter-selectors .select-group {
+        position: relative;
+    }
+    .block-poker-search-map .filter-selectors .select-group .jqselect:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 35px;
+        pointer-events: none;
+        content: '';
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 11;
+    }
+    .block-poker-search-map .filter-selectors .select-group.country .jqselect:before {
+        background-image: url('../img/icon-planet-blue.svg');
+    }
+    .block-poker-search-map .filter-selectors .select-group.currency .jqselect:before {
+        background-image: url('../img/icon-currency-blue.svg');
+    }
+    .block-poker-search-map .filter-selectors .select-group.game-type .jqselect:before {
+        background-image: url('../img/icon-gametype-blue.svg');
+        background-size: 18px 18px;
+    }
+    .block-poker-search-map .filter-selectors .select-group.discount .jqselect:before {
+        background-image: url('../img/icon-discount-blue.svg');
+        background-size: 18px 18px;
+    }
+    .block-poker-search-map .filter-selectors .select-group.minbet .jqselect:before {
+        background-image: url('../img/icon-minbet-blue.svg');
+    }
+    .block-poker-search-map .filter-selectors .select-group.maxbet .jqselect:before {
+        background-image: url('../img/icon-maxbet-blue.svg');
+    }
+
+    .block-poker-search-map .filter-selectors .jq-selectbox {
+        width: 100%;
+    }
+    .block-poker-search-map .filter-selectors .jq-selectbox__select {
+        border: 1px solid var(--grey-border);
+        padding-left: 35px;
+        padding-right: 25px;
+        min-width: initial;
+        width: 100%;
+    }
+    .block-poker-search-map .filter-selectors .jq-selectbox__trigger {
+        width: 25px;
+    }
+    .block-poker-search-map .filter-selectors .jq-selectbox__trigger-arrow {
+        right: 11px;
+    }
+
+    .block-poker-search-map .map-image-group {
+        overflow-x: scroll;
+        position: relative;
+        margin-top: 30px;
+    }
+    .block-poker-search-map .map-canvas {
+        width: 1170px;
+        position: relative;
+    }
+    .block-poker-search-map .map-image {
+        width: 100%;
+    }
+    
+    .map-image-group .map-item {
+        position: absolute;
+        z-index: 1;
+    }
+    .map-image-group .map-item:hover {
+        z-index: 2;
+    }
+    .map-image-group .map-item-marker {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.5s;
+        /*transition: background-color 0.5s;*/
+    }
+    .map-image-group .map-item:hover .map-item-marker {
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+    .map-image-group .map-item-marker:before {
+        display: block;
+        content: '';
+        width: 112%;
+        height: 112%;
+        left: -6%;
+        top: -6%;
+        background-color: inherit;
+        display: block;
+        opacity: 0.5;
+        position: absolute;
+        z-index: 1;
+        border-radius: 50%;
+        pointer-events: none;
+        /*transition: background-color 0.5s;*/
+    }
+    .map-image-group .map-item-marker span {
+        position: relative;
+        z-index: 2;
+    }
+    .map-image-group .map-item.blue .map-item-marker {
+        background-color: var(--blue);
+    }
+    .map-image-group .map-item.blue-light .map-item-marker {
+        background-color: var(--blue-light);
+    }
+    .map-image-group .map-item.size-1 {
+        width: 54px;
+        height: 54px;
+        font-size: 8px;
+        margin-top: -27px;
+        margin-left: -27px;
+    }
+    .map-image-group .map-item.size-2 {
+        width: 62px;
+        height: 62px;
+        font-size: 9px;
+        margin-top: -31px;
+        margin-left: -31px;
+    }
+    .map-image-group .map-item.size-3 {
+        width: 78px;
+        height: 78px;
+        font-size: 11px;
+        margin-top: -39px;
+        margin-left: -39px;
+    }
+    .map-image-group .map-item.size-4 {
+        width: 92px;
+        height: 92px;
+        font-size: 12px;
+        margin-top: -46px;
+        margin-left: -46px;
+    }
+    .map-image-group .map-item.size-5 {
+        width: 102px;
+        height: 102px;
+        font-size: 12px;
+        margin-top: -51px;
+        margin-left: -51px;
+    }
+    .map-image-group .map-item.size-6 {
+        width: 124px;
+        height: 124px;
+        font-size: 13px;
+        margin-top: -62px;
+        margin-left: -62px;
+    }
+    .map-image-group .map-item.active .map-item-marker,
+    .map-image-group .map-item.blue:hover .map-item-marker,
+    .map-image-group .map-item.blue-light:hover .map-item-marker {
+        background-color: var(--orange);
+        transition: background-color 0.5s;
+    }
+/* poker search map */

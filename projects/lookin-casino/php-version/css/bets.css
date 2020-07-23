@@ -1,0 +1,860 @@
+/*Блок вкладки со спортивными событиями*/
+    .block-sport-events {
+        margin-top: 50px;
+    }
+    .block-sport-events .wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .block-sport-events .sport-events {
+        width: 910px;
+    }
+
+    /*Селекторы событий*/
+        .block-sport-events .events-type-selectors {
+            display: flex;
+            width: 100%;
+        }
+        .block-sport-events .all-events-link {
+            width: 80px;
+            min-height: 72px;
+            background-color: var(--blue);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            font-weight: 400;
+            position: relative;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        .block-sport-events .all-events-link span {
+            width: 100%;
+            display: block;
+            min-height: 36px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .block-sport-events .all-events-link .icon {
+            background: transparent url('../img/icon-calendar-white.png') center no-repeat;
+            background-size: 20px 20px;
+        }
+        .block-sport-events .events-groups-links {
+            flex-grow: 1;
+        }
+        .block-sport-events .event-type-group,
+        .block-sport-events .event-time-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 36px;
+            flex-grow: 1;
+        }
+        .block-sport-events .event-time-group {
+            background-color: var(--blue);
+            padding-right: 30px;
+        }
+        .block-sport-events .type-values {
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+        }
+        .block-sport-events .type-value {
+            position: relative;
+            font-weight: 400;
+        }
+        .block-sport-events .type-value:not(:last-child) {
+            margin-right: 43px;
+        }
+        .block-sport-events .type-value:not(:last-child):after {
+            display: block;
+            content: '';
+            width: 1px;
+            height: 6px;
+            background-color: var(--blue-light);
+            position: absolute;
+            top: calc(50% - 3px);
+            right: -22px;
+            pointer-events: none;
+        }
+        .block-sport-events .time-values {
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        .block-sport-events .time-value {
+            display: flex;
+            align-items: center;
+            line-height: 36px;
+            font-weight: 400;
+            color: #fff;
+            position: relative;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .block-sport-events .time-value:not(:last-child) {
+            margin-right: 46px;
+        }
+        .block-sport-events .time-value:not(:last-child):after {
+            display: block;
+            content: '';
+            width: 1px;
+            height: 6px;
+            background-color: #fff;
+            position: absolute;
+            top: calc(50% - 3px);
+            right: -23px;
+            pointer-events: none;
+        }
+        .block-sport-events .radio-default:checked + .radio-custom {
+            display: block;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            border: 2px solid var(--grey-light);
+            background-color: var(--red-dark);
+            margin-right: 5px;
+        }
+        .block-sport-events .important-trigger {
+            display: flex;
+            align-items: center;
+        }
+        .block-sport-events .checkbox-text {
+            font-weight: 400;
+            color: #fff;
+            margin-right: 10px;
+            line-height: 1;
+        }
+        .block-sport-events .checkbox-custom {
+            display: block;
+            width: 32px;
+            height: 14px;
+            border: 1px solid #fff;
+            flex-shrink: 0;
+            position: relative;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 14px;
+        }
+        .block-sport-events .checkbox-custom:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            width: 12px;
+            background-color: var(--grey-light);
+            border-radius: 50%;
+            transition: 0.5s;
+        }
+        .block-sport-events .checkbox-default:checked + .checkbox-custom:before {
+            left: initial;
+            left: calc(100% - 12px);
+            transition: 0.5s;
+            background-color: var(--peach);
+        }
+
+
+        .events-time-selectors {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            line-height: normal;
+        }
+        .events-time-selectors .events-link {
+            color: var(--blue);
+            position: relative;
+        }
+        .events-time-selectors .events-link:before {
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-style: solid;
+            top: calc(50% - 3px);
+        }
+        .events-time-selectors .past-events-link {
+            padding-left: 11px;
+        }
+        .events-time-selectors .past-events-link:before {
+            border-width: 3px 5px 3px 0;
+            border-color: transparent var(--blue) transparent transparent;
+            left: 0px;
+        }
+        .events-time-selectors .future-events-link {
+            padding-right: 11px;
+        }
+        .events-time-selectors .future-events-link:before {
+            border-width: 3px 0 3px 5px;
+            border-color: transparent transparent transparent var(--blue);
+            right: 0;
+        }
+
+    /*Селекторы событий*/
+
+
+    /*Групы событий*/
+        .block-sport-events .events-groups {
+            margin-top: 25px;
+        }
+        .block-sport-events .events-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .block-sport-events .events-group:not(:last-child) {
+            margin-bottom: 12px;
+        }
+        .block-sport-events .event-group-title {
+            line-height: normal;
+        }
+        .block-sport-events .event-group-items {
+            display: grid;
+            grid-auto-rows: minmax(75px, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 12px;
+            border: 1px solid #e5e5e5;
+        }
+        .block-sport-events .show-more-events {
+            font-size: 12px;
+            line-height: normal;
+            font-weight: 400;
+            background-color: transparent;
+            border: 0;
+            margin-top: 20px;
+            align-self: center;
+            color: var(--blue);
+            cursor: pointer;
+            text-decoration: underline;
+            transition: 0.5s;
+        }
+        .block-sport-events .show-more-events:hover {
+            transition: 0.5s;
+            color: var(--blue-light);
+        }
+        .block-sport-events .event-group-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 14px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-right: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .block-sport-events .event-group-item:nth-child(3n) {
+            border-right: 0;
+        }
+        .block-sport-events .event-group-item:nth-last-child(-n+3) {
+            border-bottom: 0;
+        }
+        .block-sport-events .event-group-item:hover {
+            box-shadow: 0px 3px 5px 1px rgba(20,20,20,0.15);
+        }
+        .block-sport-events .item-type-column {
+            width: 90px;
+            display: flex;
+            /*flex-direction: column;*/
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid var(--grey-light);
+        }
+        .block-sport-events .item-type {
+            padding-top: 28px;
+            font-size: 13px;
+            line-height: 1;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin-bottom: 3px;
+        }
+        .block-sport-events .item-type:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 28px;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .block-sport-events .item-date,
+        .block-sport-events .item-time {
+            font-size: 10px;
+            line-height: 1;
+            font-weight: 400;
+        }
+        .block-sport-events .item-date {
+            margin-right: 3px;
+        }
+        .block-sport-events .item-time {
+            margin-left: 3px;
+        }
+        .block-sport-events .players-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .block-sport-events .player {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .block-sport-events .player:not(:last-child) {
+            margin-bottom: 8px;
+        }
+        .block-sport-events .player-title {
+            line-height: 1;
+            margin-right: 12px;
+        }
+        .block-sport-events .player-logo {
+            width: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .block-sport-events .player-logo img {
+            max-width: 35px;
+            max-height: 25px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .block-sport-events .events-group .item-type:before {
+            background-size: 15px auto;
+        }
+        .block-sport-events .events-group.football .item-type:before {
+            background-image: url('../img/icon-football-black.png');
+        }
+        .block-sport-events .events-group.hockey .item-type:before {
+            background-image: url('../img/icon-hockey-black.png');
+        }
+        .block-sport-events .events-group.basketball .item-type:before {
+            background-image: url('../img/icon-basketball-black.png');
+        }
+        .block-sport-events .events-group.volleyball .item-type:before {
+            background-image: url('../img/icon-volleyball-black.png');
+        }
+        .block-sport-events .events-group.tennis .item-type:before {
+            background-image: url('../img/icon-tennis-black.png');
+        }
+        .block-sport-events .events-group.biatlon .item-type:before {
+            background-image: url('../img/icon-biatlon-black.png');
+        }
+        .block-sport-events .events-group.formula .item-type:before {
+            background-image: url('../img/icon-formula-black.png');
+        }
+        .block-sport-events .events-group.boxing .item-type:before {
+            background-image: url('../img/icon-boxing-black.png');
+        }
+        .block-sport-events .events-group.mma .item-type:before {
+            background-image: url('../img/icon-mma-black.png');
+        }
+
+    /*Групы событий*/
+
+/*Блок вкладки со спортивными событиями*/
+
+
+/*Блок новости о ставках на спорт*/
+    .block-sport-bets-news {
+        margin-top: 50px;
+    }
+    .block-sport-bets-news .sport-bets-news {
+        margin-top: 30px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .block-sport-bets-news .primary-news {
+        width: 580px;
+    }
+    .block-sport-bets-news .news-item {
+        padding: 25px 20px;
+        padding-right: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        color: #fff;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        text-align: left;
+    }
+    .block-sport-bets-news .primary-news .news-item {
+        height: 430px;
+    }
+    .block-sport-bets-news .secondary-news .news-item {
+        height: 220px;
+        padding: 20px 20px;
+    }
+    .block-sport-bets-news .news-item .title {
+        font-size: 24px;
+        line-height: normal;
+    }
+    .block-sport-bets-news .secondary-news .news-item .title {
+        font-size: 16px;
+    }
+    .block-sport-bets-news .news-item .date {
+        font-size: 12px;
+        line-height: 1;
+        margin-top: 10px;
+    }
+    .block-sport-bets-news .news-item .comments {
+        background-color: #fff;
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+        line-height: 22px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: var(--blue);
+        font-size: 11px;
+        min-width: 22px;
+        text-align: center;
+    }
+    .block-sport-bets-news .secondary-news .news-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .block-sport-bets-news .secondary-news .news-item .comments {
+        bottom: 20px;
+    }
+    .block-sport-bets-news .news-item .comments:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 5px;
+        border-color: transparent transparent transparent #fff;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        pointer-events: none;
+    }
+
+    /*Slider controls*/
+        .block-sport-bets-news .slider-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 17px;
+        }
+        .block-sport-bets-news .prev {
+            font-size: 0;
+            color: transparent;
+            background-color: transparent;
+            background-image: url('../img/arrow-right-blue.png');
+            border: 0;
+            background-size: 7px 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 12px;
+            z-index: 10;
+            cursor: pointer;
+            transform: rotate(-180deg);
+            order: 1;
+            margin-right: 16px;
+        }
+        .block-sport-bets-news .next {
+            font-size: 0;
+            color: transparent;
+            background-color: transparent;
+            background-image: url('../img/arrow-right-blue.png');
+            border: 0;
+            background-size: 7px 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 12px;
+            z-index: 10;
+            cursor: pointer;
+            order: 2;
+            margin-left: 16px;
+        }
+        .block-sport-bets-news .next-arrow {
+            order: 3;
+        }
+        .block-sport-bets-news .slick-dots {
+            list-style-type: none;
+            list-style: none;
+            display: flex;
+            order: 2;
+        }
+        .block-sport-bets-news .slick-dots li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .block-sport-bets-news .slick-dots li:not(:last-child) {
+            margin-right: 17px;
+        }
+        .block-sport-bets-news .slick-dots button {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            border: 2px solid var(--blue);
+            background-color: transparent;
+            font-size: 0;
+            color: transparent;
+        }
+        .block-sport-bets-news .slick-dots .slick-active button {
+            background-color: var(--blue);
+        }
+    /*Slider controls*/
+
+    .block-sport-bets-news .secondary-news {
+        width: 270px;
+    }
+    .block-sport-bets-news .short-news {
+        width: 270px;
+        padding-right: 10px;
+        border-right: 2px solid #dcdcdc;
+    }
+    .block-sport-bets-news .short-news-item {
+        display: flex;
+        padding-right: 42px;
+        width: 100%;
+        align-items: center;
+        text-align: left;
+        position: relative;
+    }
+    .block-sport-bets-news .short-news-item:not(:last-child) {
+        margin-bottom: 31px;
+    }
+    .block-sport-bets-news .short-news-item:not(:last-child):after {
+        display: block;
+        content: '';
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #dcdcdc;
+        bottom: -16px;
+        position: absolute;
+    }
+    .block-sport-bets-news .short-news-item .title {
+        font-size: 13px;
+        line-height: 1;
+    }
+    .block-sport-bets-news .short-news-item .date {
+        font-size: 12px;
+        line-height: normal;
+        color: var(--grey);
+        margin-top: 10px;
+    }
+    .block-sport-bets-news .short-news-item .comments {
+        background-color: var(--blue-light);
+        position: absolute;
+        top: calc(50% - 11px);
+        left: calc(100% - 42px);
+        line-height: 22px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: #fff;
+        font-size: 11px;
+    }
+    .block-sport-bets-news .short-news-item .comments:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 5px;
+        border-color: transparent transparent transparent var(--blue-light);
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        pointer-events: none;
+    }
+/*Блок новости о ставках на спорт*/
+
+/*Блок с отзывами*/
+    .block-forecasters {
+        margin-top: 50px;
+    }
+    .block-forecasters .block-title-descr {
+        margin-top: 30px;
+        font-size: 15px;
+        line-height: 19px;
+        max-width: 940px;
+    }
+    .block-forecasters .forecasters-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .block-forecasters .button {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .block-forecasters .button:not(:last-child) {
+        margin-right: 25px;
+    }
+    .block-forecasters .forecasters-outer {
+        position: relative;
+    }
+    .block-forecasters .forecasters-outer:before,
+    .block-forecasters .forecasters-outer:after {
+        width: 10px;
+        display: block;
+        content: '';
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        background-color: #fff;
+    }
+    .block-forecasters .forecasters-outer:before {
+        left: -10px;
+    }
+    .block-forecasters .forecasters-outer:after {
+        right: -10px;
+    }
+    .block-forecasters .forecasters {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 30px;
+        z-index: 1;
+    }
+    .block-forecasters .forecasters.slick-slider {
+        display: block;
+    }
+    .block-forecasters .forecasters.slick-slider {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+    }
+    .block-forecasters .forecasters .slick-slide > div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .block-forecasters .forecasters .slick-arrow {
+        top: -56px;
+    }
+    .block-forecasters .forecasters .slick-prev {
+        right: 76px;
+    }
+    .block-forecasters .forecasters .slick-next {
+        right: 10px;
+    }
+    .block-forecasters .forecaster-item {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        width: calc((100% - 45px) / 4);
+    }
+    .block-forecasters .slick-slide .forecaster-item {
+        width: 100%;
+    }
+    .block-forecasters .forecaster-item:not(:last-child) {
+        margin-right: 15px;
+    }
+    .block-forecasters .forecaster-item:nth-child(4n) {
+        margin-right: 0;
+    }
+    .block-forecasters .forecaster-item .photo {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--grey-light);
+        width: 98px;
+        height: 98px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .forecaster-item .author {
+        font-size: 20px;
+        margin-top: 21px;
+    }
+    .block-forecasters .forecaster-item .rate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 18px;
+    }
+    .block-forecasters .forecaster-item .rate-number {
+        font-size: 18px;
+        line-height: 26px;
+    }
+/*Блок с отзывами*/
+
+/*Блок прогнозы*/
+    .block-forecast {
+        margin-top: 50px;
+    }
+    .block-forecast .forecast-outer {
+        margin-top: 30px;
+        width: 100%;
+        position: relative;
+    }
+    .block-forecast .forecast-outer:before,
+    .block-forecast .forecast-outer:after {
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: 2;
+        background-color: #fff;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        pointer-events: none;
+    }
+    .block-forecast .forecast-outer:before {
+        left: -10px;
+    }
+    .block-forecast .forecast-outer:after {
+        right: -10px;
+    }
+    .block-forecast .forecast {
+        width: calc(100% + 20px);
+        margin-left: -10px;
+        position: relative;
+        z-index: 1;
+    }
+    .block-forecast .forecast .slide {
+        padding: 0 10px;
+    }
+    .block-forecast .forecast .slick-slide > div:nth-child(2) {
+        margin-top: 40px;
+    }
+    .block-forecast .slick-prev {
+        right: 76px;
+    }
+    .block-forecast .slick-next {
+        right: 10px;
+    }
+
+    /*forecast item*/
+        .forecast-item {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .forecast-item .head {
+            position: relative;
+            background-color: var(--blue);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 125px;
+        }
+        .forecast-item .team img {
+            max-width: 50px;
+            max-height: 50px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .forecast-item .session {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+        }
+        .forecast-item .session .date {
+            font-size: 13px;
+            line-height: normal;
+        }
+        .forecast-item .session .time {
+            font-size: 41px;
+            line-height: normal;
+        }
+        .forecast-item .session .time-zone {
+            font-size: 14px;
+            line-height: normal;
+        }
+        .forecast-item .body {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .forecast-item .title {
+            font-size: 16px;
+            line-height: normal;
+            width: 100%;
+        }
+        .forecast-item .date-time {
+            font-size: 12px;
+            line-height: normal;
+            color: var(--grey);
+            margin-top: 8px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .forecast-item .commands {
+            font-size: 13px;
+            line-height: 19px;
+        }
+        .forecast-item .coefficients {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+        .forecast-item .coefficient {
+            font-size: 13px;
+            line-height: 27px;
+            border: 1px solid var(--blue-light);
+            color: var(--blue-light);
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .forecast-item .coefficient:not(:last-child) {
+            margin-right: 3px;
+        }
+        .forecast-item .forecast-link {
+            margin: 25px auto 0;
+            padding: 0 24px;
+        }
+    /*forecast item*/
+/*Блок прогнозы*/
+
+/*Блок синий баннер*/
+    .block-banner {
+        margin-top: 50px;
+    }
+    .block-banner .banner {
+        background-color: var(--blue);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60px;
+        color: #fff;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+    }
+    .block-banner .banner-title {
+        text-transform: uppercase;
+        margin-right: 55px;
+        font-size: 18px;
+        line-height: 27px;
+    }
+/*Блок синий баннер*/

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Главная страница</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script src="js/main.min.js"></script>
+	<script src="js/api.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ext.css">
+</head>
+
+<body style="overflow-y: visible;" cz-shortcut-listen="true">
+	<header id="header">
+		<div class="header_top">
+			<div class="container">
+				<div class="header_top__left">
+					<nav>
+						<ul class="header_nav">
+							<li>
+								<a href="/" class="header_nav__link">Главная</a>
+							</li>
+							<li>
+								<a href="/misc" class="header_nav__link">Прочее</a>
+							</li>
+							<li>
+								<a href="/contacts" class="header_nav__link">Контакты</a>
+							</li>
+							<li>
+								<a href="/terms" class="header_nav__link">Правила</a>
+							</li>
+							<li>
+								<a href="/1" class="header_nav__link">Пользовательское соглашение</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header_top__right">
+					<a href="/" class="header_top__social">
+						in
+					</a>
+					<a href="/" class="header_top__social">
+						f
+					</a>
+					<div class="lang">
+						<span>
+							<a href="/az">AZ</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_bottom">
+			<div class="container">
+				<div class="header_bottom__left">
+					<div class="header_nav__button"></div>
+					<div class="header_nav__popup">
+						<div class="header_nav__popup__wrap"></div>
+						<div class="header_nav__popup__close"></div>
+						<div class="header_nav__popup__top">
+							<ul class="header_nav__popup__menu">
+								<li>
+									<a href="/login" style="background: #0365c3 url('img/user.png') no-repeat 20px center;">Войти</a>
+								</li>
+								<li>
+									<a href="/login" style="background:  url('img/menu-sm-1.png') no-repeat 20px center;">Главная</a>
+								</li>
+								<li>
+									<a href="/login" style="background:  url('img/menu-sm-2.png') no-repeat 20px center;">Мои объявления</a>
+								</li>
+								<li>
+									<a href="/login" style="background:  url('img/menu-sm-3.png') no-repeat 20px center;">Закладки</a>
+								</li>
+								<li>
+									<a href="/login" style="background:  url('img/menu-sm-4.png') no-repeat 20px center;">Русский</a>
+								</li>
+							</ul>
+							<div class="header_nav__popup__social">
+								<div class="header_nav__popup__social__block">
+									<img src="img/facebook.png" alt="">
+									<a href="//fb.com">Facebook</a>
+								</div>
+								<div class="header_nav__popup__social__block">
+									<img src="img/instagram.png" alt="">
+									<a href="//instagram.com">Instagram</a>
+								</div>
+							</div>
+						</div>
+						<div class="header_nav__popup__bottom"><a href="#">Полная версия</a><a href="#">Реклама на сайте</a>
+							<p>Поддержка:
+								<br>Enlar @ SAYTI
+								<br>(070) 554 45 45</p>
+						</div>
+					</div>
+					<a href="/" class="header_bottom__logo"><img src="img/elan_logo11.png" alt=""></a>
+					<hr>
+					<p class="header_bottom__text"><b>ELAN.AZ</b>
+						<br>сайт объявлений</p>
+				</div>
+				<div class="header_bottom__right">
+					<div class="header_botom__icons">
+						<a href="/ru/record/favourites" class="header_botom__icon favor" style="background: url('img/menu-sm-3.png') no-repeat center; -webkit-background-size: 50%;
+					background-size: 40%;filter: grayscale(1) brightness(3);"></a>
+						<a href="/ru/site/login" title="Логин" class="header_botom__icon" id="user" style="background: url('img/user.png') no-repeat center"></a>
+					</div>
+					<a class="btn--orange" href="/ru/record/create">Подать объявление</a>
+				</div>
+			</div>
+		</div>
+		<form id="search_filter" class="header_search  container" action="/record/search" novalidate="">
+			<p class="header_search__rubric">
+				<span id="rubric_clear"></span>
+				Все категории
+			</p>
+			<div class="header_search__rubric__drop_down">
+				<ul>
+					<li>
+						<a href="/">Работа и бизнес</a>
+						<ul>
+							<li>
+								<a href="">
+									Оборудование для бизнеса
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Работа
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Продукты
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/">
+							Услуги
+						</a>
+						<ul>
+							<li>
+								<a href="/">
+									Обучение, подготовительные курсы
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Ремонт техники
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Установка охранных систем
+								</a></li>
+							<li>
+								<a href="/">
+									Транспорт и логистика
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Сборка и реставрация мебели
+								</a>
+							</li>
+							<li>
+								<a href="/">IT, интернет, телеком</a>
+							</li>
+							<li>
+								<a href="/">Реклама, дизайн и полиграфия</a>
+							</li>
+							<li>
+								<a href="/">Установка оборудования</a>
+							</li>
+							<li>
+								<a href="/">Красота, здоровье </a>
+							</li>
+							<li>
+								<a href="/">Аренда оборудования </a>
+							</li>
+							<li>
+								<a href="/">Уборка</a>
+							</li>
+							<li>
+								<a href="/">Музыка, развлечения и мероприятия</a>
+							</li>
+							<li>
+								<a href="/">Фото и видеосъёмка</a>
+							</li>
+							<li>
+								<a href="/">Питание, кейтеринг</a>
+							</li>
+							<li>
+								<a href="/">Медицинские услуги</a>
+							</li>
+							<li>
+								<a href="/">Няни, сиделки</a>
+							</li>
+							<li>
+								<a href="/">Юридические услуги</a>
+							</li>
+							<li>
+								<a href="/">Бухгалтерские услуги</a>
+							</li>
+							<li>
+								<a href="/">Перевод</a>
+							</li>
+							<li>
+								<a href="/">Страхование</a>
+							</li>
+							<li>
+								<a href="/">Ремонт и строительство</a>
+							</li>
+							<li>
+								<a href="/">Другое</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="/">Транспорт</a>
+						<ul>
+							<li><a href="/">Легковые автомобили</a></li>
+							<li><a href="/">Мотоциклы и мопеды</a></li>
+							<li><a href="/"> Автозапчасти и аксессуары</a></li>
+							<li><a href="/">Водный транспорт</a></li>
+							<li><a href="/">Автобусы и техника                                          </a></li>
+						</ul>
+					</li>
+					<li><a href="/">Недвижимость</a>
+						<ul>
+							<li><a href="/">Квартиры</a></li>
+							<li><a href="/">Дома, дачи, коттеджи </a></li>
+							<li><a href="/">Земельные участки</a></li>
+							<li><a href="/">  Объекты и офисы</a></li>
+							<li><a href="/">Гаражи</a></li>
+							<li><a href="/">Недвижимость за рубежом </a></li>
+						</ul>
+					</li>
+					<li><a href="/">Электроника </a>
+						<ul>
+							<li><a href="/">Мобильные телефоны</a></li>
+							<li><a href="/">Номера и SIM-карты</a></li>
+							<li><a href="/"> Аудио и видео</a></li>
+							<li><a href="/">Компьютерные аксессуары  </a></li>
+							<li><a href="/">Комплектующие и мониторы</a></li>
+							<li><a href="/">Ноутбуки и Нетбуки</a></li>
+							<li><a href="/">Игры, приставки и программы</a></li>
+							<li><a href="/">Фототехника</a></li>
+							<li><a href="/">Настольные компьютеры</a></li>
+							<li><a href="/">Оргтехника и расходники</a></li>
+							<li><a href="/">Планшеты и электронные книги</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Личные вещи </a>
+						<ul>
+							<li><a href="/">Часы и украшения</a></li>
+							<li><a href="/">Одежда и обувь</a></li>
+							<li><a href="/"> Аксессуары</a></li>
+							<li><a href="/"> Утерянные вещи</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Для дома и дачи </a>
+						<ul>
+							<li><a href="/">Мебель и интерьер</a></li>
+							<li><a href="/">Бытовая техника</a></li>
+							<li><a href="/">Посуда и товары для кухни</a></li>
+							<li><a href="/">Растения</a></li>
+							<li><a href="/">Ремонт и строительство</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Детский мир </a>
+						<ul>
+							<li><a href="/">Детская одежда</a></li>
+							<li><a href="/"> Игрушки</a></li>
+							<li><a href="/">Детская мебель</a></li>
+							<li><a href="/">Детские коляски и автомобили</a></li>
+							<li><a href="/">Автокресла</a></li>
+							<li><a href="/">Школьные принадлежности</a></li>
+							<li><a href="/">Детское питание</a></li>
+							<li><a href="/">  Другое</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Животные</a>
+						<ul>
+							<li><a href="/">Собаки  </a></li>
+							<li><a href="/">Кошки</a></li>
+							<li><a href="/">Птицы   </a></li>
+							<li><a href="/">Аквариум и рыбы</a></li>
+							<li><a href="/">Товары для животных</a></li>
+							<li><a href="/">Другие животные</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Отдых, увлечения</a>
+						<ul>
+							<li><a href="/"> Билеты и путешествия</a></li>
+							<li><a href="/">Велосипеды</a></li>
+							<li><a href="/">Коллекционирование</a></li>
+							<li><a href="/">Музыкальные инструменты</a></li>
+							<li><a href="/"> Спорт и отдых</a></li>
+							<li><a href="/">Книги и журналы</a></li>
+							<li><a href="/">Знакомства</a></li>
+						</ul>
+					</li>
+					<li><a href="/">category</a></li>
+				</ul>
+			</div>
+			<input name="q" type="text" class="header_search__input" placeholder="Например, iPhone 9" value="">
+			<div class="header_search__location">
+				<p id="location" style="color:gray">Весь Азербайджан</p>
+				<input name="region" type="hidden" value="">
+				<input name="region_title" type="hidden" value="">
+				<input name="lang" type="hidden" value="ru">
+				<div class="header_search__location__popup" style="display: none;">
+					<div class="header_search__popup__block"><a href="/ru/record/search?region=1804" data-id="1804">Агдам</a><a href="/ru/record/search?region=1808" data-id="1808">Агсу</a><a href="/ru/record/search?region=1812" data-id="1812">Балакян</a><a href="/ru/record/search?region=1816" data-id="1816">Габала</a><a href="/ru/record/search?region=1820" data-id="1820">Гобустан</a><a href="/ru/record/search?region=1824" data-id="1824">Гянджа</a><a href="/ru/record/search?region=1828" data-id="1828">Джабраиль</a><a href="/ru/record/search?region=1832" data-id="1832">Загатала</a><a href="/ru/record/search?region=1836" data-id="1836">Исмаиллы</a><a href="/ru/record/search?region=1840" data-id="1840">Кюрдемир</a><a href="/ru/record/search?region=1844" data-id="1844">Масаллы</a><a href="/ru/record/search?region=1848" data-id="1848">Огуз</a><a href="/ru/record/search?region=1852" data-id="1852">Сальян</a><a href="/ru/record/search?region=1856" data-id="1856">Сядяряк</a><a href="/ru/record/search?region=1860" data-id="1860">Физули</a><a href="/ru/record/search?region=1864" data-id="1864">Ходжалы</a><a href="/ru/record/search?region=1868" data-id="1868">Шамахи</a><a href="/ru/record/search?region=1872" data-id="1872">Ширван</a></div>
+					<hr>
+					<div class="header_search__popup__block"><a href="/ru/record/search?region=1805" data-id="1805">Агдаш</a><a href="/ru/record/search?region=1809" data-id="1809">Астара</a><a href="/ru/record/search?region=1813" data-id="1813">Барда</a><a href="/ru/record/search?region=1817" data-id="1817">Газах</a><a href="/ru/record/search?region=1821" data-id="1821">Губа</a><a href="/ru/record/search?region=1825" data-id="1825">Гёкгёль</a><a href="/ru/record/search?region=1829" data-id="1829">Джалилабад</a><a href="/ru/record/search?region=1833" data-id="1833">Зангилан</a><a href="/ru/record/search?region=1837" data-id="1837">Кедабек</a><a href="/ru/record/search?region=1841" data-id="1841">Лачын</a><a href="/ru/record/search?region=1845" data-id="1845">Мингечаур</a><a href="/ru/record/search?region=1849" data-id="1849">Ордубад</a><a href="/ru/record/search?region=1853" data-id="1853">Самух</a><a href="/ru/record/search?region=1857" data-id="1857">Тартар</a><a href="/ru/record/search?region=1861" data-id="1861">Хаджигабул</a><a href="/ru/record/search?region=1865" data-id="1865">Хызы</a><a href="/ru/record/search?region=1869" data-id="1869">Шамкир</a><a href="/ru/record/search?region=1873" data-id="1873">Шуша</a></div>
+					<hr>
+					<div class="header_search__popup__block"><a href="/ru/record/search?region=1806" data-id="1806">Агджабеди</a><a href="/ru/record/search?region=1810" data-id="1810">Бабек</a><a href="/ru/record/search?region=1814" data-id="1814">Бейлаган</a><a href="/ru/record/search?region=1818" data-id="1818">Гах</a><a href="/ru/record/search?region=1822" data-id="1822">Губадлы</a><a href="/ru/record/search?region=1826" data-id="1826">Гёкчай</a><a href="/ru/record/search?region=1830" data-id="1830">Джульфа</a><a href="/ru/record/search?region=1834" data-id="1834">Зардаб</a><a href="/ru/record/search?region=1838" data-id="1838">Келбеджер</a><a href="/ru/record/search?region=1842" data-id="1842">Ленкорань</a><a href="/ru/record/search?region=1846" data-id="1846">Нахичевань</a><a href="/ru/record/search?region=1850" data-id="1850">Саатлы</a><a href="/ru/record/search?region=1854" data-id="1854">Сиязань</a><a href="/ru/record/search?region=1858" data-id="1858">Товуз</a><a href="/ru/record/search?region=1862" data-id="1862">Хачмаз</a><a href="/ru/record/search?region=1866" data-id="1866">Хырдалан</a><a href="/ru/record/search?region=1870" data-id="1870">Шахбуз</a><a href="/ru/record/search?region=1874" data-id="1874">Шярур</a></div>
+					<hr>
+					<div class="header_search__popup__block"><a href="/ru/record/search?region=1807" data-id="1807">Агстафа</a><a href="/ru/record/search?region=1811" data-id="1811">Баку</a><a href="/ru/record/search?region=1815" data-id="1815">Биласувар</a><a href="/ru/record/search?region=1819" data-id="1819">Геранбой</a><a href="/ru/record/search?region=1823" data-id="1823">Гусар</a><a href="/ru/record/search?region=1827" data-id="1827">Дашкесан</a><a href="/ru/record/search?region=1831" data-id="1831">Евлах</a><a href="/ru/record/search?region=1835" data-id="1835">Имишли</a><a href="/ru/record/search?region=1839" data-id="1839">Кенгерли</a><a href="/ru/record/search?region=1843" data-id="1843">Лерик</a><a href="/ru/record/search?region=1847" data-id="1847">Нефтчала</a><a href="/ru/record/search?region=1851" data-id="1851">Сабирабад</a><a href="/ru/record/search?region=1855" data-id="1855">Сумгаит</a><a href="/ru/record/search?region=1859" data-id="1859">Уджар</a><a href="/ru/record/search?region=1863" data-id="1863">Ходжавенд</a><a href="/ru/record/search?region=1867" data-id="1867">Шабран</a><a href="/ru/record/search?region=1871" data-id="1871">Шеки</a><a href="/ru/record/search?region=1875" data-id="1875">Ярдымлы</a>
+						<hr><a href="/ru/record/search" data-id="">Весь Азербайджан</a></div>
+					<hr>
+				</div>
+			</div>
+			<div class="header_search__extra filter">
+				<div class="input__select price_filt">
+					<div class="input__select__clean"></div>
+					<p>
+						Цена,AZN
+						<span></span>
+					</p>
+					<div class="input__select__content input__select__content--filter">
+						<input type="text" name="min-price" placeholder="от" pattern="\d [0-9]{1,}">
+						<span>-</span>
+						<input type="text" name="max-price" placeholder="до" pattern="\d [0-9]{1,}">
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn--blue">Поиск</button>
+		</form>
+	</header>
+	<pre></pre>
+	<main class="main_page">
+		<a href="#" id="btn__scroll" style="display: none;"></a>
+		<div class="main__sides"></div>
+
+
+		<div class="main__center container">
+			<!-- BREAD_CRUMBS START -->
+			<div class="bread_crumbs">
+				<a href="/">Главная</a>
+				<p>Магазины</p>
+			</div>
+			<!-- BREAD_CRUMBS END -->
+
+			<!-- PUBLICITY START -->
+			<div id="publicity-1" class="publicity " style="position:relative" data-sticky="">
+
+				<!-- PUBLICITY__HEADER START -->
+				<div class="publicity__header">
+					<div class="publicity__header__left">
+						<h3>
+							Объявления магазинов
+						</h3>
+						<p>
+							Найдено - <span>10</span> объявления
+						</p>
+					</div>
+					<a href="/ru/record">
+						Просмотреть все объявления
+					</a>
+					<div class="publicity__header__filter">
+						<p>Сортировка</p>
+						<select id="search_filter">
+							<option value="">По дате добавления</option>
+							<option value="">option</option>
+						</select>
+					</div>
+				</div>
+				<!-- PUBLICITY__HEADER END -->
+
+				<hr>
+
+				<!-- PUBLICITY__MAIN START  advertisment list-->
+				<div class="publicity__main">
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/2.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>Apple Baku </p>
+							<div class="publicity__description__botom">
+								<span>2019-12-02 12:06:34</span>
+								<div data-id="3026" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								5 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="https://picsum.photos/840/480/?image=42" alt="">
+						<div class="publicity__block__description">
+							<p>advertisement-4c3f0c364de2e0eb9d364bc9a44bf4cb </p>
+							<div class="publicity__description__botom">
+								<span>2019-11-27 00:53:10</span>
+								<div data-id="1752" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								Бесплатно
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/3.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>110 м2,  </p>
+							<div class="publicity__description__botom">
+								<span>2019-11-25 11:53:59</span>
+								<div data-id="3018" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								250000 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/4.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>fsadf </p>
+							<div class="publicity__description__botom">
+								<span>2019-05-19 01:32:26</span>
+								<div data-id="2871" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								213 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/1.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>Тестовый магазин </p>
+							<div class="publicity__description__botom">
+								<span>2019-04-18 11:56:03</span>
+								<div data-id="2853" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								123 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/4.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>Test awwwto </p>
+							<div class="publicity__description__botom">
+								<span>2019-04-17 20:39:05</span>
+								<div data-id="2849" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								433234 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/ru/tjdtyytgdfdfdfdf" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/5.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>ыаыфва </p>
+							<div class="publicity__description__botom">
+								<span>2019-04-14 01:15:06</span>
+								<div data-id="2827" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								3454 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/2.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>Apple Baku </p>
+							<div class="publicity__description__botom">
+								<span>2019-12-02 12:06:34</span>
+								<div data-id="3026" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								5 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="https://picsum.photos/840/480/?image=42" alt="">
+						<div class="publicity__block__description">
+							<p>advertisement-4c3f0c364de2e0eb9d364bc9a44bf4cb </p>
+							<div class="publicity__description__botom">
+								<span>2019-11-27 00:53:10</span>
+								<div data-id="1752" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								Бесплатно
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/3.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>110 м2,  </p>
+							<div class="publicity__description__botom">
+								<span>2019-11-25 11:53:59</span>
+								<div data-id="3018" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								250000 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/4.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>fsadf </p>
+							<div class="publicity__description__botom">
+								<span>2019-05-19 01:32:26</span>
+								<div data-id="2871" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								213 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/1.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>Тестовый магазин </p>
+							<div class="publicity__description__botom">
+								<span>2019-04-18 11:56:03</span>
+								<div data-id="2853" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								123 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/4.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>Test awwwto </p>
+							<div class="publicity__description__botom">
+								<span>2019-04-17 20:39:05</span>
+								<div data-id="2849" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								433234 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+					<!-- PUBLICITY__MAIN__BLOCK START -->
+					<a href="/ru/tjdtyytgdfdfdfdf" class="publicity__main__block publicity__main__block--usual">
+						<div class="publicity__block__icon"></div>
+						<img style="object-fit:cover;width:100%" src="storage/upload/5.jpg" alt="">
+						<div class="publicity__block__description">
+							<p>ыаыфва </p>
+							<div class="publicity__description__botom">
+								<span>2019-04-14 01:15:06</span>
+								<div data-id="2827" data-onclick="favourite" class="heart ">
+									<img src="img/heart.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="publicity__block__price">
+							<p>
+								3454 AZN
+							</p>
+						</div>
+					</a>
+					<!-- PUBLICITY__MAIN__BLOCK END -->
+
+				</div>
+				<!-- PUBLICITY__MAIN END -->
+
+				<ul class="pagination">
+					<li class="prev disabled"><span>«</span></li>
+					<li class="active"><a href="/ru/record/shops?adsection1=1" data-page="0">1</a></li>
+					<li><a href="/ru/record/shops?adsection1=2" data-page="1">2</a></li>
+					<li><a href="/ru/record/shops?adsection1=3" data-page="2">3</a></li>
+					<li class="next"><a href="/ru/record/shops?adsection1=2" data-page="1">»</a></li>
+				</ul>
+			</div>
+			<!-- PUBLICITY END -->
+		</div>
+
+		<div class="main__sides"></div>
+	</main>
+	<footer>
+		<div class="footer__top">
+			<div class="container">
+				<div class="footer__top__block">
+					<a href="/" class="">Главная</a>
+					<a href="/ru/misc" class="">Прочее</a>
+					<a href="/ru/contacts" class="">Контакты</a>
+					<a href="/ru/terms" class="">Правила</a>
+					<a href="/ru/1" class="">Пользовательское соглашение</a>
+				</div>
+				<div class="footer__top__block">
+					<img src="img/phone.png" alt="">
+					<p>
+						Поддержка: <b>(070) 554 45 45</b>
+					</p>
+				</div>
+				<div class="footer__top__block">
+					<a href="/" class="footer_top__social">in</a>
+					<a href="/" class="footer_top__social">f</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<div class="footer__bottom__right">
+					<a href="#" class="btn_mobile">Мобильная версия</a>
+					<p class="text--info">
+						Администрация сайта не несет ответственности за содержание рекламных баннеров и размещенных объявлений
+					</p>
+					<p>
+						Copyright © 2013-2018 Elan.Az
+					</p>
+				</div>
+				<div class="footer__bottom__left">
+					<img src="img/footer.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

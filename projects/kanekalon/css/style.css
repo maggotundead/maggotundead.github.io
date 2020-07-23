@@ -1,0 +1,424 @@
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-ExtraLight.eot');
+    src: url('../fonts/Circe-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Circe-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Circe-ExtraLight.woff') format('woff'),
+        url('../fonts/Circe-ExtraLight.ttf') format('truetype'),
+        url('../fonts/Circe-ExtraLight.otf') format('opentype'),
+        url('../fonts/Circe-ExtraLight.svg#Circe-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-Light.eot');
+    src: url('../fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Circe-Light.woff2') format('woff2'),
+        url('../fonts/Circe-Light.woff') format('woff'),
+        url('../fonts/Circe-Light.ttf') format('truetype'),
+        url('../fonts/Circe-Light.otf') format('opentype'),
+        url('../fonts/Circe-Light.svg#Circe-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-Regular.eot');
+    src: url('../fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Circe-Regular.woff2') format('woff2'),
+        url('../fonts/Circe-Regular.woff') format('woff'),
+        url('../fonts/Circe-Regular.ttf') format('truetype'),
+        url('../fonts/Circe-Regular.otf') format('opentype'),
+        url('../fonts/Circe-Regular.svg#Circe-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-Bold.eot');
+    src: url('../fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Circe-Bold.woff2') format('woff2'),
+        url('../fonts/Circe-Bold.woff') format('woff'),
+        url('../fonts/Circe-Bold.ttf') format('truetype'),
+        url('../fonts/Circe-Bold.otf') format('opentype'),
+        url('../fonts/Circe-Bold.svg#Circe-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('../fonts/Circe-ExtraBold.eot');
+    src: url('../fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Circe-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Circe-ExtraBold.woff') format('woff'),
+        url('../fonts/Circe-ExtraBold.ttf') format('truetype'),
+        url('../fonts/Circe-ExtraBold.otf') format('opentype'),
+        url('../fonts/Circe-ExtraBold.svg#Circe-ExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1;
+    font-family: 'Circe';
+    color: #464646;
+    font-weight: normal;
+}
+
+.container {
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 195px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: transparent;
+    box-shadow: 0 0 22px 5px #fe93a0;
+    position: relative;
+}
+.button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    display: block;
+    border-radius: 22px;
+    box-shadow: 0 0 22px 5px #fe93a0 inset;
+    z-index: 1;
+}
+.button span {
+    text-shadow:
+        0px -6px 8px #fe93a0,
+        0px 6px 8px #fe93a0,
+        -6px -6px 8px #fe93a0,
+        6px 6px 8px #fe93a0;
+    position: relative;
+    z-index: 10;
+}
+.button span.text {
+    margin-right: 14px;
+}
+.button .fa {
+    font-size: 26px;
+    text-shadow: 
+        0px -5px 8px #fe93a0,
+        0px 5px 8px #fe93a0,
+        -5px -5px 8px #fe93a0,
+        5px 5px 8px #fe93a0;
+}
+/*.button img {
+    box-shadow: 0 0 3px 5px #fe93a0;
+}*/
+
+.header {
+    padding: 18px 0;
+    text-align: center;
+}
+.header-logo {
+    display: block;
+    width: 220px;
+    height: 51px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-link {
+    margin: 0 12px;
+}
+.cart-link {
+    width: 30px;
+    height: 33px;
+    display: flex;
+    /*align-items: center;*/
+    line-height: 35px;
+    justify-content: center;
+    font-size: 9px;
+    color: #fff;
+    background: url(../img/icon-cart.png) center no-repeat;
+    margin: 0 12px;
+}
+.homescreen {
+    height: 790px;
+    background: url(../img/home-bg.jpg) center no-repeat;
+}
+.homescreen-title {
+    font-size: 80px;
+    font-weight: 800;
+    padding-top: 220px;
+    text-transform: uppercase;
+}
+.homescreen-descr {
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.homescreen-info {
+    font-weight: 300;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 640px;
+}
+.homescreen-button {
+    margin-top: 40px;
+}
+.about {
+    margin-top: 100px;
+}
+.about .container {
+    position: relative;
+    padding-top: 175px;
+}
+.about-photo {
+    position: absolute;
+
+}
+.about-photo-back {
+    top: 0;
+    right: 525px;
+}
+.about-photo-front {
+    top: 250px;
+    right: 787px;
+}
+.about-info {    
+    max-width: 455px;
+    width: 100%;
+    margin-left: calc(100% - 455px);
+}
+
+.about-title {
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.about-text {
+    margin-top: 30px;
+    line-height: normal;
+    font-weight: 300;
+    margin-bottom: 180px;
+}
+
+.about-text p:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+section.style {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.style-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
+}
+.styles-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.style-item {
+    width: 30%;
+    max-width: 345px;
+}
+.style-item-photo {
+    overflow: hidden;
+}
+.style-item-photo img {
+    max-width: 1000px;
+    width: 100%;
+}
+.style-item-title {
+    font-size: 30px;
+    margin-top: 25px;
+    text-align: center;
+}
+.style-button {
+    margin: 25px auto 0;
+}
+
+section.faq {
+    padding-top: 130px;
+    padding-bottom: 150px;
+    background: url(../img/faq-bg.jpg) center no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.faq-info {
+    width: 100%;
+    max-width: 570px;
+    margin-left: calc(100% - 585px);
+}
+.faq-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 800;
+}
+.faq-items-container {
+    margin-top: 30px;
+}
+.faq-item {
+    display: flex;
+}
+.faq-item:not(:last-child) {
+    margin-bottom: 25px;
+}
+.faq-item-icon {
+    width: 70px;
+}
+
+.faq-item-text {
+    width: calc(100% - 70px);
+}
+.faq-item-title {
+    font-size: 30px;
+    line-height: 26px;
+    margin-top: 5px;
+}
+.faq-item-descr {
+    line-height: normal;
+    margin-top: 20px;
+}
+.faq-button {
+    margin-top: 50px;
+}
+
+section.products {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.products-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+.product-item {
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 30px;
+}
+.product-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.produt-item-title {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+.product-item-info .info-item {
+    font-size: 14px;
+    text-align: center;
+}
+.product-price {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-button {
+    margin: 15px auto 0;
+}
+
+
+section.special {
+    padding-top: 140px;
+    padding-bottom: 125px;
+    background: url(../img/special-bg.jpg) center no-repeat;
+}
+
+.special-title {
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 630px;
+    line-height: 1.4;
+}
+.special-descr {
+    font-size: 30px;
+    margin-top: 35px;
+    font-weight: 300;
+    width: 100%;
+    max-width: 680px;
+    line-height: 1.2;
+
+}
+.special-button {
+    margin-top: 55px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1169px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+

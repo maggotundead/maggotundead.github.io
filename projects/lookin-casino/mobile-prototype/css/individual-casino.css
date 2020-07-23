@@ -1,0 +1,961 @@
+/* Блок контакты */
+    .block-contacts .contacts-title {
+        font-size: 15px;
+        line-height: normal;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    .block-contacts .contacts-title:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 50px;
+        height: 1px;
+        background-color: var(--blue-light);
+    }
+    .block-contacts .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .block-contacts .address {
+        line-height: 19px;
+        font-style: normal;
+        width: 100%;
+    }
+    .block-contacts .phone-group {
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+    }
+    .block-contacts .phone-group:not(:first-child) {
+        margin-top: 10px;
+    } 
+    .block-contacts .phone-group:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .block-contacts .phone {
+        color: var(--blue-light);
+        line-height: 19px;
+        font-size: 15px;
+    }
+    .block-contacts .phone-annotation {
+        margin-right: auto;
+        flex-grow: 1;
+        margin-left: 3px;
+    }
+    .block-contacts .mail {
+        line-height: 19px;
+        color: var(--blue-light);
+    }
+    .block-contacts .mail:not(:last-child) {
+        margin-right: 50px;
+    }
+    .block-contacts .location-map {
+        margin-top: 15px;
+    }
+/* Блок контакты */
+
+
+/* Галерея изображений */
+    .block-gallery .gallery {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 14px;
+    }
+    .block-gallery .gallery-item {
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .block-gallery .gallery-item img {
+        width: 100%;
+    }
+/* Галерея изображений */
+
+
+/* Block about casino */
+    .block-about-casino {
+        padding-bottom: 0;
+    }
+    .block-about-casino .info-group {
+        width: 100%;
+    }
+    .block-about-casino .info-group.half {
+        width: calc(50% - 7.5px);
+    }
+    .block-about-casino .info-group:not(:first-child) {
+        margin-top: 30px;
+    }
+    .block-about-casino .info-group-title {
+        font-size: 15px;
+        line-height: normal;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    .block-about-casino .info-group-title:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 50px;
+        height: 1px;
+        background-color: var(--blue-light);
+    }
+    .block-about-casino .descr {
+        line-height: 17px;
+    }
+    .block-about-casino .descr p:not(:last-child) {
+        margin-bottom: 17px;
+    }
+    .block-about-casino .equipment {
+        margin-top: 15px;
+    }
+    .block-about-casino .equipment-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 40px;
+        padding-left: 42px;
+        padding-right: 10px;
+        position: relative;
+    }
+    .block-about-casino .equipment-item:before {
+        width: 42px;
+        display: block;
+        content: '';
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+    .block-about-casino .equipment-item:not(:last-child) {
+        border-bottom: 1px solid var(--grey-border);
+    }
+    .block-about-casino .equipment-item.worktime:before {
+        background-image: url('../img/icon-equipment-worktime.svg');
+        background-size: 17px 17px;
+    }
+    .block-about-casino .equipment-item.square:before {
+        background-image: url('../img/icon-equipment-square.svg');
+        background-size: 22px 15px;
+    }
+    .block-about-casino .equipment-item.tables:before {
+        background-image: url('../img/icon-equipment-tables.svg');
+        background-size: 24px 11px;
+    }
+    .block-about-casino .equipment-item.slots:before {
+        background-image: url('../img/icon-equipment-slots.svg');
+        background-size: 14px 17px;
+    }
+    .block-about-casino .equipment-item.range:before {
+        background-image: url('../img/icon-equipment-range.svg');
+        background-size: 15px 15px;
+    }
+    .block-about-casino .equipment-item.minbet:before {
+        background-image: url('../img/icon-equipment-minbet.svg');
+        background-size: 15px 15px;
+    }
+    .block-about-casino .equipment-item.maxbet:before {
+        background-image: url('../img/icon-equipment-maxbet.svg');
+        background-size: 15px 15px;
+    }
+    .block-about-casino .equipment-item.roulette:before {
+        background-image: url('../img/icon-equipment-roulette.svg');
+        background-size: 15px 15px;
+    }
+    .block-about-casino .equipment-item.blackjack:before {
+        background-image: url('../img/icon-equipment-blackjack.svg');
+        background-size: 19px 19px;
+    }
+    .block-about-casino .equipment-item.poker:before {
+        background-image: url('../img/icon-equipment-poker.svg');
+        background-size: 23px 20px;
+    }
+    .block-about-casino .equipment-item.baccarat:before {
+        background-image: url('../img/icon-equipment-baccarat.svg');
+        background-size: 22px 16px;
+    }
+    .block-about-casino .equipment-item .title {
+        flex-grow: 1;
+    }
+    .block-about-casino .equipment-item .value {
+        flex-shrink: 0;
+    }
+
+    .block-about-casino .terms-policy {
+        display: flex;
+        border-top: 1px solid var(--grey-border);
+        border-bottom: 1px solid var(--grey-border);
+    }
+    .block-about-casino .terms-policy .column {
+        width: 50%;
+        padding: 18px 15px;
+        display: flex;
+        align-items: center;
+    }
+    .block-about-casino .terms-policy .column:nth-child(1) {
+        border-right: 1px solid var(--grey-border);
+    }
+    .block-about-casino .terms-policy .link {
+        line-height: normal;
+        display: flex;
+        align-items: center;
+    }
+    .block-about-casino .terms-policy .link .icon {
+        color: var(--blue-light);
+        margin-right: 6px;
+        font-size: 20px;
+    }
+    .block-about-casino .slider .gallery-item {
+        width: 150px;
+        overflow: hidden;
+        border-radius: 3px;
+    }
+
+    .block-about-casino .casino-details {
+        padding: 0 15px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .block-about-casino .casino-details .label {
+        color: var(--blue);
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .block-about-casino .casino-details .label .icon {
+        font-size: 12px;
+        margin-right: 3px;
+    }
+    .block-about-casino .casino-details .id {
+        background-color: var(--blue);
+        padding-left: 22px;
+        padding-right: 30px;
+        font-size: 13px;
+        line-height: 22px;
+        padding-top: 2px;
+        color: #fff;
+        margin-right: -15px;
+        white-space: nowrap;
+    }
+    .block-about-casino .casino-details .casino-info {
+        width: 100%;
+        margin-top: 14px;
+    }
+    .block-about-casino .casino-details .info-head {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .block-about-casino .casino-details .info-head .logo {
+        width: 80px;
+        margin-right: 12px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-about-casino .casino-details .info-head .params {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .block-about-casino .casino-details .info-head .title-stars-location {
+        margin-top: -4px;
+    }
+    .block-about-casino .casino-details .info-head .title {
+        font-size: 12px;
+    }
+    .block-about-casino .casino-details .info-head .rating {
+        margin-top: 4px;
+        display: flex;
+    }
+    .block-about-casino .casino-details .info-head .rate-number {
+        color: var(--grey-dark);
+        line-height: 1;
+    }
+    .block-about-casino .casino-details .info-head .location {
+        font-size: 10px;
+        color: var(--grey-dark);
+        display: flex;
+        align-items: center;
+        margin-top: 7px;
+    }
+    .block-about-casino .casino-details .info-head .location .icon {
+        font-size: 12px;
+        margin-right: 4px;
+    }
+    .block-about-casino .casino-details .info-head .rate {
+        text-align: right;
+    }
+    .block-about-casino .casino-details .info-head .rate-value {
+        font-size: 28px;
+        line-height: 22px;
+    }
+    .block-about-casino .casino-details .info-head .rate-title {
+        line-height: 1.09;
+        margin-top: 8px;
+    }
+    .block-about-casino .casino-details .info-body {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-top: 8px;
+    }
+    .block-about-casino .casino-details .info-controls {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        align-items: center;
+    }
+    .block-about-casino .casino-details .info-controls .map {
+        width: 80px;
+        flex-shrink: 0;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-about-casino .casino-details .info-controls .map-link {
+        position: relative;
+        text-decoration: underline;
+        color: var(--blue);
+        display: block;
+        padding-left: 20px;
+    }
+    .block-about-casino .casino-details .info-controls .map-link:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 8px);
+        background: transparent url('../img/icon-map-pin.svg') center no-repeat;
+        background-size: contain;
+        width: 11px;
+        height: 15px;
+    }
+    .block-about-casino .casino-details .info-controls .buttons {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+    .block-about-casino .casino-details .info-controls .order-tour-link {
+        min-width: 120px;
+        max-width: 150px;
+        margin-right: 10px;
+        flex-grow: 1;
+    }
+    .block-about-casino .casino-details .info-controls .rating-link {
+        min-width: 85px;
+        max-width: 150px;
+        flex-grow: 1;
+    }
+
+    /* casino hotel */
+        .block-about-hotel {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-bottom: 30px;
+        }
+        .block-about-hotel .block-services-order {
+            margin-top: 0;
+        }
+        .block-about-hotel .order-form {
+            flex-wrap: wrap;
+        }
+        .block-about-hotel .jq-selectbox__select {
+            min-width: initial;
+        }
+        .block-about-hotel .block-services-order .input-group {
+            z-index: 2;
+            width: calc(50% - 5px);
+        }
+        .block-about-hotel .block-services-order .client-amount-selector.hotel-clients-amount {
+            flex-grow: 1;
+            width: 100%;
+            margin-top: 10px;
+            z-index: 1;
+        }
+        .block-about-hotel .block-services-order .input-group .input-group-dropdown {
+            right: calc(-100% - 13px);
+        }
+        .block-about-hotel .block-services-order .daterangepicker {
+            width: 100%;
+        }
+        .block-about-hotel .block-services-order .daterangepicker .drp-calendar {
+            max-width: 100%;
+        }
+        .block-about-hotel .block-services-order .daterangepicker .drp-calendar.left {
+            padding: 10px 15px 0;
+        }
+        .block-about-hotel .block-services-order .daterangepicker .drp-calendar.right {
+            padding: 0 15px 15px;
+        }
+
+
+        .block-about-hotel .general-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .block-about-hotel .hotel-group .wrap {
+            padding-right: 0;
+        }
+        .block-about-hotel .room-group .wrap {
+            padding-left: 0;
+        }
+        .block-about-hotel .hotel-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .block-about-hotel .hotel-details .hotel-logo {
+            width: 100px;
+            flex-shrink: 0;
+        }
+        .block-about-hotel .hotel-details .hotel-logo img {
+            width: 100%;
+        }
+        .block-about-hotel .hotel-details .hotel-rate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .block-about-hotel .hotel-details .rate-value-group {
+            display: flex;
+            align-items: center;
+        }
+        .block-about-hotel .hotel-details .rate-value-group .rate-title {
+            font-size: 11px;
+            text-align: right;
+        }
+        .block-about-hotel .hotel-details .rate-value-group .rate-value {
+            font-size: 26px;
+            line-height: 20px;
+            margin-left: 4px;
+        }
+        .block-about-hotel .item-stars {
+            margin-top: 8px;
+        }
+        .block-about-hotel .reviews-link {
+            margin-top: 8px;
+            line-height: 1;
+            margin-top: 10px;
+            text-decoration: underline;
+            color: var(--blue);
+            transition: 0.5s;
+        }
+        .block-about-hotel .hotel-class {
+            align-self: last baseline;
+        }
+        .block-about-hotel .hotel-class-value {
+            text-align: center;
+            margin-top: 8px;
+        }
+        .block-about-hotel .hotel-params {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .block-about-hotel .hotel-attributes {
+            margin-top: 20px;
+            width: 100%;
+            max-height: 0;
+            transition: 0.5s;
+            overflow: hidden;
+            display: none;
+        }
+        .block-about-hotel .hotel-atrributes.open {
+            max-height: 200px;
+        }
+        .block-about-hotel .attr-item {
+            display: flex;
+            align-items: flex-start;
+            line-height: 20px;
+        }
+        .block-about-hotel .attr-item:not(:last-child) {
+            margin-bottom: 18px;
+        }
+        .block-about-hotel .attr-title {
+            width: 120px;
+            flex-shrink: 0;
+            text-align: right;
+            margin-right: 8px;
+        }
+        .block-about-hotel .filter-controls {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .block-about-hotel .map {
+            width: 80px;
+            flex-shrink: 0;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .block-about-hotel .map-link {
+            position: relative;
+            text-decoration: underline;
+            color: var(--blue);
+            display: block;
+            padding-left: 20px;
+        }
+        .block-about-hotel .map-link:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: calc(50% - 8px);
+            background: transparent url('../img/icon-map-pin.svg') center no-repeat;
+            background-size: contain;
+            width: 11px;
+            height: 15px;
+        }
+        .block-about-hotel .buttons {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .block-about-hotel .rating-link {
+            min-width: 85px;
+            max-width: 150px;
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .block-about-hotel .check-dates-link {
+            min-width: 120px;
+            max-width: 150px;
+            flex-grow: 1;
+        }
+    /* casino hotel */
+
+
+    /* casino restaurant */
+        .block-about-restaurant {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding-bottom: 30px;
+        }
+        .block-about-restaurant .block-services-order {
+            margin-top: 0;
+        }
+        .block-about-restaurant .order-form {
+            flex-wrap: wrap;
+        }
+        .block-about-restaurant .jq-selectbox__select {
+            min-width: initial;
+        }
+        .block-about-restaurant .block-services-order .input-group.restaurant-location {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        .block-about-restaurant .block-services-order .input-group {
+            flex-grow: 1;
+            margin-right: 10px;
+            z-index: 2;
+        }
+        .block-about-restaurant .block-services-order .input-group .input-group-dropdown.time-dropdown {
+            left: calc(50% - 135px);
+        }
+        .block-about-restaurant .block-services-order .client-amount-selector.client-amount-basic {
+            flex-grow: 1;
+            z-index: 2;
+            margin-right: 0;
+        }
+        .block-about-restaurant .block-services-order .dish-type {
+            width: 100%;
+            margin-top: 10px;
+            z-index: 1;
+            margin-right: 0;
+        }
+
+        .block-about-restaurant .descr {
+            line-height: 17px;
+        }
+        .block-about-restaurant .descr p:not(:last-child) {
+            margin-bottom: 17px;
+        }
+        .block-about-restaurant .restaurant-categories {
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            border-top: 1px solid var(--grey-border);
+            border-bottom: 1px solid var(--grey-border);
+        }
+        .block-about-restaurant .restaurant-categories .column {
+            flex-grow: 1;
+            padding: 18px 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .block-about-restaurant .restaurant-categories .column:not(:last-child) {
+            border-right: 1px solid var(--grey-border);
+        }
+        .block-about-restaurant .category-link {
+            position: relative;
+            padding-left: 22px;
+            color: var(--blue);
+            text-decoration: underline;
+        }
+        .block-about-restaurant .category-link:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 22px;
+            height: 17px;
+            top: calc(50% - 10px);
+            background-color: transparent;
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .block-about-restaurant .category-link.menu:before {
+            background-image: url('../img/icon-menu-blue.svg');
+        }
+        .block-about-restaurant .category-link.bar:before {
+            background-image: url('../img/icon-bar-blue.svg');
+        }
+        .block-about-restaurant .category-link.shisha:before {
+            background-image: url('../img/icon-shisha-blue.svg');
+        }
+        .block-about-restaurant .general-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: 15px;
+        }
+        .block-about-restaurant .restaurant-details {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .block-about-restaurant .restaurant-details .restaurant-logo {
+            width: 100px;
+            flex-shrink: 0;
+        }
+        .block-about-restaurant .restaurant-details .restaurant-logo img {
+            width: 100%;
+        }
+        .block-about-restaurant .restaurant-details .restaurant-rate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .block-about-restaurant .restaurant-details .rate-value-group {
+            display: flex;
+            align-items: center;
+        }
+        .block-about-restaurant .restaurant-details .rate-value-group .rate-title {
+            font-size: 11px;
+            text-align: right;
+        }
+        .block-about-restaurant .restaurant-details .rate-value-group .rate-value {
+            font-size: 26px;
+            line-height: 20px;
+            margin-left: 4px;
+        }
+        .block-about-restaurant .item-stars {
+            margin-top: 8px;
+        }
+        .block-about-restaurant .reviews-link {
+            margin-top: 8px;
+            line-height: 1;
+            margin-top: 10px;
+            text-decoration: underline;
+            color: var(--blue);
+            transition: 0.5s;
+        }
+        .block-about-restaurant .restaurant-certificate {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            line-height: 12px;
+        }
+        .block-about-restaurant .icon {
+            color: var(--blue-light);
+            font-size: 21px;
+            margin-bottom: 9px;
+        }
+        .block-about-restaurant .restaurant-params {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .block-about-restaurant .restaurant-attributes {
+            margin-top: 20px;
+            width: 100%;
+            max-height: 0;
+            transition: 0.5s;
+            overflow: hidden;
+            display: none;
+        }
+        .block-about-restaurant .restaurant-atrributes.open {
+            max-height: 200px;
+        }
+        .block-about-restaurant .attr-item {
+            display: flex;
+            align-items: flex-start;
+            line-height: 20px;
+        }
+        .block-about-restaurant .attr-item:not(:last-child) {
+            margin-bottom: 18px;
+        }
+        .block-about-restaurant .attr-title {
+            width: 150px;
+            flex-shrink: 0;
+            text-align: right;
+            margin-right: 8px;
+        }
+        .block-about-restaurant .filter-controls {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .block-about-restaurant .map {
+            width: 80px;
+            flex-shrink: 0;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .block-about-restaurant .map-link {
+            position: relative;
+            text-decoration: underline;
+            color: var(--blue);
+            display: block;
+            padding-left: 20px;
+        }
+        .block-about-restaurant .map-link:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: calc(50% - 8px);
+            background: transparent url('../img/icon-map-pin.svg') center no-repeat;
+            background-size: contain;
+            width: 11px;
+            height: 15px;
+        }
+        .block-about-restaurant .buttons {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .block-about-restaurant .rating-link {
+            min-width: 85px;
+            max-width: 150px;
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+        .block-about-restaurant .book-table-link {
+            min-width: 120px;
+            max-width: 150px;
+            flex-grow: 1;
+        }
+    /* casino hotel */
+
+
+    /* description icon item */
+        .list .item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .list .item .icon {
+            width: 30px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .list .item .icon img {
+            max-width: 22px;
+            max-height: 16px;
+            object-fit: contain;
+        }
+        .list .item .title {
+            min-height: 40px;
+            line-height: normal;
+            display: flex;
+            align-items: center;
+        }
+    /* description icon item */
+    
+    /* progress parameter */
+        .parameter {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 13px;
+            line-height: normal;
+            width: 100%;
+        }
+        .parameter:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        .parameter .parameter-bar {
+            background-color: #dedede;
+            width: 100%;
+            margin-top: 3px;
+        }
+        .parameter .parameter-strip {
+            height: 3px;
+            background-color: var(--blue-light);
+            transition: 0.5s;
+            animation: progress-bar 1.5s;
+            opacity: 1;
+        }
+    /* progress parameter */
+
+/* Block about casino */
+
+
+/* block special offers */
+    .block-special-offers .slider:not(:first-child) {
+        margin-top: 26px;
+    }
+    .block-special-offers .offer-item {
+        width: 210px;
+        display: block;
+    }
+    .block-special-offers .offer-item .photo {
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    .block-special-offers .offer-item .info {
+        margin-top: 9px;
+    }
+    .block-special-offers .offer-item .title {
+        font-size: 12px;
+    }
+    .block-special-offers .offer-item .date {
+        font-size: 10px;
+        color: var(--grey-text);
+        margin-top: 4px;
+    }
+/* block special offers */
+
+
+/* block check-in terms */
+    .block-checkin-terms .block-title {
+        padding: 0 15px;
+    }
+    .block-checkin-terms .term-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 170px;
+        padding: 30px 10px;
+        background-color: var(--grey-light);
+        text-align: center;
+        width: 250px;
+    }
+    .block-checkin-terms .term-item .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 25px;
+    }
+    .block-checkin-terms .term-item .icon img {
+        max-width: 50px;
+        max-height: 25px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+    .block-checkin-terms .term-item .title {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 10px;
+    }
+    .block-checkin-terms .term-item .title.double,
+    .block-checkin-terms .term-item .descr.double {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .block-checkin-terms .term-item .descr {
+        line-height: 16px;
+        min-height: 32px;
+        margin-top: 5px;
+    }
+    .block-checkin-terms .term-item .link {
+        transition: 0.5s;
+        color: var(--blue);
+        text-decoration: underline;
+        margin-top: 5px;
+    }
+/* block check-in terms */
+
+
+/* block frequency asked questions */
+    .block-faq .faq-item:not(:last-child) {
+        border-bottom: 1px solid var(--grey-border);
+    }
+    .block-faq .faq-item .question {
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 5px;
+    }
+    .block-faq .faq-item .question:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 3.5px 0 3.5px;
+        border-color: #000 transparent transparent transparent;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        transition: 0.5s;
+    }
+    .block-faq .faq-item.open .question:after {
+        transform: rotate(-180deg);
+    }
+    .block-faq .faq-item .answer {
+        max-height: 0;
+        overflow: hidden;
+    }
+    .block-faq .faq-item.open .answer {
+        max-height: 500px;
+        transition: 0.5s;
+    }
+    .block-faq .faq-item .answer-inner {
+        padding: 5px 5px 15px;
+    }
+/* block frequency asked questions */

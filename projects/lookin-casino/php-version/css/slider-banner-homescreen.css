@@ -1,0 +1,260 @@
+/*Слайдер-баннер первый экран*/
+    .block-banner-slider {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        min-height: 610px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: var(--grey-light);
+    }
+    .block-banner-slider.text {
+        padding-top: 70px;
+        padding-bottom: 0;
+        min-height: 510px;
+    }
+    .block-banner-slider .slide:not(:first-child) {
+        display: none;
+    }
+    .block-banner-slider .slide-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    /*circle chart slider*/
+        .block-banner-slider .casino-logo {
+            width: 280px;
+            padding-top: 40px;
+        }
+        .block-banner-slider .casino-logo span {
+            margin-top: 40px;
+            font-size: 35px;
+            line-height: 1;
+            color: #fff;
+            display: block;
+            font-weight: 400;
+        }
+        .block-banner-slider .casino-stats {
+            width: 660px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .block-banner-slider .stat-item {
+            width: calc(50% - 60px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+        }
+        .block-banner-slider .stat-item .circle {
+            width: 100%;
+            padding-bottom: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 0 7px #fff inset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            font-weight: 400;
+            position: relative;
+        }
+        .block-banner-slider .stat-item .circle:before {
+            position: absolute;
+            display: block;
+            content: '';
+            top: 11px;
+            left: 11px;
+            right: 11px;
+            bottom: 11px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.35);
+            z-index: 1;
+        }
+        .block-banner-slider .stat-item .circle span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+        .block-banner-slider .stat-item .circle canvas {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 2;
+        }
+        .block-banner-slider .stat-item.green .circle {
+            color: var(--green);
+        }
+        .block-banner-slider .stat-item.yellow .circle {
+            color: var(--yellow);
+        }
+        .block-banner-slider .stat-item.green .circle svg path {
+            stroke: var(--green);
+        }
+        .block-banner-slider .stat-item.yellow .circle svg path {
+            stroke: var(--yellow);
+        }
+        .block-banner-slider .stat-item .title {
+            margin-top: 29px;
+            font-size: 20px;
+            line-height: normal;
+            position: relative;
+        }
+        .block-banner-slider .stat-item .title:after {
+            display: block;
+            content: '';
+            position: absolute;
+            left: calc(50% - 31px);
+            background-color: var(--blue-light);
+            width: 62px;
+            height: 2px;
+            bottom: -13px;
+        }
+        .block-banner-slider .stat-item .button {
+            margin-top: 38px;
+            width: 100%;
+            height: 54px;
+            font-size: 15px;
+            line-height: 52px;
+            transition: 0.5s;
+        }
+        .block-banner-slider .stat-item .button:hover {
+            transition: 0.5s;
+            color: var(--blue-light);
+            border-color: var(--blue-light);
+        }
+    /*circle chart slider*/
+
+
+    /*Banner slider with text*/
+        .block-banner-slider.text .slide-content {
+            color: #fff;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 530px;
+            min-height: 410px;
+            padding-bottom: 65px;
+        }
+        .block-banner-slider.text .slide-title {
+            font-size: 33px;
+            line-height: normal;
+            position: relative;
+        }
+        .block-banner-slider.text .slide-title:after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: -24px;
+            width: 78px;
+            height: 3px;
+            letter-spacing: 0;
+            background-color: var(--blue-light);
+        }
+
+        .block-banner-slider.text .slide-title-descr {
+            font-size: 24px;
+            line-height: 26px;
+            margin-top: 50px;
+        }
+        .block-banner-slider.text .slide-title-descr + .slide-descr {
+            margin-top: 10px;
+        }
+        .block-banner-slider.text .slide-descr {
+            margin-top: 50px;
+            font-size: 19px;
+            line-height: 26px;
+        }
+        .block-banner-slider.text .slide-descr p:not(:last-child) {
+            margin-bottom: 22px;
+        }
+        .block-banner-slider.text .slide-link {
+            min-width: 156px;
+            margin-top: 40px;
+        }
+    /*Banner slider with text*/
+
+
+    /*Slider controls*/
+        .block-banner-slider .slider-controls {
+            left: 10px;
+            position: absolute;
+            bottom: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+        }
+        .block-banner-slider .prev {
+            font-size: 0;
+            color: transparent;
+            background-color: transparent;
+            background-image: url('../img/arrow-right-white.png');
+            border: 0;
+            background-size: 7px 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 12px;
+            z-index: 10;
+            cursor: pointer;
+            transform: rotate(-180deg);
+            order: 1;
+            margin-right: 16px;
+        }
+        .block-banner-slider .next {
+            font-size: 0;
+            color: transparent;
+            background-color: transparent;
+            background-image: url('../img/arrow-right-white.png');
+            border: 0;
+            background-size: 7px 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 12px;
+            z-index: 10;
+            cursor: pointer;
+            order: 3;
+            margin-left: 16px;
+        }
+        .block-banner-slider .slick-dots {
+            list-style-type: none;
+            list-style: none;
+            display: flex;
+            order: 2;
+        }
+        .block-banner-slider .slick-dots li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .block-banner-slider .slick-dots li:not(:last-child) {
+            margin-right: 17px;
+        }
+        .block-banner-slider .slick-dots button {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            background-color: transparent;
+            font-size: 0;
+            color: transparent;
+        }
+        .block-banner-slider .slick-dots .slick-active button {
+            /*border-width: 3px;*/
+            background-color: #fff;
+        }
+    /*Slider controls*/
+
+
+/*Слайдер-баннер первый экран*/

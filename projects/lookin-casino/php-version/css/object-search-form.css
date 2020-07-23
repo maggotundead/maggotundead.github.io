@@ -1,0 +1,342 @@
+/*Форма поиска объекта*/
+    .block-object-search-form .object-search-form {
+        padding: 30px 50px 50px;
+        background-color: var(--grey-light);
+        position: relative;
+    }
+    .block-object-search-form .form-title {
+        font-size: 20px;
+        line-height: 1;
+    }
+    .block-object-search-form .form-container {
+        margin-top: 20px;
+    }
+    .block-object-search-form .row {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .block-object-search-form .row:nth-child(2) {
+        margin-top: 15px;
+    }
+    .block-object-search-form .search-form {
+        display: flex;
+        align-items: center;
+        width: 55%;
+        max-width: 590px;
+        flex-shrink: 0;
+        border: 1px solid #fff;
+    }
+    .block-object-search-form .search-form .input-label {
+        width: calc(100% - 66px);
+    }
+    .block-object-search-form .search-form .input {
+        padding-left: 25px;
+        padding-right: 25px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        height: 66px;
+        line-height: 66px;
+        border: 0;
+        font-size: 20px;
+        color: var(--grey);
+        width: 100%;
+        font-style: italic;
+        font-weight: 400;
+    }
+    .block-object-search-form .search-form .search-button {
+        width: 66px;
+        height: 66px;
+        background-color: var(--blue-light);
+        border: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/icon-search-white.png');
+        background-size: 30px 30px;
+    }
+    .block-object-search-form .form-links {
+        display: flex;
+        flex-direction: row-reverse;
+        /*flex-wrap: wrap-reverse;*/
+        flex-wrap: wrap;
+        align-items: flex-end;
+        width: 40%;
+    }
+    .block-object-search-form .form-link {
+        position: relative;
+        padding-left: 30px;
+        font-size: 16px;
+        color: var(--blue-light);
+    }
+    .block-object-search-form .link-wrapper {
+        width: 50%;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .block-object-search-form .link-wrapper:not(:last-child) {
+        /*margin-top: 15px;*/
+        margin-bottom: 15px;
+    }
+    .block-object-search-form .form-link:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-size: cover;
+    }
+    .block-object-search-form .faq-link:before {
+        background-image: url('../img/icon-headset-bluelight.png');
+        top: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+    }
+    .block-object-search-form .casino-find-link:before {
+        background-image: url('../img/icon-marker-bluelight.png');
+        top: calc(50% - 12.5px);
+        width: 18px;
+        height: 25px;
+    }
+    .block-object-search-form .consult-link:before {
+        background-image: url('../img/icon-ask-bluelight.png');
+        top: calc(50% - 10.5px);
+        width: 20px;
+        height: 21px;
+    }
+
+    /*.block-object-search-form .selectors-group,
+    .block-object-search-form .checkboxes-group {
+        display: flex;
+        align-items: center;
+    }*/
+    .block-object-search-form .selectors-group {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 392px;
+        bottom: 62px;
+    }
+    .block-object-search-form .select-item {
+        font-size: 16px;
+        color: var(--grey-blue);
+    }
+    .block-object-search-form .select-item:not(:last-child) {
+        margin-right: 70px;
+    }
+    /*.block-object-search-form .checkbox-item {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: var(--grey-blue);
+    }
+    .block-object-search-form .checkbox-item:not(:last-child) {
+        margin-right: 32px;
+    }
+    .block-object-search-form .checkbox-custom {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        margin-right: 10px;
+        border: 2px solid var(--grey-blue);
+        display: block;
+        position: relative;
+    }
+    .block-object-search-form .checkbox-custom:before {
+        display: block;
+        position: absolute;
+        background-color: var(--grey-blue);
+        left: 2px;
+        right: 2px;
+        top: 2px;
+        bottom: 2px;
+    }
+    .block-object-search-form .checkbox-default:checked + .checkbox-custom:before {
+        content: '';
+    }*/
+
+    @media screen and (max-width: 1600px) {
+        .block-object-search-form .object-search-form {
+            padding: 20px 30px;
+        }
+        .block-object-search-form .form-links {
+            width: 40%;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .block-object-search-form .link-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+        .block-object-search-form .link-wrapper:not(:last-child) {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .block-object-search-form .row {
+            flex-wrap: wrap;
+        }
+        /*.block-object-search-form .selectors-group,
+        .block-object-search-form .checkboxes-group {
+            width: 100%;
+        }*/
+        .block-object-search-form .selectors-group {
+            width: 100%;
+        }
+        .block-object-search-form .form-links {
+            flex-wrap: wrap-reverse;
+        }
+        /*.block-object-search-form .link-wrapper:not(:last-child) {
+            margin-top: 15px;
+            margin-bottom: 0;
+        }*/
+        .block-object-search-form .selectors-group {
+            position: static;
+        }
+        /*.block-object-search-form .checkboxes-group {
+            margin-top: 20px;
+        }*/
+    }
+    @media screen and (max-width: 1200px) {
+        .block-object-search-form .search-form-wrapper {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .block-object-search-form .form-title {
+            font-size: 24px;
+            line-height: 1;
+        }
+        .block-object-search-form .search-form .input-label {
+            width: calc(100% - 60px);
+        }
+        .block-object-search-form .search-form .input {
+            font-size: 18px;
+            height: 60px;
+            line-height: 60px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .block-object-search-form .search-form .search-button {
+            height: 60px;
+            width: 60px;
+        }
+        .block-object-search-form .link-wrapper:not(:last-child) {
+            margin-bottom: 8px;
+        }
+        .block-object-search-form .form-link {
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 880px) {
+        .block-object-search-form .row:nth-child(1) {
+            flex-direction: column-reverse;
+        }
+        .block-object-search-form .form-links {
+            width: 100%;
+            flex-direction: row;
+        }
+        .block-object-search-form .link-wrapper {
+            width: calc(100% / 3);
+            justify-content: center;
+        }
+        .block-object-search-form .link-wrapper:not(:last-child) {
+            margin-bottom: 0;
+        }
+        .block-object-search-form .search-form {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+        .block-object-search-form .checkboxes-group {
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        .block-object-search-form .checkbox-item {
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        .block-object-search-form .select-item:not(:last-child) {
+            margin-right: 40px;
+        }
+        .block-object-search-form .checkbox-item:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .block-object-search-form .object-search-form {
+            padding: 15px;
+        }
+        .block-object-search-form .search-form-wrapper {
+            text-align: center;
+        }
+        .block-object-search-form .form-title {
+            font-size: 20px;
+        }
+        .block-object-search-form .form-links {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+        .block-object-search-form .link-wrapper {
+            width: auto;
+        }
+        .block-object-search-form .link-wrapper:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+    @media screen and (max-width: 640px) {
+        .block-object-search-form .search-form .input {
+            font-size: 16px;
+        }
+        .block-object-search-form .selectors-group {
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        .block-object-search-form .select-item:not(:last-child) {
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+    }
+
+    /*selectors*/
+        .block-object-search-form .jq-selectbox__select {
+            text-shadow: initial;
+            box-shadow: initial;
+            font: inherit;
+            color: inherit;
+            border-radius: 0;
+            border: 0;
+            background: transparent;
+            padding-left: 0;
+            padding-right: 23px;
+            height: 28px;
+        }
+        .block-object-search-form .jq-selectbox.focused .jq-selectbox__select {
+            border: 0;
+        }
+        .block-object-search-form .jq-selectbox__select:hover {
+            background: transparent;
+        }
+        .block-object-search-form .jq-selectbox__trigger {
+            width: 6px;
+            height: 6px;
+            border: 0;
+            top: calc(50% - 3px);
+        }
+        .block-object-search-form .jq-selectbox__trigger-arrow {
+            top: 0;
+            right: 0;
+            border-top: 6px solid var(--grey-blue);
+            border-right: 3px solid transparent;
+            border-left: 3px solid transparent;
+        }
+        .block-object-search-form  .jq-selectbox__select-text {
+            border-bottom: 1px dashed var(--grey-blue);
+        }
+    /*selectors*/
+/*Форма поиска объекта*/

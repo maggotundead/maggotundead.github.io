@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=cyrillic');
+
+*{
+	margin: 0;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	color: #ffffff;
+	min-width: 320px;
+}
+h1{
+	font-weight: bold;
+	font-size: 80px;
+	/* identical to box height */
+	text-align: center;
+	color: #FFFFFF;
+	margin: 50px 0 12px 0;
+}
+a{
+	text-decoration: none;
+	color: #ffffff;
+}
+a:hover{
+	text-decoration: underline;
+}
+#main{
+	background: url(../oldimg/bg.jpg);
+	background-position: center;
+	background-size: cover;
+}
+#main .content{
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+}
+.button{
+	display: inline-block;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+	/* identical to box height */
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 15px 75px;
+	background: #DC0073;
+	border: 1px solid #FF42A5;
+	border-radius: 999px;
+	margin-top: 80px;
+}
+.button:hover{
+	background: #bd0264;
+        text-decoration: none;
+}
+.button:active{
+	border-color: #841851;
+        text-decoration: none;
+}
+.description{
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 35px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+	max-width: 700px;
+}
+.footer{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	bottom: 40px;
+}
+.footer p{
+	max-width: 370px;
+	width: 100%;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	color: #FFFFFF;
+}
+.footer p:nth-child(1){
+	text-align: right;
+}
+.footer div{
+	margin: 0 40px;
+}
+@media(max-width: 720px){
+	#main .content{
+		height: auto;
+		padding: 50px 15px;
+	}
+	.footer{
+		flex-direction: column;
+		text-align: center;
+		position: unset;
+
+	}
+	.footer p:nth-child(1){
+		text-align: center;
+	}
+	.footer div{
+		margin: 40px 0;
+	}
+	h1{
+		font-size: 50px;
+	}
+	.description{
+		font-size: 18px;
+		line-height: 28px;
+	}
+	.button{
+		margin-bottom: 80px;
+	}
+	.logo{
+		width: 90%;
+	}
+	.footer p{
+	font-size: 16px;
+	line-height: 25px;
+	}
+	.footer p:nth-child(3){
+		line-height: 30px;
+	}
+}
+@media(max-height: 720px){
+	.footer{
+		position: unset;
+		margin: 100px 0;
+	}
+	#main .content{
+		height: auto;
+		padding: 50px 15px;
+	}
+}
