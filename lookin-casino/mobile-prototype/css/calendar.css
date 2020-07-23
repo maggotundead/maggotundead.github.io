@@ -1,0 +1,389 @@
+/* slider event item */
+    .event-item {
+        width: 150px;
+        position: relative;
+    }
+    .event-item .add-to-wishlist {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+        width: 23px;
+        height: 21px;
+        border: 0;
+        background: transparent url('../img/icon-wishlist-white-empty.png') center no-repeat;
+        background-size: contain;
+    }
+    .event-item .info {
+        margin-top: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .event-item .date-time,
+    .event-item .location {
+        font-size: 10px;
+        color: var(--grey-dark);
+    }
+    .event-item .location {
+        text-align: right;
+    }
+    .event-item .descr {
+        width: 100%;
+        line-height: normal;
+        margin-top: 9px;
+    }
+    .event-item .join-event-button {
+        min-width: 115px;
+        margin-top: 18px;
+    }
+/* slider event item */
+
+/* block single event */
+    .block-event {
+        padding: 15px 0;
+    }
+    .block-event .event-banner-photo img {
+        width: 100%;
+    }
+    .block-event .info-group:not(:first-child) {
+        margin-top: 30px;
+    }
+    .block-event .info-group-title {
+        font-size: 15px;
+        line-height: normal;
+        position: relative;
+        padding-bottom: 20px;
+    }
+    .block-event .info-group-title:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 50px;
+        height: 1px;
+        background-color: var(--blue-light);
+    }
+    .block-event .date-time {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid var(--grey-border);
+        width: 100%;
+        margin-top: 15px;
+    }
+    .block-event .date,
+    .block-event .time,
+    .block-event .location {
+        position: relative;
+        padding-left: 24px;
+        line-height: normal;
+    }
+    .block-event .date:before,
+    .block-event .time:before,
+    .block-event .location:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .block-event .date:before {
+        background-image: url('../img/icon-calendar-blue.png');
+        width: 14px;
+        height: 14px;
+        top: calc(50% - 7px);
+    }
+    .block-event .time:before {
+        background-image: url('../img/icon-clock-blue.svg');
+        width: 15px;
+        height: 15px;
+        top: calc(50% - 7px);
+    }
+    .block-event .location:before {
+        background-image: url('../img/icon-pin-blue.svg');
+        width: 14px;
+        height: 19px;
+        top: calc(50% - 9px);
+    }
+    
+    .block-event .event-registration-button {
+        margin-top: 30px;
+        width: 100%;
+        height: 42px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+    .block-event .descr {
+        margin-top: 30px;
+        line-height: 17px;
+    }
+    .block-event .descr p:not(:last-child) {
+        margin-bottom: 17px;
+    }
+    .block-event .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .block-event .address {
+        line-height: 19px;
+        font-style: normal;
+        width: 100%;
+    }
+    .block-event .phone-group {
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+    }
+    .block-event .phone-group:not(:first-child) {
+        margin-top: 10px;
+    } 
+    .block-event .phone-group:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .block-event .phone {
+        color: var(--blue-light);
+        line-height: 19px;
+        font-size: 15px;
+    }
+    .block-event .phone-annotation {
+        margin-right: auto;
+        flex-grow: 1;
+        margin-left: 3px;
+    }
+    .block-event .mail {
+        line-height: 19px;
+        color: var(--blue-light);
+    }
+    .block-event .mail:not(:last-child) {
+        margin-right: 50px;
+    }
+    .block-event .location-map {
+        margin-top: 15px;
+    }
+/* block single event */
+
+
+/* Блок что вам найти */
+    .block-what-to-find .block-title {
+        padding-left: 15px;
+    }
+    .block-what-to-find .find-recommend-item {
+        width: 90px;
+    }
+    .block-what-to-find .find-recommend-item .title {
+        border: 1px solid var(--grey-border);
+        border-top: 0;
+        border-radius: 0 0 2px 2px;
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+/* Блок что вам найти */
+
+
+/* slider casino item */
+    .establishment-item {
+        width: 150px;
+        position: relative;
+    }
+    .establishment-item .add-to-wishlist {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+        width: 23px;
+        height: 21px;
+        border: 0;
+        background: transparent url('../img/icon-wishlist-white-empty.png') center no-repeat;
+        background-size: contain;
+    }
+    .establishment-item .info {
+        margin-top: 9px;
+    }
+    .establishment-item .title {
+        font-size: 12px;
+    }
+    .establishment-item .rating {
+        margin-top: 4px;
+        display: flex;
+    }
+    .establishment-item .rate-number {
+        color: var(--grey-dark);
+        line-height: 1;
+    }
+    .establishment-item .location {
+        font-size: 10px;
+        color: var(--grey-dark);
+        display: flex;
+        align-items: center;
+        margin-top: 7px;
+    }
+    .establishment-item .location .icon {
+        font-size: 12px;
+        margin-right: 4px;
+    }
+/* slider casino item */
+
+/*Calendar plugin*/
+    .fc-unthemed th, .fc-unthemed td, .fc-unthemed thead, .fc-unthemed tbody, .fc-unthemed .fc-divider, .fc-unthemed .fc-row, .fc-unthemed .fc-content, .fc-unthemed .fc-popover, .fc-unthemed .fc-list-view, .fc-unthemed .fc-list-heading td {
+        border-color: var(--grey-border);
+    }
+    .fc-unthemed td.fc-head-container {
+        border-color: var(--blue-light);
+    }
+    .fc-toolbar h2 {
+        min-width: 115px;
+        padding: 0 30px;
+        height: 32px;
+        line-height: 30px;
+        border: 1px solid var(--blue-light);
+        font-size: 11px;
+    }
+    .fc-toolbar.fc-header-toolbar .fc-center {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .fc-toolbar.fc-header-toolbar .fc-center .fc-button {
+        height: 38px;
+        min-width: 136px;
+        border: 1px solid var(--blue-light);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        border-radius: 0;
+        background-color: transparent;
+        margin: 0;
+    }
+    .fc-toolbar.fc-header-toolbar .fc-center .fc-button-active {
+        color: var(--blue-light);
+        border-color: var(--blue-light);
+    }
+    .fc-toolbar.fc-header-toolbar .fc-center .fc-button:not(:first-child) {
+        margin-right: 20px;
+    }
+    .fc-row.fc-widget-header:first-child table {
+        border: 0;
+        border-collapse: initial;
+    }
+    .fc-unthemed th.fc-day-header {
+        height: auto;
+        font-size: 13px;
+        color: #fff;
+        background-color: var(--blue-light);
+        border: 0;
+        height: 40px;
+        position: relative;
+        line-height: 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .fc-unthemed th.fc-day-header:not(:last-child) {
+        border-right: 1px solid #fff;
+    }
+    .fc-dayGrid-view .fc-body .fc-row {
+        min-height: 103px;
+    }
+    .fc-scroller.fc-day-grid-container {
+        overflow: visible !important;
+        height: auto !important;
+    }
+    .fc-unthemed tbody {
+        margin-top: 1px;
+    }
+    .fc .fc-row .fc-content-skeleton td.fc-day-top {
+        height: 23px;
+        line-height: 23px;
+        font-size: 13px;
+        text-align: center;
+        background-color: var(--grey-border);
+        border-right: 1px solid #fff;
+    }
+    .fc .fc-row .fc-content-skeleton td.fc-day-top.fc-other-month {
+        background-color: var(--grey-border);
+        opacity: 1;
+        border-right: 1px solid #fff;
+        border-top: 0;
+        color: var(--grey-dark);
+    }
+    .fc .fc-row .fc-content-skeleton td.fc-day-top.fc-today {
+        background-color: var(--blue-light);
+    }
+    .fc .fc-row .fc-content-skeleton td.fc-day-top.fc-today .fc-day-number {
+        color: #fff;
+        opacity: 1;
+    }
+    .fc-ltr .fc-dayGrid-view .fc-day-top.fc-other-month .fc-day-number {
+        color: var(--grey-dark);
+        opacity: 0.5;
+    }
+    .fc-unthemed .fc-disabled-day {
+        background: transparent;
+    }
+    .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+        padding: 0;
+        color: var(--black);
+        font-size: 13px;
+        float: none;
+    }
+    .fc-prev-button,
+    .fc-next-button {
+        border: 0;
+        background-color: var(--blue-light);
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 0;
+    }
+    .fc-event-container .fc-day-grid-event {
+        margin: 0;
+        border-radius: 0;
+        border: 0;
+        background-color: transparent;
+    }
+    tr:first-child > td > .fc-day-grid-event {
+        margin-top: 1px;
+        /* padding: 0; */
+    }
+    tr:not(:last-child) > td > .fc-day-grid-event {
+        margin-top: initial;
+        margin-bottom: 1px;
+    }
+    tr:nth-child(2n) > td > .fc-day-grid-event .fc-content {
+        background-color: var(--blue);
+    }
+    .fc-day-grid-event .fc-content {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 10px;
+        background-color: var(--blue-light);
+        min-height: 17px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        padding: 0 2px;
+    }
+    .fc-day-grid-event .fc-content span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    td.fc-event-container:nth-child(6) > a .calendar-item-popup,
+    td.fc-event-container:nth-child(7) > a .calendar-item-popup {
+        right: 0;
+        left: initial;
+    }
+/*Calendar plugin*/

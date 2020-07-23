@@ -1,0 +1,2258 @@
+/*Первый лок на главной*/
+    .block-main-homescreen {
+        padding-top: 83px;
+        padding-bottom: 40px;
+        background-color: var(--grey-light);
+    }
+    .block-main-homescreen .wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    /*Auth block*/
+        .block-main-homescreen .right-column {
+            flex-shrink: 0;
+            flex-grow: 0;
+            width: 316px;
+            margin-left: 96px;
+            padding: 40px 30px 40px;
+            min-height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            background-color: var(--blue-light);
+            margin-top: 5px;
+        }
+        .block-main-homescreen .right-column .title {
+            font-size: 15px;
+            line-height: 26px;
+            padding-bottom: 8px;
+            width: 100%;
+            border-bottom: 1px solid var(--blue);
+        }
+        .block-main-homescreen .right-column .descr {
+            line-height: 22px;
+            max-width: 210px;
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+        .block-main-homescreen .right-column .button {
+            margin-top: 14px;
+            width: 100%;
+            height: 48px;
+        }
+        .block-main-homescreen .right-column .help-link {
+            text-decoration: underline;
+            line-height: 1;
+            margin-top: 16px;
+        }
+    /*Auth-block*/
+
+
+    .block-main-homescreen .left-column {
+        max-width: calc(100% - 414px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .block-main-homescreen .left-column .title {
+        font-weight: 400;
+        font-size: 33px;
+        line-height: normal;
+        width: 100%;
+    }
+    /*.block-main-homescreen .left-column .title strong {
+        font-weight: 600;
+    }*/
+    .block-main-homescreen .left-column .title-descr {
+        position: relative;
+        font-size: 19px;
+        padding-bottom: 8px;
+        margin-top: 15px;
+        width: 100%;
+    }
+    .block-main-homescreen .left-column .title-descr:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 55px;
+        background-color: var(--blue-light);
+    }
+
+    /*Search form*/
+        .block-main-homescreen .search-form {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            flex-shrink: 0;
+            /*border: 1px solid #fff;*/
+            margin-top: 39px;
+            flex-grow: 1;
+        }
+        .block-main-homescreen .search-form .input-label {
+            width: calc(100% - 50px);
+        }
+        .block-main-homescreen .search-form .input {
+            padding-left: 20px;
+            padding-right: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            height: 46px;
+            line-height: 46px;
+            border: 0;
+            font-size: 15px;
+            color: var(--grey);
+            width: 100%;
+        }
+        .block-main-homescreen .search-form .search-button {
+            width: 50px;
+            height: 46px;
+            background-color: var(--blue-light);
+            border: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('../img/icon-search-white.png');
+            background-size: 22px 22px;
+            transition: 0.5s;
+        }
+        .block-main-homescreen .search-form .search-button:hover {
+            background-color: var(--blue);
+            transition: 0.5s;
+        }
+        .block-main-homescreen .advanced-search-link {
+            /*font-weight: 400;*/
+            margin-top: 20px;
+            text-align: right;
+            color: var(--blue-light);
+            display: block;
+            align-self: flex-end;
+            transition: 0.5s;
+        }
+        .block-main-homescreen .advanced-search-link:hover {
+            transition: 0.5s;
+            color: var(--blue);
+        }
+    /*Search form*/
+
+    /*Slider*/
+        .block-main-homescreen .casino-features-slider-outer {
+            margin-top: 39px;
+            position: relative;
+            width: 100%;
+            padding-bottom: 27px;
+        }
+        .block-main-homescreen .feature-item {
+            display: flex;
+            align-items: center;
+        }
+        .block-main-homescreen .feature-item:not(:first-child) {
+            opacity: 0;
+        }
+        .block-main-homescreen .icon {
+            width: 175px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            flex-grow: 0;
+            margin-right: 20px;
+        }
+        .block-main-homescreen .icon img {
+            width: auto;
+            height: auto;
+            max-height: 85px;
+        }
+        .block-main-homescreen .slide-title {
+            font-size: 19px;
+            position: relative;
+            padding-bottom: 8px;
+            line-height: 1;
+        }
+        .block-main-homescreen .slide-title:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 55px;
+            background-color: var(--blue-light);
+        }
+        .block-main-homescreen .slide-text {
+            margin-top: 5px;
+            max-width: 400px;
+            line-height: 22px;
+        }
+
+        /*Slider controls*/
+            .block-main-homescreen .slider-controls {
+                left: 0;
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                z-index: 10;
+            }
+            .block-main-homescreen .prev {
+                font-size: 0;
+                color: transparent;
+                background-color: transparent;
+                background-image: url('../img/arrow-right-bluelight.png');
+                border: 0;
+                background-size: 6px 9px;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 26px;
+                z-index: 10;
+                cursor: pointer;
+                transform: rotate(-180deg);
+                order: 1;
+                margin-right: 19px;
+            }
+            .block-main-homescreen .next {
+                font-size: 0;
+                color: transparent;
+                background-color: transparent;
+                background-image: url('../img/arrow-right-bluelight.png');
+                border: 0;
+                background-size: 6px 9px;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 26px;
+                z-index: 10;
+                cursor: pointer;
+                order: 2;
+                margin-left: 19px;
+            }
+            .block-main-homescreen .next-arrow {
+                order: 3;
+            }
+            .block-main-homescreen .slick-dots {
+                list-style-type: none;
+                list-style: none;
+                display: flex;
+                order: 2;
+            }
+            .block-main-homescreen .slick-dots li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .block-main-homescreen .slick-dots li:not(:last-child) {
+                margin-right: 17px;
+            }
+            .block-main-homescreen .slick-dots button {
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                border: 0;
+                background-color: var(--blue-light);
+                font-size: 0;
+                color: transparent;
+            }
+            .block-main-homescreen .slick-dots .slick-active button {
+                background-color: var(--blue);
+            }
+        /*Slider controls*/
+
+    /*Slider*
+/*Первый лок на главной*/
+
+
+
+
+/*Блок лучшие казино*/
+    .block-best-gambling-establishments {
+        margin-top: 38px;
+        position: relative;
+        z-index: 5;
+    }
+    .block-best-gambling-establishments .wrap {
+    }
+    .block-best-gambling-establishments .establishments-head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .block-best-gambling-establishments .establishments-head .left-column {
+        width: calc(100% - 270px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 6px;
+    }
+    .block-best-gambling-establishments .establishments-head .right-column {
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-best-gambling-establishments .reviews-link {
+        width: 100%;
+    }
+    .block-best-gambling-establishments .info-rating-link {
+        position: relative;
+        margin-top: 17px;
+        padding-left: 30px;
+        color: var(--blue-light);
+        text-decoration: underline;
+        transition: 0.5s;
+    }
+    .block-best-gambling-establishments .info-rating-link:hover {
+        color: var(--blue);
+        transition: 0.5s;
+    }
+    .block-best-gambling-establishments .info-rating-link:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 16px;
+        height: 14px;
+        top: calc(50% - 7px);
+        left: 0;
+        background-image: url('../img/icon-star-yellow.png');
+    }
+    .block-best-gambling-establishments .establishment-type-links {
+        display: flex;
+        padding-top: 2px;
+        padding-right: 10px;
+    }
+    .block-best-gambling-establishments .establishment-type-link {
+        padding-left: 25px;
+        position: relative;
+        font-size: 13px;
+        line-height: 26px;
+        color: var(--blue-light);
+        text-decoration: underline;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .block-best-gambling-establishments .establishment-type-link.active {
+        color: #bcbdc1;
+        cursor: default;
+    }
+    .block-best-gambling-establishments .establishment-type-link:not(.active):hover {
+        transition: 0.5s;
+        color: var(--blue);
+    }
+    .block-best-gambling-establishments .establishment-type-link:before {
+        display: block;
+        content: '';
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 0;
+        top: calc(50% - 10px);
+        position: absolute;
+    }
+    .block-best-gambling-establishments .establishment-type-link:not(:last-child) {
+        margin-right: 31px;
+    }
+    .block-best-gambling-establishments .establishment-type-link.casino:before {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icon-token-blue.png');
+    }
+    .block-best-gambling-establishments .casino.active:before {
+        background-image: url('../img/icon-token-grey.png');
+    }
+    .block-best-gambling-establishments .establishment-type-link.poker-club:before {
+        width: 16px;
+        height: 20px;
+        background-image: url('../img/icon-card-blue.png');
+    }
+    .block-best-gambling-establishments .poker-club.active:before {
+        background-image: url('../img/icon-card-grey.png');
+    }
+    .block-best-gambling-establishments .establishment-type-link.bookmaker:before {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icon-ball-blue.png');
+    }
+    .block-best-gambling-establishments .bookmaker.active:before {
+        background-image: url('../img/icon-ball-grey.png');
+    }
+    .block-best-gambling-establishments .title-descr {
+        font-size: 15px;
+        line-height: 19px;
+        margin-top: 14px;
+        width: 100%;
+    }
+    .block-best-gambling-establishments .establishments-body {
+        margin-top: 17px;
+        display: flex;
+        /*align-items: flex-end;*/
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    .block-best-gambling-establishments .body-title {
+        font-size: 15px;
+        line-height: 19px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--grey);
+        display: inline-block;
+    }
+
+    .block-best-gambling-establishments .best-establishments-tabs {
+        /*margin-top: 15px;*/
+        width: calc(100% - 270px);
+    }
+    .block-best-gambling-establishments .establishment-tab {
+        display: none;
+    }
+    .block-best-gambling-establishments .establishment-tab.active {
+        display: block;
+    }
+    .block-best-gambling-establishments .establishment-list-head,
+    .block-best-gambling-establishments .establishment-list-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .block-best-gambling-establishments .establishment-list-head {
+        line-height: 1;
+        color: var(--grey-blue);
+    }
+    .block-best-gambling-establishments .establishment-list-body {
+        margin-top: 10px;
+    }
+    .block-best-gambling-establishments .column.establishment {
+        width: 120px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .block-best-gambling-establishments .column.establishment img {
+        width: 100%;
+    }
+    .block-best-gambling-establishments .establishment-list-body .column.establishment {
+        padding: 3px 16px;
+        border: 1px solid var(--orange);
+    }
+    .block-best-gambling-establishments .establishment-list-body .column.empty {
+        padding: 0;
+        border: 0;
+    }
+    .block-best-gambling-establishments .column.rate {
+        flex-shrink: 0;
+        flex-grow: 0;
+        width: 175px;
+        margin-left: 26px;
+        display: flex;
+        align-items: center;
+    }
+    .block-best-gambling-establishments .column.descr {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    .block-best-gambling-establishments .column.review,
+    .block-best-gambling-establishments .column.rating {
+        min-width: 130px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .block-best-gambling-establishments .column.review {
+        margin-left: 35px;
+    }
+    .block-best-gambling-establishments .column.rating {
+        margin-left: 20px;
+    }
+
+    .block-best-gambling-establishments .establishment-list-item {
+
+    }
+    .block-best-gambling-establishments .establishment-list-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .block-best-gambling-establishments .stars-rate-group + .rate-number {
+        margin-left: 20px;
+    }
+    .block-best-gambling-establishments .aside-column {
+        padding-top: 23px;
+        display: flex;
+        align-items: stretch;
+    }
+
+/*Блок лучшие казино*/
+
+
+
+
+/*Блок мировая карта казино*/
+    .block-casino-world-map {
+        margin-top: 50px;
+        position: relative;
+        z-index: 10;
+    }
+    .block-casino-world-map .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .block-casino-world-map .map-control-buttons {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+    }
+    .block-casino-world-map .map-show-button {
+        height: 36px;
+        line-height: 34px;
+        border: 1px solid var(--grey);
+        padding-right: 11px;
+        padding-left: 36px;
+        position: relative;
+        margin-right: 20px;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .block-casino-world-map .map-show-button:hover {
+        transition: 0.5s;
+        color: var(--blue-light);
+    }
+    .block-casino-world-map .map-show-button:before {
+        display: block;
+        content: '';
+        pointer-events: none;
+        width: 15px;
+        height: 22px;
+        background: transparent url('../img/icon-marker-blue.png') center no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 10px;
+        top: calc(50% - 11px);
+    }
+    .block-casino-world-map .sorting-button {
+        display: flex;
+        align-items: center;
+        height: 36px;
+        border: 1px solid var(--grey);
+        padding-left: 11px;
+        position: relative;
+    }
+    .block-casino-world-map .sorting-button .title {
+        color: var(--grey-blue);
+        margin-right: 3px;
+    }
+    .block-casino-world-map .sorting-button .jq-selectbox {
+        position: static;
+    }
+    .block-casino-world-map .sorting-button .jq-selectbox__select {
+        height: 34px;
+        border: 0;
+        padding-left: 0;
+    }
+    .block-casino-world-map .sorting-button .jq-selectbox__trigger-arrow {
+        top: 16px;
+    }
+    .block-casino-world-map .sorting-button .jq-selectbox__dropdown {
+        left: 0;
+        right: 0;
+        width: 100% !important;
+    }
+    .block-casino-world-map .sorting-button .jq-selectbox li {
+        padding-left: 11px;
+    }
+
+    .block-casino-world-map .map-wrapper {
+        margin-top: 30px;
+        width: 100%;
+    }
+    .block-casino-world-map .casino-rating-map {
+        height: 750px;
+    }
+
+    /*Form search selectors*/
+        .block-casino-world-map .search-form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+        /*.block-casino-world-map .search-form select.select {
+            pointer-events: none;
+            visibility: hidden;
+        }*/
+        .block-casino-world-map .select-group {
+            position: relative;
+        }
+        .block-casino-world-map .select-group:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 10px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            pointer-events: none;
+            z-index: 2;
+        }
+        .block-casino-world-map .select-group.country {
+            width: 220px;
+        }
+        .block-casino-world-map .select-group.country:before {
+            background-image: url('../img/icon-globe-blue.png');
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+        }
+        .block-casino-world-map .select-group.game-type {
+            width: 230px;
+        }
+        .block-casino-world-map .select-group.game-type:before {
+            background-image: url('../img/icon-dice-blue.png');
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+        }
+        .block-casino-world-map .select-group.currency {
+            width: 110px;
+        }
+        .block-casino-world-map .select-group.currency:before {
+            background-image: url('../img/icon-currency-blue.png');
+            width: 20px;
+            height: 16px;
+            top: calc(50% - 8px);
+        }
+        .block-casino-world-map .select-group.minbet {
+            width: 200px;
+        }
+        .block-casino-world-map .select-group.minbet:before {
+            background-image: url('../img/icon-minbet-blue.png');
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+        }
+        .block-casino-world-map .select-group.maxbet {
+            width: 205px;
+        }
+        .block-casino-world-map .select-group.maxbet:before {
+            background-image: url('../img/icon-maxbet-blue.png');
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+        }
+        .block-casino-world-map .select-group.discount {
+            width: 124px;
+        }
+        .block-casino-world-map .select-group.discount:before {
+
+            background-image: url('../img/icon-discount-blue.png');
+            width: 20px;
+            height: 20px;
+            top: calc(50% - 10px);
+
+        }
+        .block-casino-world-map .jq-selectbox {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        .block-casino-world-map .jq-selectbox__select {
+            width: 100%;
+            padding-left: 38px;
+            padding-right: 23px;
+            height: 46px;
+            background: #fff;
+            background-color: #fff;
+            border: 1px solid var(--grey);
+            font-family: inherit;
+            font: inherit;
+            color: inherit;
+            text-shadow: none;
+            display: flex;
+            align-items: center;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .block-casino-world-map .jq-selectbox__trigger {
+            width: 23px;
+            border: 0;
+        }
+        .block-casino-world-map .jq-selectbox__trigger-arrow {
+            border-top: 5px solid #000;
+            border-right: 3.5px solid transparent;
+            border-left: 3.5px solid transparent;
+            top: 21px;
+            right: 10px;
+        }
+        .block-casino-world-map .jq-selectbox__dropdown {
+            border: 0;
+            margin-top: 10px;
+            margin-left: 0;
+            width: 100%;
+            border: 0;
+            font: inherit;
+            border-radius: 0;
+            border: 0;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            box-shadow: 6px 10px 19px rgba(20,20,20,0.19);
+        }
+        .block-casino-world-map .jq-selectbox li {
+            color: var(--black);
+            padding: 0;
+            padding-left: 40px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .block-casino-world-map .jq-selectbox li.disabled {
+            color: var(--black);
+            cursor: default;
+            display: none;
+        }
+        .block-casino-world-map .jq-selectbox li.selected {
+            background-color: #f7f7f7;
+        }
+    /*Form search selectors*/
+
+
+    /*Map popup*/
+        .map-item-popup {
+            /*position: absolute;*/
+            z-index: 99;
+            box-shadow: 0px 3px 5px 1px rgba(20,20,20,0.15);
+            background-color: #fff;
+            width: 100%;
+            max-width: 460px;
+            font: initial;
+
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 400;
+            color: var(--black);
+        }
+        .map-item-popup .close {
+            width: 14px;
+            height: 14px;
+            border: 0;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-size: contain;
+            /*background-position: center;*/
+            background-image: url('../img/icon-close-greylight.png');
+            position: absolute;
+            /*right: 22px;*/
+            right: 10px;
+            /*top: 22px;*/
+            top: 14px;
+            z-index: 99;
+            background-size: 9px 10px;
+        }
+        .map-item-popup .head {
+            padding: 30px 16px 12px;
+            border-bottom: 1px solid var(--grey);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .map-item-popup .logo {
+            max-width: 100px;
+        }
+        .map-item-popup .logo img {
+            max-width: 100%;
+        }
+        .map-item-popup .contacts {
+            padding-left: 30px;
+            max-width: 285px;
+            width: calc(100% - 100px);
+            /*width: 50%;*/
+        }
+        .map-item-popup .address {
+            font-style: normal;
+            position: relative;
+        }
+        .map-item-popup .address:before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -22px;
+            width: 15px;
+            height: 21px;
+            top: -4px;
+            background: transparent url('../img/icon-marker-greyblue.png') center no-repeat;
+            background-size: contain;
+        }
+        .map-item-popup .phone {
+            font-size: 15px;
+            color: var(--blue-light);
+        }
+        .map-item-popup .descr {
+            margin-top: 10px;
+            width: 100%;
+        }
+        .map-item-popup .params {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--grey);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 38px;
+            grid-row-gap: 12px;
+        }
+        .map-item-popup .param-item {
+            padding-left: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .map-item-popup .param-item:before {
+            width: 28px;
+            display: block;
+            content: '';
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .map-item-popup .param-item.square:before {
+            background-image: url('../img/icon-square-greyblue.png');
+            background-size: 18px 12px;
+        }
+        .map-item-popup .param-item.range:before {
+            background-image: url('../img/icon-range-greyblue.png');
+            background-size: 14px 12px;
+        }
+        .map-item-popup .param-item.tables:before {
+            background-image: url('../img/icon-tables-greyblue.png');
+            background-size: 11px 14px;
+        }
+        .map-item-popup .param-item.slots:before {
+            background-image: url('../img/icon-slots-greyblue.png');
+            background-size: 17px 14px;
+        }
+        .map-item-popup .param-item.minbet:before {
+            background-image: url('../img/icon-minbet-greyblue.png');
+            background-size: 17px 17px;
+        }
+        .map-item-popup .param-item.maxbet:before {
+            background-image: url('../img/icon-maxbet-greyblue.png');
+            background-size: 19px 14px;
+        }
+        /*.map-item-popup .param-item .title {
+            font-weight: 400;
+        }*/
+        .map-item-popup .param-item .value {
+            color: var(--grey-blue);
+        }
+
+        .map-item-popup .rating {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 12px 16px 16px;
+        }
+        .map-item-popup .stats {
+            display: flex;
+            width: calc(100% - 145px);
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .map-item-popup .stat-item {
+            width: calc(50% - 15px);
+            max-width: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /*color: #fff;*/
+        }
+        .map-item-popup .stat-item .circle {
+            width: 100%;
+            /*max-width: 150px;*/
+            padding-bottom: 100%;
+            border-radius: 50%;
+            /*box-shadow: 0 0 0 7px var(--grey-light) inset;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 400;
+            position: relative;
+        }
+        .map-item-popup .stat-item .circle span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+        .map-item-popup .stat-item .circle canvas {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 2;
+        }
+        .map-item-popup .stat-item .circle canvas:not(:last-child) {
+            display: none;
+        }
+        .map-item-popup .stat-item.green .circle {
+            color: var(--green);
+        }
+        .map-item-popup .stat-item.yellow .circle {
+            color: var(--yellow);
+        }
+        .map-item-popup .stat-item.green .circle svg path {
+            stroke: var(--green);
+        }
+        .map-item-popup .stat-item.yellow .circle svg path {
+            stroke: var(--yellow);
+        }
+        .map-item-popup .stat-item .title {
+            margin-bottom: 6px;
+            /*font-size: 16px;*/
+            position: relative;
+        }
+        .map-item-popup .button {
+            flex-shrink: 0;
+            flex-grow: 0;
+            /*transition: 0.5s;*/
+        }
+        /*.map-item-popup .button:hover {
+            transition: 0.5s;
+            color: var(--blue);
+            border-color: var(--blue);
+        }*/
+    /*Map popup*/
+
+    /*image map*/
+        .map-image-group {
+            position: relative;
+            z-index: 1;
+            margin-top: 36px;
+        }
+        .map-image-group .map-item {
+            position: absolute;
+            z-index: 1;
+        }
+        .map-image-group .map-item:hover {
+            z-index: 2;
+        }
+        .map-image-group .map-item-marker {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.5s;
+            /*transition: background-color 0.5s;*/
+        }
+        .map-image-group .map-item:hover .map-item-marker {
+            transition: 0.5s;
+            transform: scale(1.1);
+        }
+        .map-image-group .map-item-marker:before {
+            display: block;
+            content: '';
+            width: 112%;
+            height: 112%;
+            left: -6%;
+            top: -6%;
+            background-color: inherit;
+            display: block;
+            opacity: 0.5;
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            pointer-events: none;
+            /*transition: background-color 0.5s;*/
+        }
+        .map-image-group .map-item-marker span {
+            position: relative;
+            z-index: 2;
+        }
+        .map-image-group .map-item.blue .map-item-marker {
+            background-color: var(--blue);
+        }
+        .map-image-group .map-item.blue-light .map-item-marker {
+            background-color: var(--blue-light);
+        }
+        .map-image-group .map-item.size-1 {
+            width: 54px;
+            height: 54px;
+            font-size: 8px;
+            margin-top: -27px;
+            margin-left: -27px;
+        }
+        .map-image-group .map-item.size-2 {
+            width: 62px;
+            height: 62px;
+            font-size: 9px;
+            margin-top: -31px;
+            margin-left: -31px;
+        }
+        .map-image-group .map-item.size-3 {
+            width: 78px;
+            height: 78px;
+            font-size: 11px;
+            margin-top: -39px;
+            margin-left: -39px;
+        }
+        .map-image-group .map-item.size-4 {
+            width: 92px;
+            height: 92px;
+            font-size: 12px;
+            margin-top: -46px;
+            margin-left: -46px;
+        }
+        .map-image-group .map-item.size-5 {
+            width: 102px;
+            height: 102px;
+            font-size: 12px;
+            margin-top: -51px;
+            margin-left: -51px;
+        }
+        .map-image-group .map-item.size-6 {
+            width: 124px;
+            height: 124px;
+            font-size: 13px;
+            margin-top: -62px;
+            margin-left: -62px;
+        }
+        .map-image-group .map-item.blue:hover .map-item-marker,
+        .map-image-group .map-item.blue-light:hover .map-item-marker {
+            background-color: var(--orange);
+            transition: background-color 0.5s;
+        }
+        .map-image-group .map-item-popup {
+            position: absolute;
+            top: 50%;
+            width: 460px;
+            left: 80%;
+            transform: translateY(-50%);
+            display: none;
+        }
+        .map-image-group .map-item.popup-right .map-item-popup {
+            left: initial;
+            right: 80%;
+        }
+        .map-image-group .map-item.popup-top-offset .map-item-popup {
+            top: -80px;
+            transform: none;
+        }
+        .map-image-group .map-item.popup-bottom-offset .map-item-popup {
+            top: initial;
+            bottom: -80px;
+            transform: none;
+        }
+        .map-image-group .map-item:hover .map-item-popup {
+            display: block;
+        }
+    /*image map*/
+
+    /*Google maps styles */
+        .block-casino-world-map .gm-style-iw.gm-style-iw-c {
+            padding: 0;
+        }
+        .block-casino-world-map .gm-ui-hover-effect {
+            right: 5px !important;
+            top: 5px !important;
+        }
+        .block-casino-world-map .gm-ui-hover-effect img {
+            width: 24px !important;
+            height: 24px !important;
+            margin: 3px !important;
+        }
+        .block-casino-world-map .gm-style-iw.gm-style-iw-c,
+        .block-casino-world-map .gm-style-iw-d {
+            max-height: initial !important;
+            max-width: 460px !important;
+            width: 100%;
+            border-radius: 0 !important;
+        }
+
+        .block-casino-world-map .gm-style {
+            font: initial;
+            font-family: 'Roboto', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--black);
+        }
+        .block-casino-world-map .marker-item {
+            background-color: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            line-height: normal;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+            position: absolute;
+            padding: 15px;
+        }
+        .block-casino-world-map .marker-item:before {
+            display: block;
+            content: '';
+            width: 112%;
+            height: 112%;
+            left: -6%;
+            top: -6%;
+            background-color: inherit;
+            display: block;
+            opacity: 0.5;
+            position: absolute;
+            z-index: 1;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .block-casino-world-map .marker-item.active {
+            background-color: var(--orange) !important;
+            z-index: 2;
+        }
+        .block-casino-world-map .marker-item .inner {
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+        }
+    /*Google maps styles */
+
+
+
+/*Блок мировая карта казино*/
+
+
+/*Блок три столбца с популярными предложениями*/
+    .block-three-columns-recommendations {
+        margin-top: 50px;
+    }
+    .block-three-columns-recommendations .wrap {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .block-three-columns-recommendations .content-column {
+        flex-grow: 0;
+        flex-shrink: 0;
+        position: relative;
+    }
+    .block-three-columns-recommendations .content-column.advantages {
+        width: 270px;
+        z-index: 2;
+    }
+    .block-three-columns-recommendations .content-column.advantages:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 3px;
+        width: 1px;
+        background-color: var(--grey-light);
+        right: -13px;
+        pointer-events: none;
+    }
+    .block-three-columns-recommendations .content-column.offers {
+        width: 545px;
+        z-index: 1;
+    }
+    .block-three-columns-recommendations .content-column.activities {
+        width: 260px;
+        z-index: 2;
+    }
+    .block-three-columns-recommendations .column-items-group {
+        text-align: center;
+    }
+    .block-three-columns-recommendations .column-items-group:not(:last-child) {
+        margin-bottom: 32px;
+    }
+    .block-three-columns-recommendations .column-items-group .block-title {
+        text-align: left;
+    }
+    .block-three-columns-recommendations .column-items {
+        margin-top: 28px;
+        text-align: center;
+    }
+    .block-three-columns-recommendations .offer-items {
+        margin-top: 28px;
+    }
+    .block-three-columns-recommendations .advantage-items,
+    .block-three-columns-recommendations .share-items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 34px;
+    }
+    .block-three-columns-recommendations .game-tourism-items {
+        margin-top: 38px;
+    }
+    .block-three-columns-recommendations .advantage-item,
+    .block-three-columns-recommendations .share-item {
+        display: flex;
+        align-items: flex-start;
+        line-height: 20px;
+        text-align: left;
+    }
+    .block-three-columns-recommendations .advantage-item:not(:last-child),
+    .block-three-columns-recommendations .share-item:not(:last-child) {
+        margin-bottom: 21px;
+    }
+    .block-three-columns-recommendations .advantage-item .icon,
+    .block-three-columns-recommendations .share-item .icon {
+        flex-shrink: 0;
+        width: 40px;
+        display: flex;
+        align-items: center;
+    }
+    .block-three-columns-recommendations .share-item .descr {
+        /*text-transform: uppercase;*/
+        text-decoration: underline;
+        color: var(--black);
+        transition: 0.5s;
+    }
+    .block-three-columns-recommendations .share-item .descr:hover {
+        transition: 0.5s;
+        color: var(--blue-light);
+    }
+    .block-three-columns-recommendations .offer-group {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .block-three-columns-recommendations .offer-group-title {
+        font-size: 15px;
+        line-height: 19px;
+        text-align: left;
+    }
+    .block-three-columns-recommendations .offer-group-link {
+        transition: 0.5s;
+        text-decoration: underline;
+        color: var(--blue-light);
+        font-size: 13px;
+    }
+    .block-three-columns-recommendations .offer-group-link:hover {
+        transition: 0.5s;
+        color: var(--blue);
+    }
+    .block-three-columns-recommendations .offer-group-outer {
+        width: 100%;
+        margin-top: 10px;
+        position: relative;
+    }
+    .block-three-columns-recommendations .offer-group-outer:before,
+    .block-three-columns-recommendations .offer-group-outer:after {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background-color: #fff;
+        z-index: 1;
+        pointer-events: none;
+        content: '';
+    }
+    .block-three-columns-recommendations .offer-group-outer:before {
+        left: -20px;
+    }
+    .block-three-columns-recommendations .offer-group-outer:after {
+        right: -20px;
+    }
+    .block-three-columns-recommendations .offer-group-slider {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
+    .block-three-columns-recommendations .offer-item {
+        width: 100%;
+        max-width: 156px;
+    }
+    .block-three-columns-recommendations .offer-item-photo {
+        width: 100%;
+        height: 106px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-three-columns-recommendations .offer-item-photo img {
+        width: auto;
+        height: auto;
+        max-width: 35px;
+        max-height: 30px;
+        object-fit: contain;
+    }
+    .block-three-columns-recommendations .offer-item-title {
+        line-height: 1;
+        margin-top: 19px;
+        text-align: center;
+    }
+    .block-three-columns-recommendations .offer-group-outer .slider-controls {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 100%;
+    }
+    .block-three-columns-recommendations .offer-group-outer .slick-arrow {
+        position: absolute;
+        z-index: 2;
+        width: 28px;
+        height: 28px;
+        border-radius: 50px;
+        transition: 0.5s;
+        border: 0;
+        padding: 0;
+        font-size: 0;
+        color: transparent;
+        background-color: #fff;
+        box-shadow: 6px 10px 19px rgba(20,20,20,0.19);
+        top: 40px;
+        background-repeat: no-repeat;
+        background-size: 7px 12px;
+        background-position: center;
+        background-image: url('../img/arrow-right-blue.png');
+    }
+    .block-three-columns-recommendations .offer-group-outer .slick-arrow.slick-disabled {
+        opacity: 0;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+    .block-three-columns-recommendations .offer-group-outer .slick-arrow.slick-prev {
+        left: -14px;
+        transform: rotate(-180deg);
+    }
+    .block-three-columns-recommendations .offer-group-outer .slick-arrow.slick-next {
+        right: -14px;
+    }
+    .block-three-columns-recommendations .offer-group-outer .slick-arrow:not(.slick-disabled):hover {
+        background-color: #7bccf2;
+    }
+    .block-three-columns-recommendations .offer-group:not(:last-of-type) {
+        margin-bottom: 25.5px;
+    }
+    .b_chrome .block-three-columns-recommendations .offer-group:not(:last-of-type),
+    .b_safari .block-three-columns-recommendations .offer-group:not(:last-of-type) {
+        margin-bottom: 26.5px;
+    }
+
+    .block-three-columns-recommendations .tourism-item {
+        display: block;
+    }
+    .block-three-columns-recommendations .tourism-item:not(:last-child) {
+        margin-bottom: 28px;
+    }
+    .block-three-columns-recommendations .tourism-item-photo {
+        width: 100%;
+        height: 125px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-three-columns-recommendations .tourism-item-photo img {
+        width: auto;
+        height: auto;
+        max-width: 35px;
+        max-height: 30px;
+        object-fit: contain;
+    }
+    .block-three-columns-recommendations .tourism-item-title {
+        line-height: 1;
+        margin-top: 19px;
+        text-align: center;
+    }
+    .block-three-columns-recommendations .all-items-link {
+        display: inline-block;
+        transition: 0.5s;
+
+        text-decoration: underline;
+        color: var(--blue-light);
+    }
+    .block-three-columns-recommendations .offers .all-items-link {
+        margin-top: 22px;
+    }
+    .b_chrome .block-three-columns-recommendations .offers .all-items-link,
+    .b_safari .block-three-columns-recommendations .offers .all-items-link {
+        margin-top: 23px;
+    }
+    .block-three-columns-recommendations .activities .all-items-link {
+        margin-top: 24px;
+    }
+    .block-three-columns-recommendations .all-items-link:hover {
+        color: var(--blue);
+        transition: 0.5s;
+    }
+/*Блок три столбца с популярными предложениями*/
+
+
+/*Блок рейтинг игроков с выбором казино*/
+    .block-casino-players-rating {
+        margin-top: 50px;
+        position: relative;
+        z-index: 1;
+    }
+    .block-casino-players-rating .wrap {
+        display: flex;
+        align-items: flex-start;
+    }
+    .block-casino-players-rating .block-casino-list {
+        width: 175px;
+        margin-right: 150px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 9px;
+    }
+    .block-casino-players-rating .block-casino-list:after {
+        display: block;
+        content: '';
+        width: 1px;
+        height: 170px;
+        background-color: #c4c4c4;
+        position: absolute;
+        right: -65px;
+        top: calc(50% - 75px);
+    }
+    .block-casino-players-rating .block-casino-list .block-title {
+        position: relative;
+        padding-right: 35px;
+        display: inline-block;
+    }
+    .block-casino-players-rating .block-casino-list .block-title:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: var(--blue-light);
+        width: 55px;
+        height: 2px;
+        bottom: -10px;
+    }
+    .block-casino-players-rating .block-casino-list .block-title:after {
+        display: block;
+        content: '';
+        position: absolute;
+        right: 0;
+        left: initial;
+        top: -3px;
+        width: 15px;
+        height: 21px;
+        background: transparent url(../img/icon-marker-greyblue.png) center no-repeat;
+        background-size: 15px 21px;
+    }
+
+    .block-casino-players-rating .casino-list {
+        min-width: 186px;
+        margin-top: 26px;
+        padding-right: 13px;
+        margin-left: -10px;
+    }
+    .block-casino-players-rating .casino-list.overflow {
+        height: 140px;
+        overflow-y: scroll;
+    }
+    .block-casino-players-rating .list-item {
+        min-height: 28px;
+        font-size: 12px;
+        line-height: 24px;
+        padding: 2px 10px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .block-casino-players-rating .list-item:nth-child(2n) {
+        background-color: #f7f7f7;
+    }
+    .block-casino-players-rating .list-item:hover {
+        background-color: rgba(36, 171, 234, 0.25);
+    }
+
+    .block-casino-players-rating .details-button {
+        margin-top: 20px;
+    }
+
+
+
+
+    .block-casino-players-rating .block-players-rating {
+        margin-top: 0;
+        flex-shrink: 1;
+        width: 824px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .block-casino-players-rating .block-players-rating:last-child {
+        padding-bottom: 0;
+    }
+    .block-casino-players-rating .block-players-rating .title-details-button {
+        width: auto;
+        min-width: 130px;
+        margin-top: 0;
+        margin-left: 57px;
+    }
+    .block-casino-players-rating .block-players-rating .block-title {
+        margin-top: 8px;
+    }
+    .block-casino-players-rating .block-players-rating .players-rating-outer {
+        margin-top: 25px;
+    }
+    .block-casino-players-rating .block-players-rating .players-rating .slick-slide > div:nth-child(2) {
+        margin-top: 22px;
+    }
+
+/*Блок рейтинг игроков с выбором казино*/
+
+
+
+
+/*Блок мобильное приложение*/
+    .block-mobile-app {
+        background: var(--grey-light) url('../img/app-bg.png') center right no-repeat;
+        background-size: contain;
+        margin-top: 85px;
+    }
+    .block-mobile-app .wrap {
+        position: relative;
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+    .block-mobile-app .phone-figure {
+        width: 27%;
+        padding-bottom: calc(27% * 1.18);
+        background: transparent url('../img/phone-figure.png') center no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        left: -8px;
+        bottom: 0;
+    }
+    .block-mobile-app .app-text {
+        padding-left: 33.8%;
+        max-width: 860px;
+    }
+    .pl_wp .block-mobile-app .app-text,
+    .pl_android .block-mobile-app .app-text,
+    .pl_ios .block-mobile-app .app-text {
+        max-width: 100%;
+    }
+    .block-mobile-app .app-title {
+        font-size: 19px;
+        line-height: 26px;
+        color: var(--black-light);
+    }
+    .block-mobile-app .app-descr {
+        line-height: 21px;
+        color: var(--black-light);
+        margin-top: 9px;
+    }
+    .block-mobile-app .app-images {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 24px;
+    }
+    .block-mobile-app .app-images .store-link {
+        transition: 0.5s;
+    }
+    .block-mobile-app .app-images .store-link:not(:last-child) {
+        margin-right: 30px;
+    }
+    .block-mobile-app .app-images .store-link:hover {
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+    .block-mobile-app .app-images img {
+        width: auto;
+        height: auto;
+        max-height: 41px;
+    }
+/*Блок мобильное приложение*/
+
+
+
+
+/*Блок лучшие заведения месяца*/
+    .block-best-places {
+        margin-top: 50px;
+    }
+    .block-best-places .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .block-best-places .place-type-selectors {
+        display: flex;
+        align-items: center;
+        margin-left: 45px;
+    }
+    .block-best-places .place-type-link {
+        padding-left: 30px;
+        position: relative;
+        font-size: 13px;
+        line-height: 26px;
+        color: var(--blue-light);
+        text-decoration: underline;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .block-best-places .place-type-link.hotel {
+        padding-left: 42px;
+    }
+    .block-best-places .place-type-link.poker-club {
+        padding-left: 25px;
+    }
+    .block-best-places .place-type-link.active {
+        color: #bcbdc1;
+        cursor: default;
+    }
+    .block-best-places .place-type-link:not(.active):hover {
+        transition: 0.5s;
+        color: var(--blue);
+    }
+    .block-best-places .place-type-link:before {
+        display: block;
+        content: '';
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 0;
+        top: calc(50% - 10px);
+        position: absolute;
+    }
+    .block-best-places .place-type-link:not(:last-child) {
+        margin-right: 28px;
+    }
+    .block-best-places .place-type-link.casino:before {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icon-token-blue.png');
+        /*top: calc(50% - 10px);*/
+    }
+    .block-best-places .casino.active:before {
+        background-image: url('../img/icon-token-grey.png');
+    }
+    .block-best-places .place-type-link.poker-club:before {
+        width: 16px;
+        height: 20px;
+        background-image: url('../img/icon-card-blue.png');
+    }
+    .block-best-places .poker-club.active:before {
+        background-image: url('../img/icon-card-grey.png');
+    }
+    .block-best-places .place-type-link.bookmaker:before {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icon-ball-blue.png');
+        /*top: calc(50% - 10px);*/
+    }
+    .block-best-places .bookmaker.active:before {
+        background-image: url('../img/icon-ball-grey.png');
+    }
+    .block-best-places .place-type-link.hotel:before {
+        width: 30px;
+        height: 20px;
+        background-image: url('../img/icon-bed-blue.png');
+        /*top: calc(50% - 10px);*/
+    }
+    .block-best-places .hotel.active:before {
+        background-image: url('../img/icon-bed-grey.png');
+    }
+    .block-best-places .place-type-link.restaurant:before {
+        width: 22px;
+        height: 20px;
+        background-image: url('../img/icon-cutlery-blue.png');
+        /*top: calc(50% - 10px);*/
+    }
+    .block-best-places .restaurant.active:before {
+        background-image: url('../img/icon-cutlery-grey.png');
+    }
+    .block-best-places .best-places-tabs {
+        margin-top: 30px;
+        width: 100%;
+    }
+    .block-best-places .place-type-tab {
+        display: none;
+    }
+    .block-best-places .place-type-tab.active {
+        display: block;
+    }
+    .block-best-places .place-type-slider {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+    }
+    .block-best-places .place-type-slider.initialized {
+        display: block;
+        width: calc(100% + 20px);
+        margin-left: -10px;
+    }
+    .block-best-places .place-type-slider.initialized:before,
+    .block-best-places .place-type-slider.initialized:after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 10px;
+        background-color: #fff;
+        z-index: 2;
+    }
+    .block-best-places .place-type-slider.initialized:before {
+        left: -10px;
+    }
+    .block-best-places .place-type-slider.initialized:after {
+        right: -10px;
+    }
+    .block-best-places .place-type-slider.initialized .slick-list {
+        z-index: 1;
+    }
+    .block-best-places .place-type-slider.initialized .slide {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .block-best-places .place-type-slider.initialized .slick-arrow {
+        top: -60px;
+    }
+    .block-best-places .place-item {
+        width: 100%;
+        /*max-width: 260px;*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .block-best-places .place-item .item-head {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .block-best-places .place-item .logo {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-best-places .place-item .logo img {
+        max-width: 120px;
+        max-height: 45px;
+        width: auto;
+        height: auto;
+    }
+    .block-best-places .place-item .rate-value-group {
+        display: flex;
+        align-items: last baseline;
+        justify-content: flex-end;
+        align-self: flex-end;
+    }
+    .block-best-places .place-item .rate-title {
+        font-size: 13px;
+        line-height: 12px;
+        margin-right: 7px;
+        text-align: right;
+    }
+    .block-best-places .place-item .rate-value {
+        font-size: 27.4px;
+        line-height: 21px;
+    }
+    .block-best-places .place-item .item-title {
+        margin-top: 14px;
+        font-size: 13px;
+        line-height: normal;
+        width: calc(100% - 100px);
+    }
+    .block-best-places .place-item .item-stars {
+        margin-top: 16px;
+    }
+    .block-best-places .place-item .item-params {
+        margin-top: 25px;
+        width: 100%;
+    }
+    .block-best-places .parameter {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 13px;
+        line-height: normal;
+    }
+    .block-best-places .parameter:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .block-best-places .parameter-bar {
+        background-color: #dedede;
+        width: 100%;
+        margin-top: 3px;
+    }
+    .block-best-places .parameter-strip {
+        height: 3px;
+        background-color: var(--blue-light);
+        opacity: 0;
+        transition: 0.5s;
+    }
+    .block-best-places.visible .slick-active .parameter-strip {
+        -webkit-animation: progress-bar 1.5s;
+        -moz-animation: progress-bar 1.5s;
+        animation: progress-bar 1.5s;
+        opacity: 1;
+    }
+    .block-best-places .best-item-link {
+        margin-top: 30px;
+        /*background-color:*/
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+/*Блок лучшие заведения месяца*/
+
+
+/*Блок новости о главных событиях*/
+    .block-main-news {
+        margin-top: 50px;
+    }
+    .block-main-news .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+    }
+    .block-main-news .news-type-selectors {
+        display: flex;
+        align-items: center;
+        margin-left: 45px;
+    }
+    .block-main-news .news-type-link {
+        padding-left: 30px;
+        position: relative;
+        font-size: 13px;
+        line-height: 26px;
+        color: var(--blue-light);
+        text-decoration: underline;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .block-main-news .news-type-link.poker-club {
+        padding-left: 25px;
+    }
+    .block-main-news .news-type-link.active {
+        color: #bcbdc1;
+        cursor: default;
+    }
+    .block-main-news .news-type-link:not(.active):hover {
+        transition: 0.5s;
+        color: var(--blue);
+    }
+    .block-main-news .news-type-link:before {
+        display: block;
+        content: '';
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 0;
+        top: calc(50% - 10px);
+        position: absolute;
+    }
+    .block-main-news .news-type-link:not(:last-child) {
+        /*margin-right: 28px;*/
+        margin-right: 26px;
+    }
+    .block-main-news .news-type-link.casino:before {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icon-token-blue.png');
+        /*top: calc(50% - 10px);*/
+    }
+    .block-main-news .casino.active:before {
+        background-image: url('../img/icon-token-grey.png');
+    }
+    .block-main-news .news-type-link.poker:before {
+        width: 16px;
+        height: 20px;
+        background-image: url('../img/icon-card-blue.png');
+    }
+    .block-main-news .poker.active:before {
+        background-image: url('../img/icon-card-grey.png');
+    }
+    .block-main-news .news-type-link.bets:before {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icon-ball-blue.png');
+    }
+    .block-main-news .bets.active:before {
+        background-image: url('../img/icon-ball-grey.png');
+    }
+    .block-main-news .news-type-link.actions:before {
+        width: 22px;
+        height: 20px;
+        background-image: url('../img/icon-action-blue.png');
+    }
+    .block-main-news .actions.active:before {
+        background-image: url('../img/icon-action-grey.png');
+    }
+    .block-main-news .news-type-link.lottery:before {
+        width: 19px;
+        height: 20px;
+        background-image: url('../img/icon-cup-blue.png');
+        top: calc(50% - 11px);
+    }
+    .block-main-news .lottery.active:before {
+        background-image: url('../img/icon-cup-grey.png');
+    }
+    .block-main-news .news-type-link.calendar:before {
+        width: 21px;
+        height: 22px;
+        background-image: url('../img/icon-calendar-fill-blue.png');
+        top: calc(50% - 11px);
+    }
+    .block-main-news .calendar.active:before {
+        background-image: url('../img/icon-calendar-fill-grey.png');
+    }
+    .block-main-news .main-news-tabs {
+        margin-top: 30px;
+        width: 100%;
+    }
+    .block-main-news .news-type-tab {
+        display: none;
+    }
+    .block-main-news .news-type-tab.active {
+        display: block;
+    }
+    .block-main-news .news-slider.initialized .slick-arrow {
+        top: -60px;
+    }
+    .block-main-news .news-group {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    .block-main-news .left-column {
+        width: 23.7%;
+        max-width: 272px;
+        min-height: 434px;
+    }
+    .block-main-news .center-column {
+        width: 40.7%;
+        max-width: 468px;
+        min-height: 434px;
+    }
+    .block-main-news .right-column {
+        width: 32.2%;
+        max-width: 370px;
+    }
+    .block-main-news .right-column .news-item {
+        min-height: 190px;
+    }
+    .block-main-news .news-item {
+        padding: 30px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        color: #fff;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        text-align: left;
+    }
+    .block-main-news .news-item .main-label {
+        line-height: 23px;
+        background-color: #fff;
+        color: var(--blue-light);
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 12px;
+        margin-bottom: 14px;
+    }
+    .block-main-news .news-item .title {
+        font-size: 24px;
+        line-height: normal;
+    }
+    .block-main-news .news-item .date {
+        font-size: 12px;
+        line-height: normal;
+        margin-top: 10px;
+    }
+    .block-main-news .news-item .comments {
+        background-color: #fff;
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        line-height: 22px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: var(--blue);
+        font-size: 11px;
+    }
+    .block-main-news .news-item .comments:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 5px;
+        border-color: transparent transparent transparent #fff;
+        position: absolute;
+        left: 0;
+        bottom: -6.5px;
+        pointer-events: none;
+    }
+
+    .block-main-news .short-news {
+        margin-top: 22px;
+    }
+    .block-main-news .short-news-item {
+        display: flex;
+        padding-right: 42px;
+        width: 100%;
+        align-items: center;
+        text-align: left;
+        position: relative;
+    }
+    .block-main-news .short-news-item:not(:last-child):after {
+        display: block;
+        content: '';
+        left: 98px;
+        right: 0;
+        height: 1px;
+        background-color: #dcdcdc;
+        bottom: -16px;
+        position: absolute;
+    }
+    .block-main-news .short-news-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .block-main-news .short-news-item .photo {
+        width: 78px;
+        height: 54px;
+        flex-shrink: 0;
+        margin-right: 20px;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .block-main-news .short-news-item .title {
+        font-size: 13px;
+        line-height: 1;
+    }
+    .block-main-news .short-news-item .date {
+        font-size: 12px;
+        line-height: normal;
+        color: var(--grey);
+        margin-top: 5px;
+    }
+    .block-main-news .short-news-item .comments {
+        background-color: var(--blue-light);
+        position: absolute;
+        top: calc(50% - 11px);
+        left: calc(100% - 42px);
+        line-height: 22px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: #fff;
+        font-size: 11px;
+    }
+    .block-main-news .short-news-item .comments:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 5px;
+        border-color: transparent transparent transparent var(--blue-light);
+        position: absolute;
+        left: 0;
+        bottom: -6.5px;
+        pointer-events: none;
+    }
+    .block-main-news .all-news-link {
+        margin-top: 30px;
+        padding-left: 28px;
+        padding-right: 28px;
+        width: auto;
+        display: inline-block;
+    }
+/*Блок новости о главных событиях*/
+
+
+/*Блок почему выбирают нас*/
+    .block-why-choose-us {
+        margin-top: 50px;
+        /*padding-bottom: 50px;*/
+    }
+    .block-why-choose-us .block-title {
+        display: flex;
+        width: 100%;
+    }
+    .block-why-choose-us .advantages {
+        margin-top: 40px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+    .block-why-choose-us .divider {
+        width: 1px;
+        background-color: #d1d1d1;
+        height: 125px;
+        align-self: center;
+    }
+    .block-why-choose-us .advantage-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 225px;
+    }
+    .block-why-choose-us .advantage-item .icon {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .block-why-choose-us .advantage-item .icon img {
+        height: auto;
+        width: auto;
+        max-height: 60px;
+    }
+    .block-why-choose-us .advantage-item .title {
+        font-size: 19px;
+        line-height: 26px;
+        margin-top: 29px;
+    }
+    .block-why-choose-us .advantage-item .descr {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+    .block-why-choose-us .poll {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 120px;
+        padding-right: 40px;
+        background-color: var(--grey-light);
+        background-position: calc(50% + 75px) center;
+        background-size: 336px 336px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        background-image: url('../img/figure-token.png');
+        background-repeat: no-repeat;
+    }
+    .block-why-choose-us .poll:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 40px;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background-color: var(--blue-light);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 34px 32px;
+        background-image: url('../img/icon-star-border-white.png');
+        top: calc(50% - 27.5px);
+    }
+    .block-why-choose-us .poll .title {
+        font-size: 17px;
+        line-height: 21px;
+    }
+    .block-why-choose-us .poll-button {
+        min-width: 194px;
+        margin-left: 30px;
+    }
+    .block-logos-slider {
+        margin-top: 50px;
+        /*padding-bottom: 50px;*/
+    }
+    .block-logos-slider .slide-item {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-logos-slider .slide-item img {
+        width: auto;
+        height: auto;
+        max-width: 120px;
+        max-height: 44px;
+    }
+    .block-logos-slider .slide-item .title {
+        color: var(--blue);
+        font-size: 13px;
+        line-height: 19px;
+        margin-top: 20px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .block-logos-slider .slick-arrow {
+
+        font-size: 0;
+        color: transparent;
+        background-color: transparent;
+        border: 0;
+        background-size: 6px 9px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 26px;
+        height: 26px;
+        z-index: 10;
+        cursor: pointer;
+        position: absolute;
+        top: calc(50% - 13px);
+    }
+    .block-logos-slider .slick-prev {
+        background-image: url('../img/arrow-right-bluelight.png');
+        transform: rotate(-180deg);
+        left: 0;
+    }
+    .block-logos-slider .slick-next {
+        background-image: url('../img/arrow-right-bluelight.png');
+        right: 0;
+    }
+/*Блок почему выбирают нас*/
+
+
+
+
+
+
+
+

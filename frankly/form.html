@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en/EN">
+	<head>
+		<title>Frankly One article</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/slick.min.css">
+
+	</head>
+	<body>
+		<div class="wrapper form-page">
+			<header class="header yellow">
+				<div class="container">
+					<button class="burger">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<a href="/" class="header-logo"><img src="img/header-logo.svg"></a>
+				</div>
+			</header>
+			<main class="content">
+				<section class="section block-step-form">
+					<div class="container">
+						<form class="step-form">
+							<div class="step-counter">1/6</div>
+							<!-- <div class="step-block step-one active"> -->
+							<div class="step-block step-one">
+								<div class="user-photo" style="background-image: url('img/user2.jpg');"></div>
+								<div class="step-block-descr">
+									Hey! I’m Maya, I’ll help you find the right solution in seconds. Let’s start by entering your name.
+								</div>
+								<input type="text" name="" placeholder="Enter Your Name" required="required" class="step-text-input" maxlength="35" pattern="[A-Za-z]{1,35}+\s[A-Za-z]{1,35}">
+							</div>
+							<div class="step-block step-two active">
+								<div class="step-block-descr">
+									Let's learn about your teeth! Which words would you use to describe them? Choose any that apply.
+								</div>
+								<div class="selectors-group">
+									<label class="input-label">
+										<input type="radio" name="1" class="radio-default">
+										<span class="radio-custom"></span>
+										<span class="radio-text">Crowded</span>
+									</label>
+									<label class="input-label">
+										<input type="radio" name="1" class="radio-default">
+										<span class="radio-custom"></span>
+										<span class="radio-text">Discolored</span>
+									</label>
+									<label class="input-label">
+										<input type="radio" name="1" class="radio-default">
+										<span class="radio-custom"></span>
+										<span class="radio-text">Spaced</span>
+									</label>
+									<label class="input-label">
+										<input type="radio" name="1" class="radio-default">
+										<span class="radio-custom"></span>
+										<span class="radio-text">Protruding</span>
+									</label>
+								</div>
+							</div>
+							<div class="steps-controls">
+								<button class="prev-step-button">
+									<img src="img/prev-step-arrow.svg">
+									<span>Back</span>
+								</button>
+								<button class="next-step-button">
+									<img src="img/next-step-arrow.svg">
+									<span>Continue</span>
+								</button>
+							</div>
+						</form>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/main.js"></script>
+</html>

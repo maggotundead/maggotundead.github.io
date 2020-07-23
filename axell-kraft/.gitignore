@@ -1,0 +1,7 @@
+node_modules/
+app/css/
+app/js/
+
+package-jock.json
+
+*/*/.DS_Store

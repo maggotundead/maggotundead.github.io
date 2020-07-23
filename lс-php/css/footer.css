@@ -1,0 +1,319 @@
+.footer {
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 400;
+    margin-top: 50px;
+}
+.footer .footer-top {
+	padding-top: 50px;
+	padding-bottom: 44px;
+	background-color: var(--blue);
+}
+.footer .footer-top .wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.footer .footer-column {
+	width: calc(50% - 10px);
+	/*max-width: 640px;*/
+}
+.footer .footer-column.left p {
+    max-width: 480px;
+}
+.footer .copyright {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color: var(--blue-light);
+	text-align: center;
+}
+.footer .footer-column p:not(:last-child) {
+	margin-bottom: 19px;
+}
+.footer .socials {
+	display: flex;
+	align-items: center;
+    margin-top: 40px;
+}
+.footer .social {
+	width: 36px;
+	height: 36px;
+	flex-shrink: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--blue);
+	background-size: contain;
+}
+.footer .social:not(:last-child) {
+	margin-right: 31px;
+}
+.footer .social.fb {
+	background-image: url('../img/social-fb-white.jpg');
+}
+.footer .social.insta {
+	background-image: url('../img/social-insta-white.jpg');
+}
+.footer .social.telegram {
+	background-image: url('../img/social-telegram-white.jpg');
+}
+.footer .social.twitter {
+	background-image: url('../img/social-twitter-white.jpg');
+}
+.footer .social.vk {
+	background-image: url('../img/social-vk-white.jpg');
+}
+.footer .social.youtube {
+	background-image: url('../img/social-youtube-white.jpg');
+}
+
+.footer .subscribe-form {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+    text-align: center;
+}
+.footer .form-title {
+	font-size: 19px;
+    margin-top: -4px;
+	/*font-weight: 600;*/
+	line-height: normal;
+}
+.footer .form-descr {
+    font-size: 13px;
+	line-height: normal;
+	margin-top: 3px;
+}
+.footer .form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 10px;
+}
+.footer .input-label {
+	flex-grow: 1;
+	flex-shrink: 1;
+	width: calc(100% - 130px);
+}
+.footer .input {
+	width: 100%;
+	border: 0;
+	/*border-right: 1px solid var(--blue);*/
+	height: 36px;
+	line-height: 36px;
+	font-size: 13px;
+	color: var(--grey-dark);
+	padding-left: 14px;
+	padding-right: 14px;
+    text-align: left;
+}
+.footer .submit-button {
+	flex-grow: 10;
+	flex-shrink: 0;
+}
+.footer .checkbox-label {
+	margin-top: 13px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+.footer .checkbox-custom {
+	width: 12px;
+	height: 12px;
+	margin-right: 8px;
+	background-color: #fff;
+	position: relative;
+	flex-shrink: 0;
+}
+.footer .checkbox-custom:before {
+	display: block;
+	position: absolute;
+	left: 2px;
+	right: 2px;
+	top: 2px;
+	bottom: 2px;
+	background-color: var(--blue-light);
+}
+.footer .checkbox-default:checked + .checkbox-custom:before {
+	content: '';
+}
+.footer .checkbox-text {
+	font-size: 11px;
+	line-height: normal;
+}
+.footer .brand-about {
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+.footer .brand-about-text {
+	width: 100%;
+    margin-bottom: 25px;
+    line-height: 21px;
+	/*max-width: 490px;*/
+	/*padding-right: 15px;*/
+}
+.footer .brand-about-text a {
+	color: var(--blue-light);
+}
+.footer .brand-logo.gambling {
+    max-width: 245px;
+}
+.footer .brand-logo.agarta {
+    max-width: 65px;
+}
+.footer .langs {
+	width: 76px;
+	height: 22px;
+	flex-shrink: 0;
+	position: relative;
+	border-left: 1px solid var(--blue-light);
+	border-right: 1px solid var(--blue-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    margin-top: 9px;
+}
+.footer .langs:after {
+	display: block;
+	content: '';
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+	left: 0;
+	right: 0;
+	height: 20px;
+}
+.footer .current-lang {
+	position: relative;
+	font-size: 15px;
+	line-height: 1;
+	color: #fff;
+	/*font-weight: 600;*/
+	padding-right: 8px;
+}
+.footer .current-lang:after {
+	position: absolute;
+	right: 0;
+	top: calc(50% - 1px);
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 4px 2px 2px;
+	border-color: #fff transparent transparent;
+}
+.footer .langs-dropdown {
+	display: none;
+	min-width: 74px;
+	position: absolute;
+	top: calc(100% + 5px);
+	left: calc(50% - 37px);
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--blue);
+	border: 1px solid var(--blue-light);
+	padding: 10px 5px;
+	z-index: 2;
+}
+.footer .langs-dropdown a {
+	color: #fff;
+	/*font-weight: 600;*/
+	font-size: 15px;
+	line-height: 1;
+}
+.footer .langs-dropdown a:not(:last-child) {
+	margin-bottom: 12px;
+}
+.footer .langs:hover .langs-dropdown {
+	display: flex;
+}
+/*.footer .brand-logo {
+	margin-top: 30px;
+}*/
+
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .footer .social:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .footer .langs {
+        width: 80px;
+    }
+    .footer .current-lang,
+    .footer .langs-dropdown a {
+        font-size: 18px;
+    }
+    .footer .copyright {
+        font-size: 14px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .footer .footer-top .wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .footer-column {
+        width: 100%;
+    }
+    .footer .footer-column:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .footer .footer-column p:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .footer .socials {
+        justify-content: center;
+    }
+    .footer .brand-logo {
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 640px) {
+    .footer {
+        text-align: center;
+    }
+    .footer .checkbox-text,
+    .footer .brand-about-text {
+        text-align: left;
+    }
+}
+@media screen and (max-width: 480px) {
+    .footer .socials {
+        display: grid;
+        grid-template-columns: repeat(3, 50px);
+        grid-gap: 25px;
+    }
+    .footer .social:not(:last-child) {
+        margin-right: initial;
+    }
+    .footer .form {
+        flex-direction: column;
+        max-width: 320px;
+    }
+    .footer .input-label {
+        width: 100%;
+    }
+    .footer .input {
+        text-align: center;
+        border-right: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+}
+

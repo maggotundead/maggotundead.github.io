@@ -1,0 +1,104 @@
+
+.block-slider-banner {
+    position: relative;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.block-slider-banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+.block-slider-banner .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 15px 0;
+    position: relative;
+    z-index: 2;
+}
+.block-slider-banner .return,
+.block-slider-banner .search {
+    display: block;
+    width: 20px;
+}
+.block-slider-banner .return svg,
+.block-slider-banner .search svg {
+    height: 20px;
+}
+.block-slider-banner .return svg path,
+.block-slider-banner .search svg path {
+    fill: #fff;
+}
+.block-slider-banner .banner-title {
+    margin-bottom: 0;
+}
+
+.block-slider-banner .slider-banner {
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
+    padding: 0 15px;
+    text-align: center;
+    padding-bottom: 45px;
+    min-height: 155px;
+}
+
+.block-slider-banner .slide-title {
+    padding-bottom: 30px;
+    position: relative;
+    font-size: 15px;
+}
+.block-slider-banner .slide-title:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 14px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 2px;
+    background-color: var(--blue-light);
+}
+.block-slider-banner .slide-text {
+    font-size: 13px;
+}
+
+.block-slider-banner .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+}
+.block-slider-banner .slick-dots li:not(:last-child) {
+    margin-right: 9px;
+}
+.block-slider-banner .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: transparent;
+    display: block;
+    font-size: 0;
+}
+.block-slider-banner .slick-dots li.slick-active button {
+    background-color: #fff;
+}
+
+.block-slider-banner .rating-indicators {
+    padding: 28px 32px 20px;
+}
+.block-slider-banner .rating-indicators .button {
+    /* margin-top: 25px; */
+    margin-top: 10px;
+}

@@ -1,0 +1,347 @@
+/*Блок форма поиска*/
+    .block-search-form {
+        margin-top: 50px;
+        position: relative;
+        z-index: 99;
+    }
+    .block-search-form.wide {
+        background-color: var(--grey-light);
+        margin-top: 0;
+    }
+    .block-search-form .search-form-container {
+        padding: 33px 40px 40px;
+        background-color: var(--grey-light);
+    }
+    .block-search-form.wide .search-form-container {
+        padding: 20px 0 20px;
+        background-color: transparent;
+    }
+    .block-search-form .search-form-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .block-search-form .head-text {
+        flex-grow: 0;
+    }
+    .block-search-form .search-form-title {
+        font-size: 19px;
+        line-height: 26px;
+        letter-spacing: 0.1px;
+    }
+    .block-search-form .search-form-descr {
+        font-size: 15px;
+        line-height: 19px;
+        margin-top: 4px;
+        letter-spacing: 0.01px;
+    }
+    .block-search-form .search-form-head .help-link {
+        min-width: 140px;
+        padding-left: 38px;
+        padding-right: 10px;
+        position: relative;
+        background-color: var(--blue-light);
+        margin-left: 20px;
+        flex-shrink: 0;
+        border: 0;
+        text-align: center;
+        line-height: 36px;
+        transition: 0.5s;
+    }
+    .block-search-form .search-form-head .help-link:hover {
+        transition: 0.5s;
+        background-color: var(--blue);
+    }
+    .block-search-form .search-form-head .help-link:before {
+        display: block;
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        left: 10px;
+        top: calc(50% - 9px);
+        width: 18px;
+        height: 18px;
+        background: transparent url('../img/icon-ask-white.png') center no-repeat;
+        background-size: contain;
+    }
+    .block-search-form .search-form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .block-search-form .search-form:not(:first-child) {
+        margin-top: 23px;
+    }
+    .block-search-form .main-search-input-label {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .block-search-form .main-search-input {
+        display: block;
+        width: 100%;
+        height: 47px;
+        background-color: #fff;
+        border: 1px solid var(--grey);
+        padding: 0 20px;
+        line-height: 45px;
+        color: #abb1b8;
+        font-size: 13px;
+    }
+    .block-search-form .select-group {
+        position: relative;
+    }
+    .block-search-form .select-group:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 10px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    .block-search-form .select-group.country:before {
+        background-image: url('../img/icon-globe-blue.png');
+        width: 20px;
+        height: 20px;
+        top: calc(50% - 10px);
+    }
+    .block-search-form .select-group.game-type:before {
+        background-image: url('../img/icon-dice-blue.png');
+        width: 20px;
+        height: 20px;
+        top: calc(50% - 10px);
+    }
+    .block-search-form .select-group.currency:before {
+        background-image: url('../img/icon-currency-blue.png');
+        width: 20px;
+        height: 16px;
+        top: calc(50% - 8px);
+    }
+    .block-search-form .select-group.minbet:before {
+        background-image: url('../img/icon-minbet-blue.png');
+        width: 20px;
+        height: 20px;
+        top: calc(50% - 10px);
+    }
+    .block-search-form .select-group.maxbet:before {
+        background-image: url('../img/icon-maxbet-blue.png');
+        width: 20px;
+        height: 20px;
+        top: calc(50% - 10px);
+    }
+    .block-search-form .select-group.discount:before {
+        background-image: url('../img/icon-discount-blue.png');
+        width: 20px;
+        height: 20px;
+        top: calc(50% - 10px);
+    }
+    .block-search-form .select-group.city:before {
+        background-image: url('../img/icon-pin-blue.png');
+        width: 15px;
+        height: 22px;
+        top: calc(50% - 11px);
+    }
+    .block-search-form .select-group.gambling-type:before {
+        background-image: url('../img/icon-dice-blue.png');
+        width: 20px;
+        height: 20px;
+        top: calc(50% - 10px);
+    }
+    .block-search-form .select-group.date:before {
+        background-image: url('../img/icon-calendar-blue.png');
+        width: 16px;
+        height: 16px;
+        top: calc(50% - 8px);
+        left: 12px;
+    }
+
+    .block-search-form .casino-advanced-search-form .select-group.country {
+        width: 170px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.game-type {
+        width: 130px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.currency {
+        width: 115px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.minbet {
+        width: 200px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.maxbet {
+        width: 205px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.discount {
+        width: 124px;
+    }
+
+    
+    .block-search-form .casino-advanced-search-form .select-group.country {
+        width: 170px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.game-type {
+        width: 130px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.currency {
+        width: 115px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.minbet {
+        width: 200px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.maxbet {
+        width: 205px;
+    }
+    .block-search-form .casino-advanced-search-form .select-group.discount {
+        width: 124px;
+    }
+
+    .block-search-form .casino-map-search-form .select-group.country {
+        width: 180px;
+    }
+    .block-search-form .casino-map-search-form .select-group.game-type {
+        width: 140px;
+    }
+    .block-search-form .casino-map-search-form .select-group.currency {
+        width: 125px;
+    }
+    .block-search-form .casino-map-search-form .select-group.minbet {
+        width: 210px;
+    }
+    .block-search-form .casino-map-search-form .select-group.maxbet {
+        width: 215px;
+    }
+    .block-search-form .casino-map-search-form .select-group.discount {
+        width: 134px;
+    }
+
+    .block-search-form .actions-advanced-search-form .select-group.country,
+    .block-search-form .lottery-advanced-search-form .select-group.country,
+    .block-search-form .events-advanced-search-form .select-group.country {
+        width: 275px;
+    }
+    .block-search-form .actions-advanced-search-form .select-group.city,
+    .block-search-form .lottery-advanced-search-form .select-group.city,
+    .block-search-form .events-advanced-search-form .select-group.city {
+        width: 285px;
+    }
+    .block-search-form .actions-advanced-search-form .select-group.gambling-type,
+    .block-search-form .lottery-advanced-search-form .select-group.gambling-type,
+    .block-search-form .events-advanced-search-form .select-group.gambling-type  {
+        width: 260px;
+    }
+    .block-search-form .actions-advanced-search-form .select-group.date,
+    .block-search-form .lottery-advanced-search-form .select-group.date,
+    .block-search-form .events-advanced-search-form .select-group.date  {
+        width: 145px;
+    }
+
+    /*Plugin styling*/
+        .block-search-form .jq-selectbox {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        .block-search-form .jq-selectbox__select {
+            width: 100%;
+            padding-left: 38px;
+            padding-right: 23px;
+            height: 46px;
+            background: #fff;
+            background-color: #fff;
+            border: 1px solid var(--grey);
+            font-family: inherit;
+            font: inherit;
+            color: inherit;
+            text-shadow: none;
+            display: flex;
+            align-items: center;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        .block-search-form .jq-selectbox__trigger {
+            width: 23px;
+            border: 0;
+        }
+        .block-search-form .jq-selectbox__trigger-arrow {
+            border-top: 5px solid #000;
+            border-right: 3.5px solid transparent;
+            border-left: 3.5px solid transparent;
+            top: 21px;
+            right: 10px;
+        }
+        .block-search-form .jq-selectbox__dropdown {
+            border: 0;
+            margin-top: 10px;
+            margin-left: 0;
+            width: 100%;
+            border: 0;
+            font: inherit;
+            border-radius: 0;
+            border: 0;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            box-shadow: 6px 10px 19px rgba(20,20,20,0.19);
+        }
+        .block-search-form .jq-selectbox li {
+            color: var(--black);
+            padding: 0;
+            padding-left: 40px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .block-search-form .jq-selectbox li.disabled {
+            color: var(--black);
+            cursor: default;
+            display: none;
+        }
+        .block-search-form .jq-selectbox li.selected {
+            background-color: #f7f7f7;
+        }
+    /*Plugin styling*/
+
+    .block-search-form .submit-button {
+        width: 46px;
+        height: 46px;
+        padding: 0;
+        background-color: var(--blue-light);
+        background-image:  url('../img/icon-search-white.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        flex-shrink: 0;
+        display: block;
+        border: 0;
+        transition: 0.5s;
+    }
+    .block-search-form .submit-button:hover {
+        transition: 0.5s;
+        background-color: var(--blue);
+    }
+/*Блок форма поиска*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

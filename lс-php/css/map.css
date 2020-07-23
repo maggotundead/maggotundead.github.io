@@ -1,0 +1,199 @@
+/*Карта казино*/
+.block-casino-items-map {
+    margin-top: 20px;
+}
+.block-casino-items-map .wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.block-casino-items-map .casino-items-list {
+    width: 470px;
+    height: 730px;
+    overflow-y: scroll;
+}
+.block-casino-items-map .casino-items-map {
+    height: 730px;
+    width: 680px;
+}
+/*Casino item*/
+    .block-casino-items-map .casino-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        background-color: var(--grey-light);
+        position: relative;
+        padding: 30px;
+        height: 230px;
+    }
+    .block-casino-items-map .casino-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .block-casino-items-map .casino-item.active {
+        background-color: #fff;
+        box-shadow: 6px 10px 19px rgba(20,20,20,0.19);
+    }
+    .block-casino-items-map .item-column {
+        display: flex;
+        flex-direction: column;
+    }
+    .block-casino-items-map .item-column:nth-child(1) {
+        align-items: flex-start;
+    }
+    .block-casino-items-map .item-column:nth-child(2) {
+        align-items: flex-end;
+    }
+    .block-casino-items-map .buttons {
+        width: 100%;
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+    }
+    .block-casino-items-map .logo {
+        width: 105px;
+        height: 45px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    .block-casino-items-map .logo img {
+        max-width: 105px;
+        max-height: 45px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+    .block-casino-items-map .title {
+        margin-top: 15px;
+        font-size: 19px;
+        line-height: normal;
+        position: relative;
+    }
+    .block-casino-items-map .title.orange {
+        color: var(--orange);
+    }
+    .block-casino-items-map .title:after {
+        display: block;
+        content: '';
+        width: 56px;
+        height: 2px;
+        background-color: var(--blue-light);
+        position: absolute;
+        bottom: -8px;
+    }
+    .block-casino-items-map .title.orange:after {
+        background-color: var(--orange);
+    }
+    .block-casino-items-map .location {
+        margin-top: 15px;
+        line-height: 19px;
+        font-weight: 500;
+    }
+    .block-casino-items-map .map-link {
+        position: relative;
+        color: var(--blue);
+        text-decoration: underline;
+        padding-left: 17px;
+        transition: 0.5s;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .block-casino-items-map .map-link:hover {
+        color: var(--blue-light);
+        transition: 0.5s;
+    }
+    .block-casino-items-map .map-link:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 8px);
+        width: 12px;
+        height: 16px;
+        background: transparent url('../img/icon-marker-small-blue.png') center no-repeat;
+        background-size: contain;
+    }
+    .block-casino-items-map .rate-and-stars {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 25px;
+    }
+    .block-casino-items-map .rate-value-group {
+        display: flex;
+        align-items: last baseline;
+        justify-content: flex-end;
+        align-self: flex-end;
+    }
+    .block-casino-items-map .rate-title {
+        font-size: 13px;
+        line-height: 12px;
+        margin-right: 7px;
+        text-align: right;
+    }
+    .block-casino-items-map .rate-value {
+        font-size: 27.4px;
+        line-height: 21px;
+    }
+    .b_chrome .block-casino-items-map .rate-value,
+    .b_safari .block-casino-items-map .rate-value {
+        line-height: 27px;
+    }
+    .block-casino-items-map .item-stars {
+        margin-top: 14px;
+    }
+    .block-casino-items-map .reviews-link {
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 1;
+        margin-top: 10px;
+        text-decoration: underline;
+        color: var(--blue);
+        transition: 0.5s;
+    }
+    .block-casino-items-map .reviews-link:hover {
+        color: var(--blue-light);
+        transition: 0.5s;
+    }
+    .block-casino-items-map .reviews-link .value {
+        margin-right: 2px;
+    }
+    .block-casino-items-map .casino-item-link {
+        margin-right: 20px;;
+    }
+    .block-casino-items-map .id-label {
+        font-size: 13px;
+        background-color: var(--blue);
+        padding-left: 18px;
+        padding-right: 18px;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 20px;
+        padding-top: 0.5px;
+        position: absolute;
+        right: 0;
+        bottom: 30px;
+    }
+    .block-casino-items-map .id-label span {
+        margin-left: 4px;
+    }
+/*Casino item*/
+
+
+/*scrollbar plugin*/
+    .block-casino-items-map .mCSB_scrollTools {
+        width: 38px;
+    }
+    .block-casino-items-map .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        width: 2px;
+    }
+    .block-casino-items-map .mCSB_scrollTools .mCSB_draggerRail {
+        width: 2px;
+    }
+    .block-casino-items-map .mCSB_inside > .mCSB_container {
+        padding-right: 40px;
+        margin-right: 0;
+    }
+/*scrollbar plugin*/
+
+/*Карта казино*/

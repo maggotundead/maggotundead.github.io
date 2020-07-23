@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Главная страница</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script src="js/main.min.js"></script>
+	<script src="js/api.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ext.css">
+</head>
+
+<body style="overflow-y: visible;" cz-shortcut-listen="true">
+	<header id="header">
+		<div class="header_top">
+			<div class="container">
+				<div class="header_top__left">
+					<nav>
+						<ul class="header_nav">
+							<li>
+								<a href="/" class="header_nav__link">Главная</a>
+							</li>
+							<li>
+								<a href="/misc" class="header_nav__link">Прочее</a>
+							</li>
+							<li>
+								<a href="/contacts" class="header_nav__link">Контакты</a>
+							</li>
+							<li>
+								<a href="/terms" class="header_nav__link">Правила</a>
+							</li>
+							<li>
+								<a href="/1" class="header_nav__link">Пользовательское соглашение</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header_top__right">
+					<a href="/" class="header_top__social">
+						in
+					</a>
+					<a href="/" class="header_top__social">
+						f
+					</a>
+					<div class="lang">
+						<span>
+							<a href="/az">AZ</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_bottom">
+			<div class="container">
+				<div class="header_bottom__left">
+					<div class="header_nav__button"></div>
+					<div class="header_nav__popup">
+						<div class="header_nav__popup__wrap"></div>
+						<div class="header_nav__popup__close"></div>
+						<div class="header_nav__popup__top">
+							<ul class="header_nav__popup__menu">
+								<li>
+									<a href="/login" style="background: #0365c3 url('img/user.png') no-repeat 20px center;">Войти</a>
+								</li>
+								<li>
+									<a href="/login" style="background:  url('img/menu-sm-1.png') no-repeat 20px center;">Главная</a>
+								</li>
+								<li>
+									<a href="/login" style="background:  url('img/menu-sm-2.png') no-repeat 20px center;">Мои объявления</a>
+								</li>
+								<li>
+									<a href="/login" style="background:  url('img/menu-sm-3.png') no-repeat 20px center;">Закладки</a>
+								</li>
+								<li>
+									<a href="/login" style="background:  url('img/menu-sm-4.png') no-repeat 20px center;">Русский</a>
+								</li>
+							</ul>
+							<div class="header_nav__popup__social">
+								<div class="header_nav__popup__social__block">
+									<img src="img/facebook.png" alt="">
+									<a href="//fb.com">Facebook</a>
+								</div>
+								<div class="header_nav__popup__social__block">
+									<img src="img/instagram.png" alt="">
+									<a href="//instagram.com">Instagram</a>
+								</div>
+							</div>
+						</div>
+						<div class="header_nav__popup__bottom"><a href="#">Полная версия</a><a href="#">Реклама на сайте</a>
+							<p>Поддержка:
+								<br>Enlar @ SAYTI
+								<br>(070) 554 45 45</p>
+						</div>
+					</div>
+					<a href="/" class="header_bottom__logo"><img src="img/elan_logo11.png" alt=""></a>
+					<hr>
+					<p class="header_bottom__text"><b>ELAN.AZ</b>
+						<br>сайт объявлений</p>
+				</div>
+				<div class="header_bottom__right">
+					<div class="header_botom__icons">
+						<a href="/ru/record/favourites" class="header_botom__icon favor" style="background: url('img/menu-sm-3.png') no-repeat center; -webkit-background-size: 50%;
+					background-size: 40%;filter: grayscale(1) brightness(3);"></a>
+						<a href="/ru/site/login" title="Логин" class="header_botom__icon" id="user" style="background: url('img/user.png') no-repeat center"></a>
+					</div>
+					<a class="btn--orange" href="/ru/record/create">Подать объявление</a>
+				</div>
+			</div>
+		</div>
+		<form id="search_filter" class="header_search  container" action="/record/search" novalidate="">
+			<p class="header_search__rubric">
+				<span id="rubric_clear"></span>
+				Все категории
+			</p>
+			<div class="header_search__rubric__drop_down">
+				<ul>
+					<li>
+						<a href="/">Работа и бизнес</a>
+						<ul>
+							<li>
+								<a href="">
+									Оборудование для бизнеса
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Работа
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Продукты
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="/">
+							Услуги
+						</a>
+						<ul>
+							<li>
+								<a href="/">
+									Обучение, подготовительные курсы
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Ремонт техники
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Установка охранных систем
+								</a></li>
+							<li>
+								<a href="/">
+									Транспорт и логистика
+								</a>
+							</li>
+							<li>
+								<a href="/">
+									Сборка и реставрация мебели
+								</a>
+							</li>
+							<li>
+								<a href="/">IT, интернет, телеком</a>
+							</li>
+							<li>
+								<a href="/">Реклама, дизайн и полиграфия</a>
+							</li>
+							<li>
+								<a href="/">Установка оборудования</a>
+							</li>
+							<li>
+								<a href="/">Красота, здоровье </a>
+							</li>
+							<li>
+								<a href="/">Аренда оборудования </a>
+							</li>
+							<li>
+								<a href="/">Уборка</a>
+							</li>
+							<li>
+								<a href="/">Музыка, развлечения и мероприятия</a>
+							</li>
+							<li>
+								<a href="/">Фото и видеосъёмка</a>
+							</li>
+							<li>
+								<a href="/">Питание, кейтеринг</a>
+							</li>
+							<li>
+								<a href="/">Медицинские услуги</a>
+							</li>
+							<li>
+								<a href="/">Няни, сиделки</a>
+							</li>
+							<li>
+								<a href="/">Юридические услуги</a>
+							</li>
+							<li>
+								<a href="/">Бухгалтерские услуги</a>
+							</li>
+							<li>
+								<a href="/">Перевод</a>
+							</li>
+							<li>
+								<a href="/">Страхование</a>
+							</li>
+							<li>
+								<a href="/">Ремонт и строительство</a>
+							</li>
+							<li>
+								<a href="/">Другое</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="/">Транспорт</a>
+						<ul>
+							<li><a href="/">Легковые автомобили</a></li>
+							<li><a href="/">Мотоциклы и мопеды</a></li>
+							<li><a href="/"> Автозапчасти и аксессуары</a></li>
+							<li><a href="/">Водный транспорт</a></li>
+							<li><a href="/">Автобусы и техника                                          </a></li>
+						</ul>
+					</li>
+					<li><a href="/">Недвижимость</a>
+						<ul>
+							<li><a href="/">Квартиры</a></li>
+							<li><a href="/">Дома, дачи, коттеджи </a></li>
+							<li><a href="/">Земельные участки</a></li>
+							<li><a href="/">  Объекты и офисы</a></li>
+							<li><a href="/">Гаражи</a></li>
+							<li><a href="/">Недвижимость за рубежом </a></li>
+						</ul>
+					</li>
+					<li><a href="/">Электроника </a>
+						<ul>
+							<li><a href="/">Мобильные телефоны</a></li>
+							<li><a href="/">Номера и SIM-карты</a></li>
+							<li><a href="/"> Аудио и видео</a></li>
+							<li><a href="/">Компьютерные аксессуары  </a></li>
+							<li><a href="/">Комплектующие и мониторы</a></li>
+							<li><a href="/">Ноутбуки и Нетбуки</a></li>
+							<li><a href="/">Игры, приставки и программы</a></li>
+							<li><a href="/">Фототехника</a></li>
+							<li><a href="/">Настольные компьютеры</a></li>
+							<li><a href="/">Оргтехника и расходники</a></li>
+							<li><a href="/">Планшеты и электронные книги</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Личные вещи </a>
+						<ul>
+							<li><a href="/">Часы и украшения</a></li>
+							<li><a href="/">Одежда и обувь</a></li>
+							<li><a href="/"> Аксессуары</a></li>
+							<li><a href="/"> Утерянные вещи</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Для дома и дачи </a>
+						<ul>
+							<li><a href="/">Мебель и интерьер</a></li>
+							<li><a href="/">Бытовая техника</a></li>
+							<li><a href="/">Посуда и товары для кухни</a></li>
+							<li><a href="/">Растения</a></li>
+							<li><a href="/">Ремонт и строительство</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Детский мир </a>
+						<ul>
+							<li><a href="/">Детская одежда</a></li>
+							<li><a href="/"> Игрушки</a></li>
+							<li><a href="/">Детская мебель</a></li>
+							<li><a href="/">Детские коляски и автомобили</a></li>
+							<li><a href="/">Автокресла</a></li>
+							<li><a href="/">Школьные принадлежности</a></li>
+							<li><a href="/">Детское питание</a></li>
+							<li><a href="/">  Другое</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Животные</a>
+						<ul>
+							<li><a href="/">Собаки  </a></li>
+							<li><a href="/">Кошки</a></li>
+							<li><a href="/">Птицы   </a></li>
+							<li><a href="/">Аквариум и рыбы</a></li>
+							<li><a href="/">Товары для животных</a></li>
+							<li><a href="/">Другие животные</a></li>
+						</ul>
+					</li>
+					<li><a href="/">Отдых, увлечения</a>
+						<ul>
+							<li><a href="/"> Билеты и путешествия</a></li>
+							<li><a href="/">Велосипеды</a></li>
+							<li><a href="/">Коллекционирование</a></li>
+							<li><a href="/">Музыкальные инструменты</a></li>
+							<li><a href="/"> Спорт и отдых</a></li>
+							<li><a href="/">Книги и журналы</a></li>
+							<li><a href="/">Знакомства</a></li>
+						</ul>
+					</li>
+					<li><a href="/">category</a></li>
+				</ul>
+			</div>
+			<input name="q" type="text" class="header_search__input" placeholder="Например, iPhone 9" value="">
+			<div class="header_search__location">
+				<p id="location" style="color:gray">Весь Азербайджан</p>
+				<input name="region" type="hidden" value="">
+				<input name="region_title" type="hidden" value="">
+				<input name="lang" type="hidden" value="ru">
+				<div class="header_search__location__popup" style="display: none;">
+					<div class="header_search__popup__block"><a href="/ru/record/search?region=1804" data-id="1804">Агдам</a><a href="/ru/record/search?region=1808" data-id="1808">Агсу</a><a href="/ru/record/search?region=1812" data-id="1812">Балакян</a><a href="/ru/record/search?region=1816" data-id="1816">Габала</a><a href="/ru/record/search?region=1820" data-id="1820">Гобустан</a><a href="/ru/record/search?region=1824" data-id="1824">Гянджа</a><a href="/ru/record/search?region=1828" data-id="1828">Джабраиль</a><a href="/ru/record/search?region=1832" data-id="1832">Загатала</a><a href="/ru/record/search?region=1836" data-id="1836">Исмаиллы</a><a href="/ru/record/search?region=1840" data-id="1840">Кюрдемир</a><a href="/ru/record/search?region=1844" data-id="1844">Масаллы</a><a href="/ru/record/search?region=1848" data-id="1848">Огуз</a><a href="/ru/record/search?region=1852" data-id="1852">Сальян</a><a href="/ru/record/search?region=1856" data-id="1856">Сядяряк</a><a href="/ru/record/search?region=1860" data-id="1860">Физули</a><a href="/ru/record/search?region=1864" data-id="1864">Ходжалы</a><a href="/ru/record/search?region=1868" data-id="1868">Шамахи</a><a href="/ru/record/search?region=1872" data-id="1872">Ширван</a></div>
+					<hr>
+					<div class="header_search__popup__block"><a href="/ru/record/search?region=1805" data-id="1805">Агдаш</a><a href="/ru/record/search?region=1809" data-id="1809">Астара</a><a href="/ru/record/search?region=1813" data-id="1813">Барда</a><a href="/ru/record/search?region=1817" data-id="1817">Газах</a><a href="/ru/record/search?region=1821" data-id="1821">Губа</a><a href="/ru/record/search?region=1825" data-id="1825">Гёкгёль</a><a href="/ru/record/search?region=1829" data-id="1829">Джалилабад</a><a href="/ru/record/search?region=1833" data-id="1833">Зангилан</a><a href="/ru/record/search?region=1837" data-id="1837">Кедабек</a><a href="/ru/record/search?region=1841" data-id="1841">Лачын</a><a href="/ru/record/search?region=1845" data-id="1845">Мингечаур</a><a href="/ru/record/search?region=1849" data-id="1849">Ордубад</a><a href="/ru/record/search?region=1853" data-id="1853">Самух</a><a href="/ru/record/search?region=1857" data-id="1857">Тартар</a><a href="/ru/record/search?region=1861" data-id="1861">Хаджигабул</a><a href="/ru/record/search?region=1865" data-id="1865">Хызы</a><a href="/ru/record/search?region=1869" data-id="1869">Шамкир</a><a href="/ru/record/search?region=1873" data-id="1873">Шуша</a></div>
+					<hr>
+					<div class="header_search__popup__block"><a href="/ru/record/search?region=1806" data-id="1806">Агджабеди</a><a href="/ru/record/search?region=1810" data-id="1810">Бабек</a><a href="/ru/record/search?region=1814" data-id="1814">Бейлаган</a><a href="/ru/record/search?region=1818" data-id="1818">Гах</a><a href="/ru/record/search?region=1822" data-id="1822">Губадлы</a><a href="/ru/record/search?region=1826" data-id="1826">Гёкчай</a><a href="/ru/record/search?region=1830" data-id="1830">Джульфа</a><a href="/ru/record/search?region=1834" data-id="1834">Зардаб</a><a href="/ru/record/search?region=1838" data-id="1838">Келбеджер</a><a href="/ru/record/search?region=1842" data-id="1842">Ленкорань</a><a href="/ru/record/search?region=1846" data-id="1846">Нахичевань</a><a href="/ru/record/search?region=1850" data-id="1850">Саатлы</a><a href="/ru/record/search?region=1854" data-id="1854">Сиязань</a><a href="/ru/record/search?region=1858" data-id="1858">Товуз</a><a href="/ru/record/search?region=1862" data-id="1862">Хачмаз</a><a href="/ru/record/search?region=1866" data-id="1866">Хырдалан</a><a href="/ru/record/search?region=1870" data-id="1870">Шахбуз</a><a href="/ru/record/search?region=1874" data-id="1874">Шярур</a></div>
+					<hr>
+					<div class="header_search__popup__block"><a href="/ru/record/search?region=1807" data-id="1807">Агстафа</a><a href="/ru/record/search?region=1811" data-id="1811">Баку</a><a href="/ru/record/search?region=1815" data-id="1815">Биласувар</a><a href="/ru/record/search?region=1819" data-id="1819">Геранбой</a><a href="/ru/record/search?region=1823" data-id="1823">Гусар</a><a href="/ru/record/search?region=1827" data-id="1827">Дашкесан</a><a href="/ru/record/search?region=1831" data-id="1831">Евлах</a><a href="/ru/record/search?region=1835" data-id="1835">Имишли</a><a href="/ru/record/search?region=1839" data-id="1839">Кенгерли</a><a href="/ru/record/search?region=1843" data-id="1843">Лерик</a><a href="/ru/record/search?region=1847" data-id="1847">Нефтчала</a><a href="/ru/record/search?region=1851" data-id="1851">Сабирабад</a><a href="/ru/record/search?region=1855" data-id="1855">Сумгаит</a><a href="/ru/record/search?region=1859" data-id="1859">Уджар</a><a href="/ru/record/search?region=1863" data-id="1863">Ходжавенд</a><a href="/ru/record/search?region=1867" data-id="1867">Шабран</a><a href="/ru/record/search?region=1871" data-id="1871">Шеки</a><a href="/ru/record/search?region=1875" data-id="1875">Ярдымлы</a>
+						<hr><a href="/ru/record/search" data-id="">Весь Азербайджан</a></div>
+					<hr>
+				</div>
+			</div>
+			<div class="header_search__extra filter">
+				<div class="input__select price_filt">
+					<div class="input__select__clean"></div>
+					<p>
+						Цена,AZN
+						<span></span>
+					</p>
+					<div class="input__select__content input__select__content--filter">
+						<input type="text" name="min-price" placeholder="от" pattern="\d [0-9]{1,}">
+						<span>-</span>
+						<input type="text" name="max-price" placeholder="до" pattern="\d [0-9]{1,}">
+					</div>
+				</div>
+			</div>
+			<button type="submit" class="btn--blue">Поиск</button>
+		</form>
+	</header>
+	<pre></pre>
+	<main class="main_page">
+		<a href="#" id="btn__scroll" style="display: none;"></a>
+		<div class="main__sides"></div>
+		<div class="main__center">
+			<div class="main__center__category">
+				<div class="main__center__category__wrap"></div>
+				<div class="main__center__category__menu">
+					<a href="#" id="category__back">Обратно</a>
+					<a href="#" id="category__all">Все категории</a>
+				</div>
+				<div class="main__center__category__section" data-section="1">
+					<a data-id="2021" href="/" class="main__category__block" data-target="s1">
+						<img src="storage/36d511ec205f6f78e4c544cc08643b3b.png" alt="" style="object-fit:contain;height:50px">
+						<p>Работа и бизнес</p>
+						<p class="text--grey">(161)</p>
+					</a>
+					<a data-id="2062" href="/" class="main__category__block" data-target="s2">
+						<img src="storage/055f80c9998625152ab3560bd90f6726.png" alt="" style="object-fit:contain;height:50px">
+						<p>Услуги</p>
+						<p class="text--grey">(8)</p>
+					</a>
+					<a data-id="2089" href="/" class="main__category__block" data-target="s3">
+						<img src="storage/b440a8715038b5b843ee1f257f42f158.png" alt="" style="object-fit:contain;height:50px">
+						<p>Транспорт</p>
+						<p class="text--grey">(67)</p>
+					</a>
+					<a data-id="2129" href="/" class="main__category__block" data-target="s4">
+						<img src="storage/e5629fff96243f498fe5ce2fa9b479b4.png" alt="" style="object-fit:contain;height:50px">
+						<p>Недвижимость</p>
+						<p class="text--grey">(61)</p>
+					</a>
+					<a data-id="2248" href="/" class="main__category__block" data-target="s5">
+						<img src="storage/3b59ab5282defe81c1d505ffd0d31aeb.png" alt="" style="object-fit:contain;height:50px">
+						<p>Электроника</p>
+						<p class="text--grey">(9)</p>
+					</a>
+					<a data-id="2360" href="/" class="main__category__block" data-target="s6">
+						<img src="storage/a7bf23eb8b4642b9df88bb4f2a36aebd.png" alt="" style="object-fit:contain;height:50px">
+						<p>Личные вещи</p>
+						<p class="text--grey">(6)</p>
+					</a>
+				</div>
+				<div class="main__center__category__subsection" id="s1">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col">
+								<a data-id="2022" href="/">
+									Оборудование для бизнеса
+									<span>47</span>
+								</a>
+								<br><a data-id="2023" href="/">
+									Работа
+									<span>56</span>
+								</a>
+								<br>
+								<a data-id="2829" href="/">Продукты  <span>2</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s2">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2067" href="/">Обучение, подготовительные курсы<span>5</span></a>
+								<br><a data-id="2068" href="/">Ремонт техники<span>0</span></a>
+								<br><a data-id="2069" href="/">Установка охранных систем<span>1</span></a>
+								<br><a data-id="2070" href="/">Транспорт и логистика  <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2071" href="/">Сборка и реставрация мебели<span>0</span></a>
+								<br><a data-id="2072" href="/">IT, интернет, телеком <span>0</span></a>
+								<br><a data-id="2073" href="/">Реклама, дизайн и полиграфия <span>0</span></a>
+								<br><a data-id="2074" href="/">Установка оборудования <span>1</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2075" href="/">Красота, здоровье  <span>0</span></a>
+								<br><a data-id="2076" href="/">Аренда оборудования  <span>0</span></a>
+								<br><a data-id="2077" href="/">Уборка <span>0</span></a>
+								<br><a data-id="2078" href="/">Музыка, развлечения и мероприятия  <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2079" href="/">Фото и видеосъёмка<span>0</span></a>
+								<br><a data-id="2080" href="/">Питание, кейтеринг <span>0</span></a>
+								<br><a data-id="2081" href="/">Медицинские услуги <span>0</span></a>
+								<br><a data-id="2082" href="/">Няни, сиделки <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2083" href="/">Юридические услуги <span>0</span></a>
+								<br><a data-id="2084" href="/">Бухгалтерские услуги <span>0</span></a>
+								<br><a data-id="2085" href="/">Перевод<span>0</span></a>
+								<br><a data-id="2086" href="/">Страхование<span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2087" href="/">Ремонт и строительство <span>1</span></a>
+								<br><a data-id="2088" href="/">Другое<span>0</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s3">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2128" href="/">Легковые автомобили <span>66</span></a>
+								<br><a data-id="2130" href="/">Мотоциклы и мопеды <span>0</span></a>
+								<br><a data-id="2132" href="/"> Автозапчасти и аксессуары <span>1</span></a>
+								<br><a data-id="2133" href="/">Водный транспорт <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2234" href="/">Автобусы и техника                                           <span>0</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s4">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2242" href="/">Квартиры <span>59</span></a>
+								<br><a data-id="2243" href="/">Дома, дачи, коттеджи  <span>1</span></a>
+								<br><a data-id="2244" href="/">Земельные участки <span>0</span></a>
+								<br><a data-id="2245" href="/">  Объекты и офисы <span>1</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2246" href="/">Гаражи <span>0</span></a>
+								<br><a data-id="2247" href="/">Недвижимость за рубежом  <span>0</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s5">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col">
+								<a data-id="2249" href="/">Мобильные телефоны <span>5</span></a>
+								<br><a data-id="2285" href="/">Номера и SIM-карты <span>1</span></a>
+								<br><a data-id="2286" href="/"> Аудио и видео    <span>1</span></a>
+								<br><a data-id="2303" href="/">Компьютерные аксессуары   <span>1</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2312" href="/">Комплектующие и мониторы <span>0</span></a>
+								<br><a data-id="2325" href="/">Ноутбуки и Нетбуки <span>1</span></a>
+								<br><a data-id="2340" href="/">Игры, приставки и программы <span>0</span></a>
+								<br><a data-id="2348" href="/">Фототехника <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2353" href="/">Настольные компьютеры <span>0</span></a>
+								<br><a data-id="2354" href="/">Оргтехника и расходники <span>0</span></a>
+								<br><a data-id="2359" href="/">Планшеты и электронные книги <span>0</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s6">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2361" href="/">Часы и украшения <span>3</span></a>
+								<br><a data-id="2365" href="/">Одежда и обувь <span>1</span></a>
+								<br><a data-id="2377" href="/"> Аксессуары <span>2</span></a>
+								<br><a data-id="2387" href="/"> Утерянные вещи <span>1</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__section" data-section="8">
+					<a data-id="2388" href="/" class="main__category__block" data-target="s7"><img src="storage/04953677c0a3b1921bb813818d1adb68.png" alt="" style="object-fit:contain;height:50px">
+						<p>Для дома и дачи</p>
+						<p class="text--grey">(0)</p>
+					</a>
+					<a data-id="2443" href="/" class="main__category__block" data-target="s8"><img src="storage/122c2e64e4d946f53df9895757ef762f.png" alt="" style="object-fit:contain;height:50px">
+						<p>Детский мир</p>
+						<p class="text--grey">(0)</p>
+					</a>
+					<a data-id="2454" href="/" class="main__category__block" data-target="s9"><img src="storage/28fd06ce544877ba1c15be063f8acf31.png" alt="" style="object-fit:contain;height:50px">
+						<p>Животные</p>
+						<p class="text--grey">(1)</p>
+					</a>
+					<a data-id="2512" href="/" class="main__category__block" data-target="s10"><img src="storage/0926dac8ffb1cde4bf33125e2385c950.png" alt="" style="object-fit:contain;height:50px">
+						<p>Отдых, увлечения</p>
+						<p class="text--grey">(1)</p>
+					</a>
+					<a data-id="" href="/record/shops" class="main__category__block"><img src="img/category-11.png" alt="" style="object-fit:contain;height:50px">
+						<p>Магазины и компании</p>
+						<p class="text--grey">(41)</p>
+					</a>
+					<a data-id="" href="" class="main__category__block" data-target="s12"><img src="img/category-12.png" alt="" style="object-fit:contain;height:50px">
+						<p>Все категории</p>
+						<p class="text--grey">(466)</p>
+					</a>
+				</div>
+				<div class="main__center__category__subsection" id="s7">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2389" href="/">Мебель и интерьер <span>0</span></a>
+								<br><a data-id="2419" href="/">Бытовая техника <span>0</span></a>
+								<br><a data-id="2431" href="/">Посуда и товары для кухни <span>0</span></a>
+								<br><a data-id="2434" href="/">Растения <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2435" href="/">Ремонт и строительство <span>0</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s8">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2444" href="/">Детская одежда <span>0</span></a>
+								<br><a data-id="2447" href="/"> Игрушки <span>0</span></a>
+								<br><a data-id="2448" href="/">Детская мебель <span>0</span></a>
+								<br><a data-id="2449" href="/">Детские коляски и автомобили <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2450" href="/">Автокресла <span>0</span></a>
+								<br><a data-id="2451" href="/">Школьные принадлежности <span>0</span></a>
+								<br><a data-id="2452" href="/">Детское питание <span>0</span></a>
+								<br><a data-id="2453" href="/">  Другое <span>0</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s9">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2455" href="/">Собаки   <span>1</span></a>
+								<br><a data-id="2469" href="/">Кошки <span>0</span></a>
+								<br><a data-id="2477" href="/">Птицы    <span>0</span></a>
+								<br><a data-id="2494" href="/">Аквариум и рыбы <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2495" href="/">Товары для животных <span>0</span></a>
+								<br><a data-id="2501" href="/">Другие животные                             <span>0</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s10">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2513" href="/"> Билеты и путешествия <span>0</span></a>
+								<br><a data-id="2519" href="/">Велосипеды <span>0</span></a>
+								<br><a data-id="2527" href="/">Коллекционирование <span>0</span></a>
+								<br><a data-id="2538" href="/">Музыкальные инструменты <span>0</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2547" href="/"> Спорт и отдых <span>0</span></a>
+								<br><a data-id="2558" href="/">Книги и журналы <span>0</span></a>
+								<br><a data-id="2568" href="/">Знакомства <span>1</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s11">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__subsection" id="s12">
+					<div class="main_subcategory container">
+						<h3>Все объявления <span>68689</span></h3>
+						<hr class="line">
+						<div class="sub_category">
+							<div class="sub_category__block"><span class="sub_cat_col"><a data-id="2021" href="/">Работа и бизнес  <span>59</span></a>
+								<br><a data-id="2062" href="/">Услуги  <span>22</span></a>
+								<br><a data-id="2089" href="/">Транспорт <span>5</span></a>
+								<br><a data-id="2129" href="/">Недвижимость <span>6</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2248" href="/">Электроника  <span>11</span></a>
+								<br><a data-id="2360" href="/">Личные вещи  <span>4</span></a>
+								<br><a data-id="2388" href="/">Для дома и дачи  <span>5</span></a>
+								<br><a data-id="2443" href="/">Детский мир  <span>8</span></a>
+								<br>
+								</span><span class="sub_cat_col"><a data-id="2454" href="/">Животные   <span>6</span></a>
+								<br><a data-id="2512" href="/">Отдых, увлечения <span>7</span></a>
+								<br><a data-id="3013" href="/">category <span>0</span></a>
+								<br>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__center__category__section" data-section="15"></div>
+				<div id="ajax-subcategories" class="main__center__category__section main__center__category__inside"></div>
+			</div>
+			<div class="container">
+				<div class="main__magazines">
+					<div class="main__magazines__top"><a href="/ru/record/shops">Посмотреть все объявления магазинов</a>
+						<h2>Магазины и компании</h2>
+						<!--<a href="/record/create?type=showcase&amp;id=0" class="btn--transparent">Создать магазин</a>--></div>
+					<hr>
+					<div class="main__magazines__bottom">
+						<div id="publicity-1" class="magazines_container">
+							<a href="advertisement-" class="magazines_container__block"><img src="storage/upload/1.jpg" alt="" style="object-fit:cover;height:130px">
+								<div class="magazines_container__description">
+									<p>fgfdsadsfdf</p>
+								</div>
+							</a>
+							<a href="advertisement-" class="magazines_container__block"><img src="storage/upload/6.jpg" alt="" style="object-fit:cover;height:130px">
+								<div class="magazines_container__description">
+									<p>Test shop 4</p>
+								</div>
+							</a>
+							<a href="advertisement-" class="magazines_container__block"><img src="storage/upload/4.jpg" alt="" style="object-fit:cover;height:130px">
+								<div class="magazines_container__description">
+									<p>advertisement-</p>
+								</div>
+							</a>
+							<a href="advertisement-" class="magazines_container__block"><img src="storage/upload/5.jpg" alt="" style="object-fit:cover;height:130px">
+								<div class="magazines_container__description">
+									<p>выва</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="publicity-2" class="publicity " style="position:relative" data-sticky="">
+					<div class="publicity__header">
+						<div class="publicity__header__left">
+							<h3>Последние объявления</h3>
+							<p>Найдено - <span>10</span> объявления</p>
+						</div><a href="/ru/record">Просмотреть все объявления</a>
+						<div class="publicity__header__filter">
+							<p>Сортировка</p>
+							<select id="search_filter">
+								<option value="">По дате добавления</option>
+								<option value="">option</option>
+							</select>
+						</div>
+					</div>
+					<hr>
+					<div class="publicity__main">
+						<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--premium">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="storage/upload/6.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>Telefon OnePlus 5T - Premium elan test</p>
+								<div class="publicity__description__botom"><span>2019-11-25 14:30:38</span>
+									<div data-id="3021" data-onclick="favourite" class="heart "><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>555 AZN</p>
+							</div>
+						</a>
+						<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--premium">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="/storage/upload/2.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>Satılır 2-комн. Yeni bina 70 м2, Binəqədi</p>
+								<div class="publicity__description__botom"><span>2019-11-21 14:34:21</span>
+									<div data-id="3017" data-onclick="favourite" class="heart"><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>75000 AZN</p>
+							</div>
+						</a>
+						<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--premium">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="storage/upload/4.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>СМИ, издательство, полиграфия</p>
+								<div class="publicity__description__botom"><span>2019-09-09 23:09:46</span>
+									<div data-id="2971" data-onclick="favourite" class="heart"><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>311 AZN</p>
+							</div>
+						</a>
+						<a href="" class="publicity__main__block publicity__main__block--premium">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="storage/upload/5.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>Audi A7, 1995г., 254000км</p>
+								<div class="publicity__description__botom"><span>2019-09-09 23:09:03</span>
+									<div data-id="2970" data-onclick="favourite" class="heart "><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>542 AZN</p>
+							</div>
+						</a>
+						<a href="" class="publicity__main__block publicity__main__block--premium">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="storage/upload/1.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>advertisement-dd95a7d23dfdc25da701835022125438</p>
+								<div class="publicity__description__botom"><span>2019-08-30 00:10:33</span>
+									<div data-id="2925" data-onclick="favourite" class="heart "><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>7246 AZN</p>
+							</div>
+						</a>
+						<a href="" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="storage/upload/3.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>Apple iPhone 11 Pro Max 512GB Unlocked</p>
+								<div class="publicity__description__botom"><span>2019-11-27 18:57:19</span>
+									<div data-id="3024" data-onclick="favourite" class="heart "><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>10000 AZN</p>
+							</div>
+						</a>
+						<a href="/" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="https://picsum.photos/840/480/?image=42" alt="">
+							<div class="publicity__block__description">
+								<p>advertisement-</p>
+								<div class="publicity__description__botom"><span>2019-11-27 00:53:10</span>
+									<div data-id="1752" data-onclick="favourite" class="heart "><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>Бесплатно</p>
+							</div>
+						</a>
+						<a href="" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="/thumbnail/undefined.png" alt="">
+							<div class="publicity__block__description">
+								<p>Qoyun əti</p>
+								<div class="publicity__description__botom"><span>2019-11-25 15:14:56</span>
+									<div data-id="3022" data-onclick="favourite" class="heart "><img src="img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>11 AZN</p>
+							</div>
+						</a>
+						<a href="/ru/advertisement-aa63fa9f3ac3a6f5d9a7686bf8aaf0f8" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div>
+							<img style="object-fit:cover;width:100%" src="storage/upload/1.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>Telefon OnePlus 5T - Gold elan</p>
+								<div class="publicity__description__botom">
+									<span>2019-11-25 14:22:24</span>
+									<div data-id="3020" data-onclick="favourite" class="heart ">
+										<img src="img/heart.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>550 AZN</p>
+							</div>
+						</a>
+						<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div>
+							<img style="object-fit:cover;width:100%" src="storage/upload/2.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>Telefon OnePlus 5T</p>
+								<div class="publicity__description__botom"><span>2019-11-25 13:59:25</span>
+									<div data-id="3019" data-onclick="favourite" class="heart "><img src="img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>400 AZN</p>
+							</div>
+						</a>
+						<a href="/ru/sobaki_koshki/import-sahil" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div>
+							<img style="object-fit:cover;width:100%" src="https://picsum.photos/840/480/?image=44" alt="">
+							<div class="publicity__block__description">
+								<p>advertisement-3b4c0026f51554b0c295c5e07c10cba4</p>
+								<div class="publicity__description__botom"><span>2019-11-25 12:27:55</span>
+									<div data-id="1754" data-onclick="favourite" class="heart "><img src="img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>Бесплатно</p>
+							</div>
+						</a>
+						<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div>
+							<img style="object-fit:cover;width:100%" src="storage/upload/3.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>110 м2,</p>
+								<div class="publicity__description__botom"><span>2019-11-25 11:53:59</span>
+									<div data-id="3018" data-onclick="favourite" class="heart "><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>250000 AZN</p>
+							</div>
+						</a>
+						<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div>
+							<img style="object-fit:cover;width:100%" src="storage/upload/4.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>Satılır 4-комн. Yeni bina 125 м2, Binəqədi</p>
+								<div class="publicity__description__botom">
+									<span>2019-11-21 14:14:53</span>
+									<div data-id="3016" data-onclick="favourite" class="heart">
+										<img src="img/heart.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>125 AZN</p>
+							</div>
+						</a>
+						<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div>
+							<img style="object-fit:cover;width:100%" src="storage/upload/5.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>advertisement-</p>
+								<div class="publicity__description__botom"><span>2019-11-21 13:34:49</span>
+									<div data-id="3014" data-onclick="favourite" class="heart "><img src="/img/heart.png" alt=""></div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>Бесплатно</p>
+							</div>
+						</a>
+						<a href="/ru/advertisement-" class="publicity__main__block publicity__main__block--usual">
+							<div class="publicity__block__icon"></div><img style="object-fit:cover;width:100%" src="storage/upload/6.jpg" alt="">
+							<div class="publicity__block__description">
+								<p>Kirayəlik 3-комн. Yeni bina 133 м2, Nərimanov</p>
+								<div class="publicity__description__botom"><span>2019-11-21 12:50:14</span>
+									<div data-id="3012" data-onclick="favourite" class="heart">
+										<img src="img/heart.png" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="publicity__block__price">
+								<p>135000 AZN</p>
+							</div>
+						</a>
+					</div>
+					<ul class="pagination">
+						<li class="prev disabled"><span>«</span></li>
+						<li class="active">
+							<a href="/ru?adsection2=1&amp;per-page=15" data-page="0">1</a>
+						</li>
+						<li><a href="/ru?adsection2=2&amp;per-page=15" data-page="1">2</a></li>
+						<li><a href="/ru?adsection2=3&amp;per-page=15" data-page="2">3</a></li>
+						<li><a href="/ru?adsection2=4&amp;per-page=15" data-page="3">4</a></li>
+						<li><a href="/ru?adsection2=5&amp;per-page=15" data-page="4">5</a></li>
+						<li><a href="/ru?adsection2=6&amp;per-page=15" data-page="5">6</a></li>
+						<li><a href="/ru?adsection2=7&amp;per-page=15" data-page="6">7</a></li>
+						<li><a href="/ru?adsection2=8&amp;per-page=15" data-page="7">8</a></li>
+						<li><a href="/ru?adsection2=9&amp;per-page=15" data-page="8">9</a></li>
+						<li><a href="/ru?adsection2=10&amp;per-page=15" data-page="9">10</a></li>
+						<li class="next"><a href="/ru?adsection2=2&amp;per-page=15" data-page="1">»</a></li>
+					</ul>
+				</div>
+				<div class="info">
+					<div class="info__content">
+						<h3>Веб-сервис Elan.az предоставляет возможность быстрой и легкой публикации объявлений различного характера.</h3>
+						<p>В Елани.веб-службы AZ предоставляет возможность быстро и легко публиковать объявления различного характера. Не требуется плата. размещение информации может занять несколько минут. Предварительно прочитайте правила - это поможет избежать ошибок. в присутствии которых публикация невозможна. Сайт бесплатных объявлений Елани.аз адресуется. в первую очередь.пользователи F от Баку и Азербайджана.
+
+						</p>
+						<p>можно размещать любую информацию. не противоречащие законодательству страны. а также общепринятых норм морали. этика. культура общения. Публичные объявления и информация от юридических лиц принимаются к публикации. Рубрикатор содержит разделы. соответствующие всем популярным видам. &lt;п&gt;&lt;б&gt;если у вас есть какие-либо вопросы о работе Бесплатная доска объявлений или для консультации, пожалуйста, свяжитесь с администрацией Элан.аз по телефону (070) 554-45-45 или через веб-форму.
+
+						</p>
+					</div><a href="#" class="btn--show">Развернуть</a></div>
+			</div>
+		</div>
+		<div class="main__sides"></div>
+	</main>
+	<footer>
+		<div class="footer__top">
+			<div class="container">
+				<div class="footer__top__block">
+					<a href="/" class="">Главная</a>
+					<a href="/ru/misc" class="">Прочее</a>
+					<a href="/ru/contacts" class="">Контакты</a>
+					<a href="/ru/terms" class="">Правила</a>
+					<a href="/ru/1" class="">Пользовательское соглашение</a>
+				</div>
+				<div class="footer__top__block">
+					<img src="img/phone.png" alt="">
+					<p>
+						Поддержка: <b>(070) 554 45 45</b>
+					</p>
+				</div>
+				<div class="footer__top__block">
+					<a href="/" class="footer_top__social">in</a>
+					<a href="/" class="footer_top__social">f</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container">
+				<div class="footer__bottom__right">
+					<a href="#" class="btn_mobile">Мобильная версия</a>
+					<p class="text--info">
+						Администрация сайта не несет ответственности за содержание рекламных баннеров и размещенных объявлений
+					</p>
+					<p>
+						Copyright © 2013-2018 Elan.Az
+					</p>
+				</div>
+				<div class="footer__bottom__left">
+					<img src="img/footer.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+/*Сайдбар*/
+    .aside-column {
+        /*width: 320px;*/
+        width: 220px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .aside-column .aside-group:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    .aside-column .aside-group {
+        width: 100%;
+    }
+    /*Ссылки*/
+        .aside-column .aside-group.head-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .aside-column .reviews-link {
+            width: 100%;
+            margin-top: 0;
+            color: #fff;
+            text-decoration: none;
+            line-height: 34px;
+        }
+        .aside-column .info-rating-link {
+            position: relative;
+            margin-top: 17px;
+            padding-left: 30px;
+            color: var(--blue-light);
+            text-decoration: underline;
+            transition: 0.5s;
+        }
+        .aside-column .info-rating-link:hover {
+            color: var(--blue);
+            transition: 0.5s;
+        }
+        .aside-column .info-rating-link:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 16px;
+            height: 14px;
+            top: calc(50% - 7px);
+            left: 0;
+            background-image: url('../img/icon-star-yellow.png');
+        }
+    /*Ссылки*/
+
+    /*Предстоящие события*/
+        .aside-column .short-events {
+            margin-top: 30px;
+        }
+        .aside-column .short-event {
+            display: flex;
+            align-items: center;
+            line-height: normal;
+        }
+        .aside-column .short-event:not(:last-child) {
+            margin-bottom: 26px;
+        }
+        .aside-column .short-event .photo {
+            width: 70px;
+            height: 70px;
+            background-color: var(--grey);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        .aside-column .short-event .info {
+            align-self: flex-start;
+        }
+        .aside-column .short-event .title {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+        .aside-column .short-event .date {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--grey-dark);
+        }
+    /*Предстоящие события*/
+
+
+    /*Выбор редакции*/
+        .aside-column .chosen-events {
+            /*padding-bottom: 72px;*/
+            margin-top: 30px;
+        }
+        .aside-column .chosen-event {
+            width: 100%;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        .aside-column .chosen-event:not(:last-child) {
+            margin-bottom: 25px;
+        }
+        /*.aside-column .chosen-event .photo {
+            border-bottom: 5px solid var(--blue-light);
+        }*/
+        .aside-column .chosen-event .title {
+            margin-top: 14px;
+            position: relative;
+            font-size: 13px;
+            line-height: 1;
+        }
+        .aside-column .chosen-event .date {
+            margin-top: 8px;
+            color: var(--grey);
+        }
+        .aside-column .chosen-events .slick-slide > div:nth-child(2) {
+            margin-top: 40px;
+            position: relative;
+        }
+        .aside-column .chosen-events .slick-slide > div:nth-child(2):before {
+            display: block;
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: var(--grey-medium);
+            position: absolute;
+            top: -22px;
+            pointer-events: none;
+            left: 0;
+        }
+    /*Выбор редакции*/
+
+
+    /*Игровые баннеры*/
+        .aside-column .game-banner {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: var(--grey-light);
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+        .aside-column .game-banner.full {
+            min-height: 410px;
+        }
+        .aside-column .game-banner.half {
+            min-height: 330px;
+        }
+        .aside-column .game-banner.small {
+            min-height: 190px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .aside-column .game-banner .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            line-height: normal;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        .aside-column .game-banner .title span {
+            font-size: 33px;
+            margin-bottom: 10px;
+        }
+        .aside-column .game-banner .button {
+            border: 0;
+            color: var(--blue);
+            margin-top: 35px;
+        }
+    /*Игровые баннеры*/
+
+    /*Мои турниры*/
+        .my-tournaments-list {
+            margin-top: 30px;
+        }
+        .my-tournaments-list .tournaments-title {
+            font-size: 13px;
+            line-height: normal;
+        }
+        .my-tournaments-list .tournaments-items {
+            margin-top: 5px;
+        }
+        .my-tournaments-list .tournament-item {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left: 40px;
+            font-size: 13px;
+            line-height: normal;
+            position: relative;
+            padding-right: 20px;
+        }
+        .my-tournaments-list .tournament-item:before {
+            display: block;
+            content: '';
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: var(--grey);
+            position: absolute;
+            left: 0;
+            top: calc(50% - 13px);
+            pointer-events: none;
+        }
+        .my-tournaments-list .tournament-item:not(:last-child) {
+            border-bottom: 1px solid var(--grey-light);
+        }
+        .my-tournaments-list .delete-tournament-button {
+            width: 25px;
+            height: 26px;
+            background: transparent url('../img/icon-close-greylight.png') center no-repeat;
+            background-size: 9px 10px;
+            position: absolute;
+            z-index: 2;
+            top: calc(50% - 13px);
+            right: 0;
+            border: 0;
+        }
+        .my-tournaments-list .search-form {
+            position: relative;
+            width: 100%;
+            display: block;
+            margin-top: 18px;
+        }
+        .my-tournaments-list .search-input {
+            position: relative;
+            border: 1px solid var(--grey);
+            height: 30px;
+            line-height: 28px;
+            padding-left: 10px;
+            padding-right: 30px;
+            z-index: 1;
+            font-size: 13px;
+            color: var(--grey);
+            width: 100%;
+        }
+        .my-tournaments-list .search-button {
+            position: absolute;
+            z-index: 2;
+            width: 30px;
+            height: 30px;
+            background: transparent url('../img/icon-search-grey.png') center no-repeat;
+            background-size: 16px 14px;
+            right: 0;
+            top: 0;
+            border: 0;
+        }
+    /*Мои турниры*/
+
+
+    /*Новости спорта*/
+        .aside-column .sport-news {
+            margin-top: 50px;
+        }
+        .aside-column .sport-news:first-child {
+            margin-top: 0;
+        }
+        .aside-column .news-item {
+            display: inline-block;
+            padding-left: 35px;
+            position: relative;
+            font-weight: 400;
+            color: var(--black);
+            padding-bottom: 0;
+        }
+        .aside-column .news-item:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: 10px;
+            right: 40px;
+            top: -12px;
+            height: 2px;
+            background-color: var(--grey-light);
+            pointer-events: none;
+        }
+        .aside-column .news-item:after {
+            display: block;
+            content: '';
+            width: 18px;
+            height: 18px;
+            background-color: var(--grey-light);
+            position: absolute;
+            left: 0;
+            top: 6px;
+            pointer-events: none;
+            border-radius: 50%;
+        }
+        .aside-column .news-item:not(:last-child) {
+            margin-bottom: 40px;
+        }
+        .aside-column .news-item span {
+            display: inline;
+        }
+        .aside-column .news-item .title {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .aside-column .news-item .time {
+            font-size: 14px;
+            line-height: 26px;
+            color: var(--grey-dark);
+            /*margin-left: auto;*/
+            margin-left: 10px;
+        }
+    /*Новости спорта*/
+
+    /* one slide news */
+        .aside-column .aside-casino-news {
+            margin-top: 30px;
+        }
+        .aside-column .aside-casino-news .news-item {
+            padding-left: 0;
+        }
+        .aside-column .aside-casino-news .news-item:before,
+        .aside-column .aside-casino-news .news-item:after {
+            content: none;
+        }
+        .aside-column .aside-casino-news .news-item .photo {
+            height: 165px;
+            width: 100%;
+            background-color: var(--grey);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .aside-column .aside-casino-news .news-item .info {
+            margin-top: 13px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .aside-column .aside-casino-news .news-item .title {
+            font-size: 15px;
+            line-height: normal;
+        }
+        /* .aside-column .aside-casino-news.secondary-news .news-item .title {
+            font-size: 13px;
+            line-height: 1;
+            font-weight: 500;
+        } */
+        .aside-column .aside-casino-news .news-item .date {
+            font-size: 12px;
+            line-height: normal;
+            color: var(--grey-medium);
+            margin-top: 5px;
+        }
+        .aside-column .aside-casino-news .news-item .descr {
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: normal;
+        }
+        .aside-column .aside-casino-news .news-item .link {
+            transition: 0.5s;
+            color: var(--blue-light);
+            text-decoration: underline;
+            margin-top: 5px;
+        }
+        .aside-column .aside-casino-news .news-item .link:hover {
+            transition: 0.5s;
+            color: var(--blue);
+        }
+        .aside-column .aside-casino-news.slider-top-controls .slick-prev {
+            right: 56px;
+        }
+    /* one slide news */
+/*Сайдбар*/
+
+/* короткие новости ещё по теме */
+    .aside-column .short-news-comments-nophotos {
+        margin-top: 30px;
+        padding-right: 10px;
+        border-right: 2px solid #dcdcdc;
+        margin-bottom: 10px;
+    }
+    .aside-column .short-news-comments-nophotos .short-news-item {
+        display: flex;
+        padding-right: 42px;
+        width: 100%;
+        align-items: center;
+        text-align: left;
+        position: relative;
+    }
+    .aside-column .short-news-comments-nophotos .short-news-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .aside-column .short-news-comments-nophotos .short-news-item:not(:last-child):after {
+        display: block;
+        content: '';
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #dcdcdc;
+        bottom: -16px;
+        position: absolute;
+    }
+    .aside-column .short-news-comments-nophotos .short-news-item .title {
+        font-size: 13px;
+        line-height: 1;
+    }
+    .aside-column .short-news-comments-nophotos .short-news-item .date {
+        font-size: 12px;
+        line-height: normal;
+        color: var(--grey);
+        margin-top: 10px;
+    }
+    .aside-column .short-news-comments-nophotos .short-news-item .comments {
+        background-color: var(--blue-light);
+        position: absolute;
+        top: calc(50% - 11px);
+        left: calc(100% - 42px);
+        line-height: 22px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: #fff;
+        font-size: 11px;
+        min-width: 22px;
+        text-align: center;
+    }
+    .aside-column .short-news-comments-nophotos .short-news-item .comments:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 5px;
+        border-color: transparent transparent transparent var(--blue-light);
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        pointer-events: none;
+    }
+    .aside-column .all-news-link {
+        transition: 0.5s;
+        color: var(--blue);
+        text-decoration: underline;
+    }
+    .aside-column .all-news-link:hover {
+        transition: 0.5s;
+        color: var(--blue-light);
+    }
+/* короткие новости ещё по теме */
+
+
+
+
+
+
+
+
+
+
+
+
+

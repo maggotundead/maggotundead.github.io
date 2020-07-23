@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery.formstyler.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+	<link href="css/ion.rangeSlider.css" rel="stylesheet" type="text/css">
+	<link href="css/ion.rangeSlider.skinFlat.css" rel="stylesheet" type="text/css">
+	<link href="css/normalize.css" rel="stylesheet" type="text/css">
+	<link href="css/slick.css" rel="stylesheet" type="text/css">
+	<link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+	<div class="block-homescreen">
+		<header class="header desktop-header hidden-xs hidden-sm">
+			<div class="container">
+				<div class="header-logo">
+					<a href="#wrapper">
+						<i class="sprite sprite-header-logo-yellow"></i>
+						<span>Start remont</span>
+					</a>
+				</div>
+				<div class="header-info-item header-title">
+					<span>Ремонт и отделка под ключ</span> <br>в Одессе и Одесcкой области
+				</div>
+				<div class="header-info-item header-contacts">
+					<span><a href="tel:+380731306182">+38 073 130 61 82</a>; <a href="tel:+380988296597">+38 098 829 65 97</a></span> <br>С 09:00 до 21:00, без выходных
+				</div>
+				<div class="fixed-menu">
+					<div class="contact-phones">
+						<a href="tel:+380731306182">+38 073 130 61 82</a><a href="tel:+380988296597">+38 098 829 65 97</a>
+					</div>
+					<div class="menu-links" id="fixed-menu-links">
+						<a href="#block-projects">Примеры работ</a>
+						<a href="#block-prices">Стоимость</a>
+						<a href="#block-services">Дополнительные услуги</a>
+						<a href="#block-feedback">Отзывы</a>
+					</div>
+				</div>
+				<div class="button-container red-button-container">
+					<button type="button" data-target="#request-order-modal" data-toggle="modal" class="button red-button calculate-price-button">Рассчитать стоимость</button>
+				</div>
+			</div>
+
+		</header>
+		<header class="header mobile-header visible-xs visible-sm">
+			<div class="container clearfix">
+				<div class="header-logo pull-left">
+					<a href="#wrapper">
+						<i class="sprite sprite-header-logo-yellow"></i>
+						<span>Start remont</span>
+					</a>
+				</div>
+				<button type="button" data-target="#mobile-menu" data-toggle="modal" class="burger-menu-button pull-right">
+					<span class="black-line"></span>
+					<span class="black-line"></span>
+					<span class="black-line"></span>
+				</button>
+			</div>
+		</header>
+		<div class="container">
+			<div class="homescreen-title">
+				Качественный ремонт квартиры под ключ с гарантией от <span class="yellow-color">2500 грн. за кв.м.</span>
+			</div>
+			<div class="homescreen-content">
+				<div class="homescreen-gifts">
+					<div class="homescreen-gifts-title">
+						Комплект <span class="yellow-color">уникальных</span> выгод в подарок:
+					</div>
+					<div class="gift-items">
+						<div class="gift-item">
+							<div class="gift-item-number yellow-bg">1</div>
+							<div class="gift-item-value"><span class="yellow-color">Скидка 10%</span> на все работы по смете.</div>
+						</div>
+						<div class="gift-item">
+							<div class="gift-item-number yellow-bg">2</div>
+							<div class="gift-item-value">Натяжной потолок в подарок!</div>
+						</div>
+						<div class="gift-item">
+							<div class="gift-item-number yellow-bg">3</div>
+							<div class="gift-item-value">Комплексный договор страхования имущества на общую сумму <span class="yellow-color">100 000 грн</span>.</div>
+						</div>
+						<div class="gift-item">
+							<div class="gift-item-number yellow-bg">4</div>
+							<div class="gift-item-value"><span class="yellow-color">Расширенная гарантия 1 год</span> на все работы по смете.</div>
+						</div>
+						<div class="gift-item">
+							<div class="gift-item-number yellow-bg">5</div>
+							<div class="gift-item-value">Бесплатное сервисное обслуживание в течение 1 года!</div>
+						</div>
+					</div>
+					<div class="gifts-description">Оставьте заявку на замер сейчас, чтобы зафиксировать уникальный пакет выгод за собой!</div>
+					<div class="gifts-painting-brush"><i class="sprite sprite-homescreen-painting"></i></div>
+				</div>
+				<div class="homescreen-form static-form">
+					<div class="static-form-title">
+						Оставьте заявку<br> на бесплатный замер:
+					</div>
+					<div class="static-form-descr">Выполним максимально точный расчет сметы <br>и зафиксируем цену.</div>
+					<form action="form-fixed.php" method="POST" id="order-form-homescreen">
+						<label class="input-label user-label">
+							<i class="sprite sprite-icon-form-user"></i>
+							<input type="text" name="user_name" placeholder="Ваше имя" required>
+						</label>
+						<label class="input-label phone-label">
+							<i class="sprite sprite-icon-form-phone"></i>
+							<input type="text" name="user_phone" placeholder="Номер телефона" required>
+						</label>
+						<label class="input-label mail-label">
+							<i class="sprite sprite-icon-form-mail"></i>
+							<input type="text" name="user_mail" placeholder="Электронная почта" required>
+						</label>
+						<label class="input-label textarea-label">
+							<i class="sprite sprite-icon-form-write"></i>
+							<textarea name="user_message" placeholder="Опишите задачу"></textarea>
+						</label>
+						<div class="button-container red-button-container">
+							<button type="submit" class="button red-button send-request-button">Отправить заявку</button>
+						</div>
+					</form>
+					<div class="privacy-description">
+						<i class="sprite sprite-icon-form-safety"></i>
+						<span>Ваши персональные данные надежно защищены и никогда не будут переданы третьим лицам.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-advantages">
+		<div class="container">
+			<div class="advantage-items">
+				<div class="advantage-item">
+					<div class="advantage-item-icon">
+						<i class="sprite sprite-icon-advantages-1"></i>
+					</div>
+					<div class="advantage-item-info">
+						<div class="advantage-item-title">Ремонт под ключ</div>
+						<div class="advantage-item-descr">
+							Выполним все работы, проведем согласования, избавим от необходимости тратить время на подбор, закупку и доставку строительных и чистовых материалов.
+						</div>
+					</div>
+				</div>
+				<div class="advantage-item">
+					<div class="advantage-item-icon">
+						<i class="sprite sprite-icon-advantages-2"></i>
+					</div>
+					<div class="advantage-item-info">
+						<div class="advantage-item-title">Высочайшее качество и <br>тотальный контроль</div>
+						<div class="advantage-item-descr">
+							У нас работают только проверенные мастера с опытом от 6 лет, многоступенчатый контроль качества.
+						</div>
+					</div>
+				</div>
+				<div class="advantage-item">
+					<div class="advantage-item-icon">
+						<i class="sprite sprite-icon-advantages-3"></i>
+					</div>
+					<div class="advantage-item-info">
+						<div class="advantage-item-title">Прозрачное ценообразование</div>
+						<div class="advantage-item-descr">
+							Смета на все работы и черновые материалы составляется до начала работ и остается неизменной до завершения.
+						</div>
+					</div>
+				</div>
+				<div class="advantage-item">
+					<div class="advantage-item-icon">
+						<i class="sprite sprite-icon-advantages-4"></i>
+					</div>
+					<div class="advantage-item-info">
+						<div class="advantage-item-title">Гарантия на все виды работ</div>
+						<div class="advantage-item-descr">
+							Гарантии на все виды работ прописаны в договоре.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="divider-lines">
+		<div class="grey-line"></div>
+		<div class="grey-line"></div>
+		<div class="grey-line"></div>
+	</div>
+	<div class="block-projects" id="block-projects">
+		<div class="container">
+			<div class="block-title">Примеры наших работ</div>
+			<div class="block-title-descr">В нашем портфолио более 3000 реализованных проектов.<br>Оцените некоторые из них.</div>
+			<div class="projects-container" id="projects-slider">
+				<div class="project-item">
+					<div class="project-slider project-photos-container" id="project-photos-slider">
+					    <div class="project-photo" data-thumb="img/repaired-flat-item.jpg"><img src="img/repaired-flat-item.jpg"></div>
+					    <div class="project-photo" data-thumb="img/repair-step-2.jpg"><img src="img/repair-step-2.jpg"></div>
+					    <div class="project-photo" data-thumb="img/repair-step-1.jpg"><img src="img/repair-step-1.jpg"></div>
+					</div>
+					<div class="project-info">
+						<div class="project-feedback project-info-item">
+							<div class="project-feedback-author">
+								<img src="img/review-item-5.jpg">
+							</div>
+							<div class="project-feedback-body">
+								<div class="project-feedback-rank">
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+								</div>
+								<div class="project-feedback-message">
+									Рекомендую, умеренные цены на ремонт, при этом хороший сервис, все сделали на достойном уровне, самостоятельно. Мы с женой не тратили свое время, всеми закупками занималась компания - никакой головной боли. Остались очень довольны, спасибо!
+								</div>
+								<div class="project-feedback-author-name"><b>Павел</b>,</div>
+								<div class="project-feedback-author-job">Предприниматель</div>
+								<div class="project-feedback-date">
+									<b>Дата:</b><br>
+									<span>30.02.2017</span>
+								</div>
+							</div>
+						</div>
+						<div class="project-details project-info-item">
+							<div class="project-info-title">Ремонт однокомнатной квартиры на фонтане1</div>
+							<div class="project-info-details">
+								<div class="project-info-detail project-square">Площадь:&nbsp;<span class="info-value bold">31м</span>.</div>
+								<div class="project-info-detail project-period">Срок исполения:&nbsp;<span class="info-value bold">45дней</span>.</div>
+								<!-- <div class="project-info-detail project-work-price">Стоимость работ:&nbsp;<span class="info-value bold">31м</span>.</div> -->
+								<div class="project-info-detail project-work-price">Стоимость ремонтных работ с материалами:&nbsp;<span class="info-value bold">121 000 грн</span>.</div>
+								<!-- <div class="project-info-detail project-rough-materials-price">Стоимость черновых материалов:&nbsp;<span class="info-value bold">21 000 грн</span>.</div>
+								<div class="project-info-detail project-finish-materials-price">Стоимость чистовых материалов:&nbsp;<span class="info-value bold">115 000 грн</span>.</div>
+								<div class="project-info-detail project-features">Подробности проекта::&nbsp;<span class="info-value">Авторский надзор, подбор и поставка эксключивных светильников.</span>.</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-item">
+					<div class="project-slider project-photos-container" id="project-photos-slider">
+					    <div class="project-photo" data-thumb="img/repaired-flat-item.jpg"><img src="img/repaired-flat-item.jpg"></div>
+					    <div class="project-photo" data-thumb="img/repair-step-2.jpg"><img src="img/repair-step-2.jpg"></div>
+					    <div class="project-photo" data-thumb="img/repair-step-1.jpg"><img src="img/repair-step-1.jpg"></div>
+					</div>
+					<div class="project-info">
+						<div class="project-feedback project-info-item">
+							<div class="project-feedback-author">
+								<img src="img/client1.jpg">
+							</div>
+							<div class="project-feedback-body">
+								<div class="project-feedback-rank">
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+								</div>
+								<div class="project-feedback-message">
+									Рекомендую, умеренные цены на ремонт, при этом хороший сервис, все сделали на достойном уровне, самостоятельно. Мы с мужем не тратили свое время, всеми закупками занималась компания - никакой головной боли. Осталось очень довольны, спасибо
+								</div>
+								<div class="project-feedback-author-name"><b>Александра</b>,</div>
+								<div class="project-feedback-author-job">медсестра</div>
+								<div class="project-feedback-date">
+									<b>Дата:</b><br>
+									<span>21.05.2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="project-details project-info-item">
+							<div class="project-info-title">Ремонт однокомнатной квартиры на фонтане2</div>
+							<div class="project-info-details">
+								<div class="project-info-detail project-square">Площадь:&nbsp;<span class="info-value bold">31м</span>.</div>
+								<div class="project-info-detail project-period">Срок исполения:&nbsp;<span class="info-value bold">45дней</span>.</div>
+								<!-- <div class="project-info-detail project-work-price">Стоимость работ:&nbsp;<span class="info-value bold">31м</span>.</div> -->
+								<div class="project-info-detail project-work-price">Стоимость ремонтных работ с материалами:&nbsp;<span class="info-value bold">121 000 грн</span>.</div>
+								<!-- <div class="project-info-detail project-rough-materials-price">Стоимость черновых материалов:&nbsp;<span class="info-value bold">21 000 грн</span>.</div>
+								<div class="project-info-detail project-finish-materials-price">Стоимость чистовых материалов:&nbsp;<span class="info-value bold">115 000 грн</span>.</div>
+								<div class="project-info-detail project-features">Подробности проекта::&nbsp;<span class="info-value">Авторский надзор, подбор и поставка эксключивных светильников.</span>.</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-item">
+					<div class="project-slider project-photos-container" id="project-photos-slider">
+					    <div class="project-photo" data-thumb="img/repaired-flat-item.jpg"><img src="img/repaired-flat-item.jpg"></div>
+					    <div class="project-photo" data-thumb="img/repair-step-2.jpg"><img src="img/repair-step-2.jpg"></div>
+					    <div class="project-photo" data-thumb="img/repair-step-1.jpg"><img src="img/repair-step-1.jpg"></div>
+					</div>
+					<div class="project-info">
+						<div class="project-feedback project-info-item">
+							<div class="project-feedback-author">
+								<img src="img/client1.jpg">
+							</div>
+							<div class="project-feedback-body">
+								<div class="project-feedback-rank">
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+								</div>
+								<div class="project-feedback-message">
+									Рекомендую, умеренные цены на ремонт, при этом хороший сервис, все сделали на достойном уровне, самостоятельно. Мы с мужем не тратили свое время, всеми закупками занималась компания - никакой головной боли. Осталось очень довольны, спасибо
+								</div>
+								<div class="project-feedback-author-name"><b>Александра</b>,</div>
+								<div class="project-feedback-author-job">медсестра</div>
+								<div class="project-feedback-date">
+									<b>Дата:</b><br>
+									<span>21.05.2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="project-details project-info-item">
+							<div class="project-info-title">Ремонт однокомнатной квартиры на фонтане3</div>
+							<div class="project-info-details">
+								<div class="project-info-detail project-square">Площадь:&nbsp;<span class="info-value bold">31м</span>.</div>
+								<div class="project-info-detail project-period">Срок исполения:&nbsp;<span class="info-value bold">45дней</span>.</div>
+								<!-- <div class="project-info-detail project-work-price">Стоимость работ:&nbsp;<span class="info-value bold">31м</span>.</div> -->
+								<div class="project-info-detail project-work-price">Стоимость ремонтных работ с материалами:&nbsp;<span class="info-value bold">121 000 грн</span>.</div>
+								<!-- <div class="project-info-detail project-rough-materials-price">Стоимость черновых материалов:&nbsp;<span class="info-value bold">21 000 грн</span>.</div>
+								<div class="project-info-detail project-finish-materials-price">Стоимость чистовых материалов:&nbsp;<span class="info-value bold">115 000 грн</span>.</div>
+								<div class="project-info-detail project-features">Подробности проекта::&nbsp;<span class="info-value">Авторский надзор, подбор и поставка эксключивных светильников.</span>.</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="project-item">
+					<div class="project-slider project-photos-container" id="project-photos-slider">
+					    <div class="project-photo" data-thumb="img/repaired-flat-item.jpg"><img src="img/repaired-flat-item.jpg"></div>
+					    <div class="project-photo" data-thumb="img/repair-step-2.jpg"><img src="img/repair-step-2.jpg"></div>
+					    <div class="project-photo" data-thumb="img/repair-step-1.jpg"><img src="img/repair-step-1.jpg"></div>
+					</div>
+					<div class="project-info">
+						<div class="project-feedback project-info-item">
+							<div class="project-feedback-author">
+								<img src="img/client1.jpg">
+							</div>
+							<div class="project-feedback-body">
+								<div class="project-feedback-rank">
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+									<i class="sprite sprite-icon-star-rank"></i>
+								</div>
+								<div class="project-feedback-message">
+									Рекомендую, умеренные цены на ремонт, при этом хороший сервис, все сделали на достойном уровне, самостоятельно. Мы с мужем не тратили свое время, всеми закупками занималась компания - никакой головной боли. Осталось очень довольны, спасибо
+								</div>
+								<div class="project-feedback-author-name"><b>Александра</b>,</div>
+								<div class="project-feedback-author-job">медсестра</div>
+								<div class="project-feedback-date">
+									<b>Дата:</b><br>
+									<span>21.05.2016</span>
+								</div>
+							</div>
+						</div>
+						<div class="project-details project-info-item">
+							<div class="project-info-title">Ремонт однокомнатной квартиры на фонтане4</div>
+							<div class="project-info-details">
+								<div class="project-info-detail project-square">Площадь:&nbsp;<span class="info-value bold">31м</span>.</div>
+								<div class="project-info-detail project-period">Срок исполения:&nbsp;<span class="info-value bold">45дней</span>.</div>
+								<!-- <div class="project-info-detail project-work-price">Стоимость работ:&nbsp;<span class="info-value bold">31м</span>.</div> -->
+								<div class="project-info-detail project-work-price">Стоимость ремонтных работ с материалами:&nbsp;<span class="info-value bold">121 000 грн</span>.</div>
+								<!-- <div class="project-info-detail project-rough-materials-price">Стоимость черновых материалов:&nbsp;<span class="info-value bold">21 000 грн</span>.</div>
+								<div class="project-info-detail project-finish-materials-price">Стоимость чистовых материалов:&nbsp;<span class="info-value bold">115 000 грн</span>.</div>
+								<div class="project-info-detail project-features">Подробности проекта::&nbsp;<span class="info-value">Авторский надзор, подбор и поставка эксключивных светильников.</span>.</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-prices" id="block-prices">
+		<div class="container">
+			<div class="block-title">Стоимость ремонта под ключ</div>
+			<div class="block-title-descr">Делаем всегда немного больше, чем обещаем.<br>На высочайшем уровне.</div>
+			<div class="repair-types">
+				<div class="repair-type">
+					<div class="repair-type-title">Косметический<br>ремонт</div>
+					<div class="repair-type-icon"><i class="sprite sprite-icon-repair-cosmetic"></i></div>
+					<div class="repair-type-photo">
+						<img src="img/repair-price-1.jpg">
+					</div>
+					<!-- <div class="repair-type-price">
+						<i class="sprite sprite-icon-square-black"></i>
+						<span>от 4000 руб. за 1 м<sup>2</sup></span>
+					</div> -->
+					<div class="repair-type-worklist">
+						<div class="list-title">Включает в себя:</div>
+						<div class="repair-type-workitems">
+							<span>1. Демонтажные работы;</span>
+							<span>2. Шпатлевка, обработка грунтовкой и покраска
+							потолка;</span>
+							<span>3. Выравнивание углов помещений под 90 градусов;</span>
+							<span>4. Шпатлевка стен и обработка грунтовкой;</span>
+							<span>5. Установка розеток, частичная разводка электросети, 
+							добавление электроточек;</span>
+							<span>6. Поклейка новых обоев;</span>
+							<span>7. Монтаж нового линолеума, ламината, либо циклевка
+							и покрытие лаком старого паркета;</span>
+							<span>8. Установка дверей, плинтусов, дополнительных 
+							аксессуаров;</span>
+							<span>9. Вывоз мусора и генеральная уборка;</span>
+							<span>10. Комплексный договор страхования имущества и ответственности на общую страховую сумму 100 000 грн - бесплатно.</span>
+						</div>
+					</div>
+					<div class="offer-button-container button-container yellow-button-container">
+						<button type="button" data-target="#request-order-modal" class="button yellow-button send-request-button" data-toggle="modal">Отправить заявку</button>
+					</div>
+				</div>
+				<div class="repair-type">
+					<div class="repair-type-title">Капитальный<br>ремонт</div>
+					<div class="repair-type-icon"><i class="sprite sprite-icon-repair-total"></i></div>
+					<div class="repair-type-photo">
+						<img src="img/repair-price-2.jpg">
+					</div>
+					<!-- <div class="repair-type-price">
+						<i class="sprite sprite-icon-square-black"></i>
+						<span>от 6000 руб. за 1 м<sup>2</sup></span>
+					</div> -->
+					<div class="repair-type-worklist">
+						<div class="list-title">Включает в себя:</div>
+						<div class="repair-type-workitems">
+							<span>1. Демонтажные и подготовительные работы;</span>
+							<span>2. Снос и возведение стен, перегородок;</span>
+							<span>3. Выравнивание стен и полов по маякам или 
+							по плоскости, устройство наливных полов;</span>
+							<span>4. Прокладка новых электросетей, перенос розеток и 
+							выключателей, установка автоматов УЗО;</span>
+							<span>5. Коллекторная разводка труб, замена внутренних 
+							водоканализационных сетей, монтаж сантехнической 
+							мебели, смесителей и фурнитуры;</span>
+							<span>6. Оклеивание обоями, покраска стен, декоративная 
+							штукатурка, облицовка плиткой и мозаикой;</span>
+							<span>7. Устройство ламината, паркета, плитки, мозаики, 
+							установка декоративных порожков, плинтусов;</span>
+							<span>9. Вывоз мусора и генеральная уборка;</span>
+							<span>10. Комплексный договор страхования имущества и ответственности на общую страховую сумму 100 000 грн - бесплатно.</span>
+						</div>
+					</div>
+					<div class="offer-button-container button-container yellow-button-container">
+						<button type="button" data-target="#request-order-modal" class="button yellow-button send-request-button" data-toggle="modal">Отправить заявку</button>
+					</div>
+				</div>
+				<div class="repair-type">
+					<div class="repair-type-title">Дизайнерский<br>ремонт</div>
+					<div class="repair-type-icon"><i class="sprite sprite-icon-repair-designer"></i></div>
+					<div class="repair-type-photo">
+						<img src="img/repair-price-3.jpg">
+					</div>
+					<!-- <div class="repair-type-price">
+						<i class="sprite sprite-icon-square-black"></i>
+						<span>от 8000 руб. за 1 м<sup>2</sup></span>
+					</div> -->
+					<div class="repair-type-worklist">
+						<div class="list-title">Включает в себя:</div>
+						<div class="repair-type-workitems">
+							<span>1. Рабочий проект: обмерочный план, 3 варианта 
+							планировки, пакет рабочих чертежей;</span>
+							<span>2. Проект электромонтажных работ, 
+							проект сантехнических работ;</span>
+							<span>3. Светотехнический проект, включая 
+							расчет освещенности;</span>
+							<span>4. Авторский надзор;</span>
+							<span>5. Полный комплекс демонтажных и
+							подготовительных работ;</span>
+							<span>6. Полный комплекс черновых и 
+							общестроительных работ;</span>
+							<span>7. Полный комплекс чистовых и монтажных работ;</span>
+							<span>8. Замена входных и межкомнатных дверей;</span>
+							<span>8. Вывоз мусора и профессиональная клининговая 
+							уборка помещения;</span>
+							<span>9. Комплексный договор страхования имущества и ответственности на общую страховую сумму 300 000 грн - бесплатно.</span>
+						</div>
+					</div>
+					<div class="offer-button-container button-container yellow-button-container">
+						<button type="button" data-target="#request-order-modal" class="button yellow-button send-request-button" data-toggle="modal">Отправить заявку</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="divider-lines">
+		<div class="grey-line"></div>
+		<div class="grey-line"></div>
+		<div class="grey-line"></div>
+	</div>
+	<div class="block-services" id="block-services">
+		<div class="container">
+			<div class="block-title">Дополнительные услуги</div>
+			<div class="block-title-descr">Оказываем комплексные услуги,<br>чтобы вы тратили свое драгоценное время на отдых.</div>
+			<div class="service-items">
+				<div class="service-item">
+					<div class="service-item-icon yellow-bg">
+						<i class="sprite sprite-icon-service-1"></i>
+					</div>
+					<div class="service-item-title">
+						Разработка<br>дизайн - проекта
+					</div>
+				</div>
+				<div class="service-item">
+					<div class="service-item-icon yellow-bg">
+						<i class="sprite sprite-icon-service-2"></i>
+					</div>
+					<div class="service-item-title">
+						Разработка<br>электропроекта с<br>согласованием
+					</div>
+				</div>
+				<div class="service-item">
+					<div class="service-item-icon yellow-bg">
+						<i class="sprite sprite-icon-service-3"></i>
+					</div>
+					<div class="service-item-title">
+						Кондиционеры<br>с установкой.
+					</div>
+				</div>
+				<div class="service-item">
+					<div class="service-item-icon yellow-bg">
+						<i class="sprite sprite-icon-service-4"></i>
+					</div>
+					<div class="service-item-title">
+						Замена радиаторов<br>отопления
+					</div>
+				</div>
+				<div class="service-item">
+					<div class="service-item-icon yellow-bg">
+						<i class="sprite sprite-icon-service-5"></i>
+					</div>
+					<div class="service-item-title">
+						Замена<br>пластиковых окон
+					</div>
+				</div>
+				<div class="service-item">
+					<div class="service-item-icon yellow-bg">
+						<i class="sprite sprite-icon-service-6"></i>
+					</div>
+					<div class="service-item-title">
+						Установка натяжных<br>потолков под ключ
+					</div>
+				</div>
+				<div class="service-item">
+					<div class="service-item-icon yellow-bg">
+						<i class="sprite sprite-icon-service-7"></i>
+					</div>
+					<div class="service-item-title">
+						Страхование<br>имущества
+					</div>
+				</div>
+				<div class="service-item">
+					<div class="service-item-icon yellow-bg">
+						<i class="sprite sprite-icon-service-8"></i>
+					</div>
+					<div class="service-item-title">
+						Профессиональная ЭКО<br>клининговая уборка
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-steps">
+		<div class="container">
+			<div class="block-title">Как будет проходить ремонт?</div>
+			<div class="repair-steps" id="project-steps-slider">
+				<div class="repair-step-outer">
+					<div class="repair-step">
+						<div class="repair-step-photo">
+							<img src="img/repair-step-1.jpg">
+						</div>
+						<div class="repair-step-title">Консультация по<br>телефону</div>
+						<div class="repair-step-process">
+							<div class="step-process-item process-time">
+								<i class="sprite sprite-icon-steps-time"></i>
+								<span>5-20 минут</span>
+							</div>
+							<div class="step-process-item process-price">
+								<i class="sprite sprite-icon-steps-price"></i>
+								<span>Бесплатно</span>
+							</div>
+						</div>
+						<div class="repair-step-descr">
+							Наши менеджеры проведут консультацию, по телефону, ответят на все вопросы, выяснят ваши пожелания и согласуют удобное время для визита сметчика-технолога на объект.
+							<br>
+							<br>
+							Время разговора не лимитировано, вы сможете задать любые интересующие вопросы и получить исчерпывающую консультацию, даже в том случае, если вы не запишитесь на замер прямой сейчас. <b>Мы знаем, вы вернетесь именно к нам.</b>
+						</div>
+					</div>
+				</div>
+				<div class="repair-step-outer">
+					<div class="repair-step">
+						<div class="repair-step-photo">
+							<img src="img/repair-step-2.jpg">
+						</div>
+						<div class="repair-step-title">Выезд сметчика-<br>технолога на объект</div>
+						<div class="repair-step-process">
+							<div class="step-process-item process-time">
+								<i class="sprite sprite-icon-steps-time"></i>
+								<span>20-30 минут</span>
+							</div>
+							<div class="step-process-item process-price">
+								<i class="sprite sprite-icon-steps-price"></i>
+								<span>Бесплатно</span>
+							</div>
+						</div>
+						<div class="repair-step-descr">
+							Квалифицированый сметчик-технолог проведет все необходимые замеры, выполнит расчеты, оценит возможность реализациваших задумок и даст полезные практические рекомендации. Выезд на замер и составление сметы всегда <b>бесплатно</b>.
+							<br>
+							<br>
+							На замер приедет <b>профессиональный строитель</b>, а не менеджер по продажам. Это гарантирует вам точную смету и достаточное время для принятия решения. Мы не будем давать на вас, мы уверены в своих ценах и качестве работ и знаем, наше предложение будет конкуретным.
+						</div>
+					</div>
+				</div>
+				<div class="repair-step-outer">
+					<div class="repair-step">
+						<div class="repair-step-photo">
+							<img src="img/repair-step-3.jpg">
+						</div>
+						<div class="repair-step-title">Составление и<br>подписание договора</div>
+						<div class="repair-step-process">
+							<div class="step-process-item process-time">
+								<i class="sprite sprite-icon-steps-time"></i>
+								<span>1 день</span>
+							</div>
+							<div class="step-process-item process-price">
+								<i class="sprite sprite-icon-steps-price"></i>
+								<span>Бесплатно</span>
+							</div>
+						</div>
+						<div class="repair-step-descr">
+							Подписание договора: в договоре прописаны все обязанности и ответственость подрядчика перед заказчиком, гарантийные обязательства, зафиксированы сроки начала и окончания ремонтных работ. <b>Ваши интересы защищены юридически</b>.
+							<br>
+							<br>
+							Подписание сметы: фиксируем конечную стоимость за все работы по смете. <b>Гарантируем, смета останется неизменной до конца самого конца</b>.
+							<br>
+							<br>
+							Подписание календарного плана работ: календарный план фиксирует сроки проведения всех работ по смете, дату поставки черновых и чистовых материалов на объект, сроки исполнения работ третьими лицами - установка окон, кондиционеров, входных дверей. <b>Весь процесс ремонта под вашим контролем</b>.
+						</div>
+					</div>
+				</div>
+				<div class="repair-step-outer repair-step-4">
+					<div class="repair-step">
+						<div class="repair-step-photo">
+							<img src="img/repair-step-4.jpg">
+						</div>
+						<div class="repair-step-title">Заезд на объект</div>
+						<div class="repair-step-process repair-step-process-wrapped">
+							<div class="step-process-item process-time">
+								<i class="sprite sprite-icon-steps-time"></i>
+								<span>Не позднее 5 дней со дня подписания договора</span>
+							</div>
+							<div class="step-process-item process-price">
+								<i class="sprite sprite-icon-steps-price"></i>
+								<span>Бесплатно</span>
+							</div>
+						</div>
+						<div class="repair-step-descr">
+							Менеджер проекта, который будет сопровождать вас во время ремонта, познакомит вас с прорабом и бригадой, которая будет работать на вашем объекте. Встретимся на объекте и согласуем все моменты еще раз, что бы убедиться в полном взаимопонимании.
+							<br>
+							<br>
+							Мы доставим все необходимые для работы инструменты на ваш объект. Наши мастера работают <b>только профессиональным сертифицированным инструментом</b>.
+						</div>
+					</div>
+				</div>
+				<div class="repair-step-outer">
+					<div class="repair-step">
+						<div class="repair-step-photo">
+							<img src="img/repair-step-5.jpg">
+						</div>
+						<div class="repair-step-title">Демонтажные работы</div>
+						<div class="repair-step-process">
+							<div class="step-process-item process-time">
+								<i class="sprite sprite-icon-steps-time"></i>
+								<span>5-15 дней</span>
+							</div>
+							<div class="step-process-item process-price">
+								<i class="sprite sprite-icon-steps-price"></i>
+								<span>Экономия до 15 000 грн</span>
+							</div>
+						</div>
+						<div class="repair-step-descr">
+							Мастера выполнят демонтаж без повреждения несущих конструкций, самостоятельно упакуют весь строительный мусор и подготовят его к утилизации. <b>Мы заботимся об экологии</b>, поэтому для утилизации привлекаем специализированые службы и никогда не выбрасываем мусор на улицу. Заказываем контейнер, мусор вывозят в течени дня - быстро, удобно, никаких проблем с соседями и управляющим компанией.
+						</div>
+					</div>
+				</div>
+				<div class="repair-step-outer">
+					<div class="repair-step">
+						<div class="repair-step-photo">
+							<img src="img/repair-step-6.jpg">
+						</div>
+						<div class="repair-step-title">Черновая отделка</div>
+						<div class="repair-step-process repair-step-process-wrapped">
+							<div class="step-process-item process-time">
+								<i class="sprite sprite-icon-steps-time"></i>
+								<span>10-15 дней</span>
+							</div>
+							<div class="step-process-item process-price">
+								<i class="sprite sprite-icon-steps-price"></i>
+								<span>Ежедневный фотоотчет о ходе работ - бесплатно</span>
+							</div>
+						</div>
+						<div class="repair-step-descr">
+							Мы строго относимся к соблюдению всех строительных норм и технологий ремонта. Для каждого вида работ в нашем штате есть отдельные квалифицированные специалисты, например, электротехничискими работами занимаются только специалисты, имеющие допуск к выполнению данного вида работ.
+							<br>
+							<br>
+							После того как черновые, электротехнические, сантехнические работы будт завершены, мы проводим оценку качества работ с привлечением технического директора компании и только после этого сдаем промежуточный результат работ вам. Это позволяет оперативно устранять возможные недочеты и поддерживать <b>стабильно высокое качество работ</b>.
+						</div>
+					</div>
+				</div>
+				
+				<div class="repair-step-outer">
+					<div class="repair-step">
+						<div class="repair-step-photo">
+							<img src="img/repair-step-7.jpg">
+						</div>
+						<div class="repair-step-title">Чистовая отделка</div>
+						<div class="repair-step-process">
+							<div class="step-process-item process-time">
+								<i class="sprite sprite-icon-steps-time"></i>
+								<span>10-20 дней</span>
+							</div>
+						<!-- 	<div class="step-process-item process-price">
+								<i class="sprite sprite-icon-steps-price"></i>
+								<span>Ежедневный фотоотчет о ходе работ - бесплатно</span>
+							</div> -->
+						</div>
+						<div class="repair-step-descr">
+							Выходим на финишную прямую - квартира постепенно приобретает очертания вашего будущего уютного дома. Помимо чистовой отделки помещения, по вашему желанию, установим натяжные потолки. До начала работ по установке мебели и другого чистового оборудования выполним генеральную уборку.
+							<br>
+							<br>
+							Перед сдачей вашего объекта выполняем <b>профессиональную ЭКО клининговую уборку</b> - вы будете въезжать в полностью обустроенное жилье, очищенное от следов строительной пыли и других аллергенов.
+						</div>
+					</div>
+				</div>
+				<div class="repair-step-outer">
+					<div class="repair-step">
+						<div class="repair-step-photo">
+							<img src="img/repair-step-8.jpg">
+						</div>
+						<div class="repair-step-title">Гарантийное<br>обслуживание</div>
+						<div class="repair-step-process">
+							<div class="step-process-item process-time">
+								<i class="sprite sprite-icon-steps-time"></i>
+								<span>1 год</span>
+							</div>
+							<div class="step-process-item process-price">
+								<i class="sprite sprite-icon-steps-price"></i>
+								<span>Бесплатно</span>
+							</div>
+						</div>
+						<div class="repair-step-descr">
+							С момента подписания акта сдачи-приемки начинает действовать гарантия на все виды работ. В случае, если с течением времени обнаружится скрытый дефект, мы беспрекословно устраним его по гарантии. Вам достаточно позвонить в отдел обслуживания клиентов и назвать номер вашего договора и причину обращения, и мы оперативно отреагируем на ваш запрос.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-feedback" id="block-feedback">
+		<div class="container">
+			<div class="block-title">Отзывы клиентов</div>
+			<div class="feedback-container">
+				<div class="feedback-container-title">
+					<i class="sprite sprite-slider-logo-yellow"></i>
+					<span>Start remont</span>
+				</div>
+				<div class="feedback-container-inner reviews-slider" id="reviews-slider">
+					<div class="review-item">
+						<div class="review-item-inner">
+							<div class="review-user-photos">
+								<div class="review-user-photo current-review-user"><img src="img/review-item-1.jpg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<div class="review-item-inner">
+							<div class="review-user-photos">
+								<div class="review-user-photo current-review-user"><img src="img/review-item-2.jpg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<div class="review-item-inner">
+							<div class="review-user-photos">
+								<div class="review-user-photo current-review-user"><img src="img/review-item-3.jpg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<div class="review-item-inner">
+							<div class="review-user-photos">
+								<div class="review-user-photo current-review-user"><img src="img/review-item-4.jpg"></div>
+							</div>
+						</div>
+					</div>
+					<div class="review-item">
+						<div class="review-item-inner">
+							<div class="review-user-photos">
+								<div class="review-user-photo current-review-user"><img src="img/review-item-5.jpg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="feedback-container-inner reviews-slider" id="reviews-slider-messages">
+					<div class="review-item review-item-1">
+						<div class="review-item-inner">							
+							<div class="review-body">
+								<div class="review-text">
+									Профессиональный проектный подход, ориентированы на клиента, доставка материала, высокое качество работ, гарантия.
+								</div>
+								<div class="review-author">
+									Андрей
+								</div>
+								<div class="review-author-job">
+									Менеджер проектов
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="review-item review-item-2">
+						<div class="review-item-inner">							
+							<div class="review-body">
+								<div class="review-text">
+									Обновили обстановку в квартире легким косметическим ремонтом – ничего сложного, поклеили новые обои, заменили ламинат. Качеством довольны. Все вплоть до розеток покупали через компанию, удобно и вышло дешевле чем в магазине.
+								</div>
+								<div class="review-author">
+									Руслана
+								</div>
+								<div class="review-author-job">
+									Руководитель отдела продаж
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="review-item review-item-3">
+						<div class="review-item-inner">							
+							<div class="review-body">
+								<div class="review-text">
+									Заказывали у этой компании капитальный ремонт ванной и туалета и косметический ремонт спальни. Принципиально не хотели нанимать частников, определяющим моментом стало наличие гарантии и работа по договору. Замерщик посчитал смету, далее обсуждали все детали с прорабом и менеджером. Все сделали вовремя, качеством довольны, спасибо!
+								</div>
+								<div class="review-author">
+									Ирина
+								</div>
+								<div class="review-author-job">
+									Врач-педиатр
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="review-item review-item-4">
+						<div class="review-item-inner">							
+							<div class="review-body">
+								<div class="review-text">
+									Хочу поблагодарить компанию Старт Ремонт за качественно выполненный ремонт моей квартиры! Понравилось вежливое отношение всей команды и профессионализм. Недочеты, которых было немного, устраняли быстро и без пререканий, результатом довольны.
+								</div>
+								<div class="review-author">
+									Анастасия
+								</div>
+								<div class="review-author-job">
+									HR-менеджер
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="review-item review-item-5">
+						<div class="review-item-inner">							
+							<div class="review-body">
+								<div class="review-text">
+									Рекомендую, умеренные цены на ремонт, при этом хороший сервис, все сделали на достойном уровне, самостоятельно. Мы с женой не тратили свое время, всеми закупками занималась компания - никакой головной боли. Остались очень довольны, спасибо!
+								</div>
+								<div class="review-author">
+									Павел
+								</div>
+								<div class="review-author-job">
+									Предприниматель
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-cta">
+		<div class="container">
+			<div class="form-container">
+				<div class="cta-title">Оставьте заявку<br>на бесплатный замер:</div>
+				<div class="cta-descr">Перезвоним, проконсультируем, уточним удобное время и запишем вас на бесплатный замер.</div>
+				<div class="cta-form static-form">
+					<form action="form-fixed.php" method="POST" id="order-form-cta">
+						<label class="input-label user-label">
+							<i class="sprite sprite-icon-form-user"></i>
+							<input type="text" name="user_name" placeholder="Ваше имя" required>
+						</label>
+						<label class="input-label phone-label">
+							<i class="sprite sprite-icon-form-phone"></i>
+							<input type="text" name="user_phone" placeholder="Номер телефона" required>
+						</label>
+						<label class="input-label mail-label">
+							<i class="sprite sprite-icon-form-mail"></i>
+							<input type="text" name="user_mail" placeholder="Электронная почта" required>
+						</label>
+						<label class="input-label textarea-label">
+							<i class="sprite sprite-icon-form-write"></i>
+							<textarea name="user_message" placeholder="Опишите задачу"></textarea>
+						</label>
+						<div class="button-container red-button-container">
+							<button class="button red-button send-request-button">Отправить заявку</button>
+						</div>
+					</form>
+					<div class="privacy-description">
+						<i class="sprite sprite-icon-form-safety"></i>
+						<span>Ваши персональные данные надежно защищены и никогда не будут переданы третьим лицам.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-footer">
+		<div class="block-contacts">
+			<div class="container">
+				<div class="contacts-content content-item">
+					<div class="content-item-title">Контакты</div>
+					<div class="contacts">
+						ООО “Старт Ремонт”<br>
+						Телефон: <a href="tel:+380731306182">+38 073 130 61 82</a>, <a href="tel:+380988296597">+38 098 829 65 97</a><br>
+						С 09:00 до 21:00, без выходных<br>
+						<br>
+						Email: <a href="mailto:startremont.od@gmail.com">startremont.od@gmail.com</a><br>
+						<br>
+						Следите за нами в социальных сетях и будьте<br>
+						в курсе последних событий.
+					</div>
+					<div class="socials">
+						<a href="#" target="_blank"><i class="sprite sprite-icon-social-fb"></i></a>
+						<a href="#" target="_blank"><i class="sprite sprite-icon-social-inst"></i></a>
+						<a href="#" target="_blank"><i class="sprite sprite-icon-social-gplus"></i></a>
+					</div>
+				</div>
+				<div class="newsletter-content content-item">
+					<div class="content-item-title">Подпишитесь на рассылку</div>
+					<div class="content-item-descr">Скидки, специальные предложения, полезные советы - подпишитесь!</div>
+					<form action="form-subscribe.php" method="POST" id="form-subscribe">
+						<label class="input-label user-label">
+							<i class="sprite sprite-icon-form-user"></i>
+							<input type="text" name="subscriber_name" placeholder="Ваше имя" required>
+						</label>
+						<label class="input-label mail-label">
+							<i class="sprite sprite-icon-form-mail"></i>
+							<input type="text" name="subscriber_mail" placeholder="Электронная почта" required>
+						</label>
+						<div class="button-container yellow-button-container">
+							<button type="submit" class="button yellow-button subscribe-button">Подписаться</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-logo">
+					<i class="sprite sprite-footer-logo-yellow"></i>
+					<span>Start remont</span>
+				</div>
+				<div class="copyright">&copy;&nbsp;Copyright. Startremont 2017</div>
+			</div>
+		</footer>
+	</div>
+	<div class="container">
+		<button id="top-scroller"><i class="sprite sprite-slider-arrow-top-black"></i></button>
+	</div>
+</div>
+
+
+<div class="modal request-order-modal fade" tabindex="-1" role="dialog" id="request-order-modal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content"> 
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="sprite sprite-icon-close hidden-xs"></i>
+					<span aria-hidden="true" class="visible-xs">×</span>
+				</button>
+				<div class="modal-title">Узнать стоимость ремонта</div>
+				<div class="modal-title-descr">Выберите опции, заполните форму и получите расчёт стоимости ремонта своей квартиры.</div>
+				<form action="form-modal.php" method="POST" id="request-modal-form">
+					<label class="input-label user-name-label">
+						<div class="label-title">Ваше имя:</div>
+						<input type="text" name="user_name" required>
+					</label>
+					<label class="input-label user-phone-label">
+						<div class="label-title">Телефон:</div>
+						<input type="text" name="user_phone" required>
+					</label>
+					<label class="input-label user-mail-label">
+						<div class="label-title">E-mail:</div>
+						<input type="text" name="user_mail">
+					</label>
+					<label class="select-label repair-type-label">
+						<div class="label-title">Уровень ремонта:</div>
+						<select required class="general-select" name="repair_type" id="repair_type" onchange="document.getElementById('repair_type_value').value=value">
+							<option selected disabled="disabled">Уровень ремонта</option>
+							<option value="кометический ремонт">кометический ремонт</option>
+							<option value="капитальный ремонт">капитальный ремонт</option>
+							<option value="дизайнерский ремонт">дизайнерский ремонт</option>
+						</select>
+						<input type="hidden" id="repair_type_value" name="repair_type_value"/>
+					</label>
+					<label class="select-label property-type-label">
+						<div class="label-title">Тип жилья:</div>
+						<select required class="general-select" name="property_type" id="property_type" onchange="document.getElementById('property_type_value').value=value">
+							<option selected disabled="disabled">Тип жилья</option>
+							<option value="новостройка">новостройка</option>
+							<option value="вторичное жилье">вторичное жилье</option>
+						</select>
+						<input type="hidden" id="property_type_value" name="property_type_value"/>
+					</label>
+					<label class="input-label property-square-label">
+						<div class="label-title">Площадь квартиры:</div>
+					    <input type="text" maxlength="4" value="0" class="property-square-value" name="property_rooms_square" required/>
+					    <input type="text" id="property-square" class="" value="" />
+					</label>
+					<label class="input-label property-rooms-label">
+						<div class="label-title">Количество комнат:</div>
+						<input type="text" value="1" class="property-rooms-value"  name="property_rooms_value" required/>
+						<input type="text" id="property-rooms" name="property_rooms" value="" />
+					</label>						
+					<div class="property-rooms">
+						<div class="label-title label-title-bold checkbox-label-title">Помещения:</div>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="living_rooms" value="комнаты">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">комнаты</span>
+						</label>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="kitchen" value="кухня">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">кухня</span>
+						</label>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="bathroom" value="санузел">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">санузел</span>
+						</label>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="balcony" value="балкон">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">балкон</span>
+						</label>
+					</div>
+					<div class="additional-service">
+						<div class="label-title label-title-bold checkbox-label-title">Дополнительные услуги:</div>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="design_project" value="дизайн-проект">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">дизайн-проект</span>
+						</label>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="electric_project" value="электропроект">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">электропроект</span>
+						</label>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="radiators_replacement" value="замена радиаторов отопления">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">замена радиаторов отопления</span>
+						</label>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="windows_replacement" value="замена окон">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">замена окон</span>
+						</label>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="entrance_door_replacement" value="замена входной двери">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">замена входной двери</span>
+						</label>
+						<label class="checkbox-label">
+							<input class="checkbox-default" type="checkbox" name="conditioner_installation" value="установка кондиционера">
+						    <span class="checkbox-custom"></span>
+							<span class="checkbox-text">установка кондиционера</span>
+						</label>
+					</div>
+					<label class="select-label property-location-label">
+						<div class="label-title label-title-bold">Расположение объекта:</div>
+						<select required class="general-select" name="property_location" id="property_location" onchange="document.getElementById('property_location_value').value=value">
+							<option selected disabled="disabled">Расположение объекта</option>
+							<option value="Одесса">Одесса</option>
+							<option value="Одесская область">Одесская область</option>
+						</select>
+						<input type="hidden" id="property_location_value" name="property_location_value"/>
+					</label>
+					<div class="button-container red-button-container">
+						<button class="button red-button submit-order-button">Рассчитать стоимость</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal request-order-modal fade" tabindex="-1" role="dialog" id="success-order-modal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content"> 
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="sprite sprite-icon-close hidden-xs"></i>
+					<span aria-hidden="true" class="visible-xs">×</span>
+				</button>
+				<div class="success-order-container">
+					<div class="modal-title">Спасибо!</div>
+					<div class="modal-title-descr">Мы перезвоним Вам в течение часа.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal request-order-modal fade" tabindex="-1" role="dialog" id="success-subscribe-modal">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<i class="sprite sprite-icon-close hidden-xs"></i>
+					<span aria-hidden="true" class="visible-xs">×</span>
+				</button>
+				<div class="success-order-container">
+					<div class="modal-title">Спасибо!</div>
+					<div class="modal-title-descr">Подписка активируется в течение часа.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="modal mobile-menu-modal fade" tabindex="-1" role="dialog" id="mobile-menu">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content"> 
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="visible-xs visible-sm">×</span></button>
+					<div class="mobile-menu-title">
+						<span>Ремонт и отделка под ключ</span><br>в Одессе и Одесcкой области
+					</div>
+					<div class="mobile-menu-contacts">
+						<span>
+							<a href="tel:+380731306182">+38 073 130 61 82</a>
+							<a href="tel:+380988296597">+38 098 829 65 97</a>
+							<a href="mailto:startremont.od@gmail.com">startremont.od@gmail.com</a>
+							<br>
+							<div class="menu-links" id="fixed-mobile-links">
+								<a href="#block-projects" data-dismiss="modal">Примеры работ</a>
+								<a href="#block-prices" data-dismiss="modal">Стоимость</a>
+								<a href="#block-services" data-dismiss="modal">Дополнительные услуги</a>
+								<a href="#block-feedback" data-dismiss="modal">Отзывы</a>
+							</div>
+						</span>
+										
+					</div>
+					<div class="button-container red-button-container">
+					<button type="button" data-target="#request-order-modal" data-toggle="modal" data-dismiss="modal" class="button red-button calculate-price-button">Рассчитать стоимость</a>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.formstyler.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/ion.rangeSlider.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
