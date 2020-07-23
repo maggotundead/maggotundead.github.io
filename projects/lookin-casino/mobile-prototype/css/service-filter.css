@@ -1,0 +1,1285 @@
+/*Блок об услугах для клиентов*/
+.block-services-order {
+    margin-top: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.block-related-events + .block-services-order {
+    margin-top: 100px;
+}
+.block-services-order .services-order {
+    background-color: var(--grey-light);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.block-services-order .services-order.avia-tickets {
+    background-image: url('../img/avia-bg.png');
+}
+.block-services-order .services-order.hotels {
+    background-image: url('../img/hotels-bg.png');
+}
+.block-services-order .services-order.game-tour {
+    background-image: url('../img/tour-bg.png');
+}
+.block-services-order .services-order.restaurants {
+    background-image: url('../img/restaurants-bg.png');
+}
+.block-services-order .services-order.entertainment {
+    background-image: url('../img/entertainment-bg.png');
+}
+.block-services-order .services-order.cars-rent {
+    background-image: url('../img/cars-bg.png');
+}
+.block-services-order .services-order.yacht-charter {
+    background-image: url('../img/yachts-bg.png');
+}
+.block-services-order .services-order.transfer {
+    background-image: url('../img/taxi-bg.png');
+}
+.block-services-order .services-head {
+    padding: 22px 46px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.block-services-order .head-text {
+    flex-grow: 0;
+}
+.block-services-order .service-title {
+    font-size: 19px;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+}
+.block-services-order .service-title-descr {
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 4px;
+    letter-spacing: 0.01px;
+}
+.block-services-order .services-head .help-link {
+    min-width: 140px;
+    padding-left: 38px;
+    padding-right: 10px;
+    position: relative;
+    background-color: var(--blue-light);
+    margin-left: 20px;
+    flex-shrink: 0;
+    border: 0;
+    text-align: center;
+    line-height: 36px;
+    transition: 0.5s;
+}
+.block-services-order .services-head .help-link:hover {
+    transition: 0.5s;
+    background-color: var(--blue);
+}
+.block-services-order .services-head .help-link:before {
+    display: block;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 9px);
+    width: 18px;
+    height: 18px;
+    background: transparent url('../img/icon-ask-white.png') center no-repeat;
+    background-size: contain;
+}
+.block-services-order .services-tabs-links {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    background-color: var(--blue);
+    padding-left: 46px;
+    padding-right: 46px;
+}
+.block-services-order .menu-link {
+    color: var(--torque);
+    position: relative;
+    cursor: pointer;
+}
+.block-services-order .menu-link.active {
+    color: #fff;
+    /*cursor: default;*/
+    pointer-events: none;
+}
+.block-services-order .menu-link.active:before {
+    display: block;
+    content: '';
+    width: calc(100% + 6px);
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -8px;
+    left: -3px;
+}
+.block-services-order .menu-link:not(:last-child) {
+    margin-right: 50px;
+}
+.block-services-order .menu-link:not(:last-child):after {
+    display: block;
+    content: '';
+    background-color: var(--blue-light);
+    width: 1px;
+    height: 7px;
+    top: calc(50% - 3px);
+    right: -24px;
+    position: absolute;
+}
+.block-services-order .services-tabs {
+    padding: 24px 46px 46px;
+    min-height: 265px;
+    /*background-color: var(--grey-light);*/
+    /*background-image: url('../img/cards-figure-square.png');*/
+    /*background-repeat: no-repeat;
+    background-size: 373px 259px;
+    background-position: right 100px center;*/
+}
+.block-services-order .service-tab {
+    display: none;
+}
+.block-services-order .service-tab.active {
+    display: block;
+}
+.block-services-order .tab-title {
+    font-size: 19px;
+    line-height: 26px;
+    color: var(--black);
+}
+.block-services-order .tab-descr {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--black);
+    margin-top: 9px;
+    letter-spacing: 0.1px;
+    width: 100%;
+}
+.block-services-order .service-type-forms-container {
+    margin-top: 16px;
+}
+.block-services-order .service-type-forms-container.offset {
+    margin-top: 51px;
+}
+.block-services-order .service-type-togglers {
+    display: flex;
+    align-items: center;
+    /*margin-top: 16px;*/
+}
+.block-services-order .service-type-toggler {
+    display: block;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid transparent;
+    height: 25px;
+    line-height: 23px;
+    color: var(--grey-blue);
+    transition: 0.5s;
+}
+.block-services-order .service-type-toggler.active {
+    border-color: var(--blue-light);
+    color: var(--blue-light);
+}
+.block-services-order .service-type-toggler:not(.active):hover {
+    border-color: var(--grey-blue);
+    transition: 0.5s;
+}
+.block-services-order .service-type-toggler:not(:last-child) {
+    margin-right: 5px;
+}
+.block-services-order .service-order-form-tabs {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+.block-services-order .service-order-form-tab-item {
+    display: none;
+    width: 100%;
+}
+.block-services-order .service-order-form-tab-item.active {
+    display: block;
+}
+
+.block-services-order .order-form {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.block-services-order .order-form.complex-order-form {
+    display: block;
+}
+.block-services-order .complex-order-form .form-row {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+.block-services-order .complex-order-form .form-row:nth-child(1) {
+    z-index: 100;
+}
+.block-services-order .complex-order-form .form-row:nth-child(2) {
+    z-index: 99;
+}
+.block-services-order .complex-order-form .form-row:nth-child(3) {
+    z-index: 98;
+}
+.block-services-order .complex-order-form .form-row:nth-child(4) {
+    z-index: 97;
+}
+.block-services-order .complex-order-form .form-row:nth-child(5) {
+    z-index: 96;
+}
+.block-services-order .complex-order-form .form-row:nth-child(6) {
+    z-index: 95;
+}
+.block-services-order .complex-order-form .form-row:nth-child(7) {
+    z-index: 94;
+}
+.block-services-order .complex-order-form .form-row:nth-child(8) {
+    z-index: 93;
+}
+.block-services-order .complex-order-form .form-row:not(:last-child) {
+    margin-bottom: 20px;
+}
+.block-services-order .complex-order-form .add-trip-point {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--blue-light);
+    line-height: 1;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+.block-services-order .complex-order-form .remove-form-row {
+    position: absolute;
+    left: -32px;
+    top: calc(50% - 12px);
+    width: 22px;
+    height: 22px;
+    background: transparent url('../img/icon-close-grey.png') center no-repeat;
+    background-size: contain;
+    padding: 0;
+    border: 0;
+    background-size: 12px 12px;
+}
+
+
+
+
+
+.block-services-order .jq-selectbox {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+.block-services-order .jq-selectbox select {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+}
+.block-services-order .jq-selectbox__select {
+    width: 100%;
+    padding-left: 38px;
+    padding-right: 23px;
+    height: 47px;
+    background: #fff;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+    font-family: inherit;
+    font: inherit;
+    color: inherit;
+    text-shadow: none;
+    display: flex;
+    align-items: center;
+    border-radius: 0;
+    box-shadow: none;
+}
+.block-services-order .jq-selectbox.focused .jq-selectbox__select {
+    border: 1px solid #c4c4c4;
+}
+.block-services-order .jq-selectbox__trigger {
+    width: 23px;
+    border: 0;
+}
+.block-services-order .jq-selectbox__trigger-arrow {
+    border-top: 5px solid #000;
+    border-right: 3.5px solid transparent;
+    border-left: 3.5px solid transparent;
+    top: 21px;
+    right: 10px;
+    transition: transform 0.5s;
+}
+
+.block-services-order .jq-selectbox.opened .jq-selectbox__trigger-arrow {
+    transform: rotate(-180deg);
+    transition: transform 0.5s;
+}
+.block-services-order .jq-selectbox__dropdown {
+    border: 0;
+    margin-top: 10px;
+    margin-left: 0;
+    width: 100%;
+    border: 0;
+    font: inherit;
+    border-radius: 0;
+    border: 0;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    box-shadow: 6px 10px 19px rgba(20,20,20,0.19);
+}
+.block-services-order .jq-selectbox li {
+    color: var(--black);
+    padding: 0;
+    padding-left: 40px;
+    height: 30px;
+    line-height: 30px;
+}
+.block-services-order .jq-selectbox li.disabled {
+    color: var(--black);
+    cursor: default;
+    display: none;
+}
+.block-services-order .jq-selectbox li:hover {
+    background-color: rgba(36, 171, 234, 0.25);
+}
+.block-services-order .jq-selectbox li.selected {
+    background-color: #f7f7f7;
+    cursor: default;
+}
+
+
+.block-services-order .submit-button {
+    width: 47px;
+    height: 47px;
+    padding: 0;
+    background-color: var(--blue-light);
+    background-image:  url('../img/icon-search-white.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    flex-shrink: 0;
+    display: block;
+    border: 0;
+    transition: 0.5s;
+}
+.block-services-order .submit-button:hover {
+    transition: 0.5s;
+    background-color: var(--blue);
+}
+.block-services-order .empty-button-space {
+    width: 47px;
+    pointer-events: none;
+}
+.block-services-order .input-group {
+    height: 47px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #c4c4c4;
+}
+/*.input-group:not(:last-child) {
+    margin-right: 10px;
+}*/
+
+.block-services-order .input-group .input-group-dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 10px);
+}
+.block-services-order .input-group.active .input-group-dropdown {
+    display: block;
+    background-color: #fff;
+    box-shadow: 6px 10px 19px rgba(20,20,20,0.19);
+}
+.block-services-order .input-group.active .date-calendar-dropdown-double {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.block-services-order .avia-tickets .round-trip-tab .client-amount-selector {
+    width: 246px;
+}
+.block-services-order .avia-tickets .one-way-trip-tab .client-amount-selector {
+    width: 292px;
+}
+.block-services-order .avia-tickets .complex-trip-tab .client-amount-selector {
+    width: 292px;
+}
+
+.block-services-order .client-amount-selector {
+    padding-left: 34px;
+    padding-right: 45px;
+    cursor: pointer;
+}
+.block-services-order .client-amount-selector:before {
+    display: block;
+    content: '';
+    width: 19px;
+    height: 18px;
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 9px);
+    background: transparent url('../img/icon-client-key-blue.svg') center no-repeat;
+    background-size: 19px 18px;
+    z-index: 2;
+}
+.block-services-order .client-amount-selector:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 5px solid #000;
+    border-right: 3.5px solid transparent;
+    border-left: 3.5px solid transparent;
+    right: 20px;
+    top: 21px;
+    position: absolute;
+    transition: transform 0.5s;
+}
+.block-services-order .client-amount-selector.active:after {
+    transform: rotate(-180deg);
+    transition: transform 0.5s;
+}
+.block-services-order .client-amount-selector .client-amount-selected {
+    line-height: 45px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    /*display: flex;*/
+    overflow: hidden;
+}
+.block-services-order .client-amount-selector .adults-value:after,
+.block-services-order .client-amount-selector .children-value:after {
+    content: ' • ';
+}
+.block-services-order .client-amount-selector .client-amount-dropdown {
+    width: 340px;
+}
+.block-services-order .client-amount-selector .selected-amount-value {
+    /*flex-shrink: 0;*/
+    position: relative;
+    /*margin-right: 2px;*/
+}
+.block-services-order .selected-amount-value::after {
+    display: inline;
+    content: ' • ';
+}
+.block-services-order .ticket-type-group {
+    width: 100%;
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.block-services-order select.ticket-type-selector {
+    display: none;
+}
+.block-services-order .ticket-type-selector {
+    width: 214px;
+}
+/*select plugin*/
+.block-services-order .ticket-type-selector.opened {
+    box-shadow: 6px 10px 19px rgba(20,20,20,0.19);
+}
+
+.block-services-order .ticket-type-selector .jq-selectbox__select {
+    padding-left: 20px;
+    padding-right: 28px;
+    box-shadow: none;
+}
+.block-services-order .ticket-type-selector .jq-selectbox__trigger {
+    width: 27px;
+}
+.block-services-order .ticket-type-selector .jq-selectbox__trigger-arrow {
+    right: 20px;
+}
+.block-services-order .ticket-type-selector .jq-selectbox__dropdown {
+    /*margin-top: 0;*/
+    margin-top: 47px;
+    padding: 3px 0 3px;
+    /*box-shadow: none;*/
+}
+.block-services-order .ticket-type-selector li {
+    padding-left: 20px;
+}
+/*select plugin*/
+
+.block-services-order .client-amount-selector-buttons,
+.block-services-order .client-amount-submit-buttons {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.block-services-order .client-amount-selector-buttons {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #c4c4c4;
+}
+.block-services-order .amount-selector-button-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.block-services-order .amount-selector-button-group:not(:last-child) {
+    margin-bottom: 12px;
+}
+.block-services-order .amount-selector-button-group .group-title {
+    font-size: 16px;
+    display: flex;
+    align-items: baseline;
+}
+.block-services-order .amount-selector-button-group .age-label {
+    font-size: 14px;
+    color: #c4c4c4;
+    margin-left: 7px;
+}
+.block-services-order .amount-selector-button {
+    display: flex;
+    align-items: center;
+}
+.block-services-order .amount-selector-button .amount-number-control {
+    cursor: pointer;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    border: 1px solid #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 1px;
+    transition: 0.5s;
+}
+.block-services-order .amount-selector-button .amount-number-control:not(.disabled):hover {
+    transition: 0.5s;
+    background-color: var(--grey-light);
+}
+.block-services-order .amount-selector-button .amount-number-control.disabled {
+    cursor: default;
+    pointer-events: none;
+    color: #c4c4c4;
+}
+.block-services-order .amount-selector-button .amount-number-control::selection,
+.block-services-order .amount-selector-button .amount-number-control::-moz-selection {
+    background: transparent;
+}
+.block-services-order .amount-selector-button .amount-number-input {
+    pointer-events: none;
+    font-size: 20px;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+    display: block;
+    width: 42px;
+    line-height: 1;
+}
+
+.block-services-order .client-amount-submit-buttons {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.block-services-order .amount-submit-button {
+    border: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 15px;
+    line-height: normal;
+    font-weight: 400;
+}
+.block-services-order .amount-cancel {
+    color: var(--black);
+    transition: 0.5s;
+}
+.block-services-order .amount-cancel:hover {
+    transition: 0.5s;
+    color: var(--grey);
+}
+.block-services-order .amount-complete {
+    color: var(--blue-light);
+    transition: 0.5s;
+}
+.block-services-order .amount-complete:hover {
+    transition: 0.5s;
+    background-color: var(--blue);
+}
+
+.block-services-order .geo-input-group {
+    display: flex;
+    /*align-items: center;*/
+    align-items: baseline;
+    padding-left: 30px;
+    font-size: 13px;
+    line-height: 45px;
+}
+.b_safari .block-services-order .geo-input-group {
+    align-items: center;
+}
+
+.block-services-order .geo-input-group:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: calc(50% - 11px);
+    left: 8px;
+    width: 15px;
+    height: 22px;
+    background: transparent url('../img/icon-pin-blue.svg') center no-repeat;
+    background-size: contain;
+}
+.block-services-order .dish-type {
+    padding-left: 48px;
+}
+.block-services-order .dish-type:before {
+    top: calc(50% - 11px);
+    left: 10px;
+    width: 29px;
+    height: 20px;
+    background: transparent url('../img/icon-dish-blue.svg') center no-repeat;
+
+}
+.block-services-order .entertainment-type {
+    padding-left: 45px;
+}
+
+.block-services-order .entertainment-type:before {
+    top: calc(50% - 12px);
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background: transparent url('../img/icon-opera-blue.png') center no-repeat;
+}
+.block-services-order .avia-tickets-to:after {
+    display: block;
+    content: '';
+    position: absolute;
+    background-size: 8px 13px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -16.5px;
+    top: calc(50% - 9px);
+    background-image: url('../img/icon-rotate-greyblue.png');
+    border: 1px solid #c4c4c4;
+
+}
+.block-services-order .geo-input-group-title {
+    color: var(--grey-blue);
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+.block-services-order .geo-input-group-value {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 13px;
+    flex-grow: 1;
+    height: 45px;
+}
+.block-services-order .avia-tickets .round-trip-tab .geo-input-group {
+    width: 212px;
+}
+.block-services-order .avia-tickets .one-way-trip-tab .geo-input-group {
+    width: 280px;
+}
+.block-services-order .avia-tickets .complex-trip-tab .geo-input-group {
+    width: 280px;
+}
+
+
+.block-services-order .avia-tickets .round-trip-tab .date-input-group {
+    width: 144px;
+}
+.block-services-order .avia-tickets .one-way-trip-tab .date-input-group {
+    width: 114px;
+}
+.block-services-order .avia-tickets .complex-trip-tab .date-input-group {
+    width: 114px;
+}
+
+.block-services-order .transfer .one-way-trip-tab .date-input-group,
+.block-services-order .transfer .one-way-trip-tab .time-input-group {
+    width: 128px;
+}
+.block-services-order .transfer .return-trip-tab .date-input-group,
+.block-services-order .transfer .return-trip-tab .time-input-group {
+    width: 128px;
+}
+
+
+.block-services-order .transfer .one-way-trip-tab .transfer-first-point {
+    width: 308px;
+}
+.block-services-order .transfer .one-way-trip-tab .transfer-second-point {
+    width: 308px;
+}
+.block-services-order .transfer .return-trip-tab .transfer-first-point {
+    width: 308px;
+}
+.block-services-order .transfer .return-trip-tab .transfer-second-point {
+    width: 308px;
+}
+
+.block-services-order .hotels .hotel-order-tab .geo-input-group {
+    /*width: 436px;*/
+    width: 400px;
+}
+.block-services-order .game-tour .tour-order-tab .geo-input-group {
+    /*width: 436px;*/
+    width: 400px;
+}
+.block-services-order .hotels .hotel-order-tab .date-input-group {
+    width: 144px;
+}
+.block-services-order .game-tour .tour-order-tab .date-input-group {
+    width: 144px;
+}
+
+.block-services-order .restaurants .restaurant-order-tab .geo-input-group {
+    width: 310px;
+}
+.block-services-order .entertainment .entertainment-order-tab .geo-input-group {
+    width: 310px;
+}
+.block-services-order .restaurants .restaurant-order-tab .date-input-group,
+.block-services-order .restaurants .restaurant-order-tab .time-input-group,
+.block-services-order .entertainment .entertainment-order-tab .date-input-group,
+.block-services-order .entertainment .entertainment-order-tab .time-input-group {
+    width: 128px;
+}
+.block-services-order .cars-rent .return-same-place-tab .geo-input-group,
+.block-services-order .yacht-charter .return-same-place-tab .geo-input-group {
+    width: 518.5px;
+}
+.block-services-order .cars-rent .return-another-place-tab .geo-input-group,
+.block-services-order .yacht-charter .return-another-place-tab .geo-input-group {
+    width: 254.5px;
+}
+.block-services-order .cars-rent .return-same-place-tab .date-input-group,
+.block-services-order .cars-rent .return-same-place-tab .time-input-group,
+.block-services-order .cars-rent .return-another-place-tab .date-input-group,
+.block-services-order .cars-rent .return-another-place-tab .time-input-group,
+.block-services-order .yacht-charter .return-same-place-tab .date-input-group,
+.block-services-order .yacht-charter .return-same-place-tab .time-input-group,
+.block-services-order .yacht-charter .return-another-place-tab .date-input-group,
+.block-services-order .yacht-charter .return-another-place-tab .time-input-group {
+    width: 144px;
+}
+.block-services-order .cars-rent .return-same-place-tab .car-rent-type,
+.block-services-order .cars-rent .return-another-place-tab .car-rent-type,
+.block-services-order .yacht-charter .return-same-place-tab .car-rent-type,
+.block-services-order .yacht-charter .return-another-place-tab .car-rent-type {
+    width: 166px;
+}
+
+
+.block-services-order .client-amount-selector.client-amount-basic {
+    width: 86px;
+    border: 0;
+    padding: 0;
+}
+.block-services-order select.client-amount-basic {
+    display: none;
+}
+.block-services-order .client-amount-selector.hotel-clients-amount {
+    /*width: 246px;*/
+    width: 282px;
+}
+.block-services-order .client-amount-selector.tour-clients-amount {
+    /*width: 246px;*/
+    width: 282px;
+}
+.block-services-order .client-amount-basic .jq-selectbox__select {
+
+}
+.block-services-order .client-amount-basic .jq-selectbox__trigger {
+    display: none;
+}
+
+
+.block-services-order .date-input-group,
+.block-services-order .time-input-group {
+    padding-left: 35px;
+}
+.block-services-order .date-input-group:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: calc(50% - 8px);
+    left: 9px;
+    width: 16px;
+    height: 16px;
+    background: transparent url('../img/icon-calendar-blue.png') center no-repeat;
+    background-size: contain;
+}
+.block-services-order .time-input-group:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: calc(50% - 8.5px);
+    left: 9px;
+    width: 17px;
+    height: 17px;
+    background: transparent url('../img/icon-clock-blue.svg') center no-repeat;
+    background-size: contain;
+}
+.block-services-order .date-input-group .input-group-selected,
+.block-services-order .time-input-group .input-group-selected {
+    cursor: pointer;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.block-services-order .date-input-group .date-selected-value-group {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-transform: lowercase;
+}
+.date-input-group .date-title,
+.time-input-group .time-title {
+    display: block;
+    font-size: 10px;
+    line-height: normal;
+    color: var(--grey-blue);
+}
+.block-services-order .date-input-group .date-value,
+.block-services-order .time-input-group .time-value {
+    /*display: block;*/
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--black);
+    border: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+.block-services-order .date-input-group .date-value:not(:last-child):after {
+    content: ', ';
+}
+
+
+.block-services-order .date-calendar-dropdown .calendar-item {
+    width: 276px;
+    /*padding: 14px 15px 12px;*/
+    padding: 15px 15px 15px;
+}
+.block-services-order .input-group.active .date-calendar-dropdown-double .calendar-items,
+.block-services-order .input-group.active .date-calendar-dropdown-double .time-items {
+    display: flex;
+    align-items: flex-start;
+    width: 552px;
+}
+.block-services-order .input-group.active .date-calendar-dropdown-double .time-items {
+    border-top: 1px solid #c4c4c4;
+}
+.block-services-order .date-calendar-dropdown-double .calendar-item {
+    flex-shrink: 0;
+}
+.block-services-order .date-calendar-dropdown-double .time-items {
+    position: relative;
+    z-index: 2;
+}
+.block-services-order .date-calendar-dropdown-double .time-item {
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 276px;
+}
+.block-services-order .date-calendar-dropdown-double .time-selector-buttons {
+    border-bottom: 0;
+}
+.block-services-order .time-dropdown .time-item {
+    width: 270px;
+}
+.block-services-order .time-selector-buttons,
+.block-services-order .time-submit-buttons {
+    width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.block-services-order .time-selector-buttons {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid #c4c4c4;
+}
+.block-services-order .time-selector-title {
+    font-size: 14px;
+    line-height: 18px;
+    margin-right: 10px;
+}
+.block-services-order .time-select {
+    /*padding-left: 9px;*/
+    color: #828282;
+    /*width: 66px;*/
+    position: relative;
+}
+.block-services-order .time-select.jq-selectbox {
+    width: 66px;
+}
+.block-services-order .time-select.jq-selectbox:before,
+.block-services-order .time-select.jq-selectbox:after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    pointer-events: none;
+    z-index: 2;
+}
+.block-services-order .time-select.jq-selectbox:before {
+    border-width: 0 3px 5px 3px;
+    border-color: transparent transparent #828282 transparent;
+    top: calc(50% - 7px);
+}
+.block-services-order .time-select.jq-selectbox:after {
+    border-width: 5px 3px 0 3px;
+    border-color: #828282 transparent transparent transparent;
+    bottom: calc(50% - 7px);
+}
+.block-services-order .time-select .jq-selectbox__select {
+    padding-left: 9px;
+}
+.block-services-order .time-select .jq-selectbox__dropdown {
+    margin-top: 57px;
+    /*max-height: 270px;*/
+}
+.block-services-order .time-select .jq-selectbox__trigger-arrow {
+    display: none;
+    transition: none;
+}
+.block-services-order .time-select.jq-selectbox ul {
+    max-height: 270px !important;
+}
+.block-services-order .time-select.jq-selectbox li {
+    padding-left: 0;
+    text-align: center;
+    color: #828282;
+}
+.block-services-order .hour-select {
+    margin-right: 4px;
+}
+
+.block-services-order .time-submit-buttons {
+    width: 100%;
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.block-services-order .time-submit-button {
+    border: 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 0;
+    font-size: 15px;
+    line-height: normal;
+    font-weight: 400;
+}
+.block-services-order .time-cancel {
+    color: var(--black);
+}
+.block-services-order .time-complete {
+    color: var(--blue-light);
+}
+
+/*custom calendar plugin*/
+    .block-services-order .date-calendar-dropdown  .xdsoft_datetimepicker {
+        border: 0;
+        color: var(--black);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        padding: 0;
+        width: 100%;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_datepicker {
+        margin-left: 0;
+        width: 100%;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar th {
+        border: 0;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 400;
+        text-align: center;
+        color: var(--black);
+        background-color: transparent;
+        height: 36px;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td {
+        color: var(--black);
+        border: 0;
+        background-color: transparent;
+        height: 36px;
+        font-size: 14px;
+        line-height: 15px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td > div {
+        padding-right: 0;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_disabled {
+        opacity: 0.35;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_other_month {
+        opacity: 0;
+        pointer-events: none;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_other_month.xdsoft_disabled {
+        opacity: 0;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+    .block-services-order .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
+        font-weight: 400;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current {
+        background-color: var(--blue-light);
+        color: #fff;
+        box-shadow: none;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_monthpicker {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_label {
+        pointer-events: none;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+        padding: 0;
+        background-color: transparent;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_month {
+        width: auto;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_year {
+        width: auto;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_label i {
+        display: none;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_today_button {
+        display: none;
+    }
+
+    .block-services-order .xdsoft_datetimepicker .xdsoft_prev,
+    .block-services-order .xdsoft_datetimepicker .xdsoft_next {
+        background-image: none;
+        background-color: transparent;
+        overflow: visible;
+        width: auto;
+        opacity: 1;
+        height: 32px;
+        width: 32px;
+        position: relative;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_prev:before,
+    .block-services-order .xdsoft_datetimepicker .xdsoft_next:before {
+        position: absolute;
+        left: 4px;
+        top: 5px;
+        display: block;
+        color: #c4c4c4;
+        font-size: 28px;
+        line-height: 18px;
+        font-weight: 400;
+    }
+    .b_safari .block-services-order .xdsoft_datetimepicker .xdsoft_prev:before,
+    .b_safari .block-services-order .xdsoft_datetimepicker .xdsoft_next:before {
+        left: -20px;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_prev {
+        margin-right: auto;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_prev:before {
+        content: '‹';
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_next {
+        margin-left: auto;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_next:before {
+        content: '›';
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar td:hover,
+    .block-services-order .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+        background-color: rgba(51, 170, 255, 0.5) !important;
+    }
+    .block-services-order .xdsoft_datetimepicker .xdsoft_calendar .xdsoft_current:hover {
+        background-color: rgba(51, 170, 255, 1) !important;
+    }
+
+    /*date range picker*/
+        .block-services-order .daterangepicker {
+            position: static;
+            z-index: 1;
+            border: 0;
+            display: block !important;
+            margin-top: 0;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            /*width: calc(100% + 2px);*/
+            /*width: 100%;*/
+        }
+        .block-services-order .daterangepicker .drp-calendar {
+            max-width: 276px;
+        }
+        .block-services-order .daterangepicker .calendar-table {
+            border: 0;
+        }
+        .block-services-order .daterangepicker .drp-calendar.left {
+            padding: 15px 15px 15px;
+        }
+        .block-services-order .daterangepicker .drp-calendar.right {
+            padding: 15px 15px 15px;
+        }
+        .block-services-order .daterangepicker .drp-calendar.left .calendar-table {
+            padding-right: 0;
+        }
+        .block-services-order .daterangepicker .drp-calendar.right .calendar-table {
+            padding-left: 0;
+        }
+        .block-services-order .daterangepicker::before,
+        .block-services-order .daterangepicker::after {
+            content: none;
+        }
+        .block-services-order .daterangepicker .calendar-table th {
+            border: 0;
+            border-radius: 0;
+            font-size: 12px;
+            height: 32px;
+            font-weight: 400;
+        }
+        .block-services-order .daterangepicker .calendar-table th.month {
+            font-size: 16px;
+        }
+        .block-services-order .daterangepicker .calendar-table td {
+            font-size: 14px;
+            height: 36px;
+            width: 36px;
+            line-height: normal;
+            border-radius: 0;
+            border: 0;
+            font-weight: 400;
+        }
+        .block-services-order .daterangepicker td.start-date,
+        .block-services-order .daterangepicker td.end-date {
+            border-radius: 0;
+            background-color: var(--blue-light);
+        }
+        .block-services-order .daterangepicker td.disabled,
+        .block-services-order .daterangepicker option.disabled {
+            text-decoration: none;
+            color: default;
+            color: #dbdbdb;
+            pointer-events: none;
+        }
+        .block-services-order .daterangepicker td.in-range {
+            background-color: #f5f5f5;
+        }
+        .block-services-order .daterangepicker td.start-date.end-date {
+            border-radius: 0;
+        }
+        .block-services-order .daterangepicker td.today:not(.start-date) {
+            color: var(--blue-light);
+            background-color: #fff;
+        }
+        .block-services-order .daterangepicker td.ends {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .block-services-order .daterangepicker td.start-date.active,
+        .block-services-order .daterangepicker td.end-date.active {
+            background-color: var(--blue-light);
+        }
+        .block-services-order .daterangepicker td.active:hover {
+            background-color: rgba(51, 170, 255, 0.5);
+        }
+        .block-services-order .daterangepicker .calendar-table .next span,
+        .block-services-order .daterangepicker .calendar-table .prev span {
+            border-color: var(--grey);
+            display: none;
+        }
+        .block-services-order .daterangepicker .calendar-table .next,
+        .block-services-order .daterangepicker .calendar-table .prev {
+            width: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 32px;
+            position: relative;
+
+        }
+        .block-services-order .daterangepicker .calendar-table .prev:before,
+        .block-services-order .daterangepicker .calendar-table .next:before {
+            position: absolute;
+            left: 12px;
+            top: 5px;
+            display: block;
+            color: #c4c4c4;
+            font-size: 28px;
+            line-height: 18px;
+            font-weight: 400;
+            z-index: 10;
+        }
+        .block-services-order .daterangepicker .calendar-table .prev {
+            margin-right: auto;
+        }
+        .block-services-order .daterangepicker .calendar-table .prev:before {
+            content: '‹';
+        }
+        .block-services-order .daterangepicker .calendar-table .next {
+            margin-left: auto;
+        }
+        .block-services-order .daterangepicker .calendar-table .next:before {
+            content: '›';
+        }
+/*Блок об услугах для клиентов*/
+
+
+
+/*.calendar-item input {
+    display: block !important;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+

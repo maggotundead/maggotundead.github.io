@@ -1,0 +1,262 @@
+/* Блок одно событие из календаря */
+    .block-one-calendar-event {
+        margin-top: 50px;
+    }
+    .block-one-calendar-event .wrap {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    .block-one-calendar-event .event-column {
+        width: 870px;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        position: relative;
+    }
+    .block-one-calendar-event .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: -47px;
+    }
+    .block-one-calendar-event .socials .social {
+        display: block;
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #fff;
+        background-size: cover;
+        transition: 0.5s;
+    }
+    .block-one-calendar-event .socials .social:hover {
+        opacity: 0.5;
+        transition: 0.5s;
+    }
+    .block-one-calendar-event .socials .social:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .block-one-calendar-event .socials .social.fb {
+        background-image: url('../img/social-fb-bluelight.png');
+    }
+    .block-one-calendar-event .socials .social.insta {
+        background-image: url('../img/social-insta-bluelight.png');
+    }
+    .block-one-calendar-event .socials .social.telegram {
+        background-image: url('../img/social-telegram-bluelight.png');
+    }
+    .block-one-calendar-event .socials .social.twitter {
+        background-image: url('../img/social-twitter-bluelight.png');
+    }
+    .block-one-calendar-event .socials .social.vk {
+        background-image: url('../img/social-vk-bluelight.png');
+    }
+    .block-one-calendar-event .socials .social.youtube {
+        background-image: url('../img/social-youtube-bluelight.png');
+    }
+    .block-one-calendar-event .socials .social.chat {
+        background-image: url('../img/social-chat-bluelight.png');
+    }
+    .block-one-calendar-event .contacts-column {
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+    }
+    .block-one-calendar-event .title-info {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .block-one-calendar-event .event-date {
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--grey-medium);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 260px;
+    }
+    .block-one-calendar-event .event-date .date,
+    .block-one-calendar-event .event-date .time {
+        position: relative;
+        padding-left: 25px;
+    }
+    .block-one-calendar-event .event-date .date:before,
+    .block-one-calendar-event .event-date .time:before {
+        position: absolute;
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        width: 16px;
+        height: 16px;
+        top: calc(50% - 9px);
+    }
+    .block-one-calendar-event .event-date .date:before {
+        background-image: url('../img/icon-calendar-bluelight.png');
+    }
+    .block-one-calendar-event .event-date .time {
+        margin-left: 50px;
+    }
+    .block-one-calendar-event .event-date .time:before {
+        background-image: url('../img/icon-clock-blue.png');
+    }
+    .block-one-calendar-event .event-location {
+        margin-top: 10px;
+        line-height: 21px;
+        padding-left: 22px;
+        position: relative;
+    }
+    .block-one-calendar-event .event-location:before {
+        display: block;
+        content: '';
+        background: transparent url('../img/icon-marker-bluelight.png') center no-repeat;
+        background-size: contain;
+        width: 16px;
+        height: 21px;
+        position: absolute;
+        left: 0;
+        top: calc(50% - 11px);
+    }
+    .block-one-calendar-event .registration {
+        margin-top: 30px;
+        min-width: 210px;
+    }
+    .block-one-calendar-event .contacts-group {
+        margin-top: auto;
+    }
+    .block-one-calendar-event .contacts {
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+    .block-one-calendar-event .address {
+        font-style: normal;
+        font-size: 13px;
+        line-height: 22px;
+        width: 100%;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    .block-one-calendar-event .phone {
+        font-size: 20px;
+        line-height: 1;
+        color: var(--blue-light);
+        transition: 0.5s;
+        margin-right: 5px;
+    }
+    .block-one-calendar-event .phone:hover {
+        transition: 0.5s;
+        color: var(--blue);
+    }
+    .block-one-calendar-event .phone-descr {
+        margin-right: auto;
+    }
+    .block-one-calendar-event .mail {
+        color: var(--blue-light);
+        transition: 0.5s;
+        margin-top: 10px;
+    }
+    .block-one-calendar-event .mail:hover {
+        color: var(--blue);
+        transition: 0.5s;
+    }
+    .block-one-calendar-event .mail:not(:last-child) {
+        margin-right: 50px;
+    }
+    .block-one-calendar-event .event-map {
+        margin-top: 15px;
+    }
+    .block-one-calendar-event .event-map iframe {
+        display: block;
+    }
+    .block-one-calendar-event .description-column {
+        width: 480px;
+    }
+    .block-one-calendar-event .control-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .block-one-calendar-event .map-link,
+    .block-one-calendar-event .wishlist-link {
+        color: var(--blue);
+        font-size: 12px;
+        padding-left: 35px;
+        position: relative;
+        transition: 0.5s;
+    }
+    .block-one-calendar-event .map-link {
+        align-self: flex-start;
+        text-decoration: underline;
+    }
+    .block-one-calendar-event .map-link:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: calc(50% - 8px);
+        width: 35px;
+        height: 16px;
+        background: transparent url('../img/icon-marker-small-blue.png') center no-repeat;
+        background-size: contain;
+    }
+    .block-one-calendar-event .wishlist-link {
+        text-decoration: underline;
+        margin-left: 30px;
+    }
+    .block-one-calendar-event .wishlist-link:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: calc(50% - 8px);
+        left: 0;
+        width: 35px;
+        height: 16px;
+        background-color: transparent;
+        background-image: url('../img/icon-wishlist-blue-empty.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .block-one-calendar-event .wishlist-link.added:before {
+        background-image: url('../img/icon-wishlist-blue.png');
+    }
+    .block-one-calendar-event .banner {
+        margin-top: 25px;
+    }
+    .block-one-calendar-event .descr {
+        margin-top: 30px;
+        line-height: 21px;
+    }
+    .block-one-calendar-event .descr p:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    .block-one-calendar-event .descr .block-title:not(:first-child) {
+        margin-top: 30px;
+    }
+    .block-one-calendar-event .descr .block-title + p {
+        margin-top: 30px;
+    }
+    .block-one-calendar-event .descr a {
+        color: var(--blue-light);
+        transition: 0.5s;
+        text-decoration: underline;
+    }
+    .block-one-calendar-event .descr a:hover {
+        color: var(--blue);
+        transition: 0.5s;
+    }
+    .block-one-calendar-event .aside-column {
+        margin-left: auto;
+    }
+/* Блок одно событие из календаря */

@@ -1,0 +1,188 @@
+.footer {
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 400;
+    margin-top: 50px;
+}
+.footer .footer-top {
+	padding-top: 50px;
+	padding-bottom: 44px;
+	background-color: var(--blue);
+}
+.footer .footer-top .wrap {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.footer .footer-column.left {
+	width: 30%;
+	max-width: 580px;
+}
+.footer .footer-column.center {
+	width: 38.5%;
+	max-width: 740px;
+}
+.footer .footer-column.right {
+	width: 19.5%;
+	max-width: 375px;
+}
+
+.footer .footer-column .text p:not(:last-child) {
+	margin-bottom: 20px;
+}
+.footer .footer-column .text a {
+    color: var(--blue-light);
+    text-decoration: none;
+    transition: 0.5s;
+}
+.footer .footer-column .text a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.footer .subscribe-form {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+    text-align: center;
+}
+.footer .form-title {
+	font-size: 19px;
+    margin-top: -4px;
+	line-height: normal;
+}
+.footer .form-descr {
+    font-size: 13px;
+	line-height: normal;
+	margin-top: 3px;
+}
+.footer .form {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 10px;
+}
+.footer .input-label {
+	flex-grow: 1;
+	flex-shrink: 1;
+	width: calc(100% - 200px);
+}
+.footer .input {
+	width: 100%;
+	border: 0;
+	/*border-right: 1px solid var(--blue);*/
+	height: 36px;
+	line-height: 36px;
+	font-size: 13px;
+	color: var(--grey-dark);
+	padding-left: 14px;
+	padding-right: 14px;
+    text-align: left;
+}
+.footer .submit-button {
+	flex-grow: 10;
+	flex-shrink: 0;
+}
+.footer .checkbox-label {
+	margin-top: 13px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+.footer .checkbox-custom {
+	width: 12px;
+	height: 12px;
+	margin-right: 8px;
+	background-color: #fff;
+	position: relative;
+	flex-shrink: 0;
+}
+.footer .checkbox-custom:before {
+	display: block;
+	position: absolute;
+	left: 2px;
+	right: 2px;
+	top: 2px;
+	bottom: 2px;
+	background-color: var(--blue-light);
+}
+.footer .checkbox-default:checked + .checkbox-custom:before {
+	content: '';
+}
+.footer .checkbox-text {
+	font-size: 11px;
+	line-height: normal;
+}
+.footer .brand-about {
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+.footer .brand-about-text a {
+	color: var(--blue-light);
+}
+.footer .brand-logo.gambling {
+    max-width: 245px;
+}
+.footer .brand-logo.agarta {
+	max-width: 65px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.footer .socials {
+	display: flex;
+	align-items: center;
+}
+@media screen and (max-width: 1440px) {
+	.footer .socials {
+		margin: 30px auto;
+	}
+}
+.footer .social {
+	width: 36px;
+	height: 36px;
+	flex-shrink: 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--blue);
+	background-size: contain;
+}
+.footer .social:not(:last-child) {
+	margin-right: 14px;
+}
+.footer .social.fb {
+	background-image: url('../img/social-fb-white.jpg');
+}
+.footer .social.insta {
+	background-image: url('../img/social-insta-white.jpg');
+}
+.footer .social.telegram {
+	background-image: url('../img/social-telegram-white.jpg');
+}
+.footer .social.twitter {
+	background-image: url('../img/social-twitter-white.png');
+}
+.footer .social.vk {
+	background-image: url('../img/social-vk-white.jpg');
+}
+.footer .social.youtube {
+	background-image: url('../img/social-youtube-white.jpg');
+}
+
+.footer .copyright {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	background-color: var(--blue-light);
+	text-align: center;
+}
+.footer .copyright .wrap {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}

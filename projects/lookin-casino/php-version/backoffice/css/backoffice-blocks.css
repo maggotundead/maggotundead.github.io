@@ -1,0 +1,2300 @@
+.page-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+}
+
+/* Блок графики визуализация балансов */
+    .block-charts-statistic {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        /* max-width: 1185px; */
+        width: calc(75% - 15px);
+    }
+    @media screen and (max-width: 1600px) {
+        .block-charts-statistic {
+            width: calc(75% - 10px);
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-charts-statistic {
+            order: 1;
+            width: 100%;
+        }
+    }
+
+    .block-charts-statistic .players-amount,
+    .block-charts-statistic .today-registrations,
+    .block-charts-statistic .booking-tours,
+    .block-charts-statistic .gambling-amount,
+    .block-charts-statistic .players-amount,
+    .block-charts-statistic .partners-amount,
+    .block-charts-statistic .total-balance,
+    .block-charts-statistic .saving-account,
+    .block-charts-statistic .bonus-points {
+        width: calc((100% - 60px) / 3);
+        padding: 25px 20px 20px;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-charts-statistic .players-amount,
+        .block-charts-statistic .today-registrations,
+        .block-charts-statistic .booking-tours,
+        .block-charts-statistic .gambling-amount,
+        .block-charts-statistic .players-amount,
+        .block-charts-statistic .partners-amount,
+        .block-charts-statistic .total-balance,
+        .block-charts-statistic .saving-account,
+        .block-charts-statistic .bonus-points {
+            width: calc((100% - 40px) / 3);
+        }
+    }
+
+    .block-charts-statistic .title {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    .block-charts-statistic .balance-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .block-charts-statistic .balance-value {
+        font-size: 20px;
+        line-height: normal;
+        font-weight: 700;
+        display: flex;
+    }
+    .block-charts-statistic .balance-value .icon {
+        font-size: 18px !important;
+        color: var(--blue-light);
+        margin-right: 8px;
+    }
+    .block-charts-statistic .progress {
+        position: relative;
+        padding-left: 13px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-top: 5px;
+    }
+    .block-charts-statistic .progress:before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 4.5px 5px 4.5px;
+    }
+    .block-charts-statistic .progress.positive {
+        color: var(--green);
+    }
+    .block-charts-statistic .progress.negative {
+        color: var(--red);
+    }
+    .block-charts-statistic .progress.neutral {
+        color: var(--grey);
+    }
+    .block-charts-statistic .progress.positive:before {
+        border-color: transparent transparent var(--green) transparent;
+        top: 5px;
+    }
+    .block-charts-statistic .progress.negative:before {
+        border-color: transparent transparent var(--red) transparent;
+        top: 5px;
+    }
+    .block-charts-statistic .progress.neutral:before {
+        border-color: transparent transparent var(--grey) transparent;
+        top: 2px;
+    }
+    .block-charts-statistic .progress.neutral:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 4.5px 0 4.5px;
+        border-color: var(--grey) transparent transparent transparent;
+        top: 9px;
+    }
+    .block-charts-statistic .general-statistic {
+        width: 100%;
+        margin-top: 30px;
+        padding: 25px 20px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-charts-statistic .general-statistic {
+            margin-top: 20px;
+        }
+    }
+    .block-charts-statistic .statisctic-main-chart {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .block-charts-statistic .live-update-switcher {
+        display: flex;
+        align-items: center;
+    }
+    .block-charts-statistic .live-update-switcher .checkbox-text {
+        font-size: 16px;
+        margin-right: 18px;
+    }
+    .block-charts-statistic .live-update-switcher .checkbox-custom {
+        width: 50px;
+        height: 26px;
+        border-radius: 25px;
+        position: relative;
+        cursor: pointer;
+        background-color: var(--grey);
+        transition: 0.5s;
+    }
+    .block-charts-statistic .live-update-switcher .checkbox-custom:before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 24px;
+        height: 24px;
+        transition: 0.5s;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+    .block-charts-statistic .live-update-switcher .checkbox-default:checked ~ .checkbox-custom {
+        background-color: var(--green);
+    }
+    .block-charts-statistic .live-update-switcher .checkbox-default:checked ~ .checkbox-custom:before {
+        left: initial;
+        right: 1px;
+        transition: 0.5s;
+    }
+/* Блок графики визуализация балансов */
+
+
+/* Блок мои отзывы */
+    .block-my-reviews {
+        width: calc(25% - 15px);
+        /* width: 375px; */
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-my-reviews {
+            width: calc(25% - 10px);
+        }
+    }
+
+    .block-my-reviews .reviews-head {
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-my-reviews .reviews-head .title {
+        font-size: 16px;
+    }
+    .block-my-reviews .reviews-head .reviews-amount {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        height: 18px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 10px;
+        color: #fff;
+        background-color: var(--blue-light);
+        padding-top: 1px;
+    }
+
+    .block-my-reviews .reviews-control {
+        padding: 30px 0;
+        border-top: 1px solid var(--block-border);
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-my-reviews .reviews-control {
+            padding: 20px 0;
+        }
+    }
+    .block-my-reviews .add-review-button {
+        min-width: 140px;
+    }
+    .block-my-reviews .all-reviews-link {
+        color: var(--blue-light);
+        text-decoration: underline;
+        font-size: 13px;
+        margin-left: 30px;
+        transition: 0.5s;
+    }
+    .block-my-reviews .all-reviews-link:hover {
+        color: var(--blue);
+    }
+    .block-my-reviews .review-item {
+        padding: 30px 20px;
+    }
+    .block-my-reviews .review-item:not(:last-child) {
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-my-reviews .review-item-head {
+        display: flex;
+        align-items: center;
+    }
+    .block-my-reviews .review-item .logo {
+        width: 100px;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+    .block-my-reviews .review-item .logo img {
+        max-width: 100px;
+    }
+    .block-my-reviews .review-item .title {
+        position: relative;
+        padding-bottom: 15px;
+        font-size: 19px;
+    }
+    .block-my-reviews .review-item .title.orange {
+        color: var(--orange);
+    }
+    .block-my-reviews .review-item .title:before {
+        display: block;
+        content: '';
+        width: 55px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 9px;
+        background-color: var(--blue-light);
+    }
+    .block-my-reviews .review-item .title.orange:before {
+        background-color: var(--orange);
+    }
+    .block-my-reviews .review-item .location {
+        font-size: 13px;
+    }
+    .block-my-reviews .review-item .rate-date {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .block-my-reviews .review-item .rate {
+        width: 100px;
+        margin-right: 20px;
+    }
+    .block-my-reviews .review-item .date {
+        font-size: 12px;
+        color: var(--grey);
+    }
+    .block-my-reviews .review-item .descr {
+        margin-top: 18px;
+    }
+    .block-my-reviews .review-item .review-link {
+        color: var(--blue);
+        margin-top: 3px;
+    }
+/* Блок мои отзывы */
+
+
+/* Блок лучшие игровые заведения */
+    .block-best-gambling-establishments {
+        margin-top: 30px;
+        position: relative;
+        /* width: 1050px; */
+        width: calc(66.5% - 15px);
+        padding-bottom: 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-best-gambling-establishments {
+            margin-top: 20px;
+            width: calc(66.5% - 10px);
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-best-gambling-establishments {
+            width: calc(100% - 320px);
+            order: 2;
+        }
+    }
+    .block-best-gambling-establishments .establishment-type-links {
+        display: flex;
+        background-color: #f7f7f7;
+        width: 100%;
+    }
+    .block-best-gambling-establishments .establishment-type-link {
+        padding-left: 60px;
+        padding-right: 30px;
+        position: relative;
+        font-size: 13px;
+        line-height: 46px;
+        transition: 0.5s;
+    }
+    .block-best-gambling-establishments .establishment-type-link.active {
+        color: var(--blue-light);
+        cursor: default;
+        background-color: #fff;
+    }
+    .block-best-gambling-establishments .establishment-type-link:not(.active):hover {
+        cursor: pointer;
+    }
+    .block-best-gambling-establishments .establishment-type-link:before {
+        display: block;
+        content: '';
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 30px;
+        top: calc(50% - 10px);
+        position: absolute;
+    }
+    .block-best-gambling-establishments .establishment-type-link.casino:before {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icon-token-blue.png');
+    }
+    .block-best-gambling-establishments .establishment-type-link.poker-club:before {
+        width: 16px;
+        height: 20px;
+        background-image: url('../img/icon-card-blue.png');
+    }
+    .block-best-gambling-establishments .establishment-type-link.bookmaker:before {
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icon-ball-blue.png');
+    }
+
+    .block-best-gambling-establishments .establishment-tabs {
+        border-bottom: 1px solid var(--block-border);
+        width: 100%;
+        flex-grow: 1;
+    }
+    .block-best-gambling-establishments .establishment-tab {
+        display: none;
+    }
+    .block-best-gambling-establishments .establishment-tab.active {
+        display: block;
+    }
+    .block-best-gambling-establishments .establishment-list-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+    }
+    .block-best-gambling-establishments .establishment-list-item:not(:last-child) {
+        border-bottom: 1px solid var(--block-border);
+    }
+    @media screen and (max-width: 1600px) {
+        .block-best-gambling-establishments .establishment-list-item {
+            padding: 20px;
+        }
+    }
+    .backoffice-for-affiliates .block-best-gambling-establishments .establishment-list-item {
+        padding: 24px 30px;
+    }
+    @media screen and (max-width: 1600px) {
+        .backoffice-for-affiliates .block-best-gambling-establishments .establishment-list-item {
+            padding: 20px 20px;
+        }
+    }
+    .block-best-gambling-establishments .column.logo {
+        width: 100px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: 30px;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-best-gambling-establishments .column.logo {
+            margin-right: 20px;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-best-gambling-establishments .column.logo {
+            width: 65px;
+        }
+    }
+    .block-best-gambling-establishments .column.establishment img {
+        width: 100%;
+    }
+    .block-best-gambling-establishments .column.title {
+        font-size: 13px;
+        line-height: 18px;
+        width: 15%;
+        flex-shrink: 0;
+    }
+    .block-best-gambling-establishments .column.rate {
+        width: 20%;
+        display: flex;
+        align-items: baseline;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    @media screen and (max-width: 1440px) {
+        .block-best-gambling-establishments .column.rate {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .block-best-gambling-establishments .column.contacts {
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        flex-direction: column;
+        padding-right: 15px;
+    }
+    .block-best-gambling-establishments .column.contacts a {
+        font-size: 15px;
+        line-height: 18px;
+        color: var(--blue-light);
+        text-decoration: none;
+    }
+    .block-best-gambling-establishments .column.review {
+        min-width: 100px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .block-best-gambling-establishments .column.review {
+        margin-left: 30px;
+    }
+    @media screen and (max-width: 1440px) {
+        .block-best-gambling-establishments .column.review {
+            margin-left: 0px;
+        }
+    }
+    .block-best-gambling-establishments .casino-link {
+        text-decoration: none;
+    }
+    @media screen and (max-width: 1440px) {
+        .block-best-gambling-establishments .casino-link {
+            min-width: 100px;
+        }
+    }
+    .block-best-gambling-establishments .stars-rate-group + .rate-number {
+        margin-left: 15px;
+    }
+    @media screen and (max-width: 1440px) {
+        .block-best-gambling-establishments .stars-rate-group + .rate-number {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+    .block-best-gambling-establishments .all-items-link {
+        color: var(--blue-light);
+        text-decoration: underline;
+        margin-top: 23px;
+        font-size: 13px;
+        line-height: 19px;
+        transition: 0.5s;
+    }
+    .block-best-gambling-establishments .all-items-link:hover {
+        color: var(--blue);
+    }
+/* Блок лучшие игровые заведения */
+
+.promo-actions-chat-group {
+    margin-top: 30px;
+    /* width: 510px; */
+    width: calc(33.5% - 15px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+@media screen and (max-width: 1600px) {
+    .promo-actions-chat-group {
+        margin-top: 20px;
+        width: calc(33.5% - 10px);
+    }
+}
+
+/* Блок мои промокоды */
+    .block-promo {
+        /* width: 240px; */
+        width: calc(50% - 15px);
+        flex-grow: 0;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-promo {
+            width: calc(50% - 10px);
+        }
+    }
+    .block-promo .promo-head {
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-promo .promo-head .title {
+        font-size: 16px;
+    }
+    .block-promo .promo-head .promo-amount {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        height: 18px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 10px;
+        color: #fff;
+        background-color: var(--blue-light);
+        padding-top: 1px;
+    }
+    .block-promo .promo-item .photo {
+        position: relative;
+        background-color: var(--grey);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 165px;
+        width: 100%;
+    }
+    .block-promo .promo-item .info {
+        padding: 20px;
+    }
+    .block-promo .promo-item .title {
+        font-size: 15px;
+        line-height: normal;
+    }
+    .block-promo .promo-item .date {
+        font-size: 12px;
+        line-height: normal;
+        margin-top: 10px;
+        color: var(--grey);
+    }
+    .block-promo .promo-item .descr {
+        font-size: 13px;
+        line-height: 19px;
+        margin-top: 10px;
+    }
+    .block-promo .promo-item .link {
+        color: var(--blue-light);
+        text-decoration: underline;
+    }
+/* Блок мои промокоды */
+
+
+
+/* Блок мои акции */
+    .block-actions {
+        /* width: 240px; */
+        width: calc(50% - 15px);
+        flex-grow: 0;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-actions {
+            width: calc(50% - 10px);
+            flex-grow: 0;
+        }
+    }
+    .block-actions .actions-head {
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-actions .actions-head .title {
+        font-size: 16px;
+    }
+    .block-actions .actions-head .actions-amount {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        height: 18px;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 10px;
+        color: #fff;
+        background-color: var(--blue-light);
+        padding-top: 1px;
+    }
+    .block-actions .action-item .photo {
+        position: relative;
+        background-color: var(--grey);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 165px;
+        width: 100%;
+    }
+    .block-actions .action-item .info {
+        padding: 20px;
+    }
+    .block-actions .action-item .title {
+        font-size: 15px;
+        line-height: normal;
+    }
+    .block-actions .action-item .date {
+        font-size: 12px;
+        line-height: normal;
+        margin-top: 10px;
+        color: var(--grey);
+    }
+    .block-actions .action-item .descr {
+        font-size: 13px;
+        line-height: 19px;
+        margin-top: 10px;
+    }
+    .block-actions .action-item .link {
+        color: var(--blue-light);
+        text-decoration: underline;
+    }
+/* Блок мои акции */
+
+
+/* Блок чат */
+    .block-chat {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-chat {
+            margin-top: 20px;
+        }
+    }
+    .block-chat .chat-head {
+        border-bottom: 1px solid var(--block-border);
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 0;
+    }
+    .block-chat .chat-companion {
+        display: flex;
+        align-items: center;
+    }
+    .block-chat .chat-companion-photo {
+        background-color: var(--grey);
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 27px;
+        height: 27px;
+    }
+    .block-chat .chat-companion-title {
+        font-size: 15px;
+    }
+    .block-chat .chat-head-controls {
+        display: flex;
+        align-items: center;
+    }
+    .block-chat .chat-control-button {
+        font-size: 16px !important;
+        color: var(--blue-light);
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .block-chat .chat-control-button:not(:last-child) {
+        margin-right: 18px;
+    }
+    .block-chat .chat-body {
+        padding: 18px 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    .block-chat .message:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .block-chat .user-message {
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 80%;
+    }
+    .block-chat .my-message {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 80%;
+    }
+    .block-chat .message-time {
+        font-size: 10px;
+        line-height: 1;
+        color: var(--grey);
+    }
+    .block-chat .user-message .message-time {
+        padding-left: 5px;
+    }
+    .block-chat .my-message .message-time {
+        padding-right: 5px;
+    }
+    .block-chat .user-message .message-text {
+        background-color: var(--grey-light);
+    }
+    .block-chat .my-message .message-text {
+        background-color: var(--grey-blue);
+    }
+    .block-chat .message-text {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 10px 12px;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .block-chat .chat-message-form {
+        min-height: 56px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 0 0 20px;
+        margin-top: auto;
+        border-top: 1px solid var(--block-border);
+    }
+    .block-chat .chat-textarea {
+        border: 0;
+        resize: none;
+        flex-grow: 1;
+        font-size: 15px;
+        line-height: normal;
+        color: var(--grey);
+    }
+    .block-chat .send-message {
+        width: 54px;
+        height: 54px;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px !important;
+        color: var(--blue-light);
+        background-color: transparent;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+/* Блок чат */
+
+
+/* Блок мои бронирования */
+    .block-booking {
+        margin-top: 30px;
+        /* width: 780px; */
+        width: calc(50% - 20px);
+        padding-bottom: 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-booking {
+            margin-top: 20px;
+            width: calc(66.5% - 10px);
+        }
+    }
+    .block-booking .title {
+        height: 46px;
+        width: 100%;
+        border-bottom: 1px solid var(--block-border);
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .block-booking .booking-list {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .block-booking .booking-item {
+        display: flex;
+        align-items: center;
+        min-height: 64px;
+        border-bottom: 1px solid var(--block-border);
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    .block-booking .booking-logo {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 20px;
+        border: 1px solid var(--blue-light);
+        border-radius: 50%;
+    }
+    .block-booking .booking-logo.orange {
+        border-color: var(--orange);
+    }
+    .block-booking .booking-logo img {
+        max-width: 32px;
+        max-height: 32px;
+        object-fit: contain;
+    }
+    .block-booking .booking-title {
+        /* width: 150px; */
+        width: 18%;
+        flex-shrink: 0;
+    }
+    .block-booking .booking-date {
+        flex-shrink: 1;
+        /* width: 205px; */
+        width: 30%;
+    }
+    .block-booking .booking-price {
+        font-size: 15px;
+        flex-shrink: 0;
+        width: 85px;
+    }
+    .block-booking .booking-status {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 20px;
+        flex-shrink: 0;
+    }
+    .block-booking .status {
+        font-size: 10px;
+        line-height: 19px;
+        padding: 0 14px;
+        color: #fff;
+        border-radius: 2px;
+    }
+    .block-booking .status.booked,
+    .block-booking .status.green {
+        background-color: var(--green);
+    }
+    .block-booking .status.awaiting,
+    .block-booking .status.blue {
+        background-color: var(--blue-light);
+    }
+    .block-booking .status.cancel,
+    .block-booking .status.grey {
+        background-color: var(--grey);
+    }
+    .block-booking .status.refuse,
+    .block-booking .status.red {
+        background-color: var(--red);
+    }
+    .block-booking .booking-details {
+        margin-left: auto;
+        text-decoration: none;
+        color: var(--blue-light);
+        flex-shrink: 0;
+    }
+    .block-booking .all-items-link {
+        color: var(--blue-light);
+        text-decoration: underline;
+        margin-top: 23px;
+        font-size: 13px;
+        line-height: 19px;
+        transition: 0.5s;
+    }
+    .block-booking .all-items-link:hover {
+        color: var(--blue);
+    }
+/* Блок мои бронирования */
+
+
+/* Блок мои заказы */
+    .block-orders {
+        margin-top: 30px;
+        /* width: 375px; */
+        width: calc(25% - 20px);
+        padding-bottom: 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-orders {
+            margin-top: 20px;
+            /* width: calc(25% - 13px); */
+            width: calc(33.5% - 10px);
+        }
+    }
+    .block-orders .title {
+        height: 46px;
+        width: 100%;
+        border-bottom: 1px solid var(--block-border);
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .block-orders .orders-list {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .block-orders .order-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 20px;
+        min-height: 64px;
+        font-size: 13px;
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-orders .order-descr {
+        /* width: 160px; */
+        min-width: 45%;
+        flex-shrink: 0;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-orders .order-descr {
+            margin-right: auto;
+        }
+    }
+    .block-orders .order-number {
+        width: 25px;
+        flex-shrink: 0;
+    }
+    .block-orders .order-amount {
+        font-size: 15px;
+        flex-shrink: 0;
+    }
+    .block-orders .order-details {
+        color: var(--blue-light);
+        margin-left: auto;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-orders .order-details {
+            margin-left: 20px;
+        }
+    }
+    .block-orders .all-items-link {
+        color: var(--blue-light);
+        text-decoration: underline;
+        margin-top: 23px;
+        font-size: 13px;
+        line-height: 19px;
+        transition: 0.5s;
+    }
+    .block-orders .all-items-link:hover {
+        color: var(--blue-light);
+    }
+/* Блок мои заказы */
+
+
+
+/* Блок новости */
+    .block-news {
+        margin-top: 30px;
+        width: calc(25% - 20px);
+        /* max-width: 375px; */
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-news {
+            margin-top: 20px;
+            width: calc(25% - 13px);
+        }
+    }
+    .block-news .title {
+        height: 46px;
+        width: 100%;
+        border-bottom: 1px solid var(--block-border);
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .block-news .news-list {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .block-news .short-news-item {
+        padding: 18px 20px;
+        padding-right: 50px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        position: relative;
+        text-decoration: none;
+        min-height: 94px;
+        color: inherit;
+    }
+    .block-news .short-news-item:not(:last-child) {
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-news .short-news-item .photo {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        margin-right: 16px;
+        background-color: transparent;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .block-news .short-news-item .news-title {
+        font-size: 13px;
+        line-height: 1;
+    }
+    .block-news .short-news-item .date {
+        font-size: 12px;
+        line-height: normal;
+        color: var(--grey);
+        margin-top: 5px;
+    }
+    .block-news .short-news-item .comments {
+        background-color: var(--blue-light);
+        position: absolute;
+        top: calc(50% - 11px);
+        left: calc(100% - 42px);
+        line-height: 22px;
+        padding-left: 7px;
+        padding-right: 7px;
+        color: #fff;
+        font-size: 11px;
+    }
+    .block-news .short-news-item .comments:after {
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 5px;
+        border-color: transparent transparent transparent var(--blue-light);
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        pointer-events: none;
+    }
+/* Блок новости */
+
+
+
+/* Блок инструменты */
+    .block-instruments {
+        /* width: 645px; */
+        width: calc(42% - 15px);
+        margin-top: 30px;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-instruments {
+            /* width: 645px; */
+            width: calc(42% - 10px);
+            margin-top: 20px;
+        }
+    }
+    .block-instruments .title {
+        height: 46px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .block-instruments .instruments-list {
+        display: flex;
+        padding: 0 20px 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .block-instruments .platforms {
+        /* max-width: 500px; */
+        max-width: calc(100% - 90px);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        grid-auto-rows: 105px;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-instruments .platforms {
+            grid-template-columns: 1fr;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-instruments .platforms {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    .block-instruments .platform-item {
+        color: #fff;
+        padding: 18px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        line-height: normal;
+        border-radius: 3px;
+        text-decoration: none;
+        position: relative;
+    }
+    .block-instruments .platform-item.facebook {
+        background-color: #4b69b0;
+    }
+    .block-instruments .platform-item.push {
+        background-color: #e83f3a;
+    }
+    .block-instruments .platform-item.instagram {
+        background: linear-gradient(62deg, #fabc53 0%,#d62f54 33%,#a73f90 66%,#5c55a1 100%);
+    }
+    .block-instruments .platform-item.sms {
+        background-color: #e83aa4;
+    }
+    .block-instruments .platform-item.twitter {
+        background-color: #37b1e1;
+    }
+    .block-instruments .platform-item.email {
+        background-color: #883ae8;
+    }
+
+    .block-instruments .platform-item .title {
+        font-size: 19px;
+        padding: 0;
+        height: auto;
+    }
+    .block-instruments .platform-item .progress {
+        font-size: 12px;
+    }
+    .block-instruments .platform-item .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 33px;
+        font-size: 36px !important;
+        color: #fff;
+        display: flex;
+        align-items: center;
+    }
+
+    .block-instruments .messengers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 60px;
+        flex-shrink: 0;
+    }
+    .block-instruments .messenger-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: inherit;
+        text-decoration: none;
+    }
+    .block-instruments .messenger-item:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .block-instruments .messenger-item .title {
+        font-size: 12px;
+        line-height: normal;
+        margin-top: 10px;
+        text-align: center;
+        padding: 0;
+        height: auto;
+    }
+/* Блок инструменты */
+
+
+/* Блок сеть патрнеров */
+    .block-network {
+        margin-top: 30px;
+        width: calc(58% - 15px);
+        /* width: 915px; */
+        padding-bottom: 40px;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-network {
+            margin-top: 20px;
+            width: calc(58% - 10px);
+            padding-bottom: 30px;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-network {
+            width: 100%;
+            order: 4;
+        }
+    }
+    .block-network .title {
+        height: 46px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .block-network .network-items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -15px;
+    }
+    .block-network .hierarchy-level {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-network .hierarchy-level {
+            flex-wrap: wrap;
+        }
+    }
+    .block-network .hierarchy-level:nth-child(1):not(:last-child) {
+        margin-bottom: 50px;
+    }
+    .block-network .hierarchy-level:nth-child(2):not(:last-child) {
+        margin-bottom: 60px;
+    }
+    .block-network .hierarchy-level:nth-child(3):not(:last-child) {
+        margin-bottom: 35px;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-network .hierarchy-level:nth-child(3) .network-item:nth-child(-n+2):not(:last-child),
+        .block-network .hierarchy-level:nth-child(4) .network-item:nth-child(-n+2):not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-network .hierarchy-level:nth-child(3) .network-item:nth-child(-n+2):not(:last-child),
+        .block-network .hierarchy-level:nth-child(4) .network-item:nth-child(-n+2):not(:last-child) {
+            margin-bottom: initial;
+        }
+    }
+    .block-network .network-item {
+        display: flex;
+        padding: 8px 26px 8px 8px;
+        border-radius: 3px;
+        background-color: var(--grey-light);
+        position: relative;
+        min-width: 184px;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-network .network-item {
+            min-width: 40%;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-network .network-item {
+            min-width: 184px;
+        }
+    }
+    .block-network .network-item:before {
+        display: block;
+        content: '';
+        position: absolute;
+        right: 26px;
+        top: calc(50% - 5px);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent var(--black);
+
+    }
+    .block-network .network-item.main {
+        background-color: var(--blue-light);
+        color: #fff;
+    }
+    .block-network .network-item.main:before  {
+        border-color: transparent transparent transparent #fff;
+    }
+    .block-network .network-item .percent {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        color: var(--blue-light);
+        flex-shrink: 0;
+        margin-right: 10px;
+        border: 1px solid var(--blue-light);
+        border-radius: 50%;
+
+    }
+    .block-network .network-item.main .percent {
+        border-color: #fff;
+        background-color: #fff;
+    }
+    .block-network .network-item .percent:after {
+        content: '%';
+        align-self: center;
+        font-size: 11px;
+    }
+    .block-network .network-item .profit-value {
+        font-size: 16px;
+        line-height: 17px;
+    }
+    .block-network .network-item .partners-amount {
+        font-size: 11px;
+        line-height: 17px;
+    }
+/* Блок сеть патрнеров */
+
+
+.education-chat-group {
+    /* width: 510px; */
+    width: calc(33.5% - 15px);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width: 1600px) {
+    .education-chat-group {
+        /* width: 510px; */
+        /* width: calc(33.5% - 15px); */
+        margin-top: 20px;
+    }
+}
+
+/* Блок обучение */
+    .block-education {
+        padding-bottom: 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block-education .title {
+        height: 46px;
+        width: 100%;
+        border-bottom: 1px solid var(--block-border);
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .block-education .education-items {
+        width: 100%;
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-education .education-item {
+        font-size: 13px;
+        line-height: 17px;
+        position: relative;
+        padding-left: 60px;
+    }
+    .block-education .education-item .icon {
+        color: var(--blue-light);
+        font-size: 18px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+    .block-education .all-items-link {
+        color: var(--blue-light);
+        text-decoration: underline;
+        margin-top: 23px;
+        font-size: 13px;
+        line-height: 19px;
+        transition: 0.5s;
+    }
+    .block-education .all-items-link:hover {
+        color: var(--blue-light);
+    }
+/* Блок обучение */
+
+
+
+
+
+
+/* Блок мои бронирования */
+    .block-programs {
+        margin-top: 30px;
+        /* width: 1185px; */
+        width: calc(75% - 15px);
+        padding-bottom: 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-programs {
+            margin-top: 20px;
+            width: calc(75% - 10px);
+        }
+    }
+    .block-programs .title {
+        height: 46px;
+        width: 100%;
+        border-bottom: 1px solid var(--block-border);
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .block-programs .program-list {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .block-programs .program-item {
+        display: flex;
+        align-items: center;
+        min-height: 64px;
+        border-bottom: 1px solid var(--block-border);
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    .block-programs .program-logo {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 20px;
+        border: 1px solid var(--blue-light);
+        border-radius: 50%;
+    }
+    .block-programs .program-logo.orange {
+        border-color: var(--orange);
+    }
+    .block-programs .program-logo img {
+        max-width: 32px;
+        max-height: 32px;
+        object-fit: contain;
+    }
+    .block-programs .program-title {
+        width: 150px;
+        flex-shrink: 1;
+    }
+    @media screen and (max-width: 1440px) {
+        .block-programs .program-title {
+            width: 15%;
+            flex-shrink: 1;
+        }
+    }
+    .block-programs .program-date {
+        flex-shrink: 1;
+        width: 220px;
+        padding-right: 10px;
+    }
+    @media screen and (max-width: 1440px) {
+        .block-programs .program-date {
+            width: 20%;
+        }
+    }
+    .block-programs .program-descr {
+        flex-shrink: 1;
+        width: 330px;
+        padding-right: 10px;
+    }
+    .block-programs .program-price {
+        font-size: 15px;
+        flex-shrink: 1;
+        width: 85px;
+        padding-right: 10px;
+    }
+    .block-programs .program-status {
+        width: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+    .block-programs .status {
+        font-size: 10px;
+        line-height: 19px;
+        padding: 0 14px;
+        color: #fff;
+        border-radius: 2px;
+        white-space: nowrap;
+    }
+    .block-programs .status.active,
+    .block-programs .status.green {
+        background-color: var(--green);
+    }
+    .block-programs .status.awaiting,
+    .block-programs .status.blue {
+        background-color: var(--blue-light);
+    }
+    .block-programs .status.completed,
+    .block-programs .status.grey {
+        background-color: var(--grey);
+    }
+    .block-programs .status.blocked,
+    .block-programs .status.red {
+        background-color: var(--red);
+    }
+    .block-programs .program-details {
+        margin-left: auto;
+        text-decoration: none;
+        color: var(--blue-light);
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .block-programs .all-items-link {
+        color: var(--blue-light);
+        text-decoration: underline;
+        margin-top: 23px;
+        font-size: 13px;
+        line-height: 19px;
+        transition: 0.5s;
+    }
+    .block-programs .all-items-link:hover {
+        color: var(--blue);
+    }
+/* Блок мои бронирования */
+
+
+/* Блок календарь событий */
+
+    .block-calendar-events {
+        width: calc(25% - 15px);
+        /* max-width: 375px; */
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-calendar-events {
+            width: calc(25% - 10px);
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-calendar-events {
+            width: 300px;
+            order: 3;
+            margin-top: 20px;
+        }
+    }
+
+    .block-calendar-events .calendar-head {
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-calendar-events .calendar-head .title {
+        font-size: 16px;
+    }
+
+    .block-calendar-events .calendar-body {
+        padding: 20px 25px;
+    }
+    @media screen and (max-width: 1440px) {
+        .block-calendar-events .calendar-body {
+            padding: 20px 15px;
+        }
+    }
+
+    /*calendar plugin */
+        .block-calendar-events .fc-header-toolbar {
+            width: 100%;
+            margin-bottom: 0;
+            border-radius: 5px;
+            background-color: var(--grey-light);
+        }
+        .fc-toolbar h2 {
+            font-size: 13px;
+            text-transform: capitalize;
+        }
+        .fc-button {
+            width: 46px;
+            height: 40px;
+            background-color: transparent;
+            border: 0;
+        }
+        .fc-button-primary {
+            background-color: transparent;
+            border: 0
+        }
+        .fc-button-primary:hover {
+            background-color: transparent;
+            border: 0
+        }
+        .fc-icon {
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--blue-light);
+        }
+        .fc-scroller {
+            height: auto !important;
+            overflow: visible !important;
+        }
+        .fc-scroller > .fc-day-grid {
+            display: grid;
+            grid-gap: 5px;
+        }
+        .fc-unthemed th,
+        .fc-unthemed td,
+        .fc-unthemed thead,
+        .fc-unthemed tbody,
+        .fc-unthemed .fc-divider,
+        .fc-unthemed .fc-row,
+        .fc-unthemed .fc-content,
+        .fc-unthemed .fc-popover,
+        .fc-unthemed .fc-list-view,
+        .fc-unthemed .fc-list-heading td {
+            border: 0;
+        }
+        .fc-widget-header tr {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 7px;
+            width: 100%;
+        }
+        .fc-unthemed th {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .fc-row .fc-content-skeleton {
+            padding: 0;
+        }
+        .fc-content-skeleton tr {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-gap: 7px;
+            width: 100%;
+        }
+        .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+            width: 100%;
+            max-width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--grey-ultralight);
+        }
+
+        .fc-day-grid-event {
+            display: none;
+        }
+        tr:first-child > td > .fc-day-grid-event {
+            font-size: 0;
+            margin: 0 auto;
+            width: 16px;
+            height: 2px;
+            margin:  0 auto 0;
+            display: block;
+            box-sizing: border-box;
+        }
+        .fc-unthemed td.fc-today {
+            background: transparent;
+        }
+        .fc-event-container {
+            position: relative;
+            top: -9px;
+        }
+        .fc-dayGrid-view .fc-body .fc-row {
+            min-height: initial;
+        }
+        .fc-row .fc-bg {
+            display: none;
+        }
+    /* calendar plugin */
+
+    .block-calendar-events .events-list {
+        margin-top: 28px;
+    }
+    .block-calendar-events .event-group:not(:last-child) {
+        margin-bottom: 34px;
+    }
+    .block-calendar-events .event-group-title {
+        font-size: 13px;
+        line-height: 18px;
+        text-transform: uppercase;
+    }
+    .block-calendar-events .event-group-list {
+        margin-top: 12px;
+    }
+    .block-calendar-events .event-item {
+        padding-left: 10px;
+        position: relative;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .block-calendar-events .event-item:before {
+        display: block;
+        content: '';
+        width: 2px;
+        top: 0;
+        bottom: 0;
+        left: 4px;
+        background-color: var(--blue-light);
+        position: absolute;
+    }
+    .block-calendar-events .event-item:not(:last-child) {
+        margin-bottom: 18px;
+    }
+    .block-calendar-events .events-list .empty {
+        color: var(--grey);
+    }
+
+
+
+    .block-calendar-events .calendar-control {
+        padding: 30px 0;
+        border-top: 1px solid var(--block-border);
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-calendar-events .calendar-control {
+            padding: 20px 0;
+            flex-direction: column-reverse;
+        }
+    }
+    .block-calendar-events .add-event-button {
+        min-width: 140px;
+    }
+    .block-calendar-events .all-events-link {
+        color: var(--blue-light);
+        text-decoration: underline;
+        font-size: 13px;
+        margin-left: 30px;
+        transition: 0.5s;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-calendar-events .all-events-link {
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+    }
+    .block-calendar-events .all-events-link:hover {
+        color: var(--blue);
+    }
+/* Блок календарь событий */
+
+
+.crm-cms-education-group {
+    width: calc(50% - 15px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    justify-content: space-between;
+}
+@media screen and (max-width: 1600px) {
+    .crm-cms-education-group {
+        width: calc(50% - 10px);
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .crm-cms-education-group {
+        order: 4;
+        width: 100%;
+    }
+}
+
+/* Блок база игроков и новые игроки  */
+    .block-players {
+        width: calc(50% - 15px);
+        margin-top: 30px;
+        position: relative;
+        padding-bottom: 23px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-players {
+            width: calc(50% - 10px);
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-players {
+            order: 2;
+            width: calc(100% - 320px);
+        }
+    }
+    .block-players .player-type-links {
+        display: flex;
+        background-color: #f7f7f7;
+        width: 100%;
+    }
+    .block-players .player-type-link {
+        padding-left: 60px;
+        padding-right: 30px;
+        position: relative;
+        font-size: 13px;
+        line-height: 46px;
+        transition: 0.5s;
+    }
+    .block-players .player-type-link.active {
+        color: var(--blue-light);
+        cursor: default;
+        background-color: #fff;
+    }
+    .block-players .player-type-link:not(.active):hover {
+        cursor: pointer;
+    }
+    .block-players .player-type-link:before {
+        display: block;
+        color: var(--blue-light);
+        font-size: 14px !important;
+        left: 30px;
+        top: 0;
+        position: absolute;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+    .block-players .player-type-link.players-base:before {
+        content: '\f0c0';
+    }
+    .block-players .player-type-link.new-players:before {
+        content: '\f4fc';
+    }
+
+    .block-players .player-tabs {
+        border-bottom: 1px solid var(--block-border);
+        width: 100%;
+        flex-grow: 1;
+    }
+    .block-players .player-tab {
+        display: none;
+    }
+    .block-players .player-tab.active {
+        display: block;
+    }
+    .block-players .player-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        padding: 24px 30px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-players .player-item {
+            padding: 24px 20px;
+        }
+    }
+    .block-players .player-item:not(:last-child) {
+        border-bottom: 1px solid var(--block-border);
+    }
+    .block-players .column.photo {
+        width: 32px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-right: 20px;
+    }
+
+
+    .block-players .column.establishment img {
+        width: 100%;
+    }
+    .block-players .column.title {
+        width: 135px;
+        flex-shrink: 0;
+        flex-grow: 0;
+    }
+    .block-players .column.deposit {
+        width: 90px;
+        flex-shrink: 1;
+        white-space: nowrap;
+    }
+    .block-players .column.contacts {
+        flex-grow: 1;
+        flex-shrink: 2;
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+    }
+    .block-players .column.contacts a {
+        font-size: 15px;
+        line-height: 18px;
+        color: var(--blue-light);
+        text-decoration: none;
+    }
+    .block-players .column.review {
+        min-width: 100px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+    .block-players .column.review {
+        margin-left: 30px;
+    }
+    .block-players .casino-link {
+        text-decoration: none;
+    }
+    .block-players .stars-rate-group + .rate-number {
+        margin-left: 15px;
+    }
+    .block-players .all-items-link {
+        color: var(--blue-light);
+        text-decoration: underline;
+        margin-top: 23px;
+        font-size: 13px;
+        line-height: 19px;
+        transition: 0.5s;
+    }
+    .block-players .all-items-link:hover {
+        color: var(--blue);
+    }
+/* Блок база игроков и новые игроки  */
+
+
+/* Блок CRM */
+    .block-crm {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 1440px) {
+        .block-crm {
+            width: calc(50% - 10px);
+        }
+    }
+    .block-crm .title {
+        height: 46px;
+        width: 100%;
+        border-bottom: 1px solid var(--block-border);
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+        flex-grow: 0;
+    }
+    .block-crm .crm-list {
+        padding: 20px 0 20px 20px;
+        display: flex;
+        flex-grow: 1;
+    }
+    .block-crm .control-links {
+        width: 180px;
+        flex-shrink: 0;
+    }
+    .block-crm .control-link {
+        display: flex;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+    }
+    .block-crm .control-link:after {
+        content: '\f054';
+        font-size: 12px;
+        position: absolute;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        color: var(--blue-light);
+        transition: 0.5s;
+        padding-top: 3px;
+    }
+    .block-crm .control-link:hover:after {
+        right: -10px;
+    }
+    .block-crm .control-link:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .block-crm .control-link .icon {
+        width: 30px;
+        flex-shrink: 0;
+        font-size: 12px !important;
+        color: var(--blue-light);
+    }
+    .block-crm .control-content {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+    }
+/* Блок CRM */
+
+
+/* Блок CMS */
+    .block-cms {
+        width: calc(100% - 270px);
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 1600px) {
+        .block-cms {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .block-cms {
+            width: calc(50% - 10px);
+            margin-top: 0;
+        }
+    }
+    .block-cms .title {
+        height: 46px;
+        width: 100%;
+        border-bottom: 1px solid var(--block-border);
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+        flex-grow: 0;
+    }
+    .block-cms .cms-list {
+        padding: 20px 0 20px 20px;
+        display: flex;
+        flex-grow: 1;
+    }
+    .block-cms .control-links {
+        width: 180px;
+        flex-shrink: 0;
+    }
+    .block-cms .control-link {
+        display: flex;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+    }
+    .block-cms .control-link:after {
+        content: '\f054';
+        font-size: 12px;
+        position: absolute;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        color: var(--blue-light);
+        transition: 0.5s;
+        padding-top: 3px;
+    }
+    .block-cms .control-link:hover:after {
+        right: -10px;
+    }
+    .block-cms .control-link:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .block-cms .control-link .icon {
+        width: 30px;
+        flex-shrink: 0;
+        font-size: 12px !important;
+        color: var(--blue-light);
+    }
+    .block-cms .control-content {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+    }
+/* Блок CMS */
+
+
+/* Страница для игровых заведений */
+    .backoffice-for-gamblings .block-instruments {
+        width: calc(42% - 20px);
+        /* max-width: 645px; */
+    }
+    @media screen and (max-width: 1600px) {
+        .backoffice-for-gamblings .block-instruments {
+            width: calc(42% - 13px);
+        }
+    }
+    .backoffice-for-gamblings .block-chat {
+        width: calc(33% - 20px);
+        /* max-width: 510px; */
+        flex-grow: 0;
+    }
+    @media screen and (max-width: 1600px) {
+        .backoffice-for-gamblings .block-chat {
+            width: calc(33% - 13px);
+            max-width: 100%;
+            flex-grow: 0;
+        }
+    }
+    .backoffice-for-gamblings .block-education {
+        width: 240px;
+        flex-grow: 0;
+        margin-top: 30px;
+    }
+    @media screen and (max-width: 1600px) {
+        .backoffice-for-gamblings .block-education {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .backoffice-for-gamblings .block-education .education-items {
+        grid-template-columns: 1fr;
+        grid-row-gap: 25px;
+    }
+    @media screen and (max-width: 1600px) {
+        .backoffice-for-gamblings .block-education .education-items {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+    }
+    .backoffice-for-gamblings .block-education .education-item {
+        padding-right: 20px;
+    }
+    .backoffice-for-gamblings .block-education .education-item br {
+        display: none;
+    }
+    @media screen and (max-width: 1440px) {
+        .backoffice-for-gamblings .block-instruments {
+            width: 100%;
+            order: 5;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .backoffice-for-gamblings .block-chat {
+            width: calc((100% - 20px) / 1.5);
+            order: 6;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .backoffice-for-gamblings .block-news {
+            width: calc((100% - 20px) / 3 );
+            order: 7;
+        }
+    }
+/* Страница для игровых заведений */
+
+
+
+/* Страница для джанкетов */
+    .backoffice-for-affiliates .block-news {
+        width: calc(25% - 15px);
+    }
+    @media screen and (max-width: 1600px) {
+        .backoffice-for-affiliates .block-news {
+            width: calc(25% - 10px);
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .backoffice-for-affiliates .block-instruments {
+            width: 100%;
+            order: 5;
+        }
+        .backoffice-for-affiliates .block-programs {
+            width: 100%;
+            order: 6;
+        }
+        .backoffice-for-affiliates .education-chat-group {
+            margin-top: 20px;
+            flex-direction: row;
+            width: calc(((100% / 3) * 2) - 10px);
+            order: 7;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        .backoffice-for-affiliates .block-education,
+        .backoffice-for-affiliates .block-chat {
+            width: calc(50% - 10px);
+            flex-grow: 0;
+        }
+        .backoffice-for-affiliates .block-education .education-items {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .backoffice-for-affiliates .block-chat {
+            margin-top: 0;
+        }
+        .backoffice-for-affiliates .block-news {
+            order: 8;
+            width: calc((100% / 3) - 10px);
+        }
+    }
+/* Страница для джанкетов */
+
+/* Страница для игроков */
+    @media screen and (max-width: 1600px) {
+        .backoffice-for-players .block-news {
+            width: 100%;
+        }
+        .backoffice-for-players .news-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin-top: 0;
+        }
+        .backoffice-for-players .block-news .short-news-item:not(:last-child) {
+            border-bottom: 0;
+            border-right: 1px solid var(--block-border);
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .backoffice-for-players .block-my-reviews {
+            order: 3;
+            width: 300px;
+            margin-top: 20px;
+        }
+        .backoffice-for-players .block-booking {
+            order: 4;
+            width: 100%;
+        }
+        .backoffice-for-players .promo-actions-chat-group {
+            width: 100%;
+            order: 5;
+            justify-content: space-between;
+        }
+        .backoffice-for-players .block-promo,
+        .backoffice-for-players .block-actions {
+            width: calc(25% - 13px);
+            flex-grow: 0;
+        }
+        .backoffice-for-players .block-chat {
+            width: calc(50% - 13px);
+            margin-top: 0;
+            flex-grow: 0;
+        }
+        .backoffice-for-players .block-orders {
+            width: calc(100% - 320px);
+            order: 6;
+        }
+        .backoffice-for-players .block-news {
+            order: 7;
+            width: 300px;
+        }
+        .backoffice-for-players .news-list {
+            display: block;
+        }
+        .backoffice-for-players .block-news .short-news-item:not(:last-child) {
+            border-right: 0;
+            border-bottom: 1px solid var(--block-border);
+        }
+    }
+/* Страница для игроков */

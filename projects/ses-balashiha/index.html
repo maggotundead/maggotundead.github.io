@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Oswald:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header-column">
+					<img src="img/ach1.png">
+					<span class="text">
+						Служба уничтожения тараканов, клопов<br>дезинсекция по Балашихе и области
+					</span>
+				</div>
+				<div class="header-column">
+					<img src="img/ach2.png">
+					<span class="text">1 место на Всероссийской<br>конференции по дезинфекции 2018</span>
+				</div>
+				<div class="header-column callback-column">
+					<a href="tel:+79059130099" class="phone-link">+7 (905) 913-00-99</a>
+					<a class="callback-button info-modal-button">Перезвонить мне</a>
+				</div>
+			</div>
+		</header>
+		<main class="content">
+			<section class="block-homescreen" style="background-image: url(img/home-bg.jpg);">
+				<div class="container">
+					<div class="half-block left-block title-block">
+						<div class="homescreen-title">
+							Уничтожение<br>
+							<b>клопов, тараканов</b><br>
+							<i>и других вредителей</i>
+						</div>
+						<div class="homescreen-icons">
+							<div class="homescreen-icon">
+								<img src="img/money.png">
+								<span>от 700 р.</span>
+							</div>
+							<div class="homescreen-icon">
+								<img src="img/002-security.png">
+								<span>гарантия 3 года</span>
+							</div>
+						</div>
+					</div>
+					<div class="half-block right-block discount-block">
+						<div class="discount-title">УСПЕЙТЕ ПОЛУЧИТЬ СКИДКУ!</div>
+						<div class="discount-descr">
+							Акция до <span class="current-day"></span>. Оставьте заявку и получите скидку
+						</div>
+						<div class="discount-img">
+							<img src="img/50.png">
+						</div>
+						<form class="discount-form" action="form.php" method="POST" id="homescreen-form">
+							<input type="hidden" name="formо" value="форма на главном екране">
+							<input type="text" name="telefono" class="discount-input" placeholder="Введите телефон">
+							<button type="submit" class="red-btn discount-button">ЗАФИКСИРОВАТЬ СКИДКУ</button>
+						</form>
+					</div>
+					<div class="counter">
+						<div class="counter-title">
+							До окончания акции осталось:
+						</div>
+						<div class="counter-value">
+							<div class="counter-group day">
+								<span class="counter-number result-day">00</span>
+								<span class="number-title">дней</span>
+							</div>
+							<div class="counter-group hour">
+								<span class="counter-number result-hour">23</span>
+								<span class="number-title">часов</span>
+							</div>
+							<div class="counter-group minute">
+								<span class="counter-number result-minute">59</span>
+								<span class="number-title">минут</span>
+							</div>
+							<div class="counter-group sec">
+								<span class="counter-number result-second">53</span>
+								<span class="number-title">секунд</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="block-about">
+				<div class="container">
+					<div class="block-title blue">служба сес москва</div>
+					<div class="descr">
+						Работаем по стандартам дезинсекции руководствуясь требованиям. СанПиНов и опираясь на системы международной стандартизации, таких как ISO:22000 и HACCP (система ХАССП). Это гарантирует качество наших услуг.
+					</div>
+					<div class="about-info">
+						<div class="about-item">
+							<strong>БЫСТРО</strong> ОТ 1 ЧАСА БЕЗ ВЫХОДНЫХ
+						</div>
+						<div class="about-item">
+							<strong>ГАРАНТИЯ</strong> НА УСЛУГИ ДО 3 ЛЕТ
+						</div>
+						<div class="about-item">
+							<strong>БЕЗОПАСНО</strong> ДЛЯ ДЕТЕЙ, РАСТЕНИЙ, ЖИВОТНЫХ
+						</div>
+						<div class="about-item">
+							<strong>АНОНИМНО</strong> И КОНФИДЕНЦИАЛЬНО
+						</div>
+						<div class="about-item">
+							<strong>ЕВРОПЕЙСКИЕ ПРЕПАРАТЫ</strong> 4 КЛАССА КАЧЕСТВА
+						</div>
+						<div class="about-item">
+							<strong>БЕСПЛАТНЫЙ ВЫЕЗД</strong> И ОСМОТР ПОМЕЩЕНИЯ
+						</div>
+						<div class="about-item">
+							<strong>ДОСТУПНАЯ ЦЕНА</strong> БЕЗ ЛИШНИХ ПЕРЕПЛАТ
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="block-portfolio-slider">
+				<div class="container">
+					<div class="block-title blue">уничтожаем тараканов, клопов</div>
+					<div class="descr">
+						Работаем по стандартам дезинсекции руководствуясь требованиям. СанПиНов и опираясь на системы международной стандартизации, таких как ISO:22000 и HACCP (система ХАССП). Это гарантирует качество наших услуг.
+					</div>
+					<div class="portfolio-slider" id="portfolio-slider">
+						<div class="portfolio-item">
+							<img src="img/item.jpg">
+						</div>
+						<div class="portfolio-item">
+							<img src="img/item.jpg">
+						</div>
+						<div class="portfolio-item">
+							<img src="img/item.jpg">
+						</div>
+						<div class="portfolio-item">
+							<img src="img/item.jpg">
+						</div>
+						<div class="portfolio-item">
+							<img src="img/item.jpg">
+						</div>
+						<div class="portfolio-item">
+							<img src="img/item.jpg">
+						</div>
+					</div>
+					<button class="red-btn calculate-button info-modal-button">Рассчитать стоимость</button>
+				</div>
+			</section>
+			<section class="block-advantages">
+				<div class="container" style="background-image: url(img/advantage-bg.jpg);">
+					<div class="advantages-title">ЧЕСТНЫЕ ЦЕНЫ БЕЗ ПЕРЕПЛАТ</div>
+					<div class="advantages-list">
+						<div class="advantage-item">ТОЛЬКО НЕОБХОДИМЫЕ РАБОТЫ</div>
+						<div class="advantage-item">ВЫГОДА ДО 50% НА УСЛУГИ</div>
+						<div class="advantage-item">БЕЗ ПЕРЕПЛАТЫ ЗА ЛИШНИЕ РАБОТЫ, МАТЕРИАЛЫ</div>
+					</div>
+					<div class="worker">
+						<img src="img/worker.png">
+					</div>
+				</div>
+			</section>
+			<section class="block-services">
+				<div class="container">
+					<div class="block-title blue">Чем можем помочь</div>
+					<div class="descr">
+						Быстро и качественно выполним услуги по дезинфекции и дезинсекции жилых и других помещений за счет использования эффективных средств
+					</div>
+					<div class="services-list">
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/003-bedbug.png"></div>
+							<div class="service-item-title">
+								Уничтожение
+								<span>тараканов</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/005-insect-bed-bug-shape.png"></div>
+							<div class="service-item-title">
+								Уничтожение
+								<span>клопов</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/002-tick.png"></div>
+							<div class="service-item-title">
+								Уничтожение
+								<span>клещей</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/007-flea.png"></div>
+							<div class="service-item-title">
+								Уничтожение
+								<span>блох</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/004-ant.png"></div>
+							<div class="service-item-title">
+								Уничтожение
+								<span>муравьёв</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/001-moth.png"></div>
+							<div class="service-item-title">
+								Уничтожение
+								<span>моли</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/009-fungus.png"></div>
+							<div class="service-item-title">
+								Обработка от
+								<span>плесени</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/006-rat-silhouette.png"></div>
+							<div class="service-item-title">
+								Уничтожение
+								<span>крыс и мышей</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/008-aroma.png"></div>
+							<div class="service-item-title">
+								Дезодорация от
+								<span>запахов</span>
+							</div>
+						</div>
+						<div class="service-item">
+							<div class="service-item-icon"><img src="img/010-treebug.png"></div>
+							<div class="service-item-title">
+								Уничтожение
+								<span>короеда</span>
+							</div>
+						</div>
+					</div>
+					<button class="red-btn order-button info-modal-button">вызвать специалиста</button>
+					<div class="descr button-descr">
+						Наш специалист БЕСПЛАТНО приедет к Вам для оценки, осмотрит помещение, выполнит необходимую проверку и сделает расчет
+					</div>
+				</div>
+			</section>
+			<section class="block-discount">
+				<div class="container" style="background-image: url(img/discount-bg.jpg);">
+					<div class="discount-body">
+						<div class="discount-title">
+							SMS-СКИДКА
+						</div>
+						<div class="discount-descr">
+							Впишите телефон и получите смс-скидку
+						</div>
+						<form class="discount-form" action="form.php" method="POST" id="sms-form">
+							<input type="hidden" name="formо" value="форма скидки по смс">
+							<input type="text" name="telefono" class="discount-input" placeholder="Введите телефон">
+							<button type="submit" class="red-btn discount-button">
+								получить скидку
+							</button>
+						</form>
+					</div>
+					<div class="discount-img">
+						<img src="img/sms-phone.png">
+					</div>
+				</div>
+			</section>
+			<section class="block-areas">
+				<div class="container">
+					<div class="block-title blue">ДЛЯ КОГО НАШИ УСЛУГИ</div>
+					<div class="descr">
+						 Наша служба выполняет весь комплекс мероприятий по уничтожению тараканов, клопов на любом объекте, будь квартиры, частные дома, торговые заведения, складские площади, любое жилое помещение или дворовая территория.
+					</div>
+					<div class="areas-list">
+						<div class="area-item">
+							<img src="img/for-01.jpg">
+							<span>Квартиры и частные<br> дома</span>
+						</div>
+						<div class="area-item">
+							<img src="img/for-02.jpg">
+							<span>Пищевая<br> промышленность</span>
+						</div>
+						<div class="area-item">
+							<img src="img/for-03.jpg">
+							<span>Магазины<br> продуктовые</span>
+						</div>
+						<div class="area-item">
+							<img src="img/for-04.jpg">
+							<span>Складские<br> помещения</span>
+						</div>
+						<div class="area-item">
+							<img src="img/for-05.jpg">
+							<span>Многоквартирные<br> дома и подъезды</span>
+						</div>
+						<div class="area-item">
+							<img src="img/for-06.jpg">
+							<span>Подвальные<br> помещения</span>
+						</div>
+						<div class="area-item">
+							<img src="img/for-07.jpg">
+							<span>
+								Гостиницы, отели<br> хостелы
+							</span>
+						</div>
+						<div class="area-item">
+							<img src="img/for-08.jpg">
+							<span>Школы, ЛПУ<br> детские учреждения</span>
+						</div>
+					</div>
+					<button class="red-btn order-button info-modal-button">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</button>
+				</div>
+			</section>
+			<section class="block-guarantees">
+				<div class="container" style="background-image: url(img/guarantee-bg.jpg);">
+					<div class="guarantees-title">
+						НАША ГАРАНТИЯ
+					</div>
+					<div class="descr">
+						<p>
+							Благодаря использованию сертифицированных препаратов и соблюдению высочайщих стандартов при санитарной обработке помещений мы полностью уверены в эффективности проводимых нами мероприятий.
+						</p>
+						<p>
+							Именно поэтому наша компания предоставляет своим клиентам гарантию на услуги до 1 года.
+						</p>
+					</div>
+					<div class="guarantees-descr-bottom">
+						МЫ ИЗБАВИМ ВАС ОТ ТАРАКАНОВ И КЛОПОВ!
+					</div>
+					<div class="guarantees-shield">
+						<img src="img/shield.png">
+					</div>
+				</div>
+			</section>
+			<section class="block-certificates">
+				<div class="container">
+					<div class="block-title blue">
+						СЕРТИФИКАТЫ И ПРЕПАРАТЫ
+					</div>
+					<div class="descr">
+						 У нас имеются все необходимые сертификаты и лицензия на используемые средства и препараты дезинсекции, это гарантирует вам качество и безопасность оказываемых услуг
+					</div>
+					<div class="certificates-list">
+						<div class="certificate-item">
+							<img src="img/certificate.jpg">
+						</div>
+						<div class="certificate-item">
+							<img src="img/certificate.jpg">
+						</div>
+						<div class="certificate-item">
+							<img src="img/certificate.jpg">
+						</div>
+						<div class="certificate-item">
+							<img src="img/certificate.jpg">
+						</div>
+					</div>
+					<button class="red-btn consult-button info-modal-button">
+						БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
+					</button>
+				</div>
+			</section>
+			<section class="block-achieve">
+				<div class="container">
+					<div class="achieve-title">
+						Мы заняли <span>1 место</span><br>
+						на Всероссийской конференции<br>
+						по дезинфекции жилых<br>
+						помещений
+					</div>
+					<div class="achieve-prize">
+						<img src="img/prize.png">
+					</div>
+				</div>
+			</section>
+			<section class="block-departure">
+				<div class="container">
+					<div class="departure-photo">
+						<img src="img/departure.jpg">
+					</div>
+					<div class="departure-info">
+						<div class="block-title blue">
+							БЕСПЛАТНЫЙ ВЫЕЗД
+						</div>
+						<div class="descr">
+							Специалист поъедет к вам БЕСПЛАТНО для консультации и оценки работ по обработке от тараканов, клопов в любое время, день и место!
+						</div>
+						<div class="features-list">
+							<div class="feature-item">Приедет в удобное время</div>
+							<div class="feature-item">Бесплатная проверка</div>
+							<div class="feature-item">Документы, разрешения</div>
+							<div class="feature-item">Бесплатная консультация</div>
+							<div class="feature-item">Бесплатная консультация</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="block-feedback">
+				<div class="container">
+					<div class="block-title blue">
+						ОТЗЫВЫ НАШИХ КЛИЕНТОВ
+					</div>
+					<div class="descr">
+						У нас имеются все необходимые сертификаты и лицензия на используемые средства и препараты дезинсекции, это гарантирует вам качество и безопасность оказываемых услуг
+					</div>
+					<div class="feedback-list">
+						<div class="feedback-item">
+							<img src="img/feedback.jpg">
+						</div>
+						<div class="feedback-item">
+							<img src="img/certificate.jpg">
+						</div>
+						<div class="feedback-item">
+							<img src="img/certificate.jpg">
+						</div>
+						<div class="feedback-item">
+							<img src="img/certificate.jpg">
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="block-action">
+				<div class="container" style="background-image: url(img/action-bg.jpg);">
+					<div class="action-inner">
+						<div class="action-title">
+							<span>
+								УСПЕЙТЕ ПОЛУЧИТЬ <br>СКИДКУ!
+							</span>
+							<img src="img/50-rbl.png">
+						</div>
+						<div class="action-descr">
+							Акция до <span class="current-day"></span>. Оставьте заявку и получите скидку
+						</div>
+						<div class="counter">
+							<div class="counter-title">
+								До окончания акции осталось:
+							</div>
+							<div class="counter-value">
+								<div class="counter-group day">
+									<span class="counter-number result-day">00</span>
+									<span class="number-title">дней</span>
+								</div>
+								<div class="counter-group hour">
+									<span class="counter-number result-hour">23</span>
+									<span class="number-title">часов</span>
+								</div>
+								<div class="counter-group minute">
+									<span class="counter-number result-minute">59</span>
+									<span class="number-title">минут</span>
+								</div>
+								<div class="counter-group sec">
+									<span class="counter-number result-second">53</span>
+									<span class="number-title">секунд</span>
+								</div>
+							</div>
+						</div>
+						<button class="red-btn discount-button info-modal-button">зафиксировать скидку</button>
+					</div>
+				</div>
+			</section>
+			<section class="block-contacts">
+				<div class="container">
+					<div class="block-title blue">
+						КОНТАКТНЫЕ ДАННЫЕ
+					</div>
+					<div class="descr">
+						Услуги дезинсекции и уничтожения тараканов, клопов в Балашихе. За 1 час проведем обработку от тараканов, клопов с гарантией до 1 года экологически безопасными средствами для вашего здоровья, детей и животных.
+					</div>
+					<div class="contacts-list">
+						<div class="contact-item">
+							<div class="contact-item-icon">
+								<img src="img/marker.png">
+							</div>
+							<div class="contact-item-title">
+								Адрес
+							</div>
+							<div class="contact-item-value">
+								<address>
+									г. Москва, Уличная 29
+								</address>
+							</div>
+						</div>
+						<div class="contact-item">
+							<div class="contact-item-icon">
+								<img src="img/call.png">
+							</div>
+							<div class="contact-item-title">
+								Телефон
+							</div>
+							<div class="contact-item-value">
+								<a href="tel:+78001234567">+7 800 12 34 567</a>
+							</div>
+						</div>
+						<div class="contact-item">
+							<div class="contact-item-icon">
+								<img src="img/mail.png">
+							</div>
+							<div class="contact-item-title">
+								E-mail
+							</div>
+							<div class="contact-item-value">
+								<a href="mailto:dezinfmail123@mail.ru">dezinfmail123@mail.ru</a>
+							</div>
+						</div>
+						<div class="contact-item">
+							<div class="contact-item-icon">
+								<img src="img/clock.png">
+							</div>
+							<div class="contact-item-title">
+								Время работы
+							</div>
+							<div class="contact-item-value">
+								<span>8:00 - 23:00 Без выходных</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="block-map">
+				<iframe src="https://yandex.ua/map-widget/v1/-/CCRIvI1o" width="100%" height="100%" frameborder="1" allowfullscreen="true"></iframe>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-column logo">
+					<img src="img/ach1.png">
+					<span class="text">
+						Служба уничтожения тараканов, клопов<br>дезинсекция по Балашихе и области
+					</span>
+				</div>
+				<div class="footer-column copyright">
+					© 2014–2019 domain.com: все права защищены | сделано в Mels Industries
+				</div>
+				<div class="footer-column callback">
+					<button class="red-btn callback-button info-modal-button">ЗАКАЗАТЬ ЗВОНОК</button>
+				</div>
+			</div>
+		</footer>
+
+		<div class="fixed-discount-button gift-modal-button">
+			<span class="white">подарок</span><span class="yellow">500р</span> <span class="white">жми</span>
+		</div>
+		<div class="modal gift-modal">
+			<div class="modal-overlay"></div>
+			<div class="modal-body">
+				<div class="modal-banknote">
+					<img src="img/banknote.jpg">
+				</div>
+				<div class="modal-info">
+					<button class="modal-close"></button>
+					<div class="modal-title">ДЛЯ ВАС ПОДАРОК!</div>
+					<div class="gift-value">
+						<span>купон на</span>
+						<img src="img/500.png">
+						<span>рублей</span>
+					</div>
+					<div class="modal-descr">
+						Получите в подарок купон на барьерную обработку стоимостью 500 рублей - БЕСПЛАТНО
+					</div>
+					<form class="modal-form" action="form.php" method="POST" id="gift-form">
+						<input type="hidden" name="formо" value="модальная форма получения скидки">
+						<input type="text" name="telefono" class="modal-input" placeholder="Введите телефон">
+						<button type="submit" class="red-btn discount-button">
+							ПОЛУЧИТЬ КУПОН НА 500 РУБ
+						</button>
+					</form>
+					<div class="modal-descr">
+						Узнайте подробности, это ни к чему не обязывает. <br>Количество ограничено: 2 шт.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal consult-modal">
+			<div class="modal-overlay"></div>
+			<div class="modal-body">
+				<div class="modal-info">
+					<button class="modal-close"></button>
+					<div class="modal-title">Бесплатная консультация</div>
+					<div class="modal-descr">
+						Введите телефон и мы перезвоним Вам через 3-5 минут
+					</div>
+					<form class="modal-form" action="form.php" method="POST" id="popup-form">
+						<input type="hidden" name="formо" value="модальная форма консультации">
+						<input type="text" name="telefono" class="modal-input" placeholder="Введите телефон">
+						<button type="submit" class="red-btn discount-button">
+							Получить консультацию
+						</button>
+					</form>
+					<div class="modal-descr">
+						Узнайте подробности по телефону, это Вас ни к чему не обязывает.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal success-modal">
+			<div class="modal-overlay"></div>
+			<div class="modal-body">
+				<div class="modal-info">
+					<button class="modal-close"></button>
+					<div class="modal-title">Спасибо</div>
+					<div class="modal-descr">
+						Мы перезвоним Вам через 3-5 минут
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal error-modal">
+			<div class="modal-overlay"></div>
+			<div class="modal-body">
+				<div class="modal-info">
+					<button class="modal-close"></button>
+					<div class="modal-title">Ошибка</div>
+					<div class="modal-descr">
+						Проверьте правильность номера телефона
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="display: none;">
+            <input class="InT" placeholder="Ваше имя" type="text" name="name" value="name">
+            <input class="InT" placeholder="Ваш емейл" type="email" name="mail">
+            <input class="InT" placeholder="Ваш емейл" type="email" name="email">
+            <input class="InT" placeholder="Ваш телефон" type="text" name="phone">
+            <input class="InT" placeholder="Ваш телефон" type="text" name="tel">
+            <input class="InT" placeholder="Ваш сайт" type="text" name="url">
+            <input type="text" name="formo" value="Форма заказать консультацию">
+            <input type="text" name="pago" value="">
+        </div>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
