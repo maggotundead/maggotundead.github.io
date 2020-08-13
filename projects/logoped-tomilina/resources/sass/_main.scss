@@ -57,6 +57,7 @@
     // background-size: auto 100%;
     background-size: auto;
     position: relative;
+    width: 100vw;
     &::before {
         position: absolute;
         left: 0;
@@ -185,7 +186,7 @@
             margin-top: 20px;
             display: flex;
             align-items: center;
-            padding-top: 2px;
+            padding-top: 3px;
             position: relative;
             padding-left: 24px;
             color: $black;

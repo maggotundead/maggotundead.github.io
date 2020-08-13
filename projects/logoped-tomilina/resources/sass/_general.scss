@@ -60,9 +60,9 @@ p {
 }
 .wrapper {
 	overflow: hidden;
-	// display: flex;
-	// flex-wrap: wrap;
-	// flex-direction: column;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 	min-height: 100vh;
 }
 .wrap {
@@ -194,7 +194,7 @@ time {
 	line-height: 1.5;
 	color: $black;
 	padding-left: 24px;
-	padding-top: 2px;
+	padding-top: 3px;
 	display: inline-block;
 	flex-grow: 0;
 	&::before {
