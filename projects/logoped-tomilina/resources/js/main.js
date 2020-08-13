@@ -165,28 +165,31 @@ $(document).ready( function() {
         infinite: true,
         asNavFor: '.product-thumbs'
     });
+
+    var wow = new WOW({
+        boxClass:     'wow',
+        animateClass: 'animate__animated',
+        offset:       0,
+        mobile:       true,
+        live:         true,
+        callback:     function(box) {
+        },
+        scrollContainer: null
+    });
+    wow.init();
+
+
+
+
+
+    // $('.burger').click(function() {
+    //     $(this).toggleClass('open');
+    //     $('body').toggleClass('menu-open');
+    // });
+
+    $('select').styler();
 });
 
 
 
-var wow = new WOW({
-    boxClass:     'wow',
-    animateClass: 'animate__animated',
-    offset:       0,
-    mobile:       true,
-    live:         true,
-    callback:     function(box) {
-    },
-    scrollContainer: null
-});
-wow.init();
-
-
-
-
-
-// $('.burger').click(function() {
-//     $(this).toggleClass('open');
-//     $('body').toggleClass('menu-open');
-// });
 

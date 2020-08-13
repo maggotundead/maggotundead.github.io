@@ -171,10 +171,10 @@ p {
 	color: $black;
 	padding-left: 30px;
 	padding-top: 2px;
-	// margin-top: 30px;
 	position: relative;
 	border: 0;
 	background-color: transparent;
+	display: inline-block;
 	&:before {
 		display: block;
 		content: '';
@@ -187,8 +187,97 @@ p {
 		background-size: contain;
 	}
 }
-.breadcrumbs {
-	display: flex;
-	flex-wrap: wrap;
-	padding-top: 30px;
+
+time {
+	position: relative;
+	font-size: 14px;
+	line-height: 1.5;
+	color: $black;
+	padding-left: 24px;
+	padding-top: 2px;
+	display: inline-block;
+	flex-grow: 0;
+	&::before {
+		display: block;
+		content: '';
+		width: 16px;
+		height: 16px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		top: calc(50% - 8px);
+		left: 0;
+	}
+	&.date {
+		&::before {
+			background-image: url('../img/icons/icon-calendar-orange.svg');
+		}
+	}
+	&.time {
+		&::before {
+			background-image: url('../img/icons/icon-clock-orange.svg');
+		}
+	}
+}
+
+.select-wrapper {
+	.jq-selectbox {
+		width: 100%;
+		select {
+			opacity: 0;
+		}
+		&.opened {
+			.jq-selectbox__trigger-arrow {
+				transform: rotate(-180deg);
+			}
+		}
+		&__select {
+			height: 56px;
+			border: 1px solid $input-border;
+			background: #fff;
+			color: $select-color;
+			box-shadow: initial;
+			font: inherit;
+			text-shadow: initial;
+			border-radius: $radius;
+			padding: 0 50px 0 32px;
+			&:hover {
+				background: #fff;
+				.jq-selectbox__trigger-arrow {
+					border-top-color: initial;
+				}
+			}
+			&-text {
+				line-height: 54px;
+			}
+		}
+		&__trigger {
+			width: 50px;
+			border-left: initial;
+			&-arrow {
+				width: 14px;
+				height: 8px;
+				background: transparent url('../img/select-arrow.svg') center no-repeat;
+				background-size: contain;
+				right: 26px;
+				top: calc(50% - 4px);
+				border: 0;
+				transition: transform $duration;
+			}
+		}
+		&__dropdown {
+			border: 1px solid $input-border;
+			font: inherit;
+			border-radius: $radius;
+			overflow: hidden;
+			li {
+				padding: 5px 10px 6px 32px;
+				&.disabled {
+					color: $input-border;
+					cursor: default;
+				}
+			}
+		}
+	}
 }
