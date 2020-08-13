@@ -71,6 +71,9 @@ p {
 
 .wrapper {
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   min-height: 100vh; }
 
 .wrap {
@@ -181,7 +184,7 @@ time {
   line-height: 1.5;
   color: #333;
   padding-left: 24px;
-  padding-top: 2px;
+  padding-top: 3px;
   display: inline-block;
   flex-grow: 0; }
   time::before {
@@ -403,7 +406,8 @@ time {
 .block-homescreen-slider {
   background: transparent url("../img/homescreen-bg.svg") left bottom no-repeat;
   background-size: auto;
-  position: relative; }
+  position: relative;
+  width: 100vw; }
   .block-homescreen-slider::before {
     position: absolute;
     left: 0;
@@ -511,7 +515,7 @@ time {
       margin-top: 20px;
       display: flex;
       align-items: center;
-      padding-top: 2px;
+      padding-top: 3px;
       position: relative;
       padding-left: 24px;
       color: #333; }
