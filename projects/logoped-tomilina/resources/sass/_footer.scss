@@ -6,24 +6,72 @@
         padding-top: 50px;
         padding-bottom: 60px;
         background-color: $footer-bg-light;
+        @include maxw640 {
+            padding-bottom: 50px;
+        }
         .wrap {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @include maxw1024 {
+                flex-wrap: wrap;
+            }
         }
         .col {
             width: 25%;
+            @include maxw1024 {
+                width: 50%;
+            }
+            @include maxw640 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                text-align: center;
+            }
+            &:nth-child(-n+2) {
+                @include maxw1024 {
+                    margin-bottom: 40px;
+                }
+                @include maxw640 {
+                    margin-bottom: initial;
+                }
+            }
+            &:nth-child(1) {
+                @include maxw640 {
+                    margin-bottom: 40px;
+                }
+            }
+            &:nth-child(2) {
+                @include maxw640 {
+                    margin-bottom: 20px;
+                }
+            }
+            &:nth-child(3) {
+                @include maxw640 {
+                    margin-bottom: 20px;
+                }
+            }
         }
         .links {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            @include maxw640 {
+                align-items: center;
+            }
             a {
                 text-decoration: underline;
                 line-height: 1.4;
                 font-size: 16px;
+                &:hover {
+                    text-decoration: none;
+                }
                 &:not(:last-child) {
                     margin-bottom: 11px;
+                    @include maxw640 {
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
@@ -31,6 +79,9 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            @include maxw640 {
+                align-items: center;
+            }
             a {
                 font-size: 16px;
                 line-height: 1.4;
@@ -38,6 +89,7 @@
                 position: relative;
                 display: flex;
                 font-weight: 400;
+                transition: color $duration;
                 &::before {
                     display: block;
                     content: '';
@@ -47,6 +99,9 @@
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: contain;
+                }
+                &:hover {
+                    color: $orange;
                 }
                 &.phone {
                     &::before {
@@ -77,6 +132,9 @@
                 }
                 &:not(:last-child) {
                     margin-bottom: 11px;
+                    @include maxw640 {
+                        margin-bottom: 23px;
+                    }
                 }
             }
         }
@@ -85,10 +143,20 @@
             align-items: center;
             &:not(:last-child) {
                 margin-bottom: 13px;
+                @include maxw640 {
+                    margin-bottom: 20px;
+                }
             }
             a {
+                transition: transform $duration;
+                &:hover {
+                    transform: scale(1.4);
+                }
                 &:not(:last-child) {
                     margin-right: 22px;
+                    @include maxw640 {
+                        margin-right: 30px;
+                    }
                 }
             }
         }
@@ -96,6 +164,10 @@
             text-decoration: underline;
             font-size: 16px;
             line-height: 1.4;
+            // transition: color $duration;
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
     .copyright {
@@ -106,5 +178,9 @@
         color: rgba(#fff, 0.7);
         background-color: $footer-bg-dark;
         text-align: center;
+        @include maxw1024 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 }

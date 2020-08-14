@@ -2521,15 +2521,14 @@ $(document).ready( function() {
 	let masonryOptions = {
 		itemSelector: '.feedback-item',
 		columnWidth: '.feedback-item',
-		gutter: 40,
+		gutter: '.masonry-gutter',
 		percentPosition: true,
 		resize: true
 	};   
-    
-    masonryGrid.masonry(masonryOptions);
+    $(window).width() > 768 && masonryGrid.masonry(masonryOptions);
     
 	$(window).resize(function () {
-	    if ($(window).width() < 641) {
+	    if ($(window).width() < 769) {
 	        masonryGrid.masonry('destroy');
 	        // console.log($(window).width());
 	    } else {
@@ -2628,6 +2627,12 @@ $(document).ready( function() {
                 settings: {
                     slidesToShow: 2
                 }
+            },
+            {
+                breakpoint: 541,
+                settings: {
+                    slidesToShow: 1
+                }
             }
         ]
     });
@@ -2645,9 +2650,9 @@ $(document).ready( function() {
                 }
             },
             {
-                breakpoint: 641,
+                breakpoint: 769,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 2
                 }
             },
             {
@@ -2696,10 +2701,16 @@ $(document).ready( function() {
 
 
 
-    // $('.burger').click(function() {
-    //     $(this).toggleClass('open');
-    //     $('body').toggleClass('menu-open');
-    // });
+    $('.burger').click(function() {
+        $(this).toggleClass('open');
+        $('body').toggleClass('menu-open');
+        $('.mobile-menu').toggleClass('open');
+    });
+
+    $('.header-bottom .menu-toggler').click(function() {
+        $(this).toggleClass('open');
+        $(this).siblings('.seminars').toggleClass('open');
+    });
 
     $('select').styler();
 });
