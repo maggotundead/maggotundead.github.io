@@ -703,6 +703,12 @@
         .columns-grid {
             width: 100%;
             margin-top: 60px;
+            &.invention-items {
+                @include maxw768 {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
             @include maxw768 {
                 margin-top: 40px;
                 width: calc(100% + (2 * #{$mobile-padding}) );

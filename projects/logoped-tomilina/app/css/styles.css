@@ -1271,6 +1271,10 @@ time {
   width: 100%;
   margin-top: 60px; }
   @media screen and (max-width: 768px) {
+    .block-title-descr-grid .columns-grid.invention-items {
+      width: 100%;
+      margin-left: 0; } }
+  @media screen and (max-width: 768px) {
     .block-title-descr-grid .columns-grid {
       margin-top: 40px;
       width: calc(100% + (2 * 25px));
