@@ -1,25 +1,36 @@
-var gulp        = require('gulp');
-var sass        = require('gulp-sass');
-var concat      = require('gulp-concat');
-// var rename      = require('gulp-rename');
-// var uglify      = require('gulp-uglify');
-var browserSync = require('browser-sync').create();
+let gulp        = require('gulp');
+let sass        = require('gulp-sass');
+let concat      = require('gulp-concat');
+// let rename      = require('gulp-rename');
+// let uglify      = require('gulp-uglify');
+let concatCss = require('gulp-concat-css');
+let browserSync = require('browser-sync').create();
 
-// var async = require('async');
-// var iconfont = require('gulp-iconfont');
-// var iconfontCss = require('gulp-iconfont-css');
-// var consolidate = require('gulp-consolidate');
+
+// let async = require('async');
+// let iconfont = require('gulp-iconfont');
+// let iconfontCss = require('gulp-iconfont-css');
+// let consolidate = require('gulp-consolidate');
 
 sass.compiler   = require('node-sass');
 
-var
+let
     stylesDev = './resources/sass/**/*.scss',
-    stylesAll = [
-        './resources/sass/**/*.scss',
+    // stylesAll = [
+    //     './resources/sass/**/*.scss',
+    //     './node_modules/slick-carousel/slick/slick.css',
+    //     './node_modules/animate.css/animate.min.css',
+    //     './node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+    //     './node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
+    //     // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
+    // ],
+    stylesVendor = [
+        // './resources/sass/**/*.scss',
         './node_modules/slick-carousel/slick/slick.css',
         './node_modules/animate.css/animate.min.css',
         './node_modules/jquery-form-styler/dist/jquery.formstyler.css',
-        './node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css'
+        './node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
+        './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css'
     ],
     scriptsDev = './resources/js/**/*.js',
     scriptsAll = [
@@ -28,11 +39,18 @@ var
         './node_modules/wowjs/dist/wow.min.js',
         './node_modules/masonry-layout/dist/masonry.pkgd.js',
         './node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
+        './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
         './resources/js/**/*.js'
     ],
 
     stylesProd = './app/css/',
-    scriptsProd = './app/js/';
+    scriptsProd = './app/js/',
+    
+    tempFiles = './temp/'
+    tempCss = tempFiles + '*.css';
+    // console.log(stylesVendor);
+    // console.log(stylesDev);
+    // console.log(tempCss);
 
 gulp.task('browser-sync', ['sass', 'scripts'], function() {
     browserSync.init({
@@ -48,11 +66,22 @@ gulp.task('browser-sync', ['sass', 'scripts'], function() {
 
 
 gulp.task('sass', function () {
-  return gulp.src(stylesAll)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(concat('styles.css'))
-    .pipe(gulp.dest(stylesProd))
-    .pipe(browserSync.stream());
+    return gulp.src(stylesDev)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(concat('app.css'))
+        .pipe(gulp.dest(tempFiles))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('vendorCss', function () {
+    return gulp.src(stylesVendor)
+        .pipe(concatCss('vendor.css'))
+        .pipe(gulp.dest(tempFiles));
+});
+gulp.task('mixCss', function () {
+    return gulp.src(tempCss)
+        .pipe(concatCss('styles.css'))
+        .pipe(gulp.dest(stylesProd));
 });
 
 gulp.task('scripts', function() {
@@ -62,8 +91,10 @@ gulp.task('scripts', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['browser-sync', 'sass', 'scripts'], function () {
+gulp.task('default', ['browser-sync', 'sass', 'vendorCss', 'mixCss', 'scripts'], function () {
     gulp.watch(stylesDev, ['sass']);
+    gulp.watch(stylesVendor, ['vendorCss']);
+    gulp.watch(tempCss, ['mixCss']);
     gulp.watch(scriptsDev, ['scripts']);
     gulp.watch("./app/*.html").on('change', browserSync.reload);
 });

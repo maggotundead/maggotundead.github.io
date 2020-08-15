@@ -146,13 +146,13 @@
                 <div class="wrap">
                     <div class="about-group">
                         <div class="col text-column">
-                            <div class="block-title">
+                            <div class="block-title wow animate__fadeInDown">
                                 Обо мне
                             </div>
-                            <p>
+                            <p class="wow animate__fadeInDown"" data-wow-delay="250ms">
                                 Окончила в 1975 году дефектологический факультет МПГИ им. Ленина. Опыт работы: Московский областной психоневрологический санаторий № 1, Детский сад «Мостелефонстрой», неврологические отделение санатория «Светлана» (Москва), кафедра сценической речи театрального училища им. Щепкина.
                             </p>
-                            <p>
+                            <p class="wow animate__fadeInDown"" data-wow-delay="500ms">
                                 Проводит мастер-классы «Коррекция звукопроизношения у детей и взрослых», «Лечение заикания у подростков и взрослых», "Логопедический и зондовый массаж", "Логопедическая ритмика" и "Логопедическая работа с детьми с моторной алалией" и другие. Автор методики лечения заикания Волна (Патент № 2450835 от 24.04.2012), автор Способ коррекции речевых и миофункциональных нарушений у детей и взрослых и набора зондов для его осуществления (Патент №2652951 от 03.05.2018).
                             </p>
                         </div>
@@ -168,7 +168,7 @@
                             Посмотрите, как проходит обучение в моей школе
                         </div>
                         <div class="video-wrapper" data-wow-delay="250ms">
-                            <img src="img/dummy/video-banner.jpg" alt="" loading="lazy">
+                            <img src="img/dummy/video-banner.jpg" alt="">
                             <button class="video-play"></button>
                         </div>
                     </div>
@@ -176,7 +176,7 @@
             </section>
             <div class="block block-patents">
                 <div class="wrap">
-                    <div class="block-title">
+                    <div class="block-title wow animate__fadeInDown">
                         Мои патенты
                     </div>
                     <div class="patents-slider">
@@ -303,6 +303,90 @@
                 © 2020 Персональный сайт Светланы Томилиной | Все права защищены
             </div>
         </footer>
+        
+        <div class="modal modal-callback">
+            <div class="modal-overlay"></div>
+            <div class="modal-body">
+                <button class="modal-close"></button>
+                <div class="modal-content">
+                    <h2 class="modal-title">
+                        <span>
+                            Получить
+                        </span>
+                        обратный звонок
+                    </h2>
+                    <div class="modal-descr">
+                        Оставьте заявку, мы перезвоним, ответим на все вопросы и поможем сделать заказ
+                    </div>
+                    <form class="modal-form">
+                        <input type="text" name="" placeholder="Ваше имя" class="input">
+                        <input type="text" name="" placeholder="Ваш телефон" class="input">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-default" hidden checked>
+                                <span class="checkbox-custom"></span>
+                            </label>
+                            <div class="checkbox-text">
+                                Я согласен на обработку моих персональных данных в соответствии с <a href="">Условиями</a>
+                            </div>
+                        </div>
+                        <button type="submit" class="main-btn modal-submit">
+                            Записаться
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-video">
+            <div class="modal-overlay"></div>
+            <div class="modal-body">
+                <button class="modal-close"></button>
+                <div class="modal-content">
+                    <iframe
+                        class="iframe"
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/Y8Wp3dafaMQ"
+                        srcdoc="
+                            <style>
+                                * {
+                                    padding: 0;
+                                    margin: 0;
+                                    overflow: hidden;
+                                }
+                                html,body { 
+                                    height: 100%;
+                                }
+                                img,
+                                span {
+                                    position: absolute;
+                                    width: 100%;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                } 
+                                span {
+                                    height: 1.5em; 
+                                    text-align: center;
+                                    font:48px/1.5 sans-serif;
+                                    color: white;
+                                    text-shadow: 0 0 0.5em black;
+                                }
+                            </style>
+                            <a href=https://www.youtube.com/embed/Y8Wp3dafaMQ?autoplay=1>
+                            <img src=https://img.youtube.com/vi/Y8Wp3dafaMQ/hqdefault.jpg alt='video title'>
+                                <span>▶</span>
+                            </a>
+                        "
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
         
     </div>
 

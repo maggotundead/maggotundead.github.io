@@ -137,6 +137,7 @@ p {
 	border: 0;
 	border-radius: 50%;
 	font-size: 0;
+	transition: $duration;
 	&:hover {
 		background-image: url('../img/slider-arrow-left-orange.svg');
 	}
@@ -174,6 +175,9 @@ p {
 		@include maxw540 {
 			right: -9px;
 		}
+	}
+	&.slick-disabled {
+		opacity: 0.3;
 	}
 }
 
@@ -288,6 +292,93 @@ time {
 		&::before {
 			background-image: url('../img/icons/icon-clock-orange.svg');
 		}
+	}
+}
+
+.checkbox-group {
+	display: flex;
+	align-items: center;
+	.checkbox-label {
+		display: block;
+		margin-right: 10px;
+	}
+	.checkbox-default:checked + .checkbox-custom::before {
+		background-color: $orange;
+	}
+	.checkbox-custom {
+		width: 20px;
+		height: 20px;
+		border-radius: $radius-small;
+		border: 1px solid $input-border;
+		display: block;
+		position: relative;
+		&:before {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			right: 4px;
+			bottom: 4px;
+			border-radius: 2px;
+			background-color: transparent;
+			transition: background-color $duration;
+		}
+	}
+	.checkbox-text {
+		font-size: 12px;
+		line-height: 1.5;
+		a {
+			text-decoration: underline;
+			color: $black;
+			transition: color $duration;
+			&:hover {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.input {
+	width: 100%;
+	height: 50px;
+	border-radius: $radius-small;
+	border: 1px solid $input-border;
+	background-color: #fff;
+	line-height: 48px;
+	padding-left: 22px;
+	font-size: 16px;
+	color: inherit;
+	padding-top: 2px;
+	margin-bottom: 15px;
+	@include maxw540 {
+		margin-bottom: 10px;
+	}
+	&.wide {
+		width: 100%;
+	}
+	&:focus {
+		border-color: $orange;
+	}
+	&:focus {
+		border-color: $orange;
+	}
+}
+
+.textarea {
+	width: 100%;
+	border-radius: $radius-small;
+	border: 1px solid $input-border;
+	background-color: #fff;
+	line-height: 1.6;
+	padding-left: 22px;
+	font-size: 16px;
+	color: inherit;
+	padding-top: 13px;
+	transition: border-color $duration;
+	resize: none;
+	&:focus {
+		border-color: $orange;
 	}
 }
 

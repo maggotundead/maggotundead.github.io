@@ -144,10 +144,10 @@
         <main class="content with-figures no-bottom-gap-mobile">
             <section class="block block-title-descr-grid block-products">
                 <div class="wrap">
-                    <div class="block-title">
+                    <div class="block-title wow animate__fadeInDown">
                         Вибромассажеры
                     </div>
-                    <div class="title-descr">
+                    <div class="title-descr wow animate__fadeInDown" data-wow-delay="250ms">
                         <p>
                             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                         </p>
@@ -346,15 +346,15 @@
                                 <path d="M165.101 232.478C162.203 234.797 158.029 234.449 155.594 231.55C145.159 219.028 133.101 199.201 119.652 172.532C92.9855 176.127 57.0435 175.083 28.1739 152.821C9.50729 138.443 2.78258 121.978 2.43475 121.283L0 115.253L5.91301 112.587C6.14489 112.471 6.37689 112.355 6.60877 112.239C33.9711 100.064 60.4058 100.992 84.9855 115.022C89.1594 117.34 92.9855 120.007 96.5796 122.79C93.4492 115.485 90.0868 107.253 86.3767 97.977C59.1304 75.3669 51.7101 52.0612 50.4347 36.2921C48.9275 18.6679 54.4928 6.37724 54.7247 5.91345L57.3912 0L63.3042 2.43497C85.2173 11.479 99.3623 27.9438 104.116 49.9741C107.594 66.091 105.391 81.5122 103.42 90.5563C105.275 94.7304 107.478 99.7162 109.913 105.166C115.478 81.976 132.29 72.2363 133.217 71.7725L138.898 68.6419L142.261 74.0915C159.536 102.267 147.478 128.935 129.159 145.864C146.087 180.185 160.695 205.114 171.478 218.1C173.797 220.999 173.449 225.173 170.55 227.608L165.101 232.478ZM117.797 159.198C118.609 159.082 119.42 158.966 120.348 158.85L120 158.039L117.797 159.198ZM18.0869 122.094C21.3333 127.312 27.3623 135.313 36.8696 142.501C56.4638 157.343 82.0869 163.14 113.043 159.778C100.058 140.878 67.1303 104.354 18.0869 122.094ZM134.261 88.1213C127.768 94.6144 118.377 108.644 122.667 133.341V133.457C131.362 124.529 142.493 108.065 134.261 88.1213ZM64.8115 18.204C62.0289 30.2627 60.7535 57.047 91.0144 84.295C94.3767 66.4388 95.1883 34.7847 64.8115 18.204Z" fill="#F2590D" fill-opacity="0.1"/>
                             </svg>    
                         </figure>
-                        <div class="block-title">
+                        <div class="block-title wow animate__fadeInDown">
                             Ещё больше товаров <br>
                             в интернет-магазине для логопедов <br>
                             Logopedshop.
                         </div>
-                        <div class="title-descr">
+                        <div class="title-descr wow animate__fadeInDown" data-wow-delay="250ms">
                             Профессиональная продукция и литература
                         </div>
-                        <a href="/" class="main-btn shop-link">
+                        <a href="/" class="main-btn shop-link wow animate__fadeInDown" data-wow-delay="500ms">
                             Перейти в магазин
                         </a>
                     </div>
@@ -420,6 +420,90 @@
                 © 2020 Персональный сайт Светланы Томилиной | Все права защищены
             </div>
         </footer>
+        
+        <div class="modal modal-callback">
+            <div class="modal-overlay"></div>
+            <div class="modal-body">
+                <button class="modal-close"></button>
+                <div class="modal-content">
+                    <h2 class="modal-title">
+                        <span>
+                            Получить
+                        </span>
+                        обратный звонок
+                    </h2>
+                    <div class="modal-descr">
+                        Оставьте заявку, мы перезвоним, ответим на все вопросы и поможем сделать заказ
+                    </div>
+                    <form class="modal-form">
+                        <input type="text" name="" placeholder="Ваше имя" class="input">
+                        <input type="text" name="" placeholder="Ваш телефон" class="input">
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="checkbox-default" hidden checked>
+                                <span class="checkbox-custom"></span>
+                            </label>
+                            <div class="checkbox-text">
+                                Я согласен на обработку моих персональных данных в соответствии с <a href="">Условиями</a>
+                            </div>
+                        </div>
+                        <button type="submit" class="main-btn modal-submit">
+                            Записаться
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-video">
+            <div class="modal-overlay"></div>
+            <div class="modal-body">
+                <button class="modal-close"></button>
+                <div class="modal-content">
+                    <iframe
+                        class="iframe"
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/Y8Wp3dafaMQ"
+                        srcdoc="
+                            <style>
+                                * {
+                                    padding: 0;
+                                    margin: 0;
+                                    overflow: hidden;
+                                }
+                                html,body { 
+                                    height: 100%;
+                                }
+                                img,
+                                span {
+                                    position: absolute;
+                                    width: 100%;
+                                    top: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                } 
+                                span {
+                                    height: 1.5em; 
+                                    text-align: center;
+                                    font:48px/1.5 sans-serif;
+                                    color: white;
+                                    text-shadow: 0 0 0.5em black;
+                                }
+                            </style>
+                            <a href=https://www.youtube.com/embed/Y8Wp3dafaMQ?autoplay=1>
+                            <img src=https://img.youtube.com/vi/Y8Wp3dafaMQ/hqdefault.jpg alt='video title'>
+                                <span>▶</span>
+                            </a>
+                        "
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
         
     </div>
 
