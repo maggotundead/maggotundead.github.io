@@ -4,6 +4,7 @@
 
 /node_modules
 **/**/node_modules
+projects/**/temp
 
 # /projects-folders/
 # /projects-folders/adalant/

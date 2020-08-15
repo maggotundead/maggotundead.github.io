@@ -80,7 +80,8 @@ $(document).ready( function() {
     });
     $('.homescreen-slider').slick({
         dots: false,
-        infinite: true,
+        // infinite: true,
+        infinite: false,
         speed: 300,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -198,7 +199,30 @@ $(document).ready( function() {
         $(this).siblings('.seminars').toggleClass('open');
     });
 
+    $('.callback-btn').click(function() {
+        if ( $(this).closest('.mobile-menu').length > 0 ) {
+            $('burger').removeClass('open');
+            $('body').removeClass('menu-open');
+            $('.mobile-menu').removeClass('open');
+
+            setTimeout(function () {
+                $('.modal-callback').addClass('open');
+            },300);   
+        }
+        else {
+            $('.modal-callback').addClass('open');
+        }
+    });
+    $('.modal-close, .modal-overlay').click(function() {
+        $('.modal').removeClass('open');
+    });
+
     $('select').styler();
+
+    $('.video-play').click(function() {
+        $('.modal-video').addClass('open');
+    });
+    
 });
 
 

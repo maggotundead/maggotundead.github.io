@@ -460,22 +460,22 @@
         justify-content: space-between;
         position: relative;
         z-index: 2;
-        .input,
-        .textarea {
-            height: 50px;
-            border-radius: $radius-small;
-            border: 1px solid $input-border;
-            background-color: #fff;
-            line-height: 48px;
-            padding-left: 22px;
-            font-size: 16px;
-            color: inherit;
-            padding-top: 2px;
-            transition: border-color $duration;
-            &:focus {
-                border-color: $orange;
-            }
-        }
+        // .input,
+        // .textarea {
+        //     height: 50px;
+        //     border-radius: $radius-small;
+        //     border: 1px solid $input-border;
+        //     background-color: #fff;
+        //     line-height: 48px;
+        //     padding-left: 22px;
+        //     font-size: 16px;
+        //     color: inherit;
+        //     padding-top: 2px;
+        //     transition: border-color $duration;
+        //     &:focus {
+        //         border-color: $orange;
+        //     }
+        // }
         .input {
             width: calc(50% - 10px);
             margin-bottom: 20px;
@@ -485,7 +485,10 @@
             }
         }
         .textarea {
-            width: 100%;
+            // width: 100%;
+            height: 50px;
+            line-height: 48px;
+	        padding-top: 2px;
         }
         .submit {
             margin: 30px auto 0;
@@ -897,23 +900,23 @@
             @include maxw768 {
                 margin-top: 20px;
             }
-            .input,
-            .textarea {
-                height: 50px;
-                border-radius: $radius-small;
-                border: 1px solid $input-border;
-                background-color: #fff;
-                padding-left: 22px;
-                font-size: 16px;
-                color: inherit;
-                padding-top: 2px;
-            }
+            // .input,
+            // .textarea {
+            //     height: 50px;
+            //     border-radius: $radius-small;
+            //     border: 1px solid $input-border;
+            //     background-color: #fff;
+            //     padding-left: 22px;
+            //     font-size: 16px;
+            //     color: inherit;
+            //     padding-top: 2px;
+            // }
             .input {
                 &:first-child {
                     width: 100%;
                 }
                 width: calc(50% - 10px);
-                line-height: 48px;
+                // line-height: 48px;
                 margin-bottom: 15px;
                 @include maxw480 {
                     width: 100%;
@@ -921,11 +924,11 @@
                 }
             }
             .textarea {
-                width: 100%;
+                // width: 100%;
                 height: 100px;
-                resize: none;
-                padding-top: 13px;
-                line-height: 1.5;
+                // resize: none;
+                // padding-top: 13px;
+                // line-height: 1.5;
             }
             .submit {
                 margin-top: 30px;
@@ -1419,9 +1422,35 @@
                 .slide {
                     border: 1px solid $input-border;
                     overflow: hidden;
-                    border-radius: 6px;
+                    border-radius: $radius;
                     img {
                         width: 100%;
+                    }
+                    a {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        &::after {
+                            display: block;
+                            content: '';
+                            position: absolute;
+                            width: 58px;
+                            height: 58px;
+                            border-radius: 50%;
+                            background-color: rgba($orange, 0.3);
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: 21px 21px;
+                            background-image: url('../img/icons/icon-zoom-white.svg');
+                            margin: auto;
+                            transition: background-color $duration;
+                        }
+                        &:hover {
+                            &::after {
+                                background-color: rgba($orange, 0.7);
+                            }
+                        }
                     }
                 }
             }
@@ -2219,77 +2248,35 @@
                     }
                     
                     .input {
-                        height: 50px;
-                        border-radius: $radius-small;
-                        border: 1px solid $input-border;
-                        background-color: #fff;
-                        line-height: 48px;
-                        padding-left: 22px;
-                        font-size: 16px;
-                        color: inherit;
-                        padding-top: 2px;
+                        // height: 50px;
+                        // border-radius: $radius-small;
+                        // border: 1px solid $input-border;
+                        // background-color: #fff;
+                        // line-height: 48px;
+                        // padding-left: 22px;
+                        // font-size: 16px;
+                        // color: inherit;
+                        // padding-top: 2px;
                         width: calc(50% - 10px);
                         margin-bottom: 15px;
                         @include maxw540 {
                             width: 100%;
                             margin-bottom: 10px;
                         }
-                        &.wide {
-                            width: 100%;
-                        }
-                        &:focus {
-                            border-color: $orange;
-                        }
-                        &:focus {
-                            border-color: $orange;
-                        }
+                        // &.wide {
+                        //     width: 100%;
+                        // }
+                        // &:focus {
+                        //     border-color: $orange;
+                        // }
+                        // &:focus {
+                        //     border-color: $orange;
+                        // }
                     }
                     .textarea {
                         width: 100%;
                     }
-                    .checkbox-group {
-                        display: flex;
-                        align-items: center;
-                    }
-                    .checkbox-label {
-                        display: block;
-                        margin-right: 10px;
-                    }
-                    .checkbox-default:checked + .checkbox-custom::before {
-                        background-color: $orange;
-                    }
-                    .checkbox-custom {
-                        width: 20px;
-                        height: 20px;
-                        border-radius: $radius-small;
-                        border: 1px solid $input-border;
-                        display: block;
-                        position: relative;
-                        &:before {
-                            display: block;
-                            content: '';
-                            position: absolute;
-                            top: 4px;
-                            left: 4px;
-                            right: 4px;
-                            bottom: 4px;
-                            border-radius: 2px;
-                            background-color: transparent;
-                            transition: background-color $duration;
-                        }
-                    }
-                    .checkbox-text {
-                        font-size: 12px;
-                        line-height: 1.5;
-                        a {
-                            text-decoration: underline;
-                            color: $black;
-                            transition: color $duration;
-                            &:hover {
-                                color: $orange;
-                            }
-                        }
-                    }
+                    
                     .submit {
                         margin: 30px auto 0;
                         min-width: 220px;
