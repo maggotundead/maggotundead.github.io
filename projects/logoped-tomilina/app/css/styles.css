@@ -4731,16 +4731,10 @@ time.time::before {
   right: 0;
   bottom: 0;
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s, visibility 0.3s;
+  display: none;
 }
 
-.modal.open {
+.modal.open .modal-inner {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -4811,6 +4805,17 @@ time.time::before {
     max-width: 100%;
     height: calc((100vw - 2 * 20px) * 0.5625);
   }
+}
+
+.modal-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  height: 100%;
 }
 
 .modal-overlay {

@@ -422,85 +422,89 @@
         </footer>
         
         <div class="modal modal-callback">
-            <div class="modal-overlay"></div>
-            <div class="modal-body">
-                <button class="modal-close"></button>
-                <div class="modal-content">
-                    <h2 class="modal-title">
-                        <span>
-                            Получить
-                        </span>
-                        обратный звонок
-                    </h2>
-                    <div class="modal-descr">
-                        Оставьте заявку, мы перезвоним, ответим на все вопросы и поможем сделать заказ
-                    </div>
-                    <form class="modal-form">
-                        <input type="text" name="" placeholder="Ваше имя" class="input">
-                        <input type="text" name="" placeholder="Ваш телефон" class="input">
-                        <div class="checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="checkbox-default" hidden checked>
-                                <span class="checkbox-custom"></span>
-                            </label>
-                            <div class="checkbox-text">
-                                Я согласен на обработку моих персональных данных в соответствии с <a href="">Условиями</a>
-                            </div>
+            <div class="modal-inner">
+                <div class="modal-overlay"></div>
+                <div class="modal-body">
+                    <button class="modal-close"></button>
+                    <div class="modal-content">
+                        <h2 class="modal-title">
+                            <span>
+                                Получить
+                            </span>
+                            обратный звонок
+                        </h2>
+                        <div class="modal-descr">
+                            Оставьте заявку, мы перезвоним, ответим на все вопросы и поможем сделать заказ
                         </div>
-                        <button type="submit" class="main-btn modal-submit">
-                            Записаться
-                        </button>
-                    </form>
+                        <form class="modal-form">
+                            <input type="text" name="" placeholder="Ваше имя" class="input">
+                            <input type="text" name="" placeholder="Ваш телефон" class="input">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" class="checkbox-default" hidden checked>
+                                    <span class="checkbox-custom"></span>
+                                </label>
+                                <div class="checkbox-text">
+                                    Я согласен на обработку моих персональных данных в соответствии с <a href="">Условиями</a>
+                                </div>
+                            </div>
+                            <button type="submit" class="main-btn modal-submit">
+                                Записаться
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="modal modal-video">
-            <div class="modal-overlay"></div>
-            <div class="modal-body">
-                <button class="modal-close"></button>
-                <div class="modal-content">
-                    <iframe
-                        class="iframe"
-                        width="560"
-                        height="315"
-                        src="https://www.youtube.com/embed/Y8Wp3dafaMQ"
-                        srcdoc="
-                            <style>
-                                * {
-                                    padding: 0;
-                                    margin: 0;
-                                    overflow: hidden;
-                                }
-                                html,body { 
-                                    height: 100%;
-                                }
-                                img,
-                                span {
-                                    position: absolute;
-                                    width: 100%;
-                                    top: 0;
-                                    bottom: 0;
-                                    margin: auto;
-                                } 
-                                span {
-                                    height: 1.5em; 
-                                    text-align: center;
-                                    font:48px/1.5 sans-serif;
-                                    color: white;
-                                    text-shadow: 0 0 0.5em black;
-                                }
-                            </style>
-                            <a href=https://www.youtube.com/embed/Y8Wp3dafaMQ?autoplay=1>
-                            <img src=https://img.youtube.com/vi/Y8Wp3dafaMQ/hqdefault.jpg alt='video title'>
-                                <span>▶</span>
-                            </a>
-                        "
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"
-                    ></iframe>
+            <div class="modal-inner">
+                <div class="modal-overlay"></div>
+                <div class="modal-body">
+                    <button class="modal-close"></button>
+                    <div class="modal-content">
+                        <iframe
+                            class="iframe"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/Y8Wp3dafaMQ"
+                            srcdoc="
+                                <style>
+                                    * {
+                                        padding: 0;
+                                        margin: 0;
+                                        overflow: hidden;
+                                    }
+                                    html,body { 
+                                        height: 100%;
+                                    }
+                                    img,
+                                    span {
+                                        position: absolute;
+                                        width: 100%;
+                                        top: 0;
+                                        bottom: 0;
+                                        margin: auto;
+                                    } 
+                                    span {
+                                        height: 1.5em; 
+                                        text-align: center;
+                                        font:48px/1.5 sans-serif;
+                                        color: white;
+                                        text-shadow: 0 0 0.5em black;
+                                    }
+                                </style>
+                                <a href=https://www.youtube.com/embed/Y8Wp3dafaMQ?autoplay=1>
+                                <img src=https://img.youtube.com/vi/Y8Wp3dafaMQ/hqdefault.jpg alt='video title'>
+                                    <span>▶</span>
+                                </a>
+                            "
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            title="The Dark Knight Rises: What Went Wrong? – Wisecrack Edition"
+                        ></iframe>
+                    </div>
                 </div>
             </div>
         </div>
