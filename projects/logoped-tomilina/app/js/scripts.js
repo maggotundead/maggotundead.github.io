@@ -2732,22 +2732,32 @@ $(document).ready( function() {
             $('body').removeClass('menu-open');
             $('.mobile-menu').removeClass('open');
 
+            $('.modal-callback').show();
             setTimeout(function () {
                 $('.modal-callback').addClass('open');
             },300);   
         }
         else {
-            $('.modal-callback').addClass('open');
+            $('.modal-callback').show();
+            setTimeout(function () {
+                $('.modal-callback').addClass('open');
+            },300);
         }
     });
     $('.modal-close, .modal-overlay').click(function() {
         $('.modal').removeClass('open');
+        setTimeout(function () {
+            $('.modal').hide();
+        },300); 
     });
 
     $('select').styler();
 
     $('.video-play').click(function() {
-        $('.modal-video').addClass('open');
+        $('.modal-video').show();
+        setTimeout(function () {
+            $('.modal-video').addClass('open');
+        },300); 
     });
     
 });

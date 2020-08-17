@@ -5,17 +5,13 @@
     right: 0;
     bottom: 0;
     z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity $duration, visibility $duration;
+    display: none;
     &.open {
-        opacity: 1;
-        pointer-events: auto;
-        visibility: visible;
+        .modal-inner {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+        }
     }
     &.modal-callback {
         .modal-body {
@@ -71,6 +67,16 @@
                 }
             }
         }
+    }
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity $duration, visibility $duration;
+        height: 100%;
     }
     &-overlay {
         position: absolute;
