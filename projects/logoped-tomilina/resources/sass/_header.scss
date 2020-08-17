@@ -243,6 +243,10 @@
             @include maxw1024 {
                 display: flex;
             }
+            @include maxh640 {
+                padding-top: 20px;
+                padding-bottom: 0;
+            }
             &.open {
                 pointer-events: auto;
                 top: 0;
@@ -269,6 +273,9 @@
                 opacity: 0;
                 transition: opacity $duration;
                 transition-delay: $duration;
+                @include maxh640 {
+                    margin-top: 20px;
+                }
                 .menu {
                     display: flex;
                     flex-direction: column;
@@ -289,6 +296,9 @@
                             width: 100%;
                             font-weight: 700;
                             text-transform: uppercase;
+                            @include maxh640 {
+                                padding: 14px 16px 11px;
+                            }
                         }
                         &.offset-left {
                             padding-left: 36px;
@@ -338,6 +348,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @include maxh640 {
+                    margin-bottom: auto;
+                }
                 .callback-btn {
                     display: inline-block;
                     margin-left: initial;
@@ -418,16 +431,19 @@
         .seminar-link {
             display: flex;
             align-items: center;
+            color: $black;
             &:not(:last-child) {
                 @include maxw768 {
                     margin-bottom: 20px;
                 }
             }
+            &.active {
+                color: $orange;
+            }
             .title {
                 font-size: 14px;
                 line-height: 1.2;
                 font-weight: 700;
-                color: $black;
                 text-transform: uppercase;
                 margin-left: 10px;
                 padding-top: 2px;

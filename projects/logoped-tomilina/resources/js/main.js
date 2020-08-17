@@ -201,7 +201,7 @@ $(document).ready( function() {
 
     $('.callback-btn').click(function() {
         if ( $(this).closest('.mobile-menu').length > 0 ) {
-            $('burger').removeClass('open');
+            $('.burger').removeClass('open');
             $('body').removeClass('menu-open');
             $('.mobile-menu').removeClass('open');
 
