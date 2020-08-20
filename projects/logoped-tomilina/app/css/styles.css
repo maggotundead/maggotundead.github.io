@@ -4126,6 +4126,10 @@ time.time::before {
   }
 }
 
+.block-seminar .seminar-body .register-section .form .input.wide {
+  width: 100%;
+}
+
 .block-seminar .seminar-body .register-section .form .textarea {
   width: 100%;
 }
