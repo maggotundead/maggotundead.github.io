@@ -1,0 +1,76 @@
+.footer {
+    padding: rem(36) 0 rem(27);
+    background-color: $red;
+    color: #fff;
+    @include mobile {
+        padding: mobrem(42) 0;
+    }
+    .footer-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    .logo {
+        width: rem(160);
+        @include mobile {
+            width: 50%;
+            order: 1;
+        }
+        img {
+            @include mobile {
+                width: mobrem(140);
+            }
+        }
+    }
+    .menu {
+        font-family: $secondary-font;
+        font-size: rem(18);
+        line-height: rem(20);
+        columns: 2;
+        column-gap: rem(215);
+        font-weight: 700;
+        max-width: rem(550);
+        @include mobile {
+            order: 3;
+            width: 100%;
+            margin-top: mobrem(38);
+            font-size: mobrem(14);
+            line-height: mobrem(16);
+            column-gap: 0;
+            max-width: initial;
+        }
+        a {
+            display: inline-block;
+            &:nth-child(2n+1) {
+                margin-bottom: rem(17);
+                @include mobile {
+                    margin-bottom: mobrem(11);
+                }
+            }
+        }
+    }
+    .socials {
+        @include mobile {
+            padding-left: mobrem(5);
+            width: 50%;
+            order: 2;
+        }
+    }
+    .copyright {
+        margin-top: rem(12);
+        text-align: center;
+        font-size: rem(18);
+        line-height: rem(22);
+        font-weight: 300;
+        @include mobile {
+            margin-top: mobrem(40);
+            text-align: left;
+            font-size: mobrem(14);
+            line-height: mobrem(17);
+        }
+    }
+}

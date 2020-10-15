@@ -1,7 +1,7 @@
 <?php
 
     $to='maggotundead@gmail.com';
-    $subject = 'Новая заявка ses bal';
+    $subject = 'Новая заявка Full House';
     $message = '
                 <html>
                     <head>
@@ -9,9 +9,13 @@
                     </head>
                     <body>
 
-                        <p>Имя клиента: ' . $_POST['formo'] . '</p>
+                        <p>Имя клиента: ' . $_POST['user_name'] . '</p>
 
-                        <p>Телефон клиента: ' . $_POST['telefono'] . '</p>
+                        <p>Телефон клиента: ' . $_POST['user_phone'] . '</p>
+
+                        <p>Почта клиента: ' . $_POST['user_mail'] . '</p>
+
+                        <p>Сценарий: ' . $_POST['user_scenario'] . '</p>
 
                     </body>
                 </html>';

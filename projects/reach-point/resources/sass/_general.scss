@@ -13,7 +13,6 @@ body {
 	font-family: $main-font, Arial, Helvetica, sans-serif;
 	font-weight: 400;
 	background-color: #fff;
-	color: $text-color;
 }
 a {
 	text-decoration: none;
@@ -57,7 +56,7 @@ p {
     margin: 0;
 }
 .wrapper {
-	overflow: hidden;	
+	overflow: hidden;
 }
 .wrap {
 	width: 100%;
