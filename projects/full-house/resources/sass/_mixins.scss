@@ -1,0 +1,15 @@
+@mixin mobile {
+	@media screen and (max-width: 768px) {
+	  	@content;
+	}
+}
+
+$browser-font-size-viewport-ratio: 14.4; //1440 desktop layout
+$browser-font-size-mobile-viewport-ratio: 3.6; //360px mobile layout
+
+@function rem($pixels, $size: $browser-font-size-viewport-ratio) {
+    @return #{$pixels/$size}rem;
+}
+@function mobrem($pixels, $size: $browser-font-size-mobile-viewport-ratio) {
+    @return #{$pixels/$size}rem;
+}
