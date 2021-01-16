@@ -37,10 +37,9 @@ $(document).ready(function() {
         $(this).parent().hasClass('no-file') && $(this).parent().removeClass('no-file');
     });
 
+    let scenarioForm = $('#scenario-form');
 
-    let form = $('#form');
-
-    form.submit(function (e) {
+    scenarioForm.submit(function (e) {
         e.preventDefault();
         if ( $('#file-input').val() == '' ) {
             $('#file-input').parent().addClass('no-file');
@@ -48,9 +47,9 @@ $(document).ready(function() {
 
         if ( $('#file-input').val() !== '') {
             $.ajax({
-                type: form.attr('method'),
-                url: form.attr('action'),
-                data: form.serialize(),
+                type: scenarioForm.attr('method'),
+                url: scenarioForm.attr('action'),
+                data: scenarioForm.serialize(),
                 success: function (data) {
                     $('.submit-status .success').fadeIn().delay(3000).fadeOut();
 
