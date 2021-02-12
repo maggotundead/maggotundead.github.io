@@ -1,0 +1,25 @@
+//- hr
+section(
+    class='block product-navigation'
+)
+    div.container
+        div(class='button-primary close-button-div')
+            //- button(class='button-primary close-navigation') close x
+            //- button(class='button-primary show-navigation') show nav
+            button(class='button-primary show-navigation toggle-navigation') close nav
+
+        h3(class='cart-header') Goods
+        div(
+            id='category-list'
+            class='category-list'
+        )
+        h3(class='cart-header') Cart
+        div(
+            id='cart-products'
+            class='cart-products'
+        )
+        div(class='text-right')
+            a(
+                href='/order'
+            )
+                button(class='button-primary button-primary-outlined order-product-button') Order Product

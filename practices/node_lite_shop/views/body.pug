@@ -1,0 +1,40 @@
+body
+    div.wrapper
+        include header
+
+        main.content
+            block content
+                home page content
+                //- include catalog
+
+                //- section.block
+                //-     div.container
+                //-         h2.title my express app with includes
+                //-         p #{foo}
+                //-         h3 #{bar}
+
+
+                //-         each val, index in goods
+                //-             include card
+                //-             div.product_item
+                //-                 h3.title #{val['name']}
+                //-                 div.image
+                //-                     img(
+                //-                         src = 'images/' + val['image']
+                //-                         alt = val['name']
+                //-                     )
+                //-                 div.description #{val['description']}
+                //-                 div.price #{val['cost']}
+
+
+
+
+
+        include navigation
+
+        
+        include footer
+
+        
+
+        include modals

@@ -1,0 +1,52 @@
+html
+    head
+        meta(
+            http-equiv='Content-Type'
+            content='text/html; charset=utf-8'
+        )
+        meta(charset='utf-8')
+        meta(
+            name='viewport'
+            content='width=device-width, initial-scale=1.0, maximum-scale=2.0'
+        )
+        link(
+            rel='stylesheet'
+            href='/css/style.css'
+        )
+        title My express app
+
+    include body
+    //- include header
+
+    //- main.content
+
+    //-     block content
+    //-         section.block
+    //-             div.container
+    //-                 h2.title my express app with includes
+    //-                 p #{foo}
+    //-                 h3 #{bar}
+
+    //-         section(class='block products')
+    //-             div.container
+    //-                 each val, index in goods
+    //-                     include card
+    //-         //- include catalog
+
+    //-         //- div.product_item
+    //-         //-     h3.title #{val['name']}
+    //-         //-     div.image
+    //-         //-         img(
+    //-         //-             src = 'images/' + val['image']
+    //-         //-             alt = val['name']
+    //-         //-         )
+    //-         //-     div.description #{val['description']}
+    //-         //-     div.price #{val['cost']}
+
+
+
+
+    //- include footer
+
+    //- include modals
+    include scripts
