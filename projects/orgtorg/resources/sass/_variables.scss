@@ -1,0 +1,84 @@
+
+$main-font: 'Open Sans';
+// $title-font: 'Tinos', serif;
+$title-font: 'Tinos';
+
+$red-700: #C21408;
+$red-500: #D11F12;
+$red-300: #E45C52;
+$red-100: #FBF2F2;
+
+$grey-900: #140302;
+$grey-800: #333333;
+$grey-700: #605857;
+$grey-500: #867B7A;
+$grey-300: #CECACA;
+$grey-200: #DAD7D7;
+$grey-150: #F2F2F2;
+$grey-100: #FBF9F9;
+
+$duration: 0.3s;
+
+$body-bg: $grey-100;
+
+// titles
+$title-size-big: 56px;
+$title-size-big-tablet: 46px;
+$title-size-big-mobile: 36px;
+
+$title-size-medium: 49px;
+$title-size-medium-tablet: 40px;
+$title-size-medium-mobile: 32px;
+
+$title-size-small: 38px;
+$title-size-small-tablet: 35px;
+$title-size-small-mobile: 32px;
+
+$title-color: $grey-900;
+$text-color: $grey-500;
+// end titles
+
+// block gaps
+$header-wrapper-gap-x: 60px;
+
+$wrapper-gap-x: 24px;
+
+$block-gap-y: 152px;
+$block-gap-y-tablet: 112px;
+$block-gap-y-mobile: 72px;
+//end block gaps
+
+// cards
+$grid-column-gap: 24px;
+$grid-row-gap: 32px;
+$grid-row-gap-tablet: 24px;
+$grid-row-gap-mobile: 24px;
+$grid-button-margin: 40px;
+$grid-button-margin-mobile: 32px;
+$card-radius: 4px;
+$card-border-color: $grey-300;
+$card-background-hover: $grey-100;
+// end cards
+
+// arrow link
+$arrow-link-margin: 24px;
+$arrow-link-color: $red-500;
+// end arrow link
+
+// buttons
+$button-color: $red-500;
+$button-hover-color: $red-700;
+$button-radius: 4px;
+$button-font-size: 14px;
+$button-font-weight: 700;
+$button-text-color: #fff;
+// end buttons
+
+//inputs
+$input-color: $grey-900;
+$input-border-color: $grey-300;
+$input-placeholder-color: $grey-300;
+$input-error-color: $red-500;
+
+$checkbox-check-color: $red-500;
+// end inputs

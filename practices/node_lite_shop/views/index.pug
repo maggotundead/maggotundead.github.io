@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    section(class='content-on-main-page')
+        div.container
+            //- h2 Category: #{category[0]['http_category']}
+            //- h2 #{category[0]['category']}
+            //- h3 #{category[0]['description']}
+            each val2, index2 in categoryLastProducts
+                div
+                    h2
+                        a(
+                            href='/category?id=' + val2['id']
+                            class= 'category-link'
+                        ) #{val2['category']}
+
+                each val, index in goods
+                    if val2['id'] == val['category']
+                        include card

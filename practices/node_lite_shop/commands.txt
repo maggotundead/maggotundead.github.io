@@ -1,0 +1,11 @@
+
+DEBUG=express:* node app.js
+DEBUG=express:router node app.js
+DEBUG=express:application node app.js
+
+DEBUG=express:* nodemon app.js
+DEBUG=express:router nodemon app.js
+DEBUG=express:application nodemon app.js
+
+
+root db password qwer1234

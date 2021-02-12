@@ -1,0 +1,17 @@
+div( class='col col-md-4' )
+    div( class='card-item' )
+        a(
+            href='/product?id=' + val['id']
+            class = 'card'
+        )
+            h3( class='card-title text-center' ) #{ val['name'] }
+            div( class = 'card-image' )
+                img(
+                    src = '/images/' + val['image']
+                    alt = val['name']
+                )
+            div( class='price text-center' ) #{ val['cost'].toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ') } uah
+        button(
+            class = 'button button-primary add-to-cart'
+            data-goods_id = val['id']
+        ) add to cart

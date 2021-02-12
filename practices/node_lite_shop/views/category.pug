@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    section(class='section one-category')
+        div.container
+            h2 #{category[0]['http_category']}
+            h2 #{category[0]['category']}
+            h3 #{category[0]['description']}
+            each val, index in goods
+                include card
