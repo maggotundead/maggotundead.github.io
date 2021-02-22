@@ -1,0 +1,52 @@
+.lSSlideOuter {
+    .lSPager.lSpg {
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > li {
+            display: flex;
+            align-items: center;
+            padding: 0;
+            height: 8px;
+            &:not(:last-child) {
+                margin-right: 36px;
+            }
+            &.active {
+                a {
+                    width: 8px;
+                    height: 8px;
+                    background-color: $blue;
+                }
+            }
+            a {
+                width: 3px;
+                height: 3px;
+                background-color: #7b91ad;
+                display: block;
+            }
+        }
+    }
+    .lSAction > .lSPrev,
+    .lSAction > .lSNext {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        background: $blue url('../img/slider-arrow-right.png') center no-repeat;
+        background-size: 12px 22px;
+        display: block;
+        border: 0;
+        position: absolute;
+        z-index: 2;
+        // top: calc(50% - 23px);
+        top: 50%;
+        opacity: 1;
+    }
+    .lSAction > .lSPrev {
+        transform: rotate(-180deg);
+        left: -12px;
+    }
+    .lSAction > .lSNext {
+        right: -12px;
+    }
+}

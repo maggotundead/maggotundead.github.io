@@ -1,0 +1,87 @@
+.footer {
+    padding-top: 115px;
+    padding-bottom: 50px;
+    background: transparent url('../img/footer-figure.png') top center no-repeat;
+    background-size: 1427px auto;
+    @include mobile {
+        padding-top: 100px;
+        padding-bottom: 90px;
+    }
+    .wrap {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include touch {
+            flex-wrap: wrap;
+        }
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .left-col {
+        margin-top: -25px;
+        @include touch {
+            width: 40%;
+        }
+        @include mobile {
+            width: 100%;
+            margin-top: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .copyright,
+    .develop {
+        font-size: 14px;
+        line-height: 25px;
+        color: $grey-lighter;
+        font-weight: 300;
+        a {
+            text-decoration: underline;
+        }
+    }
+    .copyright {
+        margin-top: 30px;
+        @include mobile {
+            margin-top: 10px;
+        }
+    }
+    .menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+        grid-column-gap: 120px;
+        grid-row-gap: 20px;
+        padding-top: 10px;
+        @include touch {
+            width: 60%;
+        }
+        @include mobile {
+            width: initial;
+            margin-top: 55px;
+            grid-column-gap: 55px;
+            grid-row-gap: 15px;
+        }
+    }
+    .right-col {
+        @include touch {
+            margin-top: 40px;
+        }
+    }
+    .phone {
+        display: inline-block;
+        font-size: 27px;
+        line-height: 40px;
+        font-weight: 700;
+        color: $blue;
+        &:hover {
+            color: $blue-lighter;
+        }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
