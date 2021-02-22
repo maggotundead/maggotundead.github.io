@@ -1,0 +1,278 @@
+.header {
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include mobile {
+        padding-top: 8px;
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .lang {
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        @include touch {
+            display: none;
+        }
+    }
+    .current-lang,
+    .lang-link {
+        font-size: 12px;
+        font-weight: 700;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        border-radius: 50%;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+    .current-lang {
+        color: #fff;
+        background-color: $yellow;
+    }
+    .lang-link {
+        color: $blue-grey;
+    }
+
+    .header-top {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        width: 100%;
+        position: relative;
+        @include touch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        // &:before {
+        //     display: block;
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     width: 1px;
+        //     background-color: #000;
+        //     left: 50%;
+        // }
+    }
+    .center-group {
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        padding-right: 150px;
+        @include touch {
+            padding-right: 0;
+            flex-grow: 1;
+        }
+    }
+    .logo {
+        margin: 0 85px;
+        @include touch {
+            margin: 0;
+            margin-right: auto;
+            order: 1;
+        }
+        @include mobile {
+            max-width: 100px;
+        }
+    }
+    .menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 35px;
+        position: relative;
+        @include touch {
+            display: none;
+        }
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            left: -150px;
+            right: -150px;
+            top: 7px;
+            bottom: 7px;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%);
+        }
+        .menu-link {
+            height: 50px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            @include maxw1199 {
+                padding: 0 20px;
+            }
+            &.active {
+                height: 60px;
+                background-color: $blue;
+                color: #fff;
+                &::before {
+                    display: block;
+                    content: '';
+                    width: 7px;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 100%;
+                    background: transparent url('../img/menu-link-figure-left.png') center no-repeat;
+                    background-size: 100%;
+                }
+                &::after {
+                    display: block;
+                    content: '';
+                    width: 7px;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 100%;
+                    background: transparent url('../img/menu-link-figure-left.png') center no-repeat;
+                    background-size: 100%;
+                    transform: scale(-1,1);
+                }
+            }
+        }
+    }
+    .link {
+        &.active {
+
+        }
+        &.icon-link {
+            margin-top: 25px;
+            @include touch {
+                margin-top: 0;
+            }
+            .text {
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+        &.order-link {
+            flex-direction: row-reverse;
+            @include touch {
+                order: 2;
+                margin-right: 15px;
+            }
+            .text {
+                margin-left: 0;
+                margin-right: 20px;
+                text-align: right;
+            }
+        }
+        &.webcam-link {
+            @include touch {
+                order: 3;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+        border: 0;
+        background-color: transparent;
+        @include touch {
+            display: block;
+        }
+        @include mobile {
+            margin-left: 35px;
+        }
+        span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: $blue;
+            &:not(:last-child) {
+                margin-bottom: 9px;
+            }
+        }
+    }
+
+    .mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        max-height: 100%;
+        max-height: -webkit-fill-avialable;
+        height: 100%;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity $duration, top $duration;
+        z-index: 9999;
+        text-align: center;
+        @include touch {
+            display: flex;
+        }
+        &.open {
+            top: 0;
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .mobile-menu-close {
+            display: block;
+            border: 0;
+            background: transparent url('../img/icons/icon-close-blue.png') center no-repeat;
+            background-size: contain;
+            width: 22px;
+            height: 23px;
+        }
+        .address {
+            font-size: 13px;
+            font-style: normal;
+            color: #838b95;
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+        .phone {
+            font-size: 20px;
+            color: #838b95;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            .menu-link {
+                height: initial;
+                padding: 0;
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+                &.active {
+                    color: $blue-lighter;
+                    background-color: initial;
+                    &::before,
+                    &::after {
+                        content: initial;
+                    }
+                }
+            }
+        }
+        .lang {
+            margin-top: 45px;
+            padding-top: 0;
+            @include touch {
+                display: flex;
+            }
+        }
+    }
+}
