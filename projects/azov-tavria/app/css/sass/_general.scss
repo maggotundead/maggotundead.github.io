@@ -17,7 +17,9 @@ body {
 	color: $text-color;
 	background: transparent url('../img/body-bg.png') center no-repeat;
 	background-size: cover;
-	@include mobile {
+	@include maxw479 {
+		background: transparent url('../img/body-bg-mobile.png') center no-repeat;
+		background-size: cover;
 	}
 }
 a {
@@ -227,10 +229,16 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	overflow: hidden;
 	border-radius: 20px;
+	&:hover {
+		img {
+			transform: scale(1.04);
+		}
+	}
 	&:not(:last-child) {
 		margin-bottom: 10px;
 	}
 	img {
 		width: 100%;
+		transition: transform 1.5*$duration;
 	}
 }

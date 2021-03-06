@@ -14,19 +14,19 @@ const
         // './resources/sass/**/*.scss'
         './node_modules/lightgallery/dist/css/lightgallery.min.css',
         './node_modules/lightslider/dist/css/lightslider.min.css',
-        './node_modules/bootstrap/dist/css/bootstrap.min.css',
+        // './node_modules/bootstrap/dist/css/bootstrap.min.css',
         './app/css/sass/**/*.scss'
     ],
     scriptsDev = './resources/js/**/*.js',
     scriptsAll = [
-        './node_modules/jquery/dist/jquery.min.js',
+        // './node_modules/jquery/dist/jquery.min.js',
         // './node_modules/slick-carousel/slick/slick.min.js',
         // './node_modules/simple-lightbox/dist/simpleLightbox.min.js',
         // './node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
         // './node_modules/jquery.marquee/jquery.marquee.min.js',
         // './node_modules/wowjs/dist/wow.min.js',
-        './node_modules/lightgallery/dist/js/lightgallery.min.js',
-        './node_modules/lightslider/dist/js/lightslider.min.js',
+        // './node_modules/lightgallery/dist/js/lightgallery.min.js',
+        // './node_modules/lightslider/dist/js/lightslider.min.js',
         './resources/js/**/*.js'
     ],
 
