@@ -16,7 +16,7 @@ $('.object-slider').each(function() {
     const slider = $(this);
     slider.lightSlider({
         item: 1,
-        loop: true,
+        loop: false,
         // controls: false,
         slideMargin: 0,
         pager: false

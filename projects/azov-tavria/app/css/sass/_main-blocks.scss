@@ -7,10 +7,14 @@
 
 .block-homescreen {
     padding-top: 260px;
-    background: transparent url('../img/homescreen-bg.jpg') center no-repeat;
+    // background: transparent url('../img/homescreen-bg.jpg') center no-repeat;
+    background: transparent url('../img/homescreen-bg.jpg') bottom center no-repeat;
     background-size: cover;
     @include mobile {
         padding-top: 94px;
+    }
+    @include maxw479 {
+        background: initial
     }
     .slider-outer {
         margin-left: auto;
@@ -34,6 +38,7 @@
             bottom: 30px;
             left: calc(50% - 512px);
             z-index: 1;
+            pointer-events: none;
             @include mobile {
                 content: none;
             }
@@ -49,6 +54,7 @@
             top: 0;
             left: -37px;
             z-index: 3;
+            pointer-events: none;
             @include mobile {
                 content: none;
             }
@@ -66,6 +72,8 @@
         img {
             width: 100%;
             z-index: 1;
+            min-height: 240px;
+            object-fit: cover;
         }
     }
     .slide-title {
@@ -131,8 +139,10 @@
 
 .block-first-screen {
     padding-top: 260px;
-    background: transparent url('../img/first-screen-bg.jpg') top center no-repeat;
-    background-size: contain;
+    // background: transparent url('../img/first-screen-bg.jpg') top center no-repeat;
+    background: transparent url('../img/first-screen-bg.jpg') bottom center no-repeat;
+    // background-size: contain;
+    background-size: cover;
     min-height: 700px;
     @include mobile {
         min-height: initial;
@@ -254,10 +264,10 @@
             margin-bottom: 20px;
         }
         li {
-            padding-left: 60px;
-            @include mobile {
-                padding-left: 40px;
-            }
+            // padding-left: 60px;
+            // @include mobile {
+            //     padding-left: 40px;
+            // }
             position: relative;
             &:not(:last-child) {
                 margin-bottom: 30px;
@@ -275,6 +285,10 @@
     }
     ul {
         li {
+            padding-left: 60px;
+            @include mobile {
+                padding-left: 40px;
+            }
             &:before {
                 display: block;
                 content: '';
@@ -291,6 +305,10 @@
     ol {
         li {
             counter-increment: step-counter;
+            padding-left: 40px;
+            @include mobile {
+                padding-left: 20px;
+            }
             &:before {
                 content: counter(step-counter)'.';
                 top: 0;
@@ -311,7 +329,8 @@
         max-width: calc(1350px + 2*#{$wrapper-gap-x});
         display: flex;
         justify-content: space-between;
-        @include mobile {
+        // @include mobile {
+        @include maxw859 {
             flex-direction: column-reverse;
         }
     }
@@ -319,7 +338,8 @@
         width: 52%;
         columns: 3;
         column-gap: 10px;
-        @include mobile {
+        // @include mobile {
+        @include maxw859 {
             width: 100%;
             margin-top: 50px;
         }
@@ -330,15 +350,19 @@
 
     .descr-col {
         width: 40%;
-        @include mobile {
+        // @include mobile {
+        @include maxw859 {
             width: 100%;
         }
     }
     .block-title {
-        @include mobile {
+        @include maxw859 {
             text-align: center;
-            // font-size: 20px;
         }
+        // @include mobile {
+        //     text-align: center;
+        //     // font-size: 20px;
+        // }
     }
     .title-descr {
         font-size: 17px;
@@ -346,9 +370,12 @@
         font-weight: 300;
         text-transform: uppercase;
         margin-top: 5px;
-        @include mobile {
+        @include maxw859 {
             text-align: center;
         }
+        // @include mobile {
+        //     text-align: center;
+        // }
     }
     p {
         line-height: 1.8;
@@ -369,9 +396,12 @@
         margin-top: 60px;
         display: flex;
         align-items: center;
+        @include maxw859 {
+            justify-content: center;
+        }
         @include mobile {
             margin-top: 35px;
-            justify-content: center;
+            // justify-content: center;
         }
     }
     .more-details {
@@ -393,7 +423,8 @@
     .wrap {
         display: flex;
         align-items: flex-start;
-        @include mobile {
+        // @include mobile {
+        @include maxw859 {
             flex-direction: column;
         }
     }
@@ -402,7 +433,8 @@
         padding-top: 70px;
         padding-right: 24px;
         flex-shrink: 0;
-        @include mobile {
+        // @include mobile {
+        @include maxw859 {
             width: 100%;
             padding-top: 0;
             padding-right: 0;
@@ -482,7 +514,8 @@
             margin-left: -$wrapper-gap-x;
             padding-left: 0;
         }
-        @include mobile {
+        // @include mobile {
+        @include maxw859 {
             margin-top: 50px;
         }
         &::before {
@@ -495,6 +528,7 @@
             bottom: 0;
             left: 0;
             z-index: 1;
+            pointer-events: none;
             @include mobile {
                 content: initial;
             }
@@ -502,7 +536,8 @@
         .photo {
             overflow: hidden;
             border-radius: 20px 0 0 20px;
-            @include mobile {
+            // @include mobile {
+            @include maxw859 {
                 border-radius: 0;
             }
         }
@@ -529,7 +564,8 @@
         @include touch {
             padding: 30px;
         }
-        @include mobile {
+        // @include mobile {
+        @include maxw859 {
             padding: 15px 15px 20px;
             flex-direction: column;
             align-items: center;
@@ -546,7 +582,8 @@
         }
         &.inverted {
             flex-direction: row-reverse;
-            @include mobile {
+            // @include mobile {
+            @include maxw859 {
                 flex-direction: column;
             }
             .object-item-photos {
@@ -555,7 +592,8 @@
                 @include touch {
                     margin-left: 50px;
                 }
-                @include mobile {
+                // @include mobile {
+                @include maxw859 {
                     margin-left: initial;
                 }
             }
@@ -569,7 +607,8 @@
                 margin-right: 50px;
                 width: 400px;
             }
-            @include mobile {
+            // @include mobile {
+            @include maxw859 {
                 width: 100%;
                 margin-right: 0;
             }
@@ -599,7 +638,8 @@
             @include touch {
                 padding-top: 0;
             }
-            @include mobile {
+            // @include mobile {
+            @include maxw859 {
                 padding-top: 15px;
             }
         }
