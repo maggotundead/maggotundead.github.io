@@ -1,0 +1,46 @@
+.footer {
+    margin-top: -24px;
+    font-size: 13px;
+    line-height: 24px;
+    padding-bottom: 90px;
+    @include mobile {
+        margin-top: 0;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    .wrap {
+        display: flex;
+        align-items: center;
+        @include mobile {
+            justify-content: space-between;
+        }
+    }
+    .mobile-logo {
+        @include not-mobile {
+            display: none;
+        }
+    }
+    .icon {
+        width: 84px;
+        height: 30px;
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+    }
+    .menu-link {
+        transition: color $duration;
+        &:not(:last-child) {
+            margin-right: 40px;
+            @include touch {
+                margin-right: 24px;
+            }
+        }
+        &:hover {
+            color: $theme-color;
+        }
+        &:active {
+            color: $theme-color-darker;
+        }
+    }
+}
