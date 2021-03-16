@@ -1,0 +1,36 @@
+.slick-arrow {
+    width: 52px;
+    height: 52px;
+    border: 1px solid #ECF0F4;
+    border-radius: 10px;
+    background-color: transparent;
+    background-image: url('../img/slider-arrow-right-grey.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 18px 12px;
+    font-size: 0;
+    color: transparent;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    transition: background-color $duration;
+    pointer-events: auto !important;
+    &:hover {
+        background-color: #ECF0F4;
+    }
+    &.slick-prev {
+        transform: rotate(-180deg);
+        left: 0;
+        @include mobile {
+            left: initial;
+            right: 68px;
+        }
+    }
+    &.slick-next {
+        left: 68px;
+        @include mobile {
+            left: initial;
+            right: 0;
+        }
+    }
+}

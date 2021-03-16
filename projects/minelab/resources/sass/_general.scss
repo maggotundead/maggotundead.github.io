@@ -1,0 +1,170 @@
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: inherit;
+	&:focus,
+	&:active {
+		outline: 0;
+	}
+}
+body {
+	font-family: $main-font, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	line-height: normal;
+	font-weight: 400;
+	color: $text-color;
+	background-color: $body-bg;
+	@include touch {
+		font-size: 14px;
+	}
+	@include mobile {
+		font-size: 14px;
+	}
+}
+a {
+	text-decoration: none;
+	color: inherit;
+    cursor: pointer;
+	transition: $duration;
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+	}
+	&:active, &:focus {
+		outline: 0;
+	}
+}
+
+p {
+	margin-bottom: 0;
+}
+
+img {
+    display: block;
+	max-width: 100%;
+	flex-shrink: 0;
+}
+button {
+	padding: 0;
+	cursor: pointer;
+	&:hover {
+		cursor: pointer;
+	}
+	&:active, &:focus {
+		outline: 0;
+	}
+}
+label {
+    cursor: pointer;
+}
+
+input, textarea {
+	font-family: inherit;
+    font-size: inherit;
+	&::placehoder {
+		font-family: inherit;
+		opacity: 1;
+        font-size: inherit;
+	}
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	min-height: -webkit-fill-avialable;
+}
+
+.content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrap {
+	width: 100%;
+    max-width: calc(1300px + 2*#{$wrapper-gap-x});
+    margin: 0 auto;
+	padding: 0 $wrapper-gap-x;
+	position: relative;
+	@include touch {
+		padding: 0 $wrapper-gap-x-mobile;
+	}
+}
+
+.btn {
+	border-radius: 10px;
+	font-size: 13px;
+	line-height: 52px;
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 600;
+	padding: 0 32px;
+	// background: radial-gradient(110.58% 110.58% at 50% 9.62%, $theme-color 0%, $theme-color-darker 100%);
+	background-color: $theme-color;
+	box-shadow: 0px 100px 80px rgba(10, 35, 122, 0.06), 0px 41.7776px 33.4221px rgba(10, 35, 122, 0.0431313), 0px 22.3363px 17.869px rgba(10, 35, 122, 0.0357664), 0px 12.5216px 10.0172px rgba(10, 35, 122, 0.03), 0px 6.6501px 5.32008px rgba(10, 35, 122, 0.0242336), 0px 2.76726px 2.21381px rgba(10, 35, 122, 0.0168687);
+	border: 0;
+	// transition: color $duration, background $duration;
+	transition: background-color $duration;
+	@include touch {
+		line-height: 44px;
+		padding: 0 24px;
+	}
+	&:hover {
+		background-color: $theme-color-darker;
+		box-shadow: 0px 100px 80px rgba(10, 35, 122, 0.06), 0px 41.7776px 33.4221px rgba(10, 35, 122, 0.0431313), 0px 22.3363px 17.869px rgba(10, 35, 122, 0.0357664), 0px 12.5216px 10.0172px rgba(10, 35, 122, 0.03), 0px 6.6501px 5.32008px rgba(10, 35, 122, 0.0242336), 0px 2.76726px 2.21381px rgba(10, 35, 122, 0.0168687);
+	}
+	&:focus {
+		background: $theme-color-darker;
+		box-shadow: initial;
+	}
+}
+
+.block-title {
+	font-size: 50px;
+	line-height: 1.2;
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	@include touch {
+		font-size: 44px;
+		line-height: 1.12;
+	}
+	@include mobile {
+		font-size: 24px;
+		line-height: 1.33;
+		letter-spacing: -0.03em;
+	}
+	span {
+		color: $theme-color;
+	}
+}
+
+.title-descr {
+	font-size: 20px;
+	line-height: 1.5;
+	margin-top: 20px;
+	letter-spacing: -0.02em;
+	@include touch {
+		font-size: 18px;
+		margin-top: 16px;
+	}
+	@include mobile {
+		font-size: 16px;
+		margin-top: 12px;
+	}
+}
