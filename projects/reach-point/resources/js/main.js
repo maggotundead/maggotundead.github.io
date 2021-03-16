@@ -94,36 +94,40 @@ if ($('.parallax')) {
     });
 }
 
-$('.cta-form').on('submit', function(e) {
-    var checkbox = $('.cta-form input[type="checkbox"]');
-
-    if( ! checkbox.is(':checked')) {
+$(document).ready(function() {
+    $('.cta-form').submit( function(e) {
         e.preventDefault();
+        let form = $(this);
         
-        checkbox.attr('required', true);
-    }
-    else {
-        e.preventDefault();
+        let checkbox = $('.cta-form input[type="checkbox"]');
+        if( ! checkbox.is(':checked')) {
+            checkbox.attr('required', true);
+        } else {
 
-        $.ajax({
-            type: 'post',
-            url: 'send.php',
-            data: $('.cta-form').serialize(),
-            success: function () {
-                // console.log('success');
-                $('.form-popup').fadeIn(300);
-                $('.form-popup .success-text').show();
-            },
-            error: function () {
-                // console.log('error');
-                $('.form-popup').fadeIn(300);
-                $('.form-popup .error-text').show();
-            }
-        });
-    }
-});
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+                contentType: 'application/json',
+                success: function () {
+                    // console.log('success');
 
-$('.form-popup .close').click(function() {
-    $('.form-popup .text').hide();
-    $('.form-popup').fadeOut(300);
+                     form.trigger('reset');
+                     $('.form-popup').fadeIn(300);
+                     $('.form-popup .success-text').show();
+                },
+                error: function () {
+                    // console.log('error');
+
+                     $('.form-popup').fadeIn(300);
+                     $('.form-popup .error-text').show();
+                }
+            });
+        }
+    });
+
+    $('.form-popup .close').click(function() {
+        $('.form-popup .text').hide();
+        $('.form-popup').fadeOut(300);
+    });
 });

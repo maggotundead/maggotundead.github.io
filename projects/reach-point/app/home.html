@@ -733,9 +733,9 @@
                             Leave your contacts here or leave a message on our <a href="https://www.facebook.com/reachpoint.biz/" rel="nofollow" target="_blank">Facebook account.</a> We will reply shortly!
                         </div>
                         <div class="form-holder">
-                            <form class="cta-form">
-                                <input type="text" placeholder="Name" class="input" required>
-                                <input type="email" placeholder="E-mail" class="input" required>
+                            <form class="cta-form" method="POST" action="./send.php">
+                                <input type="text" placeholder="Name" class="input" required autocomplete="off">
+                                <input type="email" placeholder="E-mail" class="input" required autocomplete="off">
                                 <textarea placeholder="Your message..."></textarea>
                                 <div class="checkbox-wrapper">
                                     <label class="checkbox-label">
