@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     $(".burger, .mobile-menu-close").on("click", function () {
         $(".mobile-menu").toggleClass("open");
     });
@@ -84,13 +84,44 @@ $(document).ready(function () {
         draggable: true,
     });
 
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
+    // document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    //     anchor.addEventListener("click", function (e) {
+    //         e.preventDefault();
 
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
-                behavior: "smooth",
-            });
+    //         document.querySelector(this.getAttribute("href")).scrollIntoView({
+    //             behavior: "smooth",
+    //         });
+    //     });
+    // });
+    $(document).on("click", 'a[href^="#"]', function (event) {
+        event.preventDefault();
+
+        $("html, body").animate(
+            {
+                scrollTop: $($.attr(this, "href")).offset().top,
+            },
+            500
+        );
+    });
+
+    // currency
+    if ($(window).width() > 980) {
+        $(".curr-item").each(function () {
+            const curName = $(this).attr("data-cur");
+            const $curItemVal = $(this).find(".curr-item-value");
+
+            fetch(
+                `https://min-api.cryptocompare.com/data/price?fsym=${curName}&tsyms=USD&api_key=1a201035e7f857e613ee25a903a99b843ed4a1cd1a4f7195ce33fdb563c6970e`
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    $curItemVal.text("$" + data.USD);
+                });
         });
+    }
+
+    $(".show-more-info").on("click", function () {
+        $(this).hide();
+        $(this).siblings(".about-descr").find(".hidden-text").addClass("open");
     });
 });
