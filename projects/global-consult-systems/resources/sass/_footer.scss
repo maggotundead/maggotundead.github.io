@@ -1,46 +1,55 @@
 .footer {
-    margin-top: -24px;
-    font-size: 13px;
-    line-height: 24px;
-    padding-bottom: 90px;
+    font-size: 14px;
+    line-height: 1.71;
+    font-weight: 800;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include touch {
+        padding-top: 60px;
+        padding-bottom: 66px;
+    }
     @include mobile {
-        margin-top: 0;
-        padding-top: 48px;
-        padding-bottom: 48px;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
     .wrap {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        @include touch {
+            max-width: calc(620px + 2 *#{$wrapper-gap-x});
+            flex-wrap: wrap;
+        }
         @include mobile {
-            justify-content: space-between;
+            max-width: calc(620px + 2 *#{$wrapper-gap-x-mobile});
         }
-    }
-    .mobile-logo {
-        @include not-mobile {
-            display: none;
-        }
-    }
-    .icon {
-        width: 84px;
-        height: 30px;
     }
     .menu {
-        display: flex;
-        align-items: center;
-    }
-    .menu-link {
-        transition: color $duration;
-        &:not(:last-child) {
-            margin-right: 40px;
-            @include touch {
-                margin-right: 24px;
+        @include touch {
+            order: 1;
+            margin-bottom: 32px;
+            justify-content: space-between;
+            width: 100%;
+        }
+        @include mobile {
+            display: none;
+        }
+        &-link {
+            &:not(:last-child) {
+                @include touch {
+                    margin-right: initial;
+                }
             }
         }
-        &:hover {
-            color: $theme-color;
+    }
+    .logo {
+        @include touch {
+            order: 2;
         }
-        &:active {
-            color: $theme-color-darker;
+    }
+    .lang {
+        @include touch {
+            order: 3;
         }
     }
 }

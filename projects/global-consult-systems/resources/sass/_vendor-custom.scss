@@ -1,8 +1,56 @@
 .slick-arrow {
+    width: 36px;
+    height: 32px;
+    font-size: 0;
+    color: transparent;
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    border: 0;
+    &::before,
+    &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &::before {
+        display: block;
+        content: "";
+        @include orange-bg();
+        transform: skewX(-5deg);
+        border-radius: 4px;
+    }
+    &::after {
+        background: transparent
+            url("../img/sprite-elems/list-item-arrow-white.svg") center
+            no-repeat;
+        background-size: 7px 8px;
+        z-index: 2;
+    }
     &:hover {
+        &::before {
+            background: $orange;
+        }
     }
     &.slick-prev {
+        left: 0;
+        &::after {
+            transform: rotate(-180deg);
+        }
+        @include mobile {
+            left: initial;
+            right: calc(52px + #{$wrapper-gap-x-mobile});
+        }
     }
     &.slick-next {
+        left: 52px;
+        @include mobile {
+            left: initial;
+            right: $wrapper-gap-x-mobile;
+        }
     }
 }
