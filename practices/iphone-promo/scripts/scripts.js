@@ -167,13 +167,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // document.body.addEventListener('click', (event) => {
-        //     const target = event.target;
+        document.body.addEventListener('click', (event) => {
+            const target = event.target;
 
-        //     if ( !target.closest('.characteristics__list') ) {
-        //         closeAllDrops();
-        //     }
-        // });
+            if ( !target.closest('.characteristics__list') ) {
+                closeAllDrops();
+            }
+        });
 
     };
 
