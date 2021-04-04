@@ -1,0 +1,83 @@
+@mixin maxw1920 {
+    @media screen and (max-width: 1920px) {
+        @content;
+    }
+}
+@mixin maxw1600 {
+    @media screen and (max-width: 1600px) {
+        @content;
+    }
+}
+@mixin maxw1440 {
+    @media screen and (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin maxw1199 {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin not-touch {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin touch {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin maxw859 {
+    @media screen and (max-width: 859px) {
+        @content;
+    }
+}
+@mixin not-mobile {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin maxw639 {
+    @media screen and (max-width: 639px) {
+        @content;
+    }
+}
+@mixin maxw479 {
+    @media screen and (max-width: 479px) {
+        @content;
+    }
+}
+@mixin maxw374 {
+    @media screen and (max-width: 374px) {
+        @content;
+    }
+}
+
+@function css-function($function, $values...) {
+    @return $function + unquote("(") + $values + unquote(")");
+}
+
+@function css-min($values...) {
+    @return css-function(min, $values);
+}
+
+@function css-max($values...) {
+    @return css-function(max, $values);
+}
+
+@function css-clamp($values...) {
+    @return css-function(clamp, $values);
+}
+
+@mixin btn-bg {
+    background: linear-gradient(120deg, #0ba8ef 30%, #08d0ba 100%);
+}
+@mixin catalog-btn-bg {
+    background: linear-gradient(108deg, #0ba8ef 0%, #08d0ba 68%);
+}
