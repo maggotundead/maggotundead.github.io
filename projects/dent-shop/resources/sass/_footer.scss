@@ -1,2 +1,78 @@
 .footer {
+    background-color: $footer-bg;
+    padding: 100px 0;
+    color: #e6e6e6;
+    font-size: 14px;
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    .left-group {
+        line-height: 154%;
+        width: 40%;
+    }
+    .worktime {
+        margin-top: 22px;
+    }
+    .payment-systems {
+        margin-top: 50px;
+    }
+    .right-group {
+        width: 60%;
+    }
+    .menu {
+        display: flex;
+    }
+    .menu-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.54;
+        width: 50%;
+    }
+    .subscribe-title {
+        margin-top: 8px;
+        line-height: 17px;
+        font-weight: 700;
+    }
+    .subscribe-form {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+    }
+    .input-label {
+        flex-grow: 1;
+        flex-shrink: 1;
+        margin-right: 8px;
+        max-width: 230px;
+    }
+    .input {
+        height: 40px;
+        line-height: 40px;
+        border: 0;
+        background-color: #fff;
+        box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        padding: 0 24px;
+        font-size: 14px;
+        color: #6c6c6c;
+        width: 100%;
+    }
+    .submit {
+        flex-grow: 0;
+        flex-shrink: 0;
+        @include btn-bg();
+        width: 185px;
+        font-size: 15px;
+        line-height: 40px;
+        color: #fff;
+        border-radius: 30px;
+        text-align: center;
+        flex-grow: 0;
+        flex-shrink: 0;
+        &:hover {
+            background: $blue;
+        }
+    }
 }

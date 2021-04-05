@@ -144,6 +144,11 @@
         width: 28%;
         // max-width: 370px;
         position: relative;
+        &.open {
+            .catalog-dropdown {
+                display: block;
+            }
+        }
     }
     .catalog-button {
         height: 75px;
@@ -186,6 +191,7 @@
         height: 490px;
         list-style: none;
         width: 100%;
+        display: none;
         li {
             list-style: none;
         }
@@ -221,6 +227,60 @@
                     background-color: #f2f2f2;
                 }
             }
+            &.category-irrigators {
+                .icon {
+                    background-image: url("../img/icon-category-irrigators.svg");
+                    background-size: 30px auto;
+                }
+            }
+            &.category-toothbrushes {
+                .icon {
+                    background-image: url("../img/icon-category-brushes.svg");
+                    background-size: 33px auto;
+                }
+            }
+            &.category-nozzles {
+                .icon {
+                    background-image: url("../img/icon-category-nozzles.svg");
+                    background-size: 37px auto;
+                }
+            }
+            &.category-braces {
+                .icon {
+                    background-image: url("../img/icon-category-braces.svg");
+                    background-size: 52px auto;
+                }
+            }
+            &.category-for-children {
+                .icon {
+                    background-image: url("../img/icon-category-children.svg");
+                    background-size: 34px auto;
+                }
+            }
+            &.category-sets {
+                .icon {
+                    background-image: url("../img/icon-category-sets.svg");
+                    background-size: 29px auto;
+                }
+            }
+            &.category-accessories {
+                .icon {
+                    background-image: url("../img/icon-category-accessories.svg");
+                    background-size: 33px auto;
+                }
+            }
+            &.category-toothpastes {
+                .icon {
+                    background-image: url("../img/icon-category-toothpastes.svg");
+                    background-size: 35px auto;
+                }
+            }
+            &.category-actions {
+                .icon {
+                    background-image: url("../img/icon-hot-red.png");
+                    background-size: 29px auto;
+                }
+            }
         }
         .catalog-category-subcategory {
             &:hover {
@@ -245,15 +305,17 @@
                     }
                 }
             }
-            .icon {
-                width: 95px;
-                flex-shrink: 0;
-                height: 100%;
-                background-color: transparent;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
         }
+
+        .icon {
+            width: 95px;
+            flex-shrink: 0;
+            height: 100%;
+            background-color: transparent;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
         .catalog-category-subcategories {
             display: none;
             position: absolute;

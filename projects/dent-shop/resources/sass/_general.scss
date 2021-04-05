@@ -12,7 +12,8 @@ body {
     font-family: $main-font, Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: normal;
-    font-weight: 400;
+    // font-weight: 400;
+    font-weight: 300;
     color: $text-color;
     background-color: $body-bg;
 }
@@ -41,6 +42,8 @@ img {
     flex-shrink: 0;
 }
 button {
+    border: 0;
+    background-color: transparent;
     padding: 0;
     cursor: pointer;
     &:hover {
@@ -113,6 +116,25 @@ svg {
     position: relative;
     text-transform: uppercase;
     display: inline-block;
+}
+
+.block-title {
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: 500;
+    text-align: center;
+    color: #000;
+}
+.block-title-descr {
+    font-size: 14px;
+    line-height: 17px;
+    color: #4e4e4e;
+    text-align: center;
+    margin-top: 4px;
+    text-transform: lowercase;
+    &.link {
+        text-decoration-line: underline;
+    }
 }
 
 .is-hidden-desktop {
