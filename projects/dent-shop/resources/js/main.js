@@ -150,4 +150,15 @@ $(document).ready(function () {
                 .removeClass("active");
         }
     );
+
+    $(function () {
+        $(".compare-item").on("click", ".controls-toggler", function (event) {
+            $(".compare-item-controls").removeClass("open");
+            $(this).closest(".compare-item-controls").addClass("open");
+            event.stopPropagation();
+        });
+        $("body").on("click", function () {
+            $(".compare-item-controls").removeClass("open");
+        });
+    });
 });

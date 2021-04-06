@@ -1,8 +1,16 @@
 .header {
     position: relative;
     z-index: 999;
+    &.simple-header {
+        background-color: #fafafa;
+        max-width: 100%;
+        .header-top {
+            max-width: 1310px;
+        }
+    }
     &-top,
     &-bottom {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;

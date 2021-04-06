@@ -1,5 +1,5 @@
 .product-item {
-    border: 1px solid #f0f0f0;
+    border: 1px solid $item-border-color;
     padding: 14px 0 26px;
     width: 100%;
     display: flex;
@@ -292,7 +292,7 @@
         position: relative;
         width: 24px;
         height: 24px;
-        border: 1px solid #f0f0f0;
+        border: 1px solid $item-border-color;
         margin-right: 14px;
         &::before {
             display: block;
