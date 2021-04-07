@@ -51,7 +51,7 @@
                     <div class="checkout-content">
                         <div class="auth-group">
                             <div class="auth-head">
-                                <span>Новый покупатель</span>   |   <a href="checkout-regular-customer.html">Постоянный клиент</a>
+                                <a href="checkout-new-customer.html">Новый покупатель</a>   |   <span>Постоянный клиент</span>
                             </div>
                             <form action="" class="auth-form">
                                 <label class="input-group">
@@ -67,12 +67,75 @@
                                     <input type="password" class="input" required>
                                 </label>
                                 <button class="submit">
-                                    Оформить заказ
+                                    Вход
                                 </button>
                             </form>
                         </div>
-                        <div class="cart-group">
-
+                        <div class="checkout-cart-group">
+                            <div class="checkout-cart-head">
+                                <div class="checkout-cart-title">
+                                    Ваш заказ
+                                </div>
+                                <a href="catalog-category.html" class="checkout-cart-return">
+                                    продолжить покупки
+                                </a>
+                            </div>
+                            <div class="checkout-cart-list">
+                                <div class="cart-item checkout-cart-item">
+                                    <div class="cart-item-photo">
+                                        <img src="img/temp/product-item-1.png" alt="">
+                                    </div>
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-title">
+                                            Название товара, если длинное, то в 2 строки Oral-B Triumph 5000 D34 Smart Guide
+                                        </div>
+                                        <div class="cart-item-quantity quantity">
+                                            <input type="number" min="1" max="9" step="1" value="1">
+                                        </div>
+                                        <div class="cart-item-price">
+                                            1 587 грн
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-item checkout-cart-item">
+                                    <div class="cart-item-photo">
+                                        <img src="img/temp/product-item-1.png" alt="">
+                                    </div>
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-title">
+                                            Название товара, если длинное, то в 2 строки Oral-B Triumph 5000 D34 Smart Guide
+                                        </div>
+                                        <div class="cart-item-quantity quantity">
+                                            <input type="number" min="1" max="9" step="1" value="1">
+                                        </div>
+                                        <div class="cart-item-price">
+                                            1 587 грн
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-cart-promo">
+                                <div class="promo-title">
+                                    Ввести промо код
+                                </div>
+                                <form action="/" class="promo-form">
+                                    <input type="text" class="promo-input">
+                                    <button class="promo-submit" type="submit">
+                                        Подтвердить
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="checkout-cart-summary">
+                                <div class="checkout-cart-amount">
+                                    Всего: 4 761 грн
+                                </div>
+                                <div class="checkout-cart-delivery">
+                                    Доставка:  0 грн
+                                </div>
+                                <div class="checkout-cart-total">
+                                    Итого:  4 761 грн
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

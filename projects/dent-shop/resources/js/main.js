@@ -161,4 +161,62 @@ $(document).ready(function () {
             $(".compare-item-controls").removeClass("open");
         });
     });
+
+    //quantity
+    $(function () {
+        $('<div class="quantity-button quantity-down">-</div>').insertBefore(
+            ".quantity input"
+        );
+        $('<div class="quantity-button quantity-up">+</div>').insertAfter(
+            ".quantity input"
+        );
+        $(".quantity").each(function () {
+            let spinner = $(this),
+                input = spinner.find('input[type="number"]'),
+                btnUp = spinner.find(".quantity-up"),
+                btnDown = spinner.find(".quantity-down"),
+                min = input.attr("min"),
+                max = input.attr("max");
+
+            btnUp.on("click", function () {
+                let oldValue = parseFloat(input.val());
+                let newVal;
+                if (oldValue >= max) {
+                    newVal = oldValue;
+                } else {
+                    newVal = oldValue + 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+
+            btnDown.on("click", function () {
+                let oldValue = parseFloat(input.val());
+                let newVal;
+                if (oldValue <= min) {
+                    newVal = oldValue;
+                } else {
+                    newVal = oldValue - 1;
+                }
+                spinner.find("input").val(newVal);
+                spinner.find("input").trigger("change");
+            });
+        });
+    });
+
+    $(".checkout-cart-promo .promo-title").on("click", function () {
+        $(this).siblings(".promo-form").addClass("open");
+    });
+
+    $(function () {
+        $(".params-group-edit, .params-group-cancel").on("click", function () {
+            $(this).closest(".account-params-group").toggleClass("open");
+        });
+        $(".input-value-clear").on("click", function () {
+            $(this).siblings(".input-label").find("input").val("");
+        });
+        $(".account-change-password").on("click", function () {
+            $(".modal-password").addClass("open");
+        });
+    });
 });

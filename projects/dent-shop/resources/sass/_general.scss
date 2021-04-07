@@ -46,6 +46,7 @@ button {
     background-color: transparent;
     padding: 0;
     cursor: pointer;
+    font-size: inherit;
     &:hover {
         cursor: pointer;
     }
@@ -69,6 +70,12 @@ textarea {
     font-size: inherit;
     color: inherit;
     opacity: 1;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 b,

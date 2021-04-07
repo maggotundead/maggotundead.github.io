@@ -5,7 +5,10 @@
         background-color: #fafafa;
         max-width: 100%;
         .header-top {
-            max-width: 1310px;
+            // max-width: 1310px;
+            max-width: calc(1140px + 2 *#{$wrapper-gap-x});
+            margin: 0 auto;
+            padding: 0 $wrapper-gap-x;
         }
     }
     &-top,
