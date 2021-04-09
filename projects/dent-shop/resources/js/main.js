@@ -219,4 +219,23 @@ $(document).ready(function () {
             $(".modal-password").addClass("open");
         });
     });
+
+    $(".account-change-password").on("click", function () {
+        $(".modal-password").addClass("open");
+    });
+
+    $(".change-password-view").on("click", function () {
+        $(this).addClass("open");
+        $(this).siblings(".input").attr("type", "text");
+    });
+
+    $(function () {
+        $(".header .cart-link").on("click", function () {
+            $(".modal-cart").addClass("open");
+        });
+
+        $(".modal-close, .modal-overlay").on("click", function () {
+            $(this).closest(".modal").removeClass("open");
+        });
+    });
 });
