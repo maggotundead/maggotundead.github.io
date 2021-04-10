@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dent Shop</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header simple-header">
+            <div class="header-top">
+                <div class="logo-wrapper">
+                    <div class="logo-placeholder">
+                        товары для ухода <br>
+                        за полостью рта
+                    </div>
+                </div>
+                <div class="phone-group">
+                    <a href="tel:+380764784545" class="main-phone">
+                        +38 076 478 45 45
+                    </a>
+                    <div class="phones-dropdown">
+                        <a href="tel:+380764784545" class="phone-link">
+                            +38 076 478 45 45
+                        </a>
+                        <a href="tel:+380764784545" class="phone-link">
+                            +38 076 478 45 45
+                        </a>
+                        <a href="tel:+380764784545" class="phone-link">
+                            +38 076 478 45 45
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="block-checkout">
+                <div class="wrap">
+                    <div class="block-title">
+                        Оформление заказа
+                    </div>
+                    <div class="checkout-content">
+                        <div class="auth-group">
+                            <div class="auth-head">
+                                <span>Новый покупатель</span>   |   <a href="checkout-regular-customer.html">Постоянный клиент</a>
+                            </div>
+                            <form action="" class="auth-form">
+                                <label class="input-group">
+                                    <span class="text-label">
+                                        Ваше имя и фамилия *
+                                    </span>
+                                    <input type="text" class="input" required>
+                                </label>
+                                <label class="input-group">
+                                    <span class="text-label">
+                                        Телефон *
+                                    </span>
+                                    <input type="text" class="input" required>
+                                </label>
+                                <label class="input-group">
+                                    <span class="text-label">
+                                        E-mail *
+                                    </span>
+                                    <input type="text" class="input" required>
+                                </label>
+                                <label class="input-group">
+                                    <span class="text-label">
+                                        Город *
+                                    </span>
+                                    <input type="text" class="input" required>
+                                </label>
+
+                                <label class="input-group">
+                                    <span class="text-label">
+                                        Способ оплаты *
+                                    </span>
+                                    <span class="select-wrapper">
+                                        <select class="select">
+                                            <option value="1" selected>
+                                                Наложенный платеж
+                                            </option>
+                                            <option value="2">
+                                                option 2
+                                            </option>
+                                        </select>
+                                    </span>
+                                </label>
+                                <label class="input-group">
+                                    <span class="text-label">
+                                        Служба доставки *
+                                    </span>
+                                    <span class="select-wrapper">
+                                        <select class="select">
+                                            <option value="1" selected>
+                                                Новая почта
+                                            </option>
+                                            <option value="2">
+                                                option 2
+                                            </option>
+                                        </select>
+                                    </span>
+                                </label>
+
+                                <label class="input-group">
+                                    <span class="text-label">
+                                        Адрес отделения *
+                                    </span>
+                                    <input type="text" class="input" required>
+                                </label>
+
+                                <label class="input-group">
+                                    <span class="text-label">
+                                        Комментарий к заказу
+                                    </span>
+                                    <textarea class="textarea"></textarea>
+                                </label>
+
+                                <button class="submit">
+                                    Оформить заказ
+                                </button>
+                            </form>
+                        </div>
+                        <div class="checkout-cart-group">
+                            <div class="checkout-cart-head">
+                                <div class="checkout-cart-title">
+                                    Ваш заказ
+                                </div>
+                                <a href="catalog-category.html" class="checkout-cart-return">
+                                    продолжить покупки
+                                </a>
+                            </div>
+                            <div class="checkout-cart-list">
+                                <div class="cart-item checkout-cart-item">
+                                    <div class="cart-item-photo">
+                                        <img src="img/temp/product-item-1.png" alt="">
+                                    </div>
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-title">
+                                            Название товара, если длинное, то в 2 строки Oral-B Triumph 5000 D34 Smart Guide
+                                        </div>
+                                        <div class="cart-item-quantity quantity">
+                                            <input type="number" min="1" max="9" step="1" value="1">
+                                        </div>
+                                        <div class="cart-item-price">
+                                            1 587 грн
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart-item checkout-cart-item">
+                                    <div class="cart-item-photo">
+                                        <img src="img/temp/product-item-1.png" alt="">
+                                    </div>
+                                    <div class="cart-item-info">
+                                        <div class="cart-item-title">
+                                            Название товара, если длинное, то в 2 строки Oral-B Triumph 5000 D34 Smart Guide
+                                        </div>
+                                        <div class="cart-item-quantity quantity">
+                                            <input type="number" min="1" max="9" step="1" value="1">
+                                        </div>
+                                        <div class="cart-item-price">
+                                            1 587 грн
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-cart-promo">
+                                <div class="promo-title">
+                                    Ввести промо код
+                                </div>
+                                <form action="/" class="promo-form">
+                                    <input type="text" class="promo-input">
+                                    <button class="promo-submit" type="submit">
+                                        Подтвердить
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="checkout-cart-summary">
+                                <div class="checkout-cart-amount">
+                                    Всего: 4 761 грн
+                                </div>
+                                <div class="checkout-cart-delivery">
+                                    Доставка:  0 грн
+                                </div>
+                                <div class="checkout-cart-total">
+                                    Итого:  4 761 грн
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+</body>
+
+</html>
