@@ -51,6 +51,9 @@
         width: 100%;
         flex-direction: column;
         align-items: flex-end;
+        @include maxw479 {
+            padding: 32px 32px 0;
+        }
     }
 
     .input-group {

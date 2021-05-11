@@ -61,10 +61,15 @@
                         Мой кабинет
                     </span>
                 </a>
+                <button class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
             <div class="header-bottom">
                 <div class="catalog-group open">
-                    <button class="catalog-button inactive">
+                    <button class="catalog-button">
                         Каталог товаров
                     </button>
                     <ul class="catalog-dropdown">
@@ -899,12 +904,65 @@
                     </a>
                 </div>
             </div>
-            <div class="wrap">
-                <button class="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="mobile-menu-popup">
+                <button class="mobile-menu-popup-close"></button>
+                <div class="action-links">
+                    <a href="/" class="action-link viewed-link">
+                        <div class="icon-wrapper">
+                            <span class="link-value"></span>
+                            <div class="link-icon"></div>
+                        </div>
+                        <div class="link-title">
+                            Просмотренные
+                        </div>
+                    </a>
+                    <a href="/" class="action-link compare-link">
+                        <div class="icon-wrapper">
+                            <span class="link-value"></span>
+                            <div class="link-icon"></div>
+                        </div>
+                        <div class="link-title">
+                            Сравнение
+                        </div>
+                    </a>
+                    <a href="/" class="action-link cart-link">
+                        <div class="icon-wrapper">
+                            <span class="link-value">3</span>
+                            <div class="link-icon"></div>
+                        </div>
+                        <div class="link-title">
+                            Корзина
+                        </div>
+                    </a>
+                </div>
+                <div class="search-group">
+                    <form action="" class="search-form">
+                        <input type="text" class="search-input" placeholder="Введите название товара">
+                        <button class="search-btn" type="submit"></button>
+                    </form>
+                </div>
+                <nav class="menu">
+                    <a href="/" class="menu-link">
+                        О нас
+                    </a>
+                    <a href="/" class="menu-link">
+                        Доставка и оплата
+                    </a>
+                    <a href="/" class="menu-link">
+                        Новости
+                    </a>
+                    <a href="/" class="menu-link">
+                        Контакты
+                    </a>
+                </nav>
+                <a href="/" class="account-link">
+                    <span>
+                        Мой кабинет
+                    </span>
+                </a>
+                <a href="catalog-category.html" class="catalog-button">
+                    Каталог товаров
+                </a>
             </div>
         </header>
 
@@ -6008,7 +6066,7 @@
             </div>
         </footer>
 
-        <div class="modal modal-cart open">
+        <div class="modal modal-cart">
             <div class="modal-overlay">
                 <div class="modal-body">
                     <button class="modal-close"></button>
