@@ -152,10 +152,7 @@ $(document).ready(function () {
         });
     });
 
-    $(".description-tabs-selectors").on(
-        "click",
-        ".description-tab-selector",
-        function () {
+    $(".description-tabs-selectors").on("click", ".description-tab-selector", function () {
             $(this).addClass("active").siblings().removeClass("active");
             $(this)
                 .closest(".description-tabs-wrapper")
