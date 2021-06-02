@@ -19,6 +19,9 @@
         justify-content: space-between;
         min-height: 75px;
         position: relative;
+        @include maxw859 {
+            min-height: 64px;
+        }
     }
 
     &-top {
@@ -36,17 +39,38 @@
         font-size: 13px;
         line-height: 15px;
         color: #747474;
+        @include touch {
+            width: 250px;
+        }
+        @include maxw859 {
+            width: auto;
+            padding: 0 16px;
+        }
+        @include mobile {
+            max-width: 150px;
+            font-size: 11px;
+            line-height: 1.2;
+        }
     }
 
     .menu {
         display: flex;
         align-items: center;
+        @include maxw859 {
+            display: none;
+        }
         &-link {
             font-size: 15px;
             line-height: 1.2;
             color: #000;
+            @include touch {
+                font-size: 14px;
+            }
             &:not(:last-child) {
                 margin-right: 30px;
+                @include touch {
+                    margin-right: 16px;
+                }
             }
             &:hover {
                 text-decoration: underline;
@@ -74,6 +98,13 @@
             position: relative;
             font-weight: 500;
             background-color: #fff;
+            @include touch {
+                padding-left: 40px;
+                padding-right: 30px;
+            }
+            @include touch {
+                font-size: 12px;
+            }
             &::before,
             &::after {
                 display: block;
@@ -88,6 +119,11 @@
                 height: 23px;
                 left: 23px;
                 top: calc(50% - 11.5px);
+                @include touch {
+                    left: 15px;
+                    width: 16px;
+
+                }
             }
             &::after {
                 background: transparent url("../img/icon-dropdown-grey.png")
@@ -97,6 +133,9 @@
                 height: 8px;
                 right: 20px;
                 top: calc(50% - 4px);
+                @include touch {
+                    right: 12px;
+                }
             }
         }
         .phones-dropdown {
@@ -134,6 +173,15 @@
         position: relative;
         padding-left: 42px;
         margin-right: 36px;
+        @include maxw1199 {
+            font-size: 0;
+            padding-left: 30px;
+            margin-right: 20px;
+        }
+        @include maxw859 {
+            // margin-left: auto;
+            display: none;
+        }
         &::before {
             display: block;
             content: "";
@@ -149,12 +197,23 @@
     }
     &-bottom {
         z-index: 1;
+        @include maxw859 {
+            // padding-top: 10px;
+            // padding-bottom: 10px;
+            display: none;
+        }
     }
 
     .catalog-group {
         width: 28%;
         // max-width: 370px;
         position: relative;
+        @include touch {
+            width: 250px;
+        }
+        // @include maxw859 {
+        //     display: none;
+        // }
         &.open {
             .catalog-dropdown {
                 display: block;
@@ -174,6 +233,13 @@
         cursor: pointer;
         color: #fff;
         width: 100%;
+        @include maxw1199 {
+            padding-left: 80px;
+        }
+        @include touch {
+            padding-left: 64px;
+            font-size: 18px;
+        }
         &.inactive {
             pointer-events: none;
             &::after {
@@ -191,6 +257,12 @@
             background: transparent url("../img/icon-catalog-white.png") center
                 no-repeat;
             background-size: contain;
+            @include maxw1199 {
+                left: 26px;
+            }
+            @include touch {
+                left: 20px;
+            }
         }
     }
 
@@ -209,6 +281,9 @@
         a {
             font-size: 15px;
             line-height: 1.24;
+            @include touch {
+                font-size: 14px;
+            }
         }
 
         .text {
@@ -217,6 +292,9 @@
             align-items: center;
             position: relative;
             padding-right: 40px;
+            @include touch {
+                padding-right: 30px;
+            }
             &::after {
                 display: block;
                 position: absolute;
@@ -226,6 +304,9 @@
                 height: 14px;
                 top: calc(50% - 7px);
                 right: 24px;
+                @include touch {
+                    right: 16px;
+                }
             }
         }
 
@@ -325,6 +406,12 @@
             background-color: transparent;
             background-position: center;
             background-repeat: no-repeat;
+            @include maxw1199 {
+                width: 80px;
+            }
+            @include touch {
+                width: 64px;
+            }
         }
 
         .catalog-category-subcategories {
@@ -375,6 +462,9 @@
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: 128px;
             overflow-y: auto;
+            @include touch {
+                grid-template-columns: 1fr 1fr;
+            }
             &::before {
                 display: block;
                 content: "";
@@ -410,6 +500,9 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @include touch {
+                padding: 16px;
+            }
             &:hover {
                 background-color: #f2f2f2;
             }
@@ -434,6 +527,10 @@
         margin-left: 24px;
         margin-right: 32px;
         flex-grow: 1;
+        @include touch {
+            margin-left: 16px;
+            margin-right: 24px;
+        }
     }
     .search-form {
         display: flex;
@@ -449,6 +546,9 @@
         border-bottom: 1px solid #6c6c6c;
         color: #6c6c6c;
         line-height: 17px;
+        @include maxw859 {
+            text-align: center;
+        }
     }
     .search-btn {
         width: 36px;
@@ -465,6 +565,12 @@
     .products-group {
         display: flex;
         padding-right: 36px;
+        @include maxw1199 {
+            padding-right: 20px;
+        }
+        @include maxw859 {
+            padding-right: 16px;
+        }
     }
 
     .action-link {
@@ -474,8 +580,17 @@
         align-items: center;
         justify-content: flex-end;
         position: relative;
+        // @include maxw859 {
+        //     display: none;
+        // }
         &:not(:last-child) {
             margin-right: 32px;
+            @include maxw1199 {
+                margin-right: 24px;
+            }
+            @include touch {
+                margin-right: 16px;
+            }
         }
         &.viewed-link {
             .link-icon {
@@ -503,6 +618,7 @@
             display: flex;
             align-items: flex-end;
             position: relative;
+            height: 100%;
         }
         .link-value {
             display: flex;
@@ -540,13 +656,118 @@
             line-height: 14px;
             color: #686868;
             margin-top: 8px;
+            @include touch {
+                font-size: 10px;
+            }
         }
     }
 
     .burger {
         display: none;
-        @include touch {
+        flex-direction: column;
+        align-self: center;
+        margin-left: 16px;
+        margin-right: 16px;
+        @include maxw859 {
             display: flex;
+        }
+        span {
+            width: 30px;
+            height: 3px;
+            border-radius: 1px;
+            background-color: $blue;
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    .mobile-menu-popup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: -100%;
+        opacity: 0;
+        background-color: #fff;
+        // position: absolute;
+        position: fixed;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        transition: top $duration, opacity $duration;
+        padding: 15px;
+        // height: 100vh;
+        height: 100%;
+        height: -webkit-fill-avialable;
+        z-index: 2;
+        overflow-y: auto;
+        &.open {
+            @include maxw859 {
+                top: 0;
+                opacity: 1;
+                pointer-events: auto;
+            }
+        }
+        &-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 30px;
+            height: 30px;
+            background: transparent url("../img/icon-close-black.svg") center no-repeat;
+        }
+        .action-links {
+            display: flex;
+        }
+        // .action-link {
+        //     @include maxw859 {
+        //         display: flex;
+        //     }
+        // }
+        .search-group {
+            @include maxw859 {
+                margin-top: 30px;
+                max-width: 320px;
+                width: 100%;
+                flex-grow: initial;
+            }
+        }
+        .menu {
+            @include maxw859 {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+            }
+            &-link {
+                @include maxw859 {
+                    font-size: 18px;
+                }
+                &:not(:last-child) {
+                    @include maxw859 {
+                        margin-right: initial;
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+        .account-link {
+            @include maxw859 {
+                display: flex;
+                font-size: 16px;
+                margin-top: auto;
+                margin-right: initial;
+                padding-left: 45px;
+            }
+        }
+        .catalog-button {
+            @include maxw859 {
+                // margin-top: auto;
+                margin-top: 30px;
+                max-width: 320px;
+                text-align: center;
+                padding-right: 64px;
+                justify-content: center;
+            }
         }
     }
 }

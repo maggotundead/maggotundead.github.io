@@ -175,8 +175,13 @@
                                     <span class="input-title">
                                         Способ доставки
                                     </span>
-                                    <label class="input-label">
-                                        <input type="text" value="Нова пошта">
+                                    <label class="input-label select-label">
+                                        <!-- <input type="text" value="Нова пошта"> -->
+                                        <select name="delivery_country" class="select" id="delivery_country">
+                                            <option value="0" selected="" disabled>Выберете способ доставки</option>
+                                            <option value="1">Самовывоз</option>
+                                            <option value="2">Новая почта</option>
+                                    </select>
                                     </label>
                                     <button type="button" class="input-value-clear"></button>
                                 </div>
@@ -219,45 +224,44 @@
         </main>
 
         <div class="modal modal-password">
-            <div class="modal-overlay">
-                <div class="modal-body">
-                    <button class="modal-close"></button>
-                    <div class="block-title modal-title">
-                        Изменения пароля
-                    </div>
-                    <div class="modal-content">
-                        <form action="/" class="modal-form">
-                            <div class="input-group">
-                                <div class="input-title">
-                                    Текущий или временный пароль
-                                </div>
-                                <input type="password" class="input">
-                                <button type="button" class="change-password-view"></button>
+            <div class="modal-overlay"></div>
+            <div class="modal-body">
+                <button class="modal-close"></button>
+                <div class="block-title modal-title">
+                    Изменения пароля
+                </div>
+                <div class="modal-content">
+                    <form action="/" class="modal-form">
+                        <div class="input-group">
+                            <div class="input-title">
+                                Текущий или временный пароль
                             </div>
-                            <div class="input-group">
-                                <div class="input-title">
-                                    Новый пароль
-                                </div>
-                                <input type="password" class="input">
-                                <button type="button" class="change-password-view"></button>
+                            <input type="password" class="input">
+                            <button type="button" class="change-password-view"></button>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-title">
+                                Новый пароль
                             </div>
-                            <div class="input-group">
-                                <div class="input-title">
-                                    Новый пароль еще раз
-                                </div>
-                                <input type="password" class="input">
-                                <button type="button" class="change-password-view"></button>
+                            <input type="password" class="input">
+                            <button type="button" class="change-password-view"></button>
+                        </div>
+                        <div class="input-group">
+                            <div class="input-title">
+                                Новый пароль еще раз
                             </div>
-                            <div class="form-controls">
-                                <button type="button" class="form-reset">
-                                    Отмена
-                                </button>
-                                <button type="submit" class="form-update">
-                                    Сохранить
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+                            <input type="password" class="input">
+                            <button type="button" class="change-password-view"></button>
+                        </div>
+                        <div class="form-controls">
+                            <button type="button" class="form-reset">
+                                Отмена
+                            </button>
+                            <button type="submit" class="form-update">
+                                Сохранить
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

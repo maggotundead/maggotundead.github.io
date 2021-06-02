@@ -61,6 +61,11 @@
                         Мой кабинет
                     </span>
                 </a>
+                <button class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
             <div class="header-bottom">
                 <div class="catalog-group">
@@ -899,12 +904,65 @@
                     </a>
                 </div>
             </div>
-            <div class="wrap">
-                <button class="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="mobile-menu-popup">
+                <button class="mobile-menu-popup-close"></button>
+                <div class="action-links">
+                    <a href="/" class="action-link viewed-link">
+                        <div class="icon-wrapper">
+                            <span class="link-value"></span>
+                            <div class="link-icon"></div>
+                        </div>
+                        <div class="link-title">
+                            Просмотренные
+                        </div>
+                    </a>
+                    <a href="/" class="action-link compare-link">
+                        <div class="icon-wrapper">
+                            <span class="link-value"></span>
+                            <div class="link-icon"></div>
+                        </div>
+                        <div class="link-title">
+                            Сравнение
+                        </div>
+                    </a>
+                    <a href="/" class="action-link cart-link">
+                        <div class="icon-wrapper">
+                            <span class="link-value">3</span>
+                            <div class="link-icon"></div>
+                        </div>
+                        <div class="link-title">
+                            Корзина
+                        </div>
+                    </a>
+                </div>
+                <div class="search-group">
+                    <form action="" class="search-form">
+                        <input type="text" class="search-input" placeholder="Введите название товара">
+                        <button class="search-btn" type="submit"></button>
+                    </form>
+                </div>
+                <nav class="menu">
+                    <a href="/" class="menu-link">
+                        О нас
+                    </a>
+                    <a href="/" class="menu-link">
+                        Доставка и оплата
+                    </a>
+                    <a href="/" class="menu-link">
+                        Новости
+                    </a>
+                    <a href="/" class="menu-link">
+                        Контакты
+                    </a>
+                </nav>
+                <a href="/" class="account-link">
+                    <span>
+                        Мой кабинет
+                    </span>
+                </a>
+                <a href="catalog-category.html" class="catalog-button">
+                    Каталог товаров
+                </a>
             </div>
         </header>
 
@@ -1016,30 +1074,413 @@
                                 </div>
                                 <div class="description-tabs">
                                     <div class="description-tab active">
-                                        <p>
-                                            Для того, чтобы поддерживать свои зубы в прекрасном состоянии, нужно правильно выбрать зубную щетку. Мы предлагаем щетку Oralb 5000 Triumph, которая станет Вам помощником и посоветует, как следить за вашими зубами, а также полостью рта.
-                                        </p>
-                                        <p>
-                                            Щетка Oralb 5000 Triumph - это продуманная разработка ведущих стоматологов мира. Поэтому она очень популярна и предлагается во многих странах. Щетка обустроена многими датчиками. Например, если Вы сильно будете нажимать на щетку и, следовательно, на свои зубы, то на внешней стороне щетки загорится световой датчик.
-                                        </p>
-                                        <p>
-                                            Oralb 5000 Triumph оснащена разными насадками, что позволяет тщательно вычистить зубы, массировать десна, следить за гигиеной полости рта. Для насадок в комплекте предлагается красивый контейнер. Это очень комфортно и удобно пользоваться во время командировки или отдыха. Насадки имеют свой срок использования. Это примерно 2-3 месяца. Если нужно будет менять насадку, она сама Вам об этом скажет: щетинки обесцветятся.
-                                        </p>
-                                        <p>
-                                            Благодаря тому, что щетка Oralb 5000 Triumph имеет разные режимы, Вы можете выбрать для себя любой удобный: ежедневная чистка, чистка зубов одновременно с массажем десен. Это очень удобно, так как много людей в наше время имеют проблемы, именно связанные с болезнью десен. И это было учтено при разработке щетки. Также имеется режим глубокого очищения. Его можно использовать раз в неделю для особо тщательного и глубокого очищения зубов. Щетинки расположены под таким углом, что будьте уверены-они полностью очистят налет даже с труднодоступных мест. И это при том, что щетка нежная и мягкая. А на выходных Вы сможете побаловать себя еще одним режимом отбеливание и полирование.
-                                        </p>
-                                        <p>
-                                            Щетка Oralb 5000 Triumph очень удобная, практичная и незаменимая вещь современного человека. Приобретая ее, Вы будете идти в ногу со временем.
-                                        </p>
+                                        <div class="descr-info">
+                                            <p>
+                                                Для того, чтобы поддерживать свои зубы в прекрасном состоянии, нужно правильно выбрать зубную щетку. Мы предлагаем щетку Oralb 5000 Triumph, которая станет Вам помощником и посоветует, как следить за вашими зубами, а также полостью рта.
+                                            </p>
+                                            <p>
+                                                Щетка Oralb 5000 Triumph - это продуманная разработка ведущих стоматологов мира. Поэтому она очень популярна и предлагается во многих странах. Щетка обустроена многими датчиками. Например, если Вы сильно будете нажимать на щетку и, следовательно, на свои зубы, то на внешней стороне щетки загорится световой датчик.
+                                            </p>
+                                            <p>
+                                                Oralb 5000 Triumph оснащена разными насадками, что позволяет тщательно вычистить зубы, массировать десна, следить за гигиеной полости рта. Для насадок в комплекте предлагается красивый контейнер. Это очень комфортно и удобно пользоваться во время командировки или отдыха. Насадки имеют свой срок использования. Это примерно 2-3 месяца. Если нужно будет менять насадку, она сама Вам об этом скажет: щетинки обесцветятся.
+                                            </p>
+                                            <p>
+                                                Благодаря тому, что щетка Oralb 5000 Triumph имеет разные режимы, Вы можете выбрать для себя любой удобный: ежедневная чистка, чистка зубов одновременно с массажем десен. Это очень удобно, так как много людей в наше время имеют проблемы, именно связанные с болезнью десен. И это было учтено при разработке щетки. Также имеется режим глубокого очищения. Его можно использовать раз в неделю для особо тщательного и глубокого очищения зубов. Щетинки расположены под таким углом, что будьте уверены-они полностью очистят налет даже с труднодоступных мест. И это при том, что щетка нежная и мягкая. А на выходных Вы сможете побаловать себя еще одним режимом отбеливание и полирование.
+                                            </p>
+                                            <p>
+                                                Щетка Oralb 5000 Triumph очень удобная, практичная и незаменимая вещь современного человека. Приобретая ее, Вы будете идти в ногу со временем.
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="description-tab">
-                                        Комплектация
+                                        <div class="equipment-info">
+                                            <h4>
+                                                В комплект входит:
+                                            </h4>
+                                            <p>
+                                                Oral-B Professional Care OC20 OxyJet 2000
+                                            </p>
+                                            <h4>
+                                                Насадки:
+                                            </h4>
+                                            <div class="product-equipment-items">
+                                                <div class="product-equipment-item">
+                                                    <div class="image">
+                                                        <img src="img/temp/equipment-item.jpg" alt="">
+                                                    </div>
+                                                    <span>
+                                                        ЕВ20 "Precision Clean" (1 шт.)
+                                                    </span>
+                                                </div>
+                                                <div class="product-equipment-item">
+                                                    <div class="image">
+                                                        <img src="img/temp/equipment-item.jpg" alt="">
+                                                    </div>
+                                                    <span>
+                                                        ЕВ50 "Cross Action" (1 шт.)
+                                                    </span>
+                                                </div>
+                                                <div class="product-equipment-item">
+                                                    <div class="image">
+                                                        <img src="img/temp/equipment-item.jpg" alt="">
+                                                    </div>
+                                                    <span>
+                                                        "Dual Clean" (1 шт.)
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                Для Іригатора - 4 шт.
+                                            </p>
+                                            <p>
+                                                Регулятор тиску води
+                                            </p>
+                                            <p>
+                                                Повітряний фільтр
+                                            </p>
+                                            <p>
+                                                Контейнер для води на 600 мл.
+                                            </p>
+                                            <p>
+                                                Індикатор тиску з підсвічуванням на зубній щітці
+                                            </p>
+                                            <p></p>
+                                        </div>
                                     </div>
                                     <div class="description-tab">
-                                        Характеристики
+                                        <div class="characteristics-info">
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Тип
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Зубная щетка
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Категория
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Для взрослых
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Технология чистки
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Возвратно-вращательная, пульсирующая
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Назначение
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Деликатная, для имплантов, для массажа десен, повседневная, удаление налета
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Особенности
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Датчик силы нажима, индикатор состояния аккумулятора,таймер
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Питание
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Аккумулятор
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Время неприрывной работы
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    10 дней
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Количество вращательных движений
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    8800 оборотов/мин
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Количество поступательных движений
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    20000 колебаний/мин
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Количество режимов
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    1
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Комплектация
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Электрические зубные щетки (2 шт), насадка CrossAction (2 шт), зарядное устройство
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Габариты (ВхШхГ)
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    25.3 х 10 х 17.8 см
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Насадки
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    2
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Тип элемента питания
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Аккумулятор
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Цвет
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    Черный
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Страна-производитель
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    США
+                                                </div>
+                                            </div>
+                                            <div class="char-group">
+                                                <div class="char-group-title">
+                                                    <span>
+                                                        Гарантия
+                                                    </span>
+                                                </div>
+                                                <div class="char-group-value">
+                                                    <strong>24 месяца</strong> официальной гарантии от производителя
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="description-tab">
-                                        Отзывы (4)
+                                        <div class="reviews-info">
+                                            <div class="review-items-group">
+                                                <div class="review-items">
+                                                    <div class="review-item-group">
+                                                        <div class="review-item">
+                                                            <div class="review-item-head">
+                                                                <div class="review-item-logo">
+                                                                    А
+                                                                </div>
+                                                                <div class="review-item-head-info">
+                                                                    <div class="review-item-author">
+                                                                        Александра
+                                                                    </div>
+                                                                    <div class="review-item-date">
+                                                                        21.05.2021
+                                                                    </div>
+                                                                    <div class="review-item-rating rating-stars">
+                                                                        <span class="star active"></span>
+                                                                        <span class="star active"></span>
+                                                                        <span class="star active"></span>
+                                                                        <span class="star active"></span>
+                                                                        <span class="star"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-item-message">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eleifend vel ultrices egestas vivamus nullam enim, massa quis. Aenean facilisi a purus sit. Blandit amet, ornare non aliquam. Eu pharetra egestas sed vulputate arcu, quis nunc blandit morbi. Etiam sed dolor urna eu. Tincidunt tempus bibendum feugiat fermentum auctor dui, volutpat. Cras id ultrices iaculis egestas. Congue nunc est ornare metus maecenas tincidunt ornare amet. Condimentum sit ut maecenas at vulputate interdum habitant vitae.
+                                                            </div>
+                                                            <div class="review-item-positive">
+                                                                <div class="review-item-subtitle">
+                                                                    Достоинства:
+                                                                </div>
+                                                                гарантія 24 місяці, якісно чистить зуби
+                                                            </div>
+                                                            <div class="review-item-negative">
+                                                                <div class="review-item-subtitle">
+                                                                    Недостатки:
+                                                                </div>
+                                                                не дешеве задоволення + кільця на щітку можна було зробити різними кольорами для розпізнавання де чия
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="review-item-controls">
+                                                            <button class="review-item-reply-button">
+                                                                Ответить
+                                                            </button>
+                                                            <div class="review-item-likes-dislikes">
+                                                                <button class="review-item-like">2</button>
+                                                                <button class="review-item-dislike">0</button>
+                                                            </div>
+                                                        </div> -->
+                                                        <div class="review-item-likes-dislikes">
+                                                            <button class="review-item-vote review-item-like">2</button>
+                                                            <button class="review-item-vote review-item-dislike">0</button>
+                                                        </div>
+                                                        <!-- <div class="review-reply-items">
+                                                            <div class="review-reply"></div>
+                                                        </div> -->
+                                                    </div>
+                                                    <div class="review-item-group">
+                                                        <div class="review-item">
+                                                            <div class="review-item-head">
+                                                                <div class="review-item-logo">
+                                                                    А
+                                                                </div>
+                                                                <div class="review-item-head-info">
+                                                                    <div class="review-item-author">
+                                                                        Александра
+                                                                    </div>
+                                                                    <div class="review-item-date">
+                                                                        21.05.2021
+                                                                    </div>
+                                                                    <div class="review-item-rating rating-stars">
+                                                                        <span class="star active"></span>
+                                                                        <span class="star active"></span>
+                                                                        <span class="star active"></span>
+                                                                        <span class="star active"></span>
+                                                                        <span class="star"></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="review-item-message">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit eleifend vel ultrices egestas vivamus nullam enim, massa quis. Aenean facilisi a purus sit. Blandit amet, ornare non aliquam. Eu pharetra egestas sed vulputate arcu, quis nunc blandit morbi. Etiam sed dolor urna eu. Tincidunt tempus bibendum feugiat fermentum auctor dui, volutpat. Cras id ultrices iaculis egestas. Congue nunc est ornare metus maecenas tincidunt ornare amet. Condimentum sit ut maecenas at vulputate interdum habitant vitae.
+                                                            </div>
+                                                            <div class="review-item-positive">
+                                                                <div class="review-item-subtitle">
+                                                                    Достоинства:
+                                                                </div>
+                                                                гарантія 24 місяці, якісно чистить зуби
+                                                            </div>
+                                                            <div class="review-item-negative">
+                                                                <div class="review-item-subtitle">
+                                                                    Недостатки:
+                                                                </div>
+                                                                не дешеве задоволення + кільця на щітку можна було зробити різними кольорами для розпізнавання де чия
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="review-item-controls">
+                                                            <button class="review-item-reply-button">
+                                                                Ответить
+                                                            </button>
+                                                            <div class="review-item-likes-dislikes">
+                                                                <button class="review-item-like">2</button>
+                                                                <button class="review-item-dislike">0</button>
+                                                            </div>
+                                                        </div> -->
+                                                        <div class="review-item-likes-dislikes">
+                                                            <button class="review-item-vote review-item-like">2</button>
+                                                            <button class="review-item-vote review-item-dislike">0</button>
+                                                        </div>
+                                                        <!-- <div class="review-reply-items">
+                                                            <div class="review-reply"></div>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                                <button class="review-items-more">
+                                                    Показать еще
+                                                </button>
+                                            </div>
+
+                                            <div class="review-form-group">
+                                                <div class="review-form-title">
+                                                    Написать отзыв
+                                                </div>
+                                                <form action="/" class="review-form">
+                                                    <label class="input-label text-label">
+                                                        <span class="input-title">
+                                                            Ваше имя
+                                                        </span>
+                                                        <input type="text" class="input">
+                                                    </label>
+                                                    <label class="input-label textarea-label">
+                                                        <span class="input-title">
+                                                            Ваш отзыв
+                                                        </span>
+                                                        <textarea class="input textarea"></textarea>
+                                                    </label>
+                                                    <div class="rating-group">
+                                                        <div class="input-title">
+                                                            Рейтинг:
+                                                        </div>
+                                                        <div class="rating">
+                                                            <input type="radio" name="rating" value="5" id="5">
+                                                            <label for="5"></label>
+                                                            <input type="radio" name="rating" value="4" id="4">
+                                                            <label for="4"></label>
+                                                            <input type="radio" name="rating" value="3" id="3">
+                                                            <label for="3"></label>
+                                                            <input type="radio" name="rating" value="2" id="2">
+                                                            <label for="2"></label>
+                                                            <input type="radio" name="rating" value="1" id="1">
+                                                            <label for="1"></label>
+                                                        </div>
+                                                    </div>
+                                                    <button class="submit-button" type="submit">
+                                                        Отправить
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

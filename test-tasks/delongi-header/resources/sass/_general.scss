@@ -10,12 +10,11 @@
 }
 body {
     font-family: $main-font, Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: normal;
-    // font-weight: 400;
-    font-weight: 300;
+    font-weight: 400;
     color: $text-color;
-    // background-color: $body-bg;
+    background-color: $body-bg;
 }
 a {
     text-decoration: none;
@@ -56,14 +55,9 @@ button {
         outline: 0;
     }
 }
+
 label {
     cursor: pointer;
-}
-
-input,
-textarea {
-    font-family: inherit;
-    font-size: inherit;
 }
 
 ::placeholder {
@@ -71,17 +65,6 @@ textarea {
     font-size: inherit;
     color: inherit;
     opacity: 1;
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-b,
-strong {
-    font-weight: 700;
 }
 
 svg {
@@ -94,13 +77,17 @@ svg {
     position: relative;
     overflow: hidden;
     width: 100%;
-    // max-width: 1310px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 100%;
     min-height: -webkit-fill-avialable;
     background-color: #fff;
+}
+
+header,
+main,
+footer {
+    width: 100%;
 }
 
 .content {
@@ -109,50 +96,18 @@ svg {
     flex-direction: column;
 }
 
-header,
-main,
-content {
-    width: 100%;
-    max-width: 1310px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .wrap {
     width: 100%;
-    max-width: calc(1140px + 2 *#{$wrapper-gap-x});
+    max-width: calc(#{$wrapper-max-width} + 2*#{$wrapper-padding-x});
     margin: 0 auto;
-    padding: 0 $wrapper-gap-x;
+    padding: 0 $wrapper-padding-x;
     position: relative;
     @include mobile {
-        padding: 0 $wrapper-gap-x-mobile;
+        padding: 0 $wrapper-padding-x-mobile;
     }
 }
 
-.btn {
-    position: relative;
-    text-transform: uppercase;
-    display: inline-block;
-}
-
-.block-title {
-    font-size: 28px;
-    line-height: 33px;
-    font-weight: 500;
-    text-align: center;
-    color: #000;
-}
-.block-title-descr {
-    font-size: 14px;
-    line-height: 17px;
-    color: #4e4e4e;
-    text-align: center;
-    margin-top: 4px;
-    text-transform: lowercase;
-    &.link {
-        text-decoration-line: underline;
-    }
-}
 
 .is-hidden-desktop {
     @include not-touch {
@@ -162,6 +117,11 @@ content {
 
 .is-hidden-touch {
     @include touch {
+        display: none;
+    }
+}
+.is-hidden-mobile {
+    @include mobile {
         display: none;
     }
 }

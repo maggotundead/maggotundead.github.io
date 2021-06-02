@@ -3,14 +3,29 @@
     padding: 100px 0;
     color: #e6e6e6;
     font-size: 14px;
-
+    @include mobile {
+        padding: 60px 0;
+    }
     .wrap {
         display: flex;
         justify-content: space-between;
+        @include mobile {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
     .left-group {
         line-height: 154%;
         width: 40%;
+        @include mobile {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
     }
     .worktime {
         margin-top: 22px;
@@ -20,6 +35,10 @@
     }
     .right-group {
         width: 60%;
+        @include mobile {
+            width: 100%;
+            max-width: 320px;
+        }
     }
     .menu {
         display: flex;
@@ -35,17 +54,33 @@
         margin-top: 8px;
         line-height: 17px;
         font-weight: 700;
+        @include mobile {
+            margin-top: 24px;
+            text-align: center;
+        }
     }
     .subscribe-form {
         display: flex;
         align-items: center;
         margin-top: 16px;
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+            max-width: 320px;
+            // align-items: stretch;
+        }
     }
     .input-label {
         flex-grow: 1;
         flex-shrink: 1;
         margin-right: 8px;
         max-width: 230px;
+        @include mobile {
+            width: 100%;
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 8px;
+        }
     }
     .input {
         height: 40px;
@@ -58,6 +93,9 @@
         font-size: 14px;
         color: #6c6c6c;
         width: 100%;
+        // @include mobile {
+        //     text-align: center;
+        // }
     }
     .submit {
         flex-grow: 0;
@@ -71,6 +109,9 @@
         text-align: center;
         flex-grow: 0;
         flex-shrink: 0;
+        @include mobile {
+            width: 100%;
+        }
         &:hover {
             background: $blue;
         }
