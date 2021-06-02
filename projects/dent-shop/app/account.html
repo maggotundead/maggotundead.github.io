@@ -175,8 +175,13 @@
                                     <span class="input-title">
                                         Способ доставки
                                     </span>
-                                    <label class="input-label">
-                                        <input type="text" value="Нова пошта">
+                                    <label class="input-label select-label">
+                                        <!-- <input type="text" value="Нова пошта"> -->
+                                        <select name="delivery_country" class="select" id="delivery_country">
+                                            <option value="0" selected="" disabled>Выберете способ доставки</option>
+                                            <option value="1">Самовывоз</option>
+                                            <option value="2">Новая почта</option>
+                                    </select>
                                     </label>
                                     <button type="button" class="input-value-clear"></button>
                                 </div>
