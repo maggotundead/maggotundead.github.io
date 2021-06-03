@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Scroller</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.css" integrity="sha512-lOnA3b3yRQlZ4wVksDWXzneWrbdjfULBkOvGUw00v4BoFmN3sFkd6K+dZq9V2rFRb4lpTDoMfuDJgnzYyTmqqg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .screen {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 150px;
+            text-align: center;
+        }
+    </style>
+
+    <div class="site-wrapper">
+
+
+        <div id="fullpage">
+            <section class="screen vertical-scrolling">
+                <div class="screen" style="background-color: #c4c4c4;">
+                    1
+                </div>
+            </section>
+            <section class="vertical-scrolling">
+                <div class="screen horizontal-scrolling" style="background: #F0A7A7">
+                    2
+                </div>
+                <div class="screen horizontal-scrolling" style="background: #F0DCA7">
+                    3
+                </div>
+            </section>
+            <section class="vertical-scrolling">
+                <div class="screen horizontal-scrolling" style="background: #A7F0BC">
+                    4
+                </div>
+                <div class="screen horizontal-scrolling" style="background: #A9A7F0">
+                    5
+                </div>
+            </section>
+            <section class="vertical-scrolling">
+                <div class="screen" style="background: #50DBEE;">
+                    6
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js" integrity="sha512-EqByIlFY5+ZQrDNOQg9Da27Jzimwan2jmv9gLW2HiRq7yv1cyySlYZVq9WBoZFBLAmWoL9m99kS2ip0GBvX+tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+
+
+$(document).ready(function() {
+
+    let firstGroupSlideIndex  = 1;
+    let secondGroupSlideIndex  = 1;
+
+    let firstSlideGroupLength = 2;
+    let secondSlideGroupLength = 2;
+
+    let sliding = false;
+
+    $('#fullpage').fullpage({
+        sectionSelector: '.vertical-scrolling',
+        slideSelector: '.horizontal-scrolling',
+        scrollingSpeed: 1000,
+        css3: true,
+        controlArrows: false,
+
+        onLeave: function(index, nextIndex, direction) {
+
+            if( !sliding && direction == 'down' ) {
+
+                if(index == 2 && firstGroupSlideIndex < firstSlideGroupLength) {
+
+                    sliding = true;
+                    $.fn.fullpage.moveSlideRight();
+                    firstGroupSlideIndex++;
+
+                    return false;
+                }
+                if(index == 3 && secondGroupSlideIndex < secondSlideGroupLength) {
+
+                    sliding = true;
+                    $.fn.fullpage.moveSlideRight();
+                    secondGroupSlideIndex++;
+
+                    return false;
+                }
+            }
+            else if( !sliding && direction == 'up' ) {
+                if (index == 2 && firstGroupSlideIndex > 1) {
+
+                    sliding = true;
+                    $.fn.fullpage.moveSlideLeft();
+                    firstGroupSlideIndex--;
+
+                    return false;
+                }
+                if (index == 3 && secondGroupSlideIndex > 1) {
+
+                    sliding = true;
+                    $.fn.fullpage.moveSlideLeft();
+                    secondGroupSlideIndex--;
+
+                    return false;
+                }
+            }
+
+            else if(sliding) {
+                return false;
+            }
+
+        },
+
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+
+            sliding = false;
+            console.log(slideIndex);
+
+        }
+
+    });
+
+});
+    </script>
+</body>
+
+</html>
