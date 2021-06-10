@@ -41,7 +41,7 @@
                     1
                 </div>
             </section>
-            <section class="vertical-scrolling">
+            <section class="slide-group vertical-scrolling">
                 <div class="screen horizontal-scrolling" style="background: #F0A7A7">
                     2
                 </div>
@@ -49,17 +49,42 @@
                     3
                 </div>
             </section>
-            <section class="vertical-scrolling">
+            <section class="slide-group vertical-scrolling">
                 <div class="screen horizontal-scrolling" style="background: #A7F0BC">
                     4
                 </div>
                 <div class="screen horizontal-scrolling" style="background: #A9A7F0">
                     5
                 </div>
+                <div class="screen horizontal-scrolling" style="background: #777777">
+                    6
+                </div>
             </section>
             <section class="vertical-scrolling">
                 <div class="screen" style="background: #50DBEE;">
-                    6
+                    7
+                </div>
+            </section>
+            <section class="slide-group vertical-scrolling">
+                <div class="screen horizontal-scrolling" style="background: #A7F0BC">
+                    8
+                </div>
+                <div class="screen horizontal-scrolling" style="background: #A9A7F0">
+                    9
+                </div>
+                <div class="screen horizontal-scrolling" style="background: #777777">
+                    10
+                </div>
+                <div class="screen horizontal-scrolling" style="background: #A9A7F0">
+                    11
+                </div>
+                <div class="screen horizontal-scrolling" style="background: #A7F0BC">
+                    12
+                </div>
+            </section>
+            <section class="slide-group vertical-scrolling">
+                <div class="screen" style="background: #50DBEE;">
+                    7
                 </div>
             </section>
         </div>
@@ -70,83 +95,83 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js" integrity="sha512-EqByIlFY5+ZQrDNOQg9Da27Jzimwan2jmv9gLW2HiRq7yv1cyySlYZVq9WBoZFBLAmWoL9m99kS2ip0GBvX+tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script>
+    <script src="main.js"></script>
 
+    <!-- <script>
+        $(document).ready(function() {
 
-$(document).ready(function() {
+            let firstGroupSlideIndex  = 1;
+            let secondGroupSlideIndex  = 1;
 
-    let firstGroupSlideIndex  = 1;
-    let secondGroupSlideIndex  = 1;
+            let firstSlideGroupLength = 2;
+            let secondSlideGroupLength = 2;
 
-    let firstSlideGroupLength = 2;
-    let secondSlideGroupLength = 2;
+            let sliding = false;
 
-    let sliding = false;
+            $('#fullpage').fullpage({
+                sectionSelector: '.vertical-scrolling',
+                slideSelector: '.horizontal-scrolling',
+                scrollingSpeed: 1000,
+                css3: true,
+                controlArrows: false,
 
-    $('#fullpage').fullpage({
-        sectionSelector: '.vertical-scrolling',
-        slideSelector: '.horizontal-scrolling',
-        scrollingSpeed: 1000,
-        css3: true,
-        controlArrows: false,
+                onLeave: function(index, nextIndex, direction) {
 
-        onLeave: function(index, nextIndex, direction) {
+                    if( !sliding && direction == 'down' ) {
 
-            if( !sliding && direction == 'down' ) {
+                        if(index == 2 && firstGroupSlideIndex < firstSlideGroupLength) {
 
-                if(index == 2 && firstGroupSlideIndex < firstSlideGroupLength) {
+                            sliding = true;
+                            $.fn.fullpage.moveSlideRight();
+                            firstGroupSlideIndex++;
 
-                    sliding = true;
-                    $.fn.fullpage.moveSlideRight();
-                    firstGroupSlideIndex++;
+                            return false;
+                        }
+                        if(index == 3 && secondGroupSlideIndex < secondSlideGroupLength) {
 
-                    return false;
+                            sliding = true;
+                            $.fn.fullpage.moveSlideRight();
+                            secondGroupSlideIndex++;
+
+                            return false;
+                        }
+                    }
+                    else if( !sliding && direction == 'up' ) {
+                        if (index == 2 && firstGroupSlideIndex > 1) {
+
+                            sliding = true;
+                            $.fn.fullpage.moveSlideLeft();
+                            firstGroupSlideIndex--;
+
+                            return false;
+                        }
+                        if (index == 3 && secondGroupSlideIndex > 1) {
+
+                            sliding = true;
+                            $.fn.fullpage.moveSlideLeft();
+                            secondGroupSlideIndex--;
+
+                            return false;
+                        }
+                    }
+
+                    else if(sliding) {
+                        return false;
+                    }
+
+                },
+
+                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
+
+                    sliding = false;
+                    console.log(slideIndex);
+
                 }
-                if(index == 3 && secondGroupSlideIndex < secondSlideGroupLength) {
 
-                    sliding = true;
-                    $.fn.fullpage.moveSlideRight();
-                    secondGroupSlideIndex++;
+            });
 
-                    return false;
-                }
-            }
-            else if( !sliding && direction == 'up' ) {
-                if (index == 2 && firstGroupSlideIndex > 1) {
-
-                    sliding = true;
-                    $.fn.fullpage.moveSlideLeft();
-                    firstGroupSlideIndex--;
-
-                    return false;
-                }
-                if (index == 3 && secondGroupSlideIndex > 1) {
-
-                    sliding = true;
-                    $.fn.fullpage.moveSlideLeft();
-                    secondGroupSlideIndex--;
-
-                    return false;
-                }
-            }
-
-            else if(sliding) {
-                return false;
-            }
-
-        },
-
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
-
-            sliding = false;
-            console.log(slideIndex);
-
-        }
-
-    });
-
-});
-    </script>
+        });
+    </script> -->
 </body>
 
 </html>

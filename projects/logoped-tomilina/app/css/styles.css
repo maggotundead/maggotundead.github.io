@@ -4483,6 +4483,211 @@ time.time::before {
   }
 }
 
+.block-images-text:not(:first-child) {
+  padding-top: 135px;
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text:not(:first-child) {
+    padding-top: 100px;
+  }
+}
+
+.block-images-text .images-text-content {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .block-images-text .images-text-content {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .images-text-content {
+    margin-top: 40px;
+  }
+}
+
+.block-images-text .images-text-group {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-gap: 40px;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .block-images-text .images-text-group {
+    grid-gap: 32px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .block-images-text .images-text-group {
+    grid-gap: 24px;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .block-images-text .images-text-group {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 12px;
+  }
+}
+
+.block-images-text .images-text-group:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 1024px) {
+  .block-images-text .images-text-group:not(:last-child) {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .images-text-group:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.block-images-text .images-text-group:nth-child(2n) {
+  direction: rtl;
+}
+
+@media screen and (max-width: 640px) {
+  .block-images-text .images-text-group:nth-child(2n) {
+    direction: initial;
+  }
+}
+
+.block-images-text .images-text-group:nth-child(2n) * {
+  direction: ltr;
+}
+
+.block-images-text .image-item {
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.block-images-text .image-item img {
+  width: 100%;
+}
+
+.block-images-text .text-column-title {
+  font-size: 33px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .text-column-title {
+    font-size: 24px;
+  }
+}
+
+.block-images-text .text-column-subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: rgba(51, 51, 51, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .text-column-subtitle {
+    font-size: 14px;
+  }
+}
+
+.block-images-text .text-column-subtitle:not(:first-child) {
+  margin-top: 5px;
+}
+
+.block-images-text .text-column-descr {
+  font-size: 18px;
+  line-height: 1.5;
+  color: rgba(51, 51, 51, 0.7);
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .text-column-descr {
+    font-size: 14px;
+  }
+}
+
+.block-images-text .text-column-descr:not(:first-child) {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .text-column-descr:not(:first-child) {
+    margin-top: 15px;
+  }
+}
+
+.block-images-text .text-column p:not(:last-child) {
+  margin-bottom: 27px;
+}
+
+.block-images-text .text-column-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .block-images-text .text-column-buttons {
+    flex-direction: column;
+    align-content: flex-start;
+  }
+}
+
+.block-images-text .text-column-buttons:not(:first-child) {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .text-column-buttons:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+.block-images-text .text-column .main-btn:not(:last-child) {
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .block-images-text .text-column .main-btn:not(:last-child) {
+    margin-right: initial;
+    margin-bottom: 15px;
+  }
+}
+
+.block-images-text .slick-arrow {
+  background-color: #e5e5e5;
+}
+
+.block-images-text .slick-arrow.slick-prev {
+  left: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .slick-arrow.slick-prev {
+    left: -18px;
+  }
+}
+
+.block-images-text .slick-arrow.slick-next {
+  right: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .block-images-text .slick-arrow.slick-next {
+    right: -18px;
+  }
+}
+
 .footer {
   color: #fff;
   width: 100%;
@@ -5048,7 +5253,7 @@ time.time::before {
 
 /*!
  * animate.css - https://animate.style/
- * Version - 4.1.0
+ * Version - 4.1.1
  * Licensed under the MIT license - http://opensource.org/licenses/MIT
  *
  * Copyright (c) 2020 Animate.css

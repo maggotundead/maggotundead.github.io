@@ -45,7 +45,7 @@ let
 
     stylesProd = './app/css/',
     scriptsProd = './app/js/',
-    
+
     tempFiles = './temp/'
     tempCss = tempFiles + '*.css';
     // console.log(stylesVendor);
