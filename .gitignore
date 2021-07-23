@@ -5,6 +5,7 @@
 /node_modules
 **/**/node_modules
 projects/**/temp
+projects/dozorro
 
 # /projects-folders/
 # /projects-folders/adalant/

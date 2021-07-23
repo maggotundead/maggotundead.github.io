@@ -1,18 +1,17 @@
 {
-    "name": "global consult systems",
+    "name": "gold auto",
     "version": "1.0.0",
     "description": "",
     "main": "gulpfile.js",
     "dependencies": {
-        "animate.css": "^4.1.1",
+        "gulp": "^4.0.2",
+        "ion-rangeslider": "^2.3.1",
         "jquery": "^3.6.0",
-        "slick-carousel": "^1.8.1",
-        "typed.js": "^2.0.11",
-        "wow.js": "^1.2.2"
+        "jquery.maskedinput": "^1.4.1",
+        "slick-carousel": "^1.8.1"
     },
     "devDependencies": {
         "browser-sync": "^2.26.14",
-        "gulp": "^4.0.2",
         "gulp-concat": "^2.6.1",
         "gulp-concat-css": "^3.1.0",
         "gulp-sass": "^4.1.0",

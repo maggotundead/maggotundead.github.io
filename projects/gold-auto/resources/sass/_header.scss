@@ -1,0 +1,82 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 0 0 4px 4px;
+        background-color: #fff;
+        z-index: 2;
+    }
+    .wrap {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 56px;
+    }
+    .logo {
+        position: relative;
+        z-index: 3;
+    }
+    .buttons {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+    }
+    .return {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 8L0.999977 8' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.99999 15L0.999984 8L7.99999 0.999996' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    }
+    .burger {
+        &:not(:first-child) {
+            margin-left: 32px;
+        }
+        span {
+            width: 24px;
+            height: 2px;
+            border-radius: 2px;
+            display: block;
+            background-color: #000;
+            &:not(:last-child) {
+                margin-bottom: 6px;
+            }
+        }
+    }
+    .menu {
+        position: absolute;
+        z-index: 1;
+        top: -100vh;
+        right: 0;
+        background-color: #fff;
+        border-radius: 0 0 0 8px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        box-shadow: 0px 4px 16px rgba(57, 57, 105, 0.16);
+        transition: top $duration;
+        &.open {
+            top: 100%;
+        }
+        a {
+            line-height: 1.54;
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
