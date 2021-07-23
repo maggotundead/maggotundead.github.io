@@ -265,6 +265,7 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
         padding-bottom: 30px;
+        width: 100%;
     }
     .card-item {
         position: relative;
@@ -461,7 +462,7 @@
         &.open {
             padding-top: 40px;
             padding-bottom: 40px;
-            box-shadow: 0px 6px$grey-white-box-shadow;
+            box-shadow: $grey-white-box-shadow;
             .accordeon-item-title {
                 &::before {
                     background-color: $beige;
@@ -530,7 +531,7 @@
         background-color: #fff;
         border-radius: $radius;
         padding: 40px 125px 50px 50px;
-        box-shadow: 0px 6px$grey-white-box-shadow;
+        box-shadow: $grey-white-box-shadow;
         overflow: hidden;
         transition: background-color $duration, box-shadow $duration;
         position: relative;
@@ -634,7 +635,7 @@
         background-color: #fff;
         border-radius: $radius;
         padding: 40px 30px;
-        box-shadow: 0px 6px$grey-white-box-shadow;
+        box-shadow: $grey-white-box-shadow;
         overflow: hidden;
         transition: background-color $duration, box-shadow $duration;
         position: relative;

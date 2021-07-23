@@ -1175,7 +1175,8 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    width: 100%; }
   .block-advantages-hovered-cards .card-item {
     position: relative;
     counter-increment: card-item; }
@@ -1331,7 +1332,7 @@ p {
     .block-banner-accordeon .accordeon-item.open {
       padding-top: 40px;
       padding-bottom: 40px;
-      box-shadow: 0px 6px 0px 6px 24px rgba(181, 183, 184, 0.16); }
+      box-shadow: 0px 6px 24px rgba(181, 183, 184, 0.16); }
       .block-banner-accordeon .accordeon-item.open .accordeon-item-title::before {
         background-color: #e4a991;
         background-image: url("data:image/svg+xml,%3Csvg width='21' height='3' viewBox='0 0 21 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='21' height='3' rx='1.5' fill='white'/%3E%3C/svg%3E%0A");
@@ -1380,7 +1381,7 @@ p {
     background-color: #fff;
     border-radius: 16px;
     padding: 40px 125px 50px 50px;
-    box-shadow: 0px 6px 0px 6px 24px rgba(181, 183, 184, 0.16);
+    box-shadow: 0px 6px 24px rgba(181, 183, 184, 0.16);
     overflow: hidden;
     transition: background-color 0.3s, box-shadow 0.3s;
     position: relative; }
@@ -1456,7 +1457,7 @@ p {
     background-color: #fff;
     border-radius: 16px;
     padding: 40px 30px;
-    box-shadow: 0px 6px 0px 6px 24px rgba(181, 183, 184, 0.16);
+    box-shadow: 0px 6px 24px rgba(181, 183, 184, 0.16);
     overflow: hidden;
     transition: background-color 0.3s, box-shadow 0.3s;
     position: relative; }
