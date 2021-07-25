@@ -892,11 +892,16 @@ p {
   font-weight: 600;
   background: linear-gradient(180deg, #F7765A 0%, #F55555 100%);
   min-width: 290px;
-  padding: 0 16px; }
+  padding: 0 16px;
+  box-shadow: 0;
+  transition: box-shadow 0.3s; }
   @media screen and (max-width: 1023px) {
     .btn {
       height: 60px;
       min-width: 240px; } }
+  .btn.smaller {
+    height: 52px;
+    min-width: 220px; }
   .btn:hover {
     box-shadow: 0px 8px 16px rgba(245, 90, 85, 0.4); }
   .btn:active {
@@ -1285,7 +1290,7 @@ p {
   padding-top: 184px;
   padding-bottom: 40px;
   width: 50%;
-  max-width: 610px;
+  max-width: 650px;
   padding-right: 110px;
   flex-shrink: 0; }
   @media screen and (max-width: 1023px) {
@@ -1297,9 +1302,11 @@ p {
       align-items: center;
       padding-right: 0; } }
 
-@media screen and (max-width: 1023px) {
-  .block-home-banner h1 {
-    text-align: center; } }
+.block-home-banner h1 {
+  text-transform: uppercase; }
+  @media screen and (max-width: 1023px) {
+    .block-home-banner h1 {
+      text-align: center; } }
 
 .block-home-banner .title-descr {
   margin-top: 10px;
@@ -1487,7 +1494,7 @@ p {
     border-radius: 16px; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-list-advantages-cta .advantages-banner {
-        width: calc(50% - 15px); } }
+        width: calc(40% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-list-advantages-cta .advantages-banner {
         width: 100%;
@@ -1505,7 +1512,8 @@ p {
       background-size: 792px 801px;
       width: 24%;
       max-width: 162px;
-      z-index: 2; }
+      z-index: 2;
+      opacity: .3; }
     .block-list-advantages-cta .advantages-banner::after {
       display: block;
       content: '';
@@ -1515,7 +1523,7 @@ p {
       right: 0;
       bottom: 0;
       z-index: 3;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.05);
       pointer-events: none; }
     .block-list-advantages-cta .advantages-banner img {
       position: relative;
@@ -1530,7 +1538,7 @@ p {
     flex-direction: column; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-list-advantages-cta .advantages-text {
-        width: calc(50% - 15px); } }
+        width: calc(60% - 15px); } }
     @media screen and (max-width: 1440px) {
       .block-list-advantages-cta .advantages-text {
         justify-content: center; } }
@@ -1555,10 +1563,8 @@ p {
       align-items: center;
       font-size: 18px;
       line-height: 1.56;
-      padding-left: 76px; }
-      @media screen and (max-width: 1440px) {
-        .block-list-advantages-cta .advantages-list li {
-          display: block; } }
+      padding-left: 76px;
+      min-height: 46px; }
       @media screen and (max-width: 767px) {
         .block-list-advantages-cta .advantages-list li {
           text-align: left; } }
@@ -1577,7 +1583,8 @@ p {
         background-position: center;
         background-repeat: no-repeat;
         left: 0;
-        top: calc(50% - 23px); }
+        top: calc(50% - 23px);
+        box-sizing: border-box; }
       .block-list-advantages-cta .advantages-list li:not(:last-child) {
         margin-bottom: 28px; }
         @media screen and (max-width: 1440px) {
@@ -1586,11 +1593,11 @@ p {
       .block-list-advantages-cta .advantages-list li b {
         margin-right: 4px; }
   .block-list-advantages-cta .cta-group {
-    margin-top: -230px;
+    margin-top: -240px;
     padding: 70px 0 80px; }
     @media screen and (max-width: 1440px) {
       .block-list-advantages-cta .cta-group {
-        margin-top: -100px; } }
+        margin-top: -40px; } }
     @media screen and (max-width: 1199px) {
       .block-list-advantages-cta .cta-group {
         margin-top: 30px; } }
@@ -1605,7 +1612,7 @@ p {
     margin-left: auto; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-list-advantages-cta .cta-content {
-        width: calc(50% - 15px); } }
+        width: calc(60% - 15px); } }
     @media screen and (max-width: 1199px) {
       .block-list-advantages-cta .cta-content {
         width: 100%;
@@ -1835,7 +1842,7 @@ p {
     max-width: 49%; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-title-text-banner h2 {
-        max-width: calc(50% - 15px); } }
+        max-width: calc(60% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-title-text-banner h2 {
         max-width: 100%;
@@ -1862,7 +1869,7 @@ p {
     line-height: 1.56; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-title-text-banner .text-column {
-        width: calc(50% - 15px); } }
+        width: calc(60% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-title-text-banner .text-column {
         margin-top: 30px;
@@ -1890,7 +1897,7 @@ p {
     border-radius: 16px; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-title-text-banner .banner-column {
-        width: calc(50% - 15px); } }
+        width: calc(40% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-title-text-banner .banner-column {
         width: 100%;
@@ -1927,7 +1934,7 @@ p {
     border-radius: 16px; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-banner-accordeon .banner-column {
-        width: calc(50% - 15px); } }
+        width: calc(40% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-banner-accordeon .banner-column {
         display: none; } }
@@ -1936,7 +1943,7 @@ p {
     padding-top: 20px; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-banner-accordeon .accordeon-column {
-        width: calc(50% - 15px); } }
+        width: calc(60% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-banner-accordeon .accordeon-column {
         width: 100%; } }
@@ -2190,10 +2197,12 @@ p {
     .block-slider .swiper-button-prev svg, .block-slider .swiper-button-next svg {
       width: 18px;
       height: 10px; }
-  .block-slider .swiper-button-prev {
-    transform: rotate(-90deg); }
-  .block-slider .swiper-button-next {
-    transform: rotate(-90deg); }
+  @media screen and (max-width: 767px) {
+    .block-slider .swiper-button-prev {
+      transform: rotate(-90deg); } }
+  @media screen and (max-width: 767px) {
+    .block-slider .swiper-button-next {
+      transform: rotate(-90deg); } }
   .block-slider .swiper-pagination {
     display: flex;
     flex-direction: column;
@@ -2460,7 +2469,7 @@ p {
     position: relative; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-banner-icons-list .banner-column {
-        width: calc(50% - 15px); } }
+        width: calc(40% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-banner-icons-list .banner-column {
         width: 100%;
@@ -2478,23 +2487,13 @@ p {
       background-size: 792px 801px;
       width: 24%;
       max-width: 162px;
-      z-index: 2; }
-    .block-banner-icons-list .banner-column::after {
-      display: block;
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 3;
-      background: rgba(0, 0, 0, 0.1);
-      pointer-events: none; }
+      z-index: 2;
+      opacity: .3; }
   .block-banner-icons-list .text-column {
     width: 49%; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-banner-icons-list .text-column {
-        width: calc(50% - 15px); } }
+        width: calc(60% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-banner-icons-list .text-column {
         margin-top: 30px;
@@ -2532,7 +2531,7 @@ p {
     height: 61px; }
 
 .block-check-list-banner {
-  margin-top: 140px;
+  margin-top: 150px;
   padding-top: 80px;
   padding-bottom: 80px;
   min-height: 665px;
@@ -2559,7 +2558,7 @@ p {
     width: 45%; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-check-list-banner .text-column {
-        width: calc(50% - 15px); } }
+        width: calc(60% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-check-list-banner .text-column {
         width: 100%;
@@ -2569,21 +2568,28 @@ p {
       text-align: center; } }
   .block-check-list-banner .banner-column {
     width: 49%;
-    position: relative; }
+    position: absolute;
+    top: -140px;
+    bottom: 60px;
+    right: 24px; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-check-list-banner .banner-column {
-        width: calc(50% - 15px); } }
+        width: calc(40% - 15px);
+        bottom: 0; } }
+    @media screen and (max-width: 1199px) {
+      .block-check-list-banner .banner-column {
+        position: relative;
+        top: 0;
+        right: 0; } }
     @media screen and (max-width: 1023px) {
       .block-check-list-banner .banner-column {
         width: 100%;
         max-width: 640px; } }
     .block-check-list-banner .banner-column img {
-      position: absolute;
       border-radius: 16px;
-      bottom: 0; }
-      @media screen and (max-width: 1023px) {
-        .block-check-list-banner .banner-column img {
-          position: static; } }
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
   .block-check-list-banner .check-list {
     margin-top: 45px; }
     .block-check-list-banner .check-list-item {
@@ -2697,7 +2703,8 @@ p {
           order: 1;
           max-width: 100%; } }
       .block-prices .price-item.action::after {
-        background-image: url("../img/circles-cluster-white-right.svg"); }
+        background-image: url("../img/circles-cluster-white-right.svg");
+        opacity: .36; }
       .block-prices .price-item.action .price-item-title {
         color: #ffeae1;
         text-transform: uppercase; }
@@ -2826,7 +2833,7 @@ p {
     @media screen and (max-width: 1023px) {
       .block-offers-cases .case-item {
         width: calc(50% - 15px); } }
-    @media screen and (max-width: 1023px) {
+    @media screen and (max-width: 767px) {
       .block-offers-cases .case-item {
         width: 100%; } }
     .block-offers-cases .case-item::before {
@@ -2847,7 +2854,8 @@ p {
       color: #fff;
       box-shadow: 0px 8px 24px rgba(8, 42, 107, 0.26); }
       .block-offers-cases .case-item:hover::before {
-        background-image: url("../img/circles-cluster-white-left.svg"); }
+        background-image: url("../img/circles-cluster-white-left.svg");
+        opacity: .36; }
       .block-offers-cases .case-item:hover .case-item-title {
         color: #fff; }
     .block-offers-cases .case-item-inner {
@@ -2910,7 +2918,7 @@ p {
     position: relative; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-banner-callback .banner-column {
-        width: calc(50% - 15px); } }
+        width: calc(40% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-banner-callback .banner-column {
         width: 100%;
@@ -2940,11 +2948,13 @@ p {
       z-index: 3;
       background: rgba(0, 0, 0, 0.1);
       pointer-events: none; }
+    .block-banner-callback .banner-column img {
+      width: 100%; }
   .block-banner-callback .text-column {
     width: 49%; }
     @media screen and (max-width: calc(1530px + 2*24px)) {
       .block-banner-callback .text-column {
-        width: calc(50% - 15px); } }
+        width: calc(60% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-banner-callback .text-column {
         width: 100%;
@@ -2989,10 +2999,17 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
+    width: calc(100% + (1530px * 0.51));
+    margin-left: calc(-1530px * 0.51);
     height: 100%; }
+    @media screen and (max-width: calc(1530px + 2*24px)) {
+      .block-contacts-map iframe {
+        width: calc(150% + 15px);
+        margin-left: calc(-50% - 15px); } }
     @media screen and (max-width: 1023px) {
       .block-contacts-map iframe {
+        width: 100%;
+        margin-left: 0;
         height: 500px;
         position: relative; } }
   .block-contacts-map .contacts-group {
@@ -3322,6 +3339,12 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center; }
+    @media screen and (max-width: 1023px) {
+      .modal-content {
+        padding: 40px; } }
+    @media screen and (max-width: 767px) {
+      .modal-content {
+        padding: 30px 20px; } }
   .modal-form {
     margin-top: 55px;
     width: 100%;

@@ -414,9 +414,15 @@ p {
     background: $red-gradient-normal;
     min-width: $button-min-width;
     padding: 0 16px;
+    box-shadow: 0;
+    transition: box-shadow $duration;
     @include touch {
         height: 60px;
         min-width: 240px;
+    }
+    &.smaller {
+        height: 52px;
+        min-width: 220px;
     }
     &:hover {
         box-shadow: $red-box-shadow;
