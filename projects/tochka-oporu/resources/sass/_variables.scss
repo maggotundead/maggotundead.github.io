@@ -6,6 +6,7 @@ $duration: 0.3s;
 
 $wrap-inner-width: 1530px;
 $wrap-padding-x: 24px;
+$wrap-padding-x-mobile: 16px;
 
 $body-bg: #fff;
 
@@ -14,6 +15,7 @@ $blue: #243C92;
 $grey: #7A8295;
 $grey-light: #DCE3EB;
 $beige: #e4a991;
+$beige-lighter: #ECC9BB;
 $beige-light: #ffeae1;
 
 $red: #FD7456;
@@ -34,3 +36,8 @@ $list-marker-color: $blue;
 
 $radius: 16px;
 $radius-smaller: 12px;
+
+$block-gap-y-tablet: 100px;
+$block-gap-y-mobile: 70px;
+
+$button-min-width: 290px;

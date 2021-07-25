@@ -1,0 +1,67 @@
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $duration;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    &.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background-color: rgba(#151515, .4);
+    }
+    &-body {
+        width: 90vw;
+        max-width: 870px;
+        position: relative;
+        z-index: 2;
+        overflow: auto;
+    }
+    &-close {
+        position: absolute;
+        border: 0;
+        background-color: transparent;
+        top: 16px;
+        right: 16px;
+        z-index: 2;
+        svg {
+            width: 19px;
+            height: 18px;
+        }
+    }
+    &-content {
+        position: relative;
+        z-index: 1;
+        padding: 50px 60px 60px;
+        background-color: #fff;
+        border-radius: $radius;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-form {
+        margin-top: 55px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        align-items: center;
+        @include touch {
+            grid-template-columns: 1fr;
+        }
+    }
+}

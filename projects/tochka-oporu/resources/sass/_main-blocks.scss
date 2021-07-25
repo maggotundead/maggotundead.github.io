@@ -4,7 +4,8 @@
     &::before,
     &::after {
         background-size: 792px 801px;
-        background-repeat: no-repeat;
+        // background-repeat: no-repeat;
+        background-repeat: repeat-y;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -12,6 +13,7 @@
         position: absolute;
         content: '';
         pointer-events: none;
+        z-index: 1;
         // z-index: 2;
     }
     &:before {
@@ -23,20 +25,45 @@
         right: 0;
         background-image: url('../img/circles-cluster-white-right.svg');
         background-position: left bottom;
-        width: 240px;
+        // width: 240px;
+    }
+    .wrap {
+        position: relative;
+        z-index: 2;
     }
 }
 
 .block-home-banner {
     .wrap {
         display: flex;
+        justify-content: space-between;
+        @include responsive {
+            padding-right: 0;
+        }
+        @include touch {
+            padding-right: $wrap-padding-x;
+        }
     }
     .text-column {
         padding-top: 184px;
         padding-bottom: 40px;
-        width: 610px;
+        width: 50%;
+        max-width: 610px;
         padding-right: 110px;
         flex-shrink: 0;
+        @include touch {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 0;
+        }
+    }
+    h1 {
+        @include touch {
+            text-align: center;
+        }
     }
     .title-descr {
         margin-top: 10px;
@@ -44,6 +71,21 @@
         color: #D78564;
         font-size: 34px;
         line-height: 45px;
+        @include maxw1440 {
+            font-size: 32px;
+            line-height: 1.25;
+        }
+        @include maxw1199 {
+            font-size: 28px;
+        }
+        @include touch {
+            font-size: 24px;
+            text-align: center;
+        }
+        @include mobile {
+            font-size: 20px;
+        }
+
     }
     .price-label {
         margin-top: 48px;
@@ -54,6 +96,10 @@
         position: relative;
         font-size: 22px;
         line-height: 1.36;
+        @include mobile {
+            font-size: 20px;
+            padding: 24px 32px;
+        }
         &::before {
             display: block;
             content: '';
@@ -81,12 +127,24 @@
         line-height: 1.83;
         font-weight: 300;
         color: $grey;
+        @include mobile {
+            margin-top: 32px;
+            text-align: center;
+        }
     }
     .banner-column {
         width: calc(100% + ((100vw - #{$wrap-inner-width}) / 2));
         margin-right: calc((-100vw + #{$wrap-inner-width}) / 2);
         position: relative;
         overflow: hidden;
+        @include responsive {
+            width: 50%;
+            margin-right: 0;
+        }
+        @include touch {
+            // width: 100%;
+            display: none;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -96,12 +154,70 @@
     }
 }
 
+.block-breadcrumbs-header {
+    padding-top: 190px;
+    padding-bottom: 60px;
+    flex-grow: 1;
+    &::before,
+    &::after {
+        width: 306px;
+        @include touch {
+            width: 195px;
+        }
+    }
+    h1 {
+        font-size: 50px;
+        font-weight: 400;
+        max-width: 1010px;
+        @include touch {
+            font-size: 46px;
+        }
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .breadcrumbs {
+        margin-top: 44px;
+        color: $beige;
+        a {
+            margin-right: 44px;
+            color: $beige-lighter;
+            position: relative;
+            &::after {
+                position: absolute;
+                top: 0;
+                left: calc(100% + 17px);
+                content: '›';
+                pointer-events: none;
+            }
+        }
+    }
+}
+
 .block-icons-advantages {
     margin-top: 40px;
-
+    // @include touch {
+    //     margin-top: $block-gap-y-tablet;
+    // }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        @include touch {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @include mobile {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
     }
 
     .icon-item {
@@ -112,6 +228,17 @@
         border-radius: $radius;
         transition: $duration;
         position: relative;
+        @include touch {
+            width: 50%;
+            padding: 20px 30px;
+        }
+        @include mobile {
+            width: 100%;
+            max-width: 640px;
+        }
+        @include maxw479 {
+            padding: 20px 16px;
+        }
         &:hover {
             box-shadow: $grey-box-shadow;
             z-index: 2;
@@ -130,19 +257,35 @@
 
 .block-list-advantages-cta {
     margin-top: 140px;
-
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .advantages-banner-list {
         display: flex;
-        align-items: flex-start;
+        // align-items: flex-start;
         justify-content: space-between;
         position: relative;
         z-index: 2;
+        @include touch {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     .advantages-banner {
         width: 45%;
         overflow: hidden;
         position: relative;
         border-radius: $radius;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+            max-width: 640px;
+        }
         &::before {
             display: block;
             content: '';
@@ -173,11 +316,30 @@
         img {
             position: relative;
             z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     .advantages-text {
         width: 49%;
         padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include maxw1440 {
+            justify-content: center;
+        }
+        @include touch {
+            width: 100%;
+            margin-top: 30px;
+        }
+        @include mobile {
+            text-align: center;
+            align-items: center;
+        }
     }
     // .title-descr {
     //     margin-top: 25px;
@@ -188,13 +350,24 @@
         margin-top: 55px;
         list-style: none;
         padding-bottom: 70px;
+        @include touch {
+            margin-top: 32px;
+            padding-bottom: 48px;
+        }
         li {
             display: flex;
             align-items: center;
-            align-content: center;
+            // align-content: center;
             font-size: 18px;
             line-height: 1.56;
-            padding-left: 0;
+            // padding-left: 0;
+            padding-left: 76px;
+            @include maxw1440 {
+                display: block;
+            }
+            @include mobile {
+                text-align: left;
+            }
             &::before {
                 display: block;
                 content: '';
@@ -209,10 +382,15 @@
                 background-size: 19px 13px;
                 background-position: center;
                 background-repeat: no-repeat;
-                position: initial;
+                // position: initial;
+                left: 0;
+                top: calc(50% - 23px);
             }
             &:not(:last-child) {
                 margin-bottom: 28px;
+                @include maxw1440 {
+                    margin-bottom: 36px;
+                }
             }
             b {
                 margin-right: 4px;
@@ -224,6 +402,16 @@
         // margin-top: -250px;
         margin-top: -230px;
         padding: 70px 0 80px;
+        @include maxw1440 {
+            margin-top: -100px;
+        }
+        @include maxw1199 {
+            margin-top: 30px;
+        }
+        @include touch {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
         .wrap {
             display: flex;
         }
@@ -231,14 +419,39 @@
     .cta-content {
         width: 49%;
         margin-left: auto;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include maxw1199 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
     }
     .cta-buttons {
         margin-top: 55px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        .btn {
-            &:not(:last-child) {
-                margin-right: 20px;
+        @include touch {
+            margin-top: 32px;
+        }
+        @include mobile {
+            justify-content: center;
+        }
+        @supports (gap: 20px) {
+            gap: 20px;
+        }
+
+        @supports not (gap: 20px) {
+            .btn {
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
             }
         }
     }
@@ -246,6 +459,12 @@
 
 .block-advantages-hovered-cards {
     margin-top: 140px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         flex-direction: column;
@@ -266,10 +485,31 @@
         grid-gap: 30px;
         padding-bottom: 30px;
         width: 100%;
+        @include maxw1199 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 30px;
+            row-gap: 60px;
+        }
+        @include touch {
+            margin-top: 60px;
+        }
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     .card-item {
         position: relative;
         counter-increment: card-item;
+        @include maxw1199 {
+            width: calc(50% - 15px);
+        }
+        @include mobile {
+            width: 100%;
+            max-width: 640px;
+        }
         &:hover {
             .card-item-info {
                 top: 0;
@@ -279,6 +519,12 @@
                 padding: 100px 40px 40px;
                 box-shadow: $blue-box-shadow;
                 border-radius: $radius;
+                @include maxw1440 {
+                    padding: 40px;
+                }
+                @include mobile {
+                    padding: 55px 25px 40px;
+                }
                 &::before,
                 &::after {
                     opacity: 1;
@@ -286,6 +532,9 @@
             }
             .card-item-number {
                 opacity: 0;
+                @include mobile {
+                    opacity: 1;
+                }
             }
             .card-item-title {
                 color: #fff;
@@ -301,6 +550,17 @@
             height: 100%;
             border-radius: $radius;
             overflow: hidden;
+            @include maxw1440 {
+                min-height: 450px;
+            }
+            @include mobile {
+                display: none;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
         &-info {
             background-color: #fff;
@@ -314,6 +574,21 @@
             color: $blue;
             transition: $duration;
             box-shadow: 0px 16px 22px rgba(181, 183, 184, 0.16);
+            @include maxw1440 {
+                top: calc(100% - 170px);
+            }
+            @include mobile {
+                top: initial;
+                background-color: $blue;
+                box-shadow: $blue-box-shadow;
+                border-radius: $radius;
+                position: relative;
+                bottom: 0;
+                top: initial;
+                left: 0;
+                right: 0;
+                padding: 55px 25px 40px;
+            }
             &::before,
             &::after {
                 background-size: 792px 801px;
@@ -327,6 +602,9 @@
                 pointer-events: none;
                 opacity: 0;
                 transition: opacity $duration;
+                @include mobile {
+                    opacity: 1;
+                }
             }
             &:before {
                 top: 0;
@@ -365,6 +643,9 @@
         &-title {
             transition: $duration;
             text-align: center;
+            @include mobile {
+                color: #fff;
+            }
         }
         &-list {
             margin-top: 28px;
@@ -372,6 +653,11 @@
             transition: opacity $duration, width $duration;
             width: calc(100% + 60px);
             visibility: hidden;
+            @include mobile {
+                visibility: visible;
+                opacity: 1;
+                width: 100%;
+            }
             li {
                 color: #fff;
                 &::before {
@@ -384,18 +670,46 @@
 
 .block-title-text-banner {
     margin-top: 160px;
+    @include responsive {
+        margin-top: 140px;
+    }
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        @include touch {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
     h2 {
         max-width: 49%;
+        @include responsive {
+            max-width: calc(50% - 15px);
+        }
+        @include touch {
+            max-width: 100%;
+            text-align: center;
+        }
     }
     .block-color-bg {
         margin-top: 70px;
+        @include touch {
+            margin-top: 48px;
+        }
         .wrap {
-            padding: 60px 0;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            @include touch {
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
         }
     }
     .text-column {
@@ -404,6 +718,19 @@
         padding-top: 22px;
         padding-bottom: 32px;
         position: relative;
+        font-size: 18px;
+        line-height: 1.56;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 640px;
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 0;
+        }
         &::before {
             display: block;
             content: '';
@@ -413,36 +740,77 @@
             bottom: 24px;
             width: 4px;
             background-color: $beige;
+            @include touch {
+                top: 0;
+                bottom: 0;
+            }
         }
     }
     .banner-column {
         width: 45%;
-        font-size: 18px;
-        line-height: 1.56;
         position: relative;
+        border-radius: $radius;
         // overflow: hidden;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+            max-width: 640px;
+        }
         img {
             border-radius: $radius;
             position: absolute;
             bottom: 0;
+            @include touch {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
 
 .block-banner-accordeon {
     margin-top: 90px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        @include touch {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     .banner-column {
         width: 49%;
         overflow: hidden;
+        border-radius: $radius;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            // width: 100%;
+            // max-width: 640px;
+            display: none;
+        }
     }
     .accordeon-column {
         width: 45%;
         padding-top: 20px;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            // margin-top: 30px;
+            width: 100%;
+        }
     }
     .accordeon-item {
         padding-left: 116px;
@@ -450,7 +818,10 @@
         background-color: #fff;
         border-radius: $radius;
         cursor: pointer;
-
+        @include maxw479 {
+            padding-right: 24px;
+            padding-left: 80px;
+        }
         +.accordeon-item {
             &.open {
                 margin-top: 40px;
@@ -494,6 +865,12 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 21px 21px;
+                @include maxw479 {
+                    width: 48px;
+                    height: 48px;
+                    top: calc(50% - 24px);
+                    left: -64px;
+                }
             }
         }
         &-list {
@@ -505,6 +882,12 @@
 
 .block-two-icons-cards {
     margin-top: 140px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         flex-direction: column;
@@ -525,6 +908,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 30px;
+        @include touch {
+            margin-top: 32px;
+        }
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
     }
 
     .card-item {
@@ -535,6 +924,12 @@
         overflow: hidden;
         transition: background-color $duration, box-shadow $duration;
         position: relative;
+        @include touch {
+            padding: 40px;
+        }
+        @include mobile {
+            width: 100%;
+        }
         &::after {
             position: absolute;
             top: 0;
@@ -548,6 +943,9 @@
             background-position: left bottom;
             background-repeat: no-repeat;
             background-size: 792px 801px;
+            @include touch {
+                opacity: .3;
+            }
         }
         &:hover {
             background-color: $blue;
@@ -570,6 +968,9 @@
         &-head {
             display: flex;
             align-items: center;
+            @include touch {
+                flex-direction: column;
+            }
         }
         &-icon {
             display: flex;
@@ -583,6 +984,10 @@
             border-radius: 50%;
             margin-right: 30px;
             border: 4px solid $beige;
+            @include touch {
+                margin-right: 0;
+                margin-bottom: 24px;
+            }
         }
         &-title {
             transition: color $duration;
@@ -607,8 +1012,323 @@
     }
 }
 
+.block-slider {
+    margin-top: 140px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    .slider-content {
+        margin-top: 55px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto 360px;
+        grid-gap: 60px;
+        @include maxw1440 {
+            grid-gap: 30px;
+        }
+        @include maxw1199 {
+            grid-template-columns: 1fr;
+        }
+        @include touch {
+            display: block;
+            margin-top: 32px;
+        }
+    }
+    .slider-column {
+        max-width: 1110px;
+        display: flex;
+        @include maxw1199 {
+            max-width: 100%;
+        }
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+    }
+    .card-column {
+        display: flex;
+        width: 100%;
+        max-width: 360px;
+        flex-shrink: 0;
+        @include maxw1199 {
+            max-width: 100%;
+        }
+        @include mobile {
+            margin-top: 15px;
+        }
+    }
+    .swiper {
+        &-controls {
+            width: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 35px;
+            flex-shrink: 0;
+            @include mobile {
+                margin-right: 0;
+                margin-top: 15px;
+                width: 100%;
+                flex-direction: row;
+            }
+        }
+        &-button {
+            &-prev,
+            &-next {
+                position: static;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 1px solid $red;
+                color: $red;
+                cursor: pointer;
+                top: initial;
+                margin: initial;
+                left: initial;
+                right: initial;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover {
+                    background: $red-gradient-normal;
+                    color: #fff;
+                    box-shadow: $grey-box-shadow;
+                }
+                &:active {
+                    background: $red-gradient-active;
+                    box-shadow: $grey-box-shadow;
+                    color: #fff;
+                }
+                &::after {
+                    content: initial;
+                }
+                svg {
+                    width: 18px;
+                    height: 10px;
+                }
+            }
+            &-prev {
+                transform: rotate(-90deg);
+            }
+            &-next {
+                transform: rotate(-90deg);
+            }
+        }
+        &-pagination {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px auto;
+            position: static;
+            @include mobile {
+                flex-direction: row;
+                margin: 0 20px;
+            }
+            &-bullet {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                position: relative;
+                border: 1px solid rgba($red, .7);
+                opacity: 1;
+                background-color: transparent;
+                &::before {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    right: 2px;
+                    bottom: 2px;
+                    border-radius: 50%;
+                    background-color: $red;
+                    opacity: 0;
+                    transition: opacity $duration;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                    @include mobile {
+                        margin-bottom: 0;
+                        margin-right: 12px;
+                    }
+                }
+                &-active {
+                    background-color: transparent;
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &-galleries {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-gap: 15px;
+            @include mobile {
+                display: flex;
+                flex-direction: column-reverse;
+                grid-gap: initial;
+            }
+        }
+        &-container {
+            width: 100%;
+            height: 480px;
+            @include mobile {
+                height: initial;
+            }
+        }
+        &-slide {
+            position: relative;
+            overflow: hidden;
+            border-radius: $radius;
+            img {
+                // width: 100%;
+                position: relative;
+                z-index: 1;
+
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .invite-slider-thumbs {
+        @include mobile {
+            margin-top: 15px;
+        }
+        // .swiper-container {
+
+        // }
+        // .swiper-wrapper {
+        //     // display: grid;
+        //     // grid-template-columns: 1fr;
+        //     // grid-gap: 15px;
+        // }
+        .swiper-slide {
+            padding-bottom: 60%;
+            @include mobile {
+                padding-bottom: initial;
+            }
+            &:not(.swiper-slide-active) {
+                cursor: pointer;
+            }
+            &::after {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(0deg, rgba(36, 60, 146, 0.36), rgba(36, 60, 146, 0.36));
+                z-index: 2;
+            }
+            img {
+                position: absolute;
+                @include mobile {
+                    position: relative;
+                }
+                // width: 100%;
+                // height: 100%;
+                // object-fit: cover;
+            }
+        }
+    }
+    .invite-card {
+        width: 100%;
+        background-color: #fff;
+        border-radius: $radius;
+        box-shadow: $grey-box-shadow;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: stretch;
+        &::before,
+        &::after {
+            background-size: 792px 801px;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 112px;
+            position: absolute;
+            content: '';
+            pointer-events: none;
+            transition: opacity $duration;
+            z-index: 1;
+        }
+        &:before {
+            top: 0;
+            background-image: url('../img/circles-cluster-beige-top.svg');
+            background-position: center bottom;
+        }
+        &::after {
+            bottom: 0;
+            background-image: url('../img/circles-cluster-beige-bottom.svg');
+            background-position: center top;
+        }
+        &-inner {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 45px 35px 35px;
+
+        }
+        &-icon {
+            svg {
+                width: 79px;
+                height: 85px;
+            }
+        }
+        &-title {
+            margin-top: 30px;
+        }
+        &-descr {
+            margin-top: 15px;
+            margin-bottom: auto;
+        }
+        &-order {
+            margin-top: 40px;
+            min-width: 100%;
+            @include maxw1199 {
+                min-width: $button-min-width;
+            }
+        }
+    }
+    .block-color-bg {
+        margin-top: -140px;
+        height: 220px;
+        z-index: 1;
+        @include touch {
+            margin-top: -172px;
+        }
+    }
+}
+
 .block-three-icons-cards {
     margin-top: 140px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         flex-direction: column;
@@ -629,6 +1349,13 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
+        @include touch {
+            margin-top: 32px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
     }
 
     .card-item {
@@ -639,6 +1366,13 @@
         overflow: hidden;
         transition: background-color $duration, box-shadow $duration;
         position: relative;
+        @include touch {
+            width: calc(50% - 15px);
+            padding: 20px 30px;
+        }
+        @include mobile {
+            width: 100%;
+        }
         &::before {
             position: absolute;
             top: 0;
@@ -702,16 +1436,33 @@
 
 .block-banner-icons-list {
     margin-top: 140px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include touch {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     .banner-column {
         overflow: hidden;
         border-radius: $radius;
         width: 45%;
         position: relative;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+            max-width: 640px;
+        }
         &::before {
             display: block;
             content: '';
@@ -742,6 +1493,13 @@
     }
     .text-column {
         width: 49%;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            margin-top: 30px;
+            width: 100%;
+        }
     }
     // .title-descr {
     //     margin-top: 25px;
@@ -750,6 +1508,9 @@
     // }
     .icons-list {
         margin-top: 55px;
+        @include touch {
+            margin-top: 32px;
+        }
     }
     .icon-item {
         display: flex;
@@ -793,21 +1554,57 @@
     padding-bottom: 80px;
     min-height: 665px;
     display: flex;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        min-height: initial;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
+        @include touch {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
     .text-column {
         width: 45%;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+    h2 {
+        @include touch {
+            text-align: center;
+        }
     }
     .banner-column {
         width: 49%;
         position: relative;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+            max-width: 640px;
+        }
         img {
             position: absolute;
             border-radius: $radius;
             bottom: 0;
+            @include touch {
+                position: static;
+            }
         }
     }
     .check-list {
@@ -842,6 +1639,12 @@
 
 .block-prices {
     margin-top: 140px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         flex-direction: column;
@@ -853,6 +1656,9 @@
         line-height: 1.57;
         display: flex;
         align-items: center;
+        @include touch {
+            margin-top: 32px;
+        }
         &::before {
             display: block;
             content: '';
@@ -870,6 +1676,16 @@
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 30px;
         align-items: center;
+        @include responsive {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+        @include touch {
+            margin-top: 32px;
+        }
     }
 
     .price-item {
@@ -879,6 +1695,17 @@
         background-color: #fff;
         box-shadow: $grey-white-box-shadow;
         transition: box-shadow $duration;
+        @include responsive {
+            width: 100%;
+            max-width: calc((100% - 60px) / 3);
+        }
+        @include touch {
+            max-width: calc(50% - 15px);
+            order: 2;
+        }
+        @include mobile {
+            max-width: 100%;
+        }
         &:hover {
             box-shadow: $grey-box-shadow;
         }
@@ -900,6 +1727,10 @@
             background-color: $blue;
             color: #fff;
             box-shadow: $blue-box-shadow;
+            @include touch {
+                order: 1;
+                max-width: 100%;
+            }
             &::after {
                 background-image: url('../img/circles-cluster-white-right.svg');
             }
@@ -924,6 +1755,9 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            @include touch {
+                align-items: center;
+            }
         }
         &-title {
             color: $dark;
@@ -937,6 +1771,7 @@
             font-size: 36px;
             line-height: 1.33;
             position: relative;
+            white-space: nowrap;
             &::after {
                 content: '₽';
                 margin-left: 5px;
@@ -1005,6 +1840,12 @@
 
 .block-offers-cases {
     margin-top: 90px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         flex-direction: column;
@@ -1012,8 +1853,15 @@
     }
     .block-color-bg {
         margin-top: 185px;
+        @include touch {
+            margin-top: 32px;
+        }
         .wrap {
             padding-bottom: 80px;
+            @include touch {
+                padding-top: 48px;
+                padding-bottom: 48px;
+            }
         }
     }
     .offers-cases {
@@ -1021,6 +1869,13 @@
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
         margin-top: -130px;
+        @include touch {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
     }
     .case-item {
         border-radius: $radius;
@@ -1029,6 +1884,12 @@
         background-color: #fff;
         box-shadow: $grey-white-box-shadow;
         transition: color $duration, background-color $duration, box-shadow $duration;
+        @include touch {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+        }
         &::before {
             position: absolute;
             top: 0;
@@ -1104,16 +1965,33 @@
 
 .block-banner-callback {
     margin-top: 140px;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include touch {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     .banner-column {
         width: 45%;
         overflow: hidden;
         border-radius: $radius;
         position: relative;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+            max-width: 640px;
+        }
         &::before {
             display: block;
             content: '';
@@ -1144,6 +2022,23 @@
     }
     .text-column {
         width: 49%;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+    h2 {
+        @include touch {
+            text-align: center;
+        }
+    }
+    .title-descr {
+        @include touch {
+            text-align: center;
+        }
     }
     .callback-form {
         margin-top: 55px;
@@ -1151,16 +2046,30 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
         align-items: center;
+        @include touch {
+            margin-top: 32px;
+            grid-template-columns: 1fr;
+        }
     }
 }
 
 .block-contacts-map {
     margin-top: 140px;
     position: relative;
+    @include touch {
+        margin-top: $block-gap-y-tablet;
+    }
+    @include mobile {
+        margin-top: $block-gap-y-mobile;
+    }
     .wrap {
         display: flex;
         padding-top: 60px;
         padding-bottom: 60px;
+        @include touch {
+            flex-direction: column;
+            padding: 0;
+        }
     }
     iframe {
         position: absolute;
@@ -1170,6 +2079,10 @@
         bottom: 0;
         width: 100%;
         height: 100%;
+        @include touch {
+            height: 500px;
+            position: relative;
+        }
     }
     .contacts-group {
         position: relative;
@@ -1180,6 +2093,15 @@
         box-shadow: $grey-box-shadow;
         width: 49%;
         background-color: #fff;
+        @include responsive {
+            width: calc(50% - 15px);
+        }
+        @include touch {
+            width: 100%;
+            margin: initial;
+            border-radius: 0;
+            padding: 32px $wrap-padding-x;
+        }
     }
 
     address {
@@ -1211,4 +2133,146 @@
         border-top: 1px solid $beige-light;
         line-height: 1.62;
     }
+}
+
+.block-article {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    @include touch {
+        padding-top: $block-gap-y-tablet;
+        padding-bottom: $block-gap-y-tablet;
+    }
+    @include mobile {
+        padding-top: $block-gap-y-mobile;
+        padding-bottom: $block-gap-y-mobile;
+    }
+    .article {
+        max-width: 1270px;
+        margin: 0 auto;
+    }
+
+    .text-image-group {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        gap: css-min(8%, 100px);
+        @include touch {
+            gap: 30px;
+        }
+        @include mobile {
+            flex-direction: column;
+        }
+        &:not(:first-child) {
+            margin-top: 60px;
+            @include mobile {
+                margin-top: 36px
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 40px;
+            @include mobile {
+                margin-bottom: 24px;
+            }
+        }
+        // + h3 {
+        //     margin-top: 40px;
+        // }
+        &.reversed {
+            flex-direction: row-reverse;
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+        }
+        .image {
+            width: 44%;
+            max-width: 550px;
+            flex-shrink: 0;
+            @include mobile {
+                width: 80%;
+            }
+            @include maxw479 {
+                width: 100%;
+            }
+        }
+        img {
+            border-radius: $radius;
+        }
+
+    }
+
+    h3 {
+        // &:not(:first-child) {
+        //     margin-top: 60px;
+        // }
+        + * {
+            margin-top: 32px;
+            @include mobile {
+                margin-top: 24px;
+            }
+        }
+    }
+    h4 {
+        &:not(:first-child) {
+            margin-top: 40px;
+            @include mobile {
+                margin-top: 24px;
+            }
+        }
+        + * {
+            margin-top: 32px;
+            @include mobile {
+                margin-top: 24px;
+            }
+        }
+    }
+    p {
+        + * {
+            margin-top: 16px;
+        }
+        + h3 {
+            margin-top: 60px;
+            @include mobile {
+                margin-top: 36px;
+            }
+        }
+    }
+
+    ul, ol {
+        &:not(:first-child) {
+            margin-top: 28px;
+            @include mobile {
+                margin-top: 24px;
+            }
+        }
+        &:not(:last-child) {
+            margin-bottom: 28px;
+            @include mobile {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .video-wrapper {
+        &:not(:first-child) {
+            margin-top: 60px;
+            @include mobile {
+                margin-top: 36px;
+            }
+        }
+        + * {
+            margin-top: 60px;
+            @include mobile {
+                margin-top: 36px;
+            }
+        }
+    }
+
+    .quote-group {
+        &:not(:first-child) {
+            margin-top: 70px;
+            @include mobile {
+                margin-top: 48px;
+            }
+        }
+    }
+
 }

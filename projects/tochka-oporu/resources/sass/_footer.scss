@@ -5,6 +5,10 @@
     padding-bottom: 34px;
     .wrap {
         display: flex;
+        @include touch {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     a {
         font-weight: 300;
@@ -15,12 +19,23 @@
     }
     .menu-column {
         margin-right: 170px;
+        @include maxw1199 {
+            margin-right: 100px;
+        }
+        @include touch {
+            width: 100%;
+            max-width: 480px;
+            margin-right: 0;
+        }
     }
     .column-title {
         font-weight: 600;
         line-height: 1.62;
         text-transform: uppercase;
         margin-bottom: 22px;
+        @include touch {
+            text-align: center;
+        }
     }
     .menu {
         display: grid;
@@ -28,8 +43,17 @@
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 200px;
         grid-row-gap: 18px;
+        @include maxw1199 {
+            grid-column-gap: 100px;
+        }
+        @include touch {
+            grid-column-gap: 48px;
+        }
         li {
             padding-left: 0;
+            @include touch {
+                text-align: center;
+            }
             &::before {
                 content: initial;
             }
@@ -39,10 +63,40 @@
         }
 
     }
+    .contacts-column {
+        @include touch {
+            margin-top: 48px;
+            width: 100%;
+            max-width: 480px;
+        }
+    }
     .contacts-content {
         display: grid;
         grid-template-columns: 3fr 2fr;
-        grid-column-gap: 160px;
+        grid-gap: 160px;
+        @include maxw1440 {
+            grid-gap: 120px;
+        }
+        @include maxw1199 {
+            grid-gap: 100px;
+        }
+        @include touch {
+            grid-template-columns: 1fr;
+            grid-gap: 32px;
+        }
+
+    }
+    .left-column,
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include touch {
+            align-items: center;
+        }
+    }
+    .left-column {
+
         a, span {
             // font-weight: 300;
             &:not(:last-child) {
@@ -53,11 +107,25 @@
             font-weight: 300;
         }
     }
-    .left-column,
     .right-column {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        @include touch {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        a, span {
+            // font-weight: 300;
+            &:not(:last-child) {
+                margin-bottom: 18px;
+                @include touch {
+                    margin-bottom: 0;
+                    margin-top: 18px;
+                }
+            }
+        }
+        span {
+            font-weight: 300;
+        }
     }
     .contact-link {
         padding-left: 30px;

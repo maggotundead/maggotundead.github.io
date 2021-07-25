@@ -25,15 +25,27 @@
         align-items: center;
         margin-left: auto;
         margin-right: 140px;
+        @include maxw1440 {
+            margin-right: auto;
+        }
+        @include touch {
+            display: none;
+        }
         a {
             &:not(:last-child) {
                 margin-right: 80px;
+                @include maxw1199 {
+                    margin-right: 40px;
+                }
             }
         }
     }
     &-bottom {
         border-top: 1px solid #EFF0F1;
         padding: 10px 0;
+        @include touch {
+            display: none;
+        }
     }
 
     .menu {
@@ -41,6 +53,9 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        @include touch {
+            flex-direction: column;
+        }
         a {
             font-size: 14px;
             line-height: 2.14;
@@ -48,8 +63,18 @@
             padding-left: 26px;
             position: relative;
             transition: color $duration;
+            @include touch {
+                font-size: 18px;
+                line-height: 1.5;
+                padding-left: 0;
+            }
             &:hover {
                 color: $blue;
+            }
+            &:not(:last-child) {
+                @include touch {
+                    margin-bottom: 16px;
+                }
             }
             &::before {
                 display: block;
@@ -61,6 +86,109 @@
                 position: absolute;
                 left: 0;
                 top: calc(50% - 2px);
+                @include touch {
+                    content: initial;
+                }
+            }
+        }
+    }
+    .btn {
+        @include mobile {
+            display: none;
+        }
+    }
+    .burger {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        border: 0;
+        background-color: transparent;
+        @include touch {
+            display: flex;
+        }
+        span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: $blue;
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    .mobile-popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        bottom: 0;
+        z-index: 9999;
+        width: 100vw;
+        background-color: transparent;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity $duration, left $duration;
+        background-color: #fff;
+        @include touch {
+            display: block;
+        }
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 30vw;
+            background: transparent url('../img/circles-cluster-beige-left.svg') right center repeat-y;
+            background-size: 792px 801px;
+        }
+        &.open {
+            opacity: 1;
+            left: 0;
+            pointer-events: auto;
+        }
+        &-close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            border: 0;
+            background-color: transparent;
+            z-index: 2;
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+        &-content {
+            position: relative;
+            z-index: 1;
+            // padding: 80px 30px 30px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .contacts {
+            display: flex;
+            @include mobile {
+                flex-direction: column;
+            }
+            a {
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+
+        .btn {
+            display: none;
+            @include mobile {
+                display: inline-flex;
             }
         }
     }
