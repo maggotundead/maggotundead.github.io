@@ -1,0 +1,109 @@
+.header {
+    padding-top: 18px;
+    padding-bottom: 8px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: transparent;
+    transition: background-color $duration, padding-top $duration;
+    &.fixed {
+        background-color: $sand;
+        padding-top: 8px;
+        .logo {
+            img {
+                width: 50px;
+            }
+        }
+    }
+    .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .dropdown-content {
+        display: flex;
+        @include mobile {
+            top: -100vh;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            pointer-events: none;
+            transition: top $duration, opacity $duration;
+            height: 100%;
+            height: -webkit-fill-available;
+            justify-content: center;
+            background-color: #fcfbf9;
+        }
+        &.open {
+            top: 0;
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+    .menu {
+        margin-right: 60px;
+        @include touch {
+            margin-right: 45px;
+        }
+        @include mobile {
+            margin-right: 0;
+            margin-bottom: 100px;
+            flex-direction: column;
+        }
+        &-link {
+            @include mobile {
+                font-size: 36px;
+                line-height: 68px;
+            }
+            &:not(:last-child) {
+                @include mobile {
+                    margin-right: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .socials {
+        @include mobile {
+            justify-content: center;
+        }
+    }
+    .burger {
+        display: none;
+        border: 0;
+        background-color: transparent;
+        width: 35px;
+        @include mobile {
+            display: block;
+        }
+        span {
+            width: 35px;
+            height: 4px;
+            background-color: $theme-color;
+            border-radius: 2px;
+            display: block;
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .mobile-menu-close {
+        display: none;
+        @include mobile {
+            display: block;
+            background-image: url("data:image/svg+xml,%3Csvg width='29' height='28' viewBox='0 0 29 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3.54004' y='0.210938' width='35' height='4' rx='2' transform='rotate(45 3.54004 0.210938)' fill='%23DC7090'/%3E%3Crect x='1' y='24.96' width='35' height='4' rx='2' transform='rotate(-45 1 24.96)' fill='%23DC7090'/%3E%3C/svg%3E%0A");
+            border: 0;
+            width: 29px;
+            height: 28px;
+            background-color: transparent;
+            position: absolute;
+            top: 44px;
+            right: 18px;
+        }
+    }
+}
