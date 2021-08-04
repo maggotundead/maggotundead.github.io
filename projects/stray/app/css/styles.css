@@ -3046,7 +3046,7 @@ body {
   font-weight: 400;
   background: #FCFBF9;
   color: #302D3C; }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 767px) {
     body {
       font-size: 16px; } }
 
@@ -3167,6 +3167,9 @@ main {
       color: #DC7090; }
     .menu-link:not(:last-child) {
       margin-right: 32px; }
+      @media screen and (max-width: 1024px) {
+        .menu-link:not(:last-child) {
+          margin-right: 24px; } }
 
 .socials {
   display: flex;
@@ -3207,10 +3210,17 @@ main {
   background: linear-gradient(270deg, #F89A87 0%, #D46493 100%);
   border: 0;
   border-radius: 50px;
-  position: relative; }
+  position: relative;
+  transition: color 0.3s; }
+  .btn:hover {
+    background: #d0d0d0; }
   .btn.white {
     color: #DC7090;
     background: linear-gradient(270deg, #FCC796 0.19%, #FCA9AC 50.44%, #9EBEE3 100%); }
+    .btn.white:hover {
+      color: #fff; }
+      .btn.white:hover::before {
+        opacity: 0; }
     .btn.white::before {
       display: block;
       content: '';
@@ -3221,7 +3231,8 @@ main {
       bottom: 1px;
       background-color: #fff;
       border-radius: 50px;
-      z-index: 2; }
+      z-index: 2;
+      transition: opacity 0.3s; }
   .btn span {
     position: relative;
     z-index: 2; }
@@ -3342,14 +3353,17 @@ main {
 
 .block-homescreen {
   height: 100vh;
-  min-height: 704px;
-  padding-top: 143px;
-  padding-bottom: 40px;
+  min-height: 800px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  display: flex;
+  align-items: center; }
   @media screen and (max-width: 1024px) {
     .block-homescreen {
       padding-top: 200px;
+      padding-bottom: 40px;
       height: auto;
       min-height: initial; } }
   @media screen and (max-width: 767px) {
@@ -3385,6 +3399,9 @@ main {
         display: flex;
         flex-direction: column;
         align-items: flex-start; } }
+    .block-homescreen .wrap > *:not(#scene) {
+      position: relative;
+      z-index: 2; }
   .block-homescreen .block-subtitle {
     font-size: 32px;
     line-height: 1;
@@ -3439,11 +3456,13 @@ main {
     grid-column: 1; }
     @media screen and (max-width: 1024px) {
       .block-homescreen .block-descr {
+        margin-top: 17px;
         margin-left: 0;
         order: 5; } }
     @media screen and (max-width: 767px) {
       .block-homescreen .block-descr {
-        margin-top: 24px; } }
+        margin-top: 24px;
+        padding-left: 0; } }
   .block-homescreen ul {
     margin-top: 15px;
     list-style: none; }
@@ -3497,7 +3516,8 @@ main {
     grid-column: 2;
     grid-row-start: 1;
     grid-row-end: 6;
-    align-self: end; }
+    align-self: end;
+    z-index: 1; }
     @media screen and (max-width: 1024px) {
       .block-homescreen .figure-column {
         padding-top: 92px;
@@ -3530,15 +3550,15 @@ main {
       width: 100%; }
   .block-homescreen .coin-group-1 {
     position: absolute;
-    top: -92px;
-    left: -92px;
+    top: -92px !important;
+    left: -92px !important;
     z-index: 2;
     width: 49%;
     transition: left 0.3s, top 0.3s; }
     @media screen and (max-width: 1024px) {
       .block-homescreen .coin-group-1 {
-        top: 0;
-        left: 0;
+        top: 0 !important;
+        left: 0 !important;
         width: 245px; } }
     @media screen and (max-width: 767px) {
       .block-homescreen .coin-group-1 {
@@ -3548,8 +3568,10 @@ main {
       width: 100%; }
   .block-homescreen .coin-group-2 {
     position: absolute;
-    right: -70px;
-    bottom: 104px;
+    top: initial !important;
+    left: initial !important;
+    right: -70px !important;
+    bottom: 104px !important;
     z-index: 3;
     width: 49%;
     transition: left 0.3s, top 0.3s; }
@@ -3559,8 +3581,8 @@ main {
     @media screen and (max-width: 767px) {
       .block-homescreen .coin-group-2 {
         width: 37.5%;
-        bottom: 45px;
-        right: 0; } }
+        bottom: 45px !important;
+        right: 0 !important; } }
     .block-homescreen .coin-group-2 svg {
       filter: drop-shadow(79.5344px 91.1881px 80px rgba(0, 0, 0, 0.06)) drop-shadow(51.5501px 59.1034px 46.8519px rgba(0, 0, 0, 0.0455556)) drop-shadow(30.6355px 35.1243px 25.4815px rgba(0, 0, 0, 0.0364444)) drop-shadow(15.9069px 18.2376px 13px rgba(0, 0, 0, 0.03)) drop-shadow(6.48058px 7.43014px 6.51852px rgba(0, 0, 0, 0.0235556)) drop-shadow(1.47286px 1.68867px 3.14815px rgba(0, 0, 0, 0.0144444));
       width: 100%; }
@@ -3604,17 +3626,19 @@ main {
     padding: 36px 30px;
     min-height: 300px;
     text-align: center;
-    border: 1px solid #F8F8F8; }
+    border: 1px solid #e6e6e6; }
     @media screen and (max-width: 1024px) {
       .block-advantages .advantage-item {
         background-color: #fff;
-        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.07); } }
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.07);
+        border-color: transparent; } }
     @media screen and (max-width: 767px) {
       .block-advantages .advantage-item {
         padding: 36px 22px 38px; } }
     .block-advantages .advantage-item:hover {
       background-color: #fff;
-      box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.07); }
+      box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.07);
+      border-color: transparent; }
       .block-advantages .advantage-item:hover .advantage-item-icon {
         background-color: #FFF9E7; }
     .block-advantages .advantage-item-icon {
@@ -3744,10 +3768,20 @@ main {
     width: 100%;
     height: 100%;
     z-index: 2;
-    background: #FCFBF9 url("../img/chart.svg") center no-repeat;
     background-size: contain;
     position: relative;
+    border-radius: 50%;
+    background-color: #fff;
     border-radius: 50%; }
+    .block-chart-stats .chart-diagram img {
+      position: absolute;
+      left: 0;
+      top: 0; }
+      .block-chart-stats .chart-diagram img.chart-logo {
+        width: 32.4%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); }
   .block-chart-stats .chart-percent {
     position: absolute;
     font-family: "Roboto";
@@ -4122,7 +4156,7 @@ main {
       .block-chart-stats .token-param-item {
         width: 100%; } }
     @media screen and (max-width: 1024px) {
-      .block-chart-stats .token-param-item:nth-child(2n + 1)::before {
+      .block-chart-stats .token-param-item:nth-of-type(2n + 1)::before {
         display: block;
         content: '';
         height: 94px;
@@ -4132,10 +4166,10 @@ main {
         top: calc(50% - 47px);
         right: -1.5px; } }
     @media screen and (max-width: 767px) {
-      .block-chart-stats .token-param-item:nth-child(2n + 1)::before {
+      .block-chart-stats .token-param-item:nth-of-type(2n + 1)::before {
         content: initial; } }
     @media screen and (max-width: 1024px) {
-      .block-chart-stats .token-param-item:nth-child(-n + 2)::after {
+      .block-chart-stats .token-param-item:nth-of-type(-n + 2)::after {
         display: block;
         content: '';
         height: 3px;
@@ -4145,17 +4179,17 @@ main {
         top: calc(100% + 64px);
         right: calc(50% - 47px); } }
     @media screen and (max-width: 767px) {
-      .block-chart-stats .token-param-item:nth-child(-n + 2)::after {
+      .block-chart-stats .token-param-item:nth-of-type(-n + 2)::after {
         content: initial; } }
     @media screen and (max-width: 767px) {
-      .block-chart-stats .token-param-item:not(:last-child)::before {
+      .block-chart-stats .token-param-item:not(:last-of-type)::before {
         display: block;
         content: '';
         width: 94px;
         height: 3px;
         background-color: #fff;
         position: absolute;
-        top: calc(100% + 24px);
+        top: calc(100% + 16px);
         left: calc(50% - 47px); } }
   .block-chart-stats .token-param-title {
     font-size: 24px;
@@ -4168,6 +4202,14 @@ main {
       font-size: 82px; }
     .block-chart-stats .token-param-value.smaller {
       font-size: 62px; }
+  .block-chart-stats .desktop-divider {
+    display: block;
+    height: 94px;
+    width: 3px;
+    background-color: #fff; }
+    @media screen and (max-width: 1024px) {
+      .block-chart-stats .desktop-divider {
+        display: none; } }
 
 .block-ecosystem {
   margin-top: 86px;
@@ -4178,7 +4220,8 @@ main {
       margin-top: 150px; } }
   @media screen and (max-width: 767px) {
     .block-ecosystem {
-      margin-top: 95px; } }
+      margin-top: 0;
+      padding-top: 95px; } }
   .block-ecosystem::before {
     display: block;
     content: '';
@@ -4217,7 +4260,7 @@ main {
     @media screen and (max-width: 1024px) {
       .block-ecosystem .text-column {
         margin-top: 70px;
-        width: 100%;
+        width: initial;
         max-width: 100%;
         margin-left: 40px;
         margin-right: 40px; } }
@@ -4320,7 +4363,8 @@ main {
       margin-top: 130px; } }
   @media screen and (max-width: 767px) {
     .block-roadmap {
-      margin-top: 100px; } }
+      margin-top: 0;
+      padding-top: 100px; } }
   .block-roadmap::after {
     display: block;
     content: '';
@@ -4495,7 +4539,8 @@ main {
       margin-top: 105px; } }
   @media screen and (max-width: 767px) {
     .block-buy {
-      margin-top: 100px; } }
+      margin-top: 0;
+      padding-top: 100px; } }
   .block-buy .how-to-buy {
     padding: 50px 70px;
     background: linear-gradient(180deg, #FFFFFF 0%, #F3F3F3 100%);
@@ -4559,7 +4604,6 @@ main {
     flex-shrink: 0; }
     @media screen and (max-width: 1024px) {
       .block-buy .buy-step {
-        width: calc(100% / 3);
         min-width: 270px;
         justify-content: flex-start; } }
     @media screen and (max-width: 767px) {
@@ -4567,6 +4611,9 @@ main {
         width: 100%;
         min-width: initial;
         flex-direction: column; } }
+    @media screen and (max-width: 1024px) {
+      .block-buy .buy-step:nth-child(3) {
+        min-width: 255px; } }
     .block-buy .buy-step-icon {
       display: flex;
       align-items: center;
@@ -4629,8 +4676,16 @@ main {
     background-image: linear-gradient(90deg, transparent, transparent 50%, #FCFBF9 50%, #FCFBF9 100%), linear-gradient(270deg, #FCC796 0.19%, #FCA9AC 50.44%, #9EBEE3 100%);
     background-size: 8px 2px, 100% 2px; }
     @media screen and (max-width: 1024px) {
+      .block-buy .divider:nth-child(2) {
+        max-width: calc(100% - 270px - 250px - 40px);
+        min-width: initial; } }
+    @media screen and (max-width: 767px) {
+      .block-buy .divider:nth-child(2) {
+        max-width: initial; } }
+    @media screen and (max-width: 1024px) {
       .block-buy .divider {
-        min-width: 60px; } }
+        min-width: 60px;
+        margin: 0 15px; } }
     @media screen and (max-width: 767px) {
       .block-buy .divider {
         height: 120px;

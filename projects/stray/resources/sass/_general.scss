@@ -15,7 +15,7 @@ body {
     font-weight: 400;
     background: $body-bg;
     color: $text-color;
-    @include touch {
+    @include mobile {
         font-size: 16px;
     }
 }
@@ -175,6 +175,9 @@ main {
         }
         &:not(:last-child) {
             margin-right: 32px;
+            @include touch {
+                margin-right: 24px;
+            }
         }
     }
 }
@@ -226,9 +229,21 @@ main {
     border: 0;
     border-radius: 50px;
     position: relative;
+    transition: color $duration;
+    &:hover {
+        // background: $gradient-inverted;
+        background: #d0d0d0;
+    }
     &.white {
         color: $theme-color;
         background: linear-gradient(270deg, #FCC796 0.19%, #FCA9AC 50.44%, #9EBEE3 100%);
+        &:hover {
+            // background: linear-gradient(270deg, #9EBEE3 0.19%, #FCA9AC 50.44%, #FCC796 100%);
+            color: #fff;
+            &::before {
+                opacity: 0;
+            }
+        }
         &::before {
             display: block;
             content: '';
@@ -240,6 +255,7 @@ main {
             background-color: #fff;
             border-radius: 50px;
             z-index: 2;
+            transition: opacity $duration;
         }
     }
     span {

@@ -1,12 +1,19 @@
 .block-homescreen {
     height: 100vh;
-    min-height: 704px;
-    padding-top: 143px;
-    padding-bottom: 40px;
+    // min-height: 704px;
+    min-height: 800px;
+    // padding-top: 143px;
+    padding-top: 200px;
+    // padding-bottom: 143px;
+    padding-bottom: 200px;
+    // padding-bottom: 40px;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
     @include touch {
         padding-top: 200px;
+        padding-bottom: 40px;
         height: auto;
         min-height: initial;
     }
@@ -52,6 +59,10 @@
             flex-direction: column;
             align-items: flex-start;
         }
+        > *:not(#scene) {
+            position: relative;
+            z-index: 2;
+        }
     }
     // .text-column {
     //     width: 55%;
@@ -64,6 +75,7 @@
     //         padding-bottom: 0;
     //     }
     // }
+
     .block-subtitle {
         font-size: 32px;
         line-height: 1;
@@ -123,11 +135,13 @@
         margin-left: 20px;
         grid-column: 1;
         @include touch {
+            margin-top: 17px;
             margin-left: 0;
             order: 5;
         }
         @include mobile {
             margin-top: 24px;
+            padding-left: 0;
         }
     }
     ul {
@@ -195,6 +209,7 @@
         grid-row-start: 1;
         grid-row-end: 6;
         align-self: end;
+        z-index: 1;
         @include touch {
             // width: 100%;
             padding-top: 92px;
@@ -231,14 +246,14 @@
     }
     .coin-group-1 {
         position: absolute;
-        top: -92px;
-        left: -92px;
+        top: -92px !important;
+        left: -92px !important;
         z-index: 2;
         width: 49%;
         transition: left $duration, top $duration;
         @include touch {
-            top: 0;
-            left: 0;
+            top: 0 !important;
+            left: 0 !important;
             width: 245px;
         }
         @include mobile {
@@ -251,8 +266,10 @@
     }
     .coin-group-2 {
         position: absolute;
-        right: -70px;
-        bottom: 104px;
+        top: initial !important;
+        left: initial !important;
+        right: -70px !important;
+        bottom: 104px !important;
         z-index: 3;
         width: 49%;
         transition: left $duration, top $duration;
@@ -261,8 +278,8 @@
         }
         @include mobile {
             width: 37.5%;
-            bottom: 45px;
-            right: 0;
+            bottom: 45px !important;
+            right: 0 !important;
         }
         svg {
             filter: $svg-shadow;
@@ -311,10 +328,11 @@
         padding: 36px 30px;
         min-height: 300px;
         text-align: center;
-        border: 1px solid #F8F8F8;
+        border: 1px solid #e6e6e6;
         @include touch {
             background-color: #fff;
             box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.07);
+            border-color: transparent;
         }
         @include mobile {
             padding: 36px 22px 38px;
@@ -322,6 +340,7 @@
         &:hover {
             background-color: #fff;
             box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.07);
+            border-color: transparent;
             .advantage-item-icon {
                 background-color: $sand;
             }
@@ -475,10 +494,23 @@
         width: 100%;
         height: 100%;
         z-index: 2;
-        background: $body-bg url('../img/chart.svg') center no-repeat;
+        // background: $body-bg url('../img/chart.svg') center no-repeat;
         background-size: contain;
         position: relative;
         border-radius: 50%;
+        background-color: #fff;
+        border-radius: 50%;
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            &.chart-logo {
+                width: 32.4%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
     }
     .chart-percent {
         position: absolute;
@@ -898,7 +930,7 @@
         @include mobile {
             width: 100%;
         }
-        &:nth-child(2n + 1) {
+        &:nth-of-type(2n + 1) {
             &::before {
                 @include touch {
                     display: block;
@@ -915,7 +947,7 @@
                 }
             }
         }
-        &:nth-child(-n + 2) {
+        &:nth-of-type(-n + 2) {
             &::after {
                 @include touch {
                     display: block;
@@ -932,7 +964,7 @@
                 }
             }
         }
-        &:not(:last-child) {
+        &:not(:last-of-type) {
             &::before {
                 @include mobile {
                     display: block;
@@ -941,7 +973,8 @@
                     height: 3px;
                     background-color: #fff;
                     position: absolute;
-                    top: calc(100% + 24px);
+                    // top: calc(100% + 24px);
+                    top: calc(100% + 16px);
                     left: calc(50% - 47px);
                 }
             }
@@ -962,6 +995,15 @@
             font-size: 62px;
         }
     }
+    .desktop-divider {
+        display: block;
+        height: 94px;
+        width: 3px;
+        background-color: #fff;
+        @include touch {
+            display: none;
+        }
+    }
 }
 
 .block-ecosystem {
@@ -972,7 +1014,9 @@
         margin-top: 150px;
     }
     @include mobile {
-        margin-top: 95px;
+        // margin-top: 95px;
+        margin-top: 0;
+        padding-top: 95px;
     }
     &::before {
         display: block;
@@ -1014,7 +1058,7 @@
         max-width: 630px;
         @include touch {
             margin-top: 70px;
-            width: 100%;
+            width: initial;
             max-width: 100%;
             margin-left: 40px;
             margin-right: 40px;
@@ -1133,7 +1177,9 @@
         margin-top: 130px;
     }
     @include mobile {
-        margin-top: 100px;
+        // margin-top: 100px;
+        margin-top: 0;
+        padding-top: 100px;
     }
     &::after {
         display: block;
@@ -1341,7 +1387,9 @@
         margin-top: 105px;
     }
     @include mobile {
-        margin-top: 100px;
+        // margin-top: 100px;
+        margin-top: 0;
+        padding-top: 100px;
     }
     .how-to-buy {
         padding: 50px 70px;
@@ -1409,7 +1457,7 @@
         justify-content: center;
         flex-shrink: 0;
         @include touch {
-            width: calc(100% / 3);
+            // width: calc(100% / 3);
             min-width: 270px;
             justify-content: flex-start;
         }
@@ -1417,6 +1465,11 @@
             width: 100%;
             min-width: initial;
             flex-direction: column;
+        }
+        &:nth-child(3) {
+            @include touch {
+                min-width: 255px;
+            }
         }
         &-icon {
             display: flex;
@@ -1487,8 +1540,18 @@
         flex-grow: 1;
         background-image: linear-gradient(90deg, transparent, transparent 50%, $body-bg 50%, $body-bg 100%), linear-gradient(270deg, #FCC796 0.19%, #FCA9AC 50.44%, #9EBEE3 100%);
         background-size: 8px 2px, 100% 2px;
+        &:nth-child(2) {
+            @include touch {
+                max-width: calc(100% - 270px - 250px - 40px);
+                min-width: initial;
+            }
+            @include mobile {
+                max-width: initial;
+            }
+        }
         @include touch {
             min-width: 60px;
+            margin: 0 15px;
         }
         @include mobile {
             height: 120px;
