@@ -1,16 +1,21 @@
 .block-homescreen {
     height: 100vh;
     // min-height: 704px;
-    min-height: 800px;
+    // min-height: 800px;
+    min-height: 700px;
     // padding-top: 143px;
-    padding-top: 200px;
+    // padding-top: 200px;
+    padding-top: 150px;
     // padding-bottom: 143px;
-    padding-bottom: 200px;
+    // padding-bottom: 200px;
     // padding-bottom: 40px;
     position: relative;
     z-index: 1;
     display: flex;
     align-items: center;
+    // @media screen and (min-height: 740px) {
+    //     padding-top: 150px;
+    // }
     @include touch {
         padding-top: 200px;
         padding-bottom: 40px;
@@ -208,7 +213,8 @@
         grid-column: 2;
         grid-row-start: 1;
         grid-row-end: 6;
-        align-self: end;
+        // align-self: end;
+        align-self: center;
         z-index: 1;
         @include touch {
             // width: 100%;
@@ -1672,6 +1678,11 @@
     }
     .logos-column {
         img {
+            transition: $duration;
+            &:hover {
+                filter: grayscale(1);
+                opacity: .5;
+            }
             &:not(:last-child) {
                 margin-bottom: 66px;
                 @include mobile {

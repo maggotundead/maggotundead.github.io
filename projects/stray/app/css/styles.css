@@ -3009,19 +3009,19 @@
 
 @font-face {
   font-family: 'Yanone Kaffeesatz';
-  src: url("../fonts/YanoneKaffeesatz-Light.woff2") format("woff2");
+  src: url("../fonts/YanoneKaffeesatz-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300; }
 
 @font-face {
   font-family: 'Yanone Kaffeesatz';
-  src: url("../fonts/YanoneKaffeesatz-Regular.woff2") format("woff2");
+  src: url("../fonts/YanoneKaffeesatz-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400; }
 
 @font-face {
   font-family: 'Yanone Kaffeesatz';
-  src: url("../fonts/YanoneKaffeesatz-Bold.woff2") format("woff2");
+  src: url("../fonts/YanoneKaffeesatz-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700; }
 
@@ -3272,7 +3272,7 @@ main {
   background-color: transparent;
   transition: background-color 0.3s, padding-top 0.3s; }
   .header.fixed {
-    background-color: #FFF9E7;
+    background-color: #fff;
     padding-top: 8px; }
     .header.fixed .logo img {
       width: 50px; }
@@ -3353,9 +3353,8 @@ main {
 
 .block-homescreen {
   height: 100vh;
-  min-height: 800px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  min-height: 700px;
+  padding-top: 150px;
   position: relative;
   z-index: 1;
   display: flex;
@@ -3516,7 +3515,7 @@ main {
     grid-column: 2;
     grid-row-start: 1;
     grid-row-end: 6;
-    align-self: end;
+    align-self: center;
     z-index: 1; }
     @media screen and (max-width: 1024px) {
       .block-homescreen .figure-column {
@@ -4785,11 +4784,16 @@ main {
       .block-listing .figure-column {
         max-width: 100%;
         margin: 20px auto 0; } }
-  .block-listing .logos-column img:not(:last-child) {
-    margin-bottom: 66px; }
-    @media screen and (max-width: 767px) {
-      .block-listing .logos-column img:not(:last-child) {
-        margin-bottom: 55px; } }
+  .block-listing .logos-column img {
+    transition: 0.3s; }
+    .block-listing .logos-column img:hover {
+      filter: grayscale(1);
+      opacity: .5; }
+    .block-listing .logos-column img:not(:last-child) {
+      margin-bottom: 66px; }
+      @media screen and (max-width: 767px) {
+        .block-listing .logos-column img:not(:last-child) {
+          margin-bottom: 55px; } }
 
 .footer {
   margin-top: 94px;
@@ -4849,8 +4853,25 @@ main {
       margin-top: initial;
       grid-column: initial;
       grid-row: initial; } }
-  .footer .copyright {
+  .footer .donation {
     margin-top: 4px;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: #000;
+    font-weight: 500; }
+    @media screen and (max-width: 1024px) {
+      .footer .donation {
+        padding-left: 32px;
+        text-align: left;
+        margin-top: -3px; } }
+    @media screen and (max-width: 767px) {
+      .footer .donation {
+        margin-top: 14px;
+        text-align: center;
+        padding: 0 15px; } }
+  .footer .copyright {
+    margin-top: 16px;
     font-weight: 300;
     font-size: 12px; }
     @media screen and (max-width: 1024px) {
