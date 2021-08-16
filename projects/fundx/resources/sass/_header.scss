@@ -120,6 +120,19 @@
                     background-color: currentColor;
                     height: 1px;
                 }
+                a {
+                    pointer-events: none;
+                }
+            }
+            &:not(.active) {
+                a {
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+            a {
+                transition: color $duration;
             }
         }
 

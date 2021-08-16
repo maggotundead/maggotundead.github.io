@@ -37,6 +37,7 @@
     border-radius: 0;
     height: 44px;
     font-weight: 600;
+    transition: color $duration, background-color $duration, border-color $duration;
     @include mobile {
         font-size: 14px;
         line-height: 16px;
@@ -61,14 +62,23 @@
     &.green {
         background-color: $green;
         color: $black-text;
+        &:hover {
+            background-color: darken($green, 8%);
+        }
     }
     &.blue {
         color: $black-text;
         background-color: $blue;
+        &:hover {
+            background-color: darken($blue, 8%);
+        }
     }
     &.blue-border {
         // color: #fff;
         border: 3px solid $blue;
+        &:hover {
+            border-color: darken($blue, 8%);
+        }
         @include mobile {
             border-width: 2px;
         }
