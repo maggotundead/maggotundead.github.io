@@ -41,11 +41,42 @@
         right: -56px;
         border: 0;
         background-color: transparent;
+        background-size: 100%;
+        @include mobile {
+            width: 20px;
+            height: 20px;
+
+        }
     }
     &-content {
         position: relative;
+        // max-width: 1200px;
+        // margin: 180px auto;
+    }
+}
+
+.modal-contract {
+    .modal-close {
+        @include maxw1366 {
+            right: 0;
+        }
+        @include mobile {
+            top: -30px;
+        }
+    }
+    .modal-content {
         max-width: 1200px;
         margin: 180px auto;
+        @include maxw1280 {
+            max-width: 1000px;
+        }
+        @include touch {
+            max-width: 708px;
+        }
+        @include mobile {
+            max-width: 480px;
+            margin: 56px 20px;
+        }
     }
 }
 
@@ -54,6 +85,9 @@
     background-color: #fff;
     display: flex;
     padding: 10px;
+    @include touch {
+        flex-direction: column;
+    }
     &-banner {
         background-color: $black-bg;
         width: 354px;
@@ -62,6 +96,18 @@
         display: flex;
         flex-direction: column;
         position: relative;
+
+        @include touch {
+            width: 100%;
+            min-height: 350px;
+            height: auto;
+            background: $black-bg url('../img/modal-order-banner-bg.png') left bottom no-repeat;
+            background-size: 324px 474px;
+        }
+        @include mobile {
+            background-size: auto 260px;
+            min-height: initial;
+        }
         &::before {
             display: block;
             content: '';
@@ -71,12 +117,35 @@
             position: absolute;
             top: 33px;
             right: 74px;
+            @include touch {
+                right: initial;
+                left: calc(50% - 150px);
+            }
+            @include mobile {
+                width: 66px;
+                height: 60px;
+                left: calc(100% - 145px);
+                top: initial;
+                bottom: 130px;
+                background-size: contain;
+            }
         }
         img {
             position: absolute;
             bottom: 0;
             right: 0;
             z-index: 1;
+            @include touch {
+                max-width: 210px;
+                max-height: 320px;
+                right: 0;
+                bottom: -161px;
+            }
+            @include mobile {
+                max-width: 95px;
+                max-height: 145px;
+                bottom: 0;
+            }
         }
     }
     .banner-head {
@@ -87,10 +156,30 @@
         background-size: 324px 474px;
         position: relative;
         z-index: 2;
+        @include touch {
+            padding: 55px 60px 50px;
+            background: initial;
+        }
+        @include mobile {
+            padding: 20px;
+            min-height: 165px;
+            display: flex;
+        }
     }
     .banner-text {
         position: relative;
         z-index: 2;
+        @include touch {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
     }
     .banner-title {
         max-width: 200px;
@@ -98,50 +187,112 @@
         font-size: 26px;
         line-height: 31px;
         font-weight: 600;
+        @include mobile {
+
+        }
     }
     .banner-duration {
         margin-top: 38px;
+        @include touch {
+            margin-top: 0;
+        }
+        @include mobile {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
         svg {
             width: 30px;
             height: 30px;
+            @include mobile {
+                width: 24px;
+                height: 24px;
+            }
         }
     }
-    .duration-title {
+    .duration-text {
         margin-top: 14px;
-        font-size: 13px;
-        line-height: 15px;
-        color: $grey-text;
+        @include mobile {
+            margin-top: 0;
+            margin-left: 10px;
+        }
     }
     .duration-value {
-        margin-top: 4px;
         font-size: 18px;
         line-height: 21px;
         font-weight: 600;
         color: #fff;
+        @include mobile {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+    .duration-title {
+        margin-top: 4px;
+        font-size: 13px;
+        line-height: 15px;
+        color: $grey-text;
+        @include mobile {
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
     .banner-control {
         border-top: 1px solid rgba(#fff, .16);
         padding: 50px;
+        @include touch {
+            padding: 50px 60px;
+            display: flex;
+            align-items: flex-start;
+        }
+        @include mobile {
+            padding: 20px;
+        }
         .btn {
             width: 100%;
             padding: 0 16px;
+            @include touch {
+                width: initial;
+                min-width: 250px;
+            }
+            @include mobile {
+                width: 100%;
+                max-width: 375px;
+            }
         }
     }
     &-info {
         padding: 40px 50px;
         display: flex;
         flex-direction: column;
+        @include mobile {
+            padding: 20px 10px 10px;
+        }
     }
 
     &-stats {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        @include mobile {
+            grid-template-columns: 1fr;
+            border: 1px solid $grey-border;
+            grid-gap: 1px;
+            background-color: $grey-border;
+        }
     }
     .stat-item {
         border: 1px solid $grey-border;
         padding: 24px 30px;
         min-height: 130px;
         position: relative;
+        @include mobile {
+            padding: 20px;
+            border: 0;
+            background-color: #fff;
+            min-height: 77px;
+            display: flex;
+            align-items: center;
+        }
         &:not(:first-child) {
             border-left: 0;
         }
@@ -155,22 +306,46 @@
             background-size: contain;
             width: 121px;
             height: 51px;
+            @include mobile {
+                width: 81px;
+                height: 27px;
+                left: 60px;
+            }
         }
         svg {
             width: 30px;
             height: 20px;
+            @include mobile {
+                width: 24px;
+                height: 16px;
+            }
+        }
+        &-text {
+            margin-top: 16px;
+            @include mobile {
+                margin-top: 0;
+                margin-left: 10px;
+            }
         }
         &-value {
-            margin-top: 16px;
             font-size: 18px;
             line-height: 21px;
             font-weight: 600;
+            @include mobile {
+                font-size: 16px;
+                line-height: 19px;
+            }
         }
         &-descr {
             margin-top: 6px;
             font-size: 13px;
             line-height: 15px;
             color: $grey-text;
+            @include mobile {
+                margin-top: 4px;
+                font-size: 12px;
+                line-height: 14px;
+            }
         }
     }
 
@@ -179,6 +354,14 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 6px 50px;
+        @include touch {
+            grid-gap: 6px 30px;
+        }
+        @include mobile {
+            margin-top: 20px;
+            grid-template-columns: 1fr;
+            grid-gap: 6px;
+        }
     }
     .param-item {
         display: flex;
@@ -187,6 +370,10 @@
             font-size: 14px;
             line-height: 1.71;
             color: $grey-text;
+            @include mobile {
+                font-size: 13px;
+                line-height: 1.38;
+            }
             &::after {
                 content: ':';
             }
@@ -197,12 +384,20 @@
             margin: 0 16px;
             flex-shrink: 1;
             flex-grow: 1;
+            @include mobile {
+                height: 13px;
+                margin: 0 12px;
+            }
         }
         &-value {
             font-size: 14px;
             line-height: 24px;
             display: flex;
             align-items: center;
+            @include mobile {
+                font-size: 13px;
+                line-height: 1.38;
+            }
             .bbb {
                 color: #F4C90D;
             }
@@ -233,14 +428,37 @@
         font-size: 14px;
         line-height: 1.71;
         margin-bottom: auto;
+        @include mobile {
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 1.54;
+        }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+            @include mobile {
+                margin-bottom: 16px;
+            }
+        }
     }
     &-docs {
         margin-top: 40px;
         display: flex;
         align-items: center;
+        @include mobile {
+            margin-top: 20px;
+            flex-direction: column;
+        }
         a {
+            @include mobile {
+                width: 100%;
+                max-width: 375px;
+            }
             &:not(:last-child) {
                 margin-right: 20px;
+                @include mobile {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
             }
         }
     }

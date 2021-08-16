@@ -26,6 +26,9 @@
         <div class="wrapper">
             <header class="header">
                 <div class="wrap">
+                    <button class="btn green mobile-menu-btn">
+                        <span>Меню</span>
+                    </button>
                     <div class="left-col">
                         <div class="logo full">
                             <svg>
@@ -82,12 +85,16 @@
             <main class="content">
                 <section class="block block-homescreen">
                     <div class="banner">
-                        <img src="img/temp/home-banner.jpg" alt="">
+                        <picture>
+                            <source media="(max-width: 1024px)" srcset="img/temp/home-banner-tablet.jpg">
+                            <source media="(min-width: 1025px)" srcset="img/temp/home-banner.jpg">
+                            <img src="img/temp/home-banner.jpg" alt="">
+                        </picture>
                     </div>
                     <div class="wrap">
                         <div class="text">
                             <h1 class="block-title">
-                                Трейдеры платформы <span>Fund</span><span>X</span> приносят своим клиентам ежедневную прибыль
+                                Трейдеры платформы <span class="green">Fund</span><span class="blue">X</span> приносят своим клиентам ежедневную прибыль
                             </h1>
                             <div class="title-descr">
                                 Не теряйте время и деньги - подключайтесь к торговле уже сейчас!
@@ -483,7 +490,7 @@
                         </div>
 
                         <div class="program-items">
-                            <div class="standart-items">
+                            <!-- <div class="standart-items"> -->
                                 <div class="program-item">
                                     <div class="program-item-inner">
                                         <div class="program-item-head">
@@ -1230,7 +1237,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <!-- </div> -->
                             <div class="program-item platinum">
                                 <div class="program-item-inner">
                                     <div class="program-item-head">
@@ -1241,17 +1248,10 @@
                                             <div class="program-item-title">X10</div>
                                         </div>
                                         <div class="program-item-cash-amount">
-                                            <div class="cash-amount-title">Оборот</div>
+                                            <div class="cash-amount-title">Оборот <span>структуры</span></div>
                                             <div class="cash-amount-arrow"></div>
                                             <div class="cash-amount-value">
                                                 <span>50 000 000</span><i>₽</i>
-                                            </div>
-                                        </div>
-                                        <div class="program-item-bounty">
-                                            <div class="bounty-title">Премия</div>
-                                            <div class="bounty-arrow"></div>
-                                            <div class="bounty-value">
-                                                <span class="">1 000 000</span><i>₽</i>
                                             </div>
                                         </div>
                                     </div>
@@ -1312,6 +1312,13 @@
                                             <div class="bonus-level-value"><span>6</span>%</div>
                                         </div>
                                     </div>
+                                    <div class="program-item-bounty">
+                                        <div class="bounty-title">Премия</div>
+                                        <div class="bounty-arrow"></div>
+                                        <div class="bounty-value">
+                                            <span class="">1 000 000</span><i>₽</i>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="program-item-photo">
                                     <img src="img/temp/program-item-platinum.png" alt="">
@@ -1325,7 +1332,11 @@
                     <div class="wrap">
                         <div class="club-group">
                             <div class="club-banner">
-                                <img src="img/temp/club-banner.jpg" alt="">
+                                <picture>
+                                    <source media="(max-width: 1024px)" srcset="img/temp/club-banner-tablet.png">
+                                    <source media="(min-width: 1025px)" srcset="img/temp/club-banner.jpg">
+                                    <img src="img/temp/club-banner.jpg" alt="">
+                                </picture>
                                 <div class="club-banner-text">
                                     <svg class="club-banner-logo">
                                         <use xlink:href="#logo-short-grey-inner"></use>
@@ -1467,7 +1478,8 @@
                 </div>
             </footer>
 
-            <div class="modal open">
+            <div class="modal modal-contract open">
+            <!-- <div class="modal modal-contract"> -->
                 <div class="modal-overlay"></div>
                 <div class="modal-body">
                     <div class="modal-content">
@@ -1485,11 +1497,13 @@
                                             <svg>
                                                 <use xlink:href="#icon-progress-circle-1"></use>
                                             </svg>
-                                            <div class="duration-title">
-                                                Срок контракта
-                                            </div>
-                                            <div class="duration-value">
-                                                3 дня
+                                            <div class="duration-text">
+                                                <div class="duration-value">
+                                                    3 дня
+                                                </div>
+                                                <div class="duration-title">
+                                                    Срок контракта
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1506,15 +1520,19 @@
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-1"></use>
                                         </svg>
-                                        <div class="stat-item-value">0.7% в день</div>
-                                        <div class="stat-item-descr">от 100 до 1 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">0.7% в день</div>
+                                            <div class="stat-item-descr">от 100 до 1 000 рублей</div>
+                                        </div>
                                     </div>
                                     <div class="stat-item">
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-1"></use>
                                         </svg>
-                                        <div class="stat-item-value">0.9% в день</div>
-                                        <div class="stat-item-descr">от 1 000 до 20 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">0.9% в день</div>
+                                            <div class="stat-item-descr">от 1 000 до 20 000 рублей</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="contract-order-params">
@@ -1567,11 +1585,13 @@
                                             <svg>
                                                 <use xlink:href="#icon-progress-circle-2"></use>
                                             </svg>
-                                            <div class="duration-title">
-                                                Срок контракта
-                                            </div>
-                                            <div class="duration-value">
-                                                15 дней
+                                            <div class="duration-text">
+                                                <div class="duration-value">
+                                                    15 дней
+                                                </div>
+                                                <div class="duration-title">
+                                                    Срок контракта
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1588,15 +1608,19 @@
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-2"></use>
                                         </svg>
-                                        <div class="stat-item-value">1.2% в день</div>
-                                        <div class="stat-item-descr">от 1 000 до 10 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">1.2% в день</div>
+                                            <div class="stat-item-descr">от 1 000 до 10 000 рублей</div>
+                                        </div>
                                     </div>
                                     <div class="stat-item">
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-2"></use>
                                         </svg>
-                                        <div class="stat-item-value">1.4% в день</div>
-                                        <div class="stat-item-descr">от 10 000 до 100 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">1.4% в день</div>
+                                            <div class="stat-item-descr">от 10 000 до 100 000 рублей</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="contract-order-params">
@@ -1659,11 +1683,13 @@
                                             <svg>
                                                 <use xlink:href="#icon-progress-circle-4"></use>
                                             </svg>
-                                            <div class="duration-title">
-                                                Срок контракта
-                                            </div>
-                                            <div class="duration-value">
-                                                30 дней
+                                            <div class="duration-text">
+                                                <div class="duration-value">
+                                                    30 дней
+                                                </div>
+                                                <div class="duration-title">
+                                                    Срок контракта
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1680,22 +1706,28 @@
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-1"></use>
                                         </svg>
-                                        <div class="stat-item-value">1.8% в день</div>
-                                        <div class="stat-item-descr">от 5 000 до 25 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">1.8% в день</div>
+                                            <div class="stat-item-descr">от 5 000 до 25 000 рублей</div>
+                                        </div>
                                     </div>
                                     <div class="stat-item">
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-3"></use>
                                         </svg>
-                                        <div class="stat-item-value">2.0% в день</div>
-                                        <div class="stat-item-descr">от 25 000 до 100 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">2.0% в день</div>
+                                            <div class="stat-item-descr">от 25 000 до 100 000 рублей</div>
+                                        </div>
                                     </div>
                                     <div class="stat-item">
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-3"></use>
                                         </svg>
-                                        <div class="stat-item-value">2.2% в день</div>
-                                        <div class="stat-item-descr">от 100 000 до 300 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">2.2% в день</div>
+                                            <div class="stat-item-descr">от 100 000 до 300 000 рублей</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="contract-order-params">
@@ -1758,11 +1790,13 @@
                                             <svg>
                                                 <use xlink:href="#icon-progress-circle-4"></use>
                                             </svg>
-                                            <div class="duration-title">
-                                                Срок контракта
-                                            </div>
-                                            <div class="duration-value">
-                                                60 дней
+                                            <div class="duration-text">
+                                                <div class="duration-value">
+                                                    60 дней
+                                                </div>
+                                                <div class="duration-title">
+                                                    Срок контракта
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1779,22 +1813,28 @@
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-4"></use>
                                         </svg>
-                                        <div class="stat-item-value">2.4% в день</div>
-                                        <div class="stat-item-descr">от 20 000 до 50 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">2.4% в день</div>
+                                            <div class="stat-item-descr">от 20 000 до 50 000 рублей</div>
+                                        </div>
                                     </div>
                                     <div class="stat-item">
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-4"></use>
                                         </svg>
-                                        <div class="stat-item-value">2.5% в день</div>
-                                        <div class="stat-item-descr">от 50 000 до 200 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">2.5% в день</div>
+                                            <div class="stat-item-descr">от 50 000 до 200 000 рублей</div>
+                                        </div>
                                     </div>
                                     <div class="stat-item">
                                         <svg>
                                             <use xlink:href="#icon-progress-lines-4"></use>
                                         </svg>
-                                        <div class="stat-item-value">2.6% в день</div>
-                                        <div class="stat-item-descr">от 200 000 до 500 000 рублей</div>
+                                        <div class="stat-item-text">
+                                            <div class="stat-item-value">2.6% в день</div>
+                                            <div class="stat-item-descr">от 200 000 до 500 000 рублей</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="contract-order-params">
@@ -1816,11 +1856,11 @@
                                     <div class="param-item">
                                         <div class="param-item-title">Партнерская программа</div>
                                         <div class="param-item-divider"></div>
-                                        <div class="param-item-value"></div>
+                                        <div class="param-item-value"><span class="check"></span>да</div>
                                     </div>
                                     <div class="param-item">
                                         <div class="param-item-title">Рынок</div>
-                                        <div class="param-item-divider"><span class="check"></span>да</div>
+                                        <div class="param-item-divider"></div>
                                         <div class="param-item-value">Криптовалютная биржа</div>
                                     </div>
                                 </div>

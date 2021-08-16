@@ -19,6 +19,16 @@
         padding: 14px 14px 14px 40px;
         min-height: 72px;
         border-bottom: 1px solid rgba(#fff, .16);
+        @include maxw1280 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0;
+            grid-auto-rows: 72px;
+        }
+        @include mobile {
+            display: flex;
+            padding: 15px $wrap-padding-x-mobile;
+        }
     }
 
     .left-col {
@@ -26,6 +36,15 @@
         align-items: center;
         margin-right: 112px;
         position: relative;
+        @include maxw1280 {
+            margin-right: initial;
+            padding-left: $wrap-padding-x;
+            justify-self: start;
+        }
+        @include mobile {
+            padding-left: 0;
+            margin-right: 0;
+        }
         &::after {
             display: block;
             content: '';
@@ -36,17 +55,46 @@
             top: -14px;
             width: 99px;
             height: 83px;
+            @include mobile {
+                content: initial;
+            }
         }
     }
     .logo {
         margin-right: 36px;
+        @include mobile {
+            margin: 0 auto;
+        }
+    }
+
+    .langs {
+        @include mobile {
+            display: none;
+        }
     }
 
     .menu {
+        @include maxw1280 {
+            grid-column: span 2;
+            grid-row: 2;
+            border-top: 1px solid rgba(#fff, .16);
+            padding: 0 $wrap-padding-x;
+            align-self: stretch;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @include mobile {
+            display: none;
+        }
         ul {
             list-style: none;
             display: flex;
             align-items: center;
+            @include maxw1280 {
+                width: 100%;
+                justify-content: space-evenly;
+            }
         }
         li {
             color: $grey-text;
@@ -56,6 +104,9 @@
             position: relative;
             &:not(:last-child) {
                 margin-right: 50px;
+                @include maxw1366 {
+                    margin-right: 36px;
+                }
             }
             &.active {
                 color: $green;
@@ -88,13 +139,59 @@
         display: flex;
         align-items: center;
         margin-left: auto;
+        justify-content: flex-end;
+        @include maxw1280 {
+            padding-right: $wrap-padding-x;
+        }
+        @include mobile {
+            padding-right: 0;
+            margin-left: 0;
+        }
         .btn {
             &:not(:last-child) {
                 margin-right: 10px;
+                @include mobile {
+                    margin-right: 0;
+                }
             }
             &.blue-border {
                 color: #fff;
             }
+        }
+    }
+
+    .btn-login {
+        @include mobile {
+            height: 30px;
+            padding: 0 15px;
+        }
+        svg {
+            @include mobile {
+                display: none;
+            }
+        }
+        span {
+            &:not(:only-child) {
+                @include mobile {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .btn-register {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        @include mobile {
+            padding: 0 15px;
+            display: block;
+            padding: 0 15px;
+            height: 30px;
         }
     }
 }
