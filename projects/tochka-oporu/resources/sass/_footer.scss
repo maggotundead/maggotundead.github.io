@@ -1,0 +1,178 @@
+.footer {
+    background-color: $dark;
+    color: #fff;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    .wrap {
+        display: flex;
+        @include touch {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    a {
+        font-weight: 300;
+        transition: color $duration;
+        &:hover {
+            color: $beige;
+        }
+    }
+    .menu-column {
+        margin-right: 170px;
+        @include maxw1199 {
+            margin-right: 100px;
+        }
+        @include touch {
+            width: 100%;
+            max-width: 480px;
+            margin-right: 0;
+        }
+    }
+    .column-title {
+        font-weight: 600;
+        line-height: 1.62;
+        text-transform: uppercase;
+        margin-bottom: 22px;
+        @include touch {
+            text-align: center;
+        }
+    }
+    .menu {
+        display: grid;
+        // grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 200px;
+        grid-row-gap: 18px;
+        @include maxw1199 {
+            grid-column-gap: 100px;
+        }
+        @include touch {
+            grid-column-gap: 48px;
+        }
+        li {
+            padding-left: 0;
+            @include touch {
+                text-align: center;
+            }
+            &::before {
+                content: initial;
+            }
+            &:not(:last-child) {
+                margin-bottom: initial;
+            }
+        }
+
+    }
+    .contacts-column {
+        @include touch {
+            margin-top: 48px;
+            width: 100%;
+            max-width: 480px;
+        }
+    }
+    .contacts-content {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        grid-gap: 160px;
+        @include maxw1440 {
+            grid-gap: 120px;
+        }
+        @include maxw1199 {
+            grid-gap: 100px;
+        }
+        @include touch {
+            grid-template-columns: 1fr;
+            grid-gap: 32px;
+        }
+
+    }
+    .left-column,
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include touch {
+            align-items: center;
+        }
+    }
+    .left-column {
+
+        a, span {
+            // font-weight: 300;
+            &:not(:last-child) {
+                margin-bottom: 18px;
+            }
+        }
+        span {
+            font-weight: 300;
+        }
+    }
+    .right-column {
+        @include touch {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        a, span {
+            // font-weight: 300;
+            &:not(:last-child) {
+                margin-bottom: 18px;
+                @include touch {
+                    margin-bottom: 0;
+                    margin-top: 18px;
+                }
+            }
+        }
+        span {
+            font-weight: 300;
+        }
+    }
+    .contact-link {
+        padding-left: 30px;
+        position: relative;
+        color: #fff;
+        &::before {
+            display: block;
+            content: '';
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            border-radius: 0;
+        }
+    }
+    .phone-link {
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.8625 9.1875C11.9875 9.1875 11.2 9.0125 10.325 8.75C9.975 8.575 9.45 8.75 9.1875 9.0125L7.6125 10.2375C5.775 9.275 4.6375 8.1375 3.675 6.3L4.8125 4.725C5.25 4.4625 5.3375 4.025 5.25 3.5875C4.9875 2.8 4.8125 2.0125 4.8125 1.1375C4.8125 0.525 4.2875 0 3.675 0H1.1375C0.525 0 0 0.525 0 1.1375C0 8.225 5.775 14 12.8625 14C13.475 14 14 13.475 14 12.8625V10.325C14 9.7125 13.475 9.1875 12.8625 9.1875Z' fill='%23E4A991'/%3E%3C/svg%3E%0A");
+            width: 14px;
+            height: 14px;
+            left: 0;
+            top: calc(50% - 7px);
+        }
+    }
+    .mail-link {
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9125 0.7L9.625 4.9L13.9125 9.1C14 8.925 14 8.75 14 8.575V1.225C14 1.05 13.9125 0.875 13.9125 0.7ZM12.775 0H1.225C1.05 0 0.875 0.0875 0.7 0.0875L6.125 5.5125C6.5625 5.95 7.35 5.95 7.875 5.5125L13.3 0.0875C13.125 0.0875 12.95 0 12.775 0ZM0.0875 0.7C0.0875 0.875 0 1.05 0 1.225V8.575C0 8.75 0.0875 8.925 0.0875 9.1L4.375 4.9L0.0875 0.7ZM9.0125 5.5125L8.4875 6.125C7.6125 6.9125 6.3875 6.9125 5.5125 6.125L4.9875 5.5125L0.7 9.7125C0.875 9.8 1.05 9.8 1.225 9.8H12.775C12.95 9.8 13.125 9.7125 13.3 9.7125L9.0125 5.5125Z' fill='%23E4A991'/%3E%3C/svg%3E%0A");
+            width: 14px;
+            height: 11px;
+            left: 0;
+            top: calc(50% - 5.5px);
+
+        }
+    }
+    .address {
+        font-style: normal;
+        font-weight: 300;
+        &:hover {
+            text-decoration: initial;
+        }
+        &::before {
+            background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.1231 1.77692C8.99231 0.592308 7.53846 0 5.92308 0C4.36154 0 2.90769 0.592308 1.77692 1.77692C0.592308 2.90769 0 4.36154 0 5.92308C0 9.15385 3.06923 11.7923 4.63077 13.1923C4.9 13.3538 5.06154 13.5692 5.22308 13.7308C5.38462 13.8923 5.65385 14 5.92308 14C6.19231 14 6.46154 13.8923 6.62308 13.7308C6.78462 13.5692 7 13.3538 7.21538 13.1923C8.88462 11.7923 11.8462 9.1 11.8462 5.92308C11.7923 4.36154 11.2 2.90769 10.1231 1.77692ZM5.92308 8.88462C4.30769 8.88462 2.96154 7.53846 2.96154 5.92308C3.01538 4.30769 4.30769 2.96154 5.92308 2.96154C7.53846 2.96154 8.88462 4.30769 8.88462 5.92308C8.88462 7.53846 7.59231 8.88462 5.92308 8.88462Z' fill='%23E4A991'/%3E%3C/svg%3E%0A");
+            width: 12px;
+            height: 14px;
+            left: 1px;
+            top: 5px;
+        }
+    }
+}

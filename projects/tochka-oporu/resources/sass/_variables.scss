@@ -1,0 +1,43 @@
+$main-font: "Open Sans";
+$title-font: "PT Serif";
+
+
+$duration: 0.3s;
+
+$wrap-inner-width: 1530px;
+$wrap-padding-x: 24px;
+$wrap-padding-x-mobile: 16px;
+
+$body-bg: #fff;
+
+$dark: #2b3445;
+$blue: #243C92;
+$grey: #7A8295;
+$grey-light: #DCE3EB;
+$beige: #e4a991;
+$beige-lighter: #ECC9BB;
+$beige-light: #ffeae1;
+
+$red: #FD7456;
+$red-text: #FB5454;
+$red-gradient-normal: linear-gradient(180deg, #F7765A 0%, #F55555 100%);
+$red-gradient-active: linear-gradient(180deg, #F55555 0%, #F6765A 100%);
+
+$red-box-shadow: 0px 8px 16px rgba(245, 90, 85, 0.4);
+$grey-white-box-shadow: 0px 6px 24px rgba(181, 183, 184, 0.16);
+$blue-box-shadow: 0px 8px 24px rgba(8, 42, 107, 0.26);
+$grey-box-shadow: 0px 8px 24px rgba(8, 42, 107, 0.12);
+
+$input-border: $grey-light;
+
+$text-color: $dark;
+$title-color: $blue;
+$list-marker-color: $blue;
+
+$radius: 16px;
+$radius-smaller: 12px;
+
+$block-gap-y-tablet: 100px;
+$block-gap-y-mobile: 70px;
+
+$button-min-width: 290px;

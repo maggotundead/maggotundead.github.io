@@ -1,0 +1,213 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 100;
+    transition: background-color $duration;
+    &.fixed {
+        background-color: $black-bg;
+    }
+    &.black {
+        background-color: $black-bg;
+    }
+    .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        padding: 14px 14px 14px 40px;
+        min-height: 72px;
+        border-bottom: 1px solid rgba(#fff, .16);
+        @include maxw1280 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0;
+            grid-auto-rows: 72px;
+        }
+        @include mobile {
+            display: flex;
+            padding: 15px $wrap-padding-x-mobile;
+        }
+    }
+
+    .left-col {
+        display: flex;
+        align-items: center;
+        margin-right: 112px;
+        position: relative;
+        @include maxw1280 {
+            margin-right: initial;
+            padding-left: $wrap-padding-x;
+            justify-self: start;
+        }
+        @include mobile {
+            padding-left: 0;
+            margin-right: 0;
+        }
+        &::after {
+            display: block;
+            content: '';
+            background: transparent url('../img/header-arrows-bg.svg') center no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: calc(100% - 15px);
+            top: -14px;
+            width: 99px;
+            height: 83px;
+            @include mobile {
+                content: initial;
+            }
+        }
+    }
+    .logo {
+        margin-right: 36px;
+        @include mobile {
+            margin: 0 auto;
+        }
+    }
+
+    .langs {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .menu {
+        @include maxw1280 {
+            grid-column: span 2;
+            grid-row: 2;
+            border-top: 1px solid rgba(#fff, .16);
+            padding: 0 $wrap-padding-x;
+            align-self: stretch;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @include mobile {
+            display: none;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            @include maxw1280 {
+                width: 100%;
+                justify-content: space-evenly;
+            }
+        }
+        li {
+            color: $grey-text;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            &:not(:last-child) {
+                margin-right: 50px;
+                @include maxw1366 {
+                    margin-right: 36px;
+                }
+            }
+            &.active {
+                color: $green;
+                &::after {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    bottom: -27px;
+                    left: 0;
+                    right: 0;
+                    background-color: currentColor;
+                    height: 1px;
+                }
+                a {
+                    pointer-events: none;
+                }
+            }
+            &:not(.active) {
+                a {
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+            a {
+                transition: color $duration;
+            }
+        }
+
+        .star {
+            color: #fff;
+            font-weight: 600;
+            display: flex;
+            svg {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        justify-content: flex-end;
+        @include maxw1280 {
+            padding-right: $wrap-padding-x;
+        }
+        @include mobile {
+            padding-right: 0;
+            margin-left: 0;
+        }
+        .btn {
+            &:not(:last-child) {
+                margin-right: 10px;
+                @include mobile {
+                    margin-right: 0;
+                }
+            }
+            &.blue-border {
+                color: #fff;
+            }
+        }
+    }
+
+    .btn-login {
+        @include mobile {
+            height: 30px;
+            padding: 0 15px;
+        }
+        svg {
+            @include mobile {
+                display: none;
+            }
+        }
+        span {
+            &:not(:only-child) {
+                @include mobile {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .btn-register {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .mobile-menu-btn {
+        display: none;
+        @include mobile {
+            padding: 0 15px;
+            display: block;
+            padding: 0 15px;
+            height: 30px;
+        }
+    }
+}

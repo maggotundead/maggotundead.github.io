@@ -1,0 +1,266 @@
+.footer {
+    background-color: $black-bg;
+    position: relative;
+    &::before,
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        @include touch {
+            content: initial;
+        }
+    }
+    &::before {
+        left: 36px;
+        top: 0;
+        background-image: url('../img/footer-top-bg.png');
+        width: 474px;
+        height: 296px;
+    }
+    &::after {
+        left: 50%;
+        bottom: 0;
+        background-image: url('../img/footer-bottom-bg.png');
+        width: 474px;
+        height: 227px;
+    }
+    &-top {
+        .wrap {
+            display: flex;
+            @include touch {
+                padding-top: 80px;
+                padding-bottom: 60px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 50px 96px;
+            }
+            @include mobile {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+            }
+        }
+    }
+    .footer-group {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        width: 25%;
+        @include touch {
+            width: 100%;
+            padding: 0;
+        }
+        &.menu-group {
+            width: 50%;
+            @include touch {
+                width: 100%;
+                grid-column: span 2;
+            }
+            @include mobile {
+                width: 100%;
+                grid-column: initial;
+            }
+        }
+        &.contacts-group {
+            padding-left: 60px;
+            border-left: 1px solid rgba(#fff, .16);
+            @include touch {
+                padding: 0;
+                border: 0;
+                grid-column: span 3;
+            }
+            @include mobile {
+                grid-column: initial;
+            }
+
+            .footer-group-content {
+                @include touch {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 50px 96px;
+                }
+                @include mobile {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 16px;
+                }
+            }
+        }
+        &-title {
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 600;
+            color: #fff;
+            @include mobile {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+        &-content {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            @include mobile {
+                margin-top: 20px;
+            }
+        }
+    }
+    .menu {
+        position: relative;
+        width: 100%;
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -28px;
+            left: calc(50% - 120px);
+            width: 99px;
+            height: 83px;
+            background: transparent url('../img/header-arrows-bg.svg') center no-repeat;
+            @include mobile {
+                width: 66px;
+                height: 56px;
+                background-size: contain;
+                top: -15px;
+                left: calc(50% - 110px);
+            }
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px 0;
+            position: relative;
+            z-index: 2;
+            @include touch {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px 96px;
+            }
+            @include mobile {
+                grid-gap: 16px;
+            }
+        }
+        li {
+            color: $grey-text;
+            line-height: 19px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 50%;
+            @include touch {
+                width: 100%;
+            }
+            @include mobile {
+                font-size: 14px;
+                line-height: 16px;
+            }
+            &.active {
+                color: $green;
+            }
+        }
+
+        .star {
+            color: #fff;
+            font-weight: 600;
+            display: flex;
+            svg {
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+        }
+    }
+    .worktime {
+        display: flex;
+        align-items: center;
+        line-height: 19px;
+        color: $grey-text;
+        @include mobile {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        span {
+            color: #fff;
+            margin-left: 4px;
+        }
+    }
+    .contact-link {
+        display: flex;
+        align-items: center;
+        line-height: 19px;
+        color: #fff;
+        @include mobile {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+            @include mobile {
+                margin-bottom: 0;
+            }
+        }
+        svg {
+            margin-right: 12px
+        }
+        &.vk-link {
+            svg {
+                width: 20px;
+                height: 11px;
+            }
+        }
+        &.telegram-link {
+            svg {
+                width: 20px;
+                height: 18px;
+            }
+        }
+        &.mail-link {
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    &-bottom {
+        border-top: 1px solid rgba(#fff, .16);
+        padding: 28px 0;
+        font-size: 13px;
+        line-height: 15px;
+        color: $grey-text;
+        @include mobile {
+            padding: 30px 0;
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .wrap {
+            display: flex;
+            justify-content: space-between;
+            @include mobile {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+        }
+    }
+    .copyright {
+        @include touch {
+            max-width: 312px;
+        }
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}

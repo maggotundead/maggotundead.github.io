@@ -1,0 +1,26 @@
+{
+    "name": "Stray",
+    "version": "1.0.0",
+    "description": "",
+    "main": "gulpfile.js",
+    "dependencies": {
+        "animate.css": "^4.1.1",
+        "jquery": "^3.6.0",
+        "parallax-js": "^3.1.0",
+        "wow.js": "^1.2.2"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-concat-css": "^3.1.0",
+        "gulp-sass": "^4.1.0",
+        "node-sass": "^5.0.0",
+        "sass": "^1.32.8",
+        "browser-sync": "^2.26.14"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Roman Salko",
+    "license": "ISC"
+}
