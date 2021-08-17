@@ -11,6 +11,9 @@
     &.fixed {
         background-color: $black-bg;
     }
+    &.black {
+        background-color: $black-bg;
+    }
     .wrap {
         display: flex;
         align-items: center;

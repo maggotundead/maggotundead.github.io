@@ -58,4 +58,8 @@ $(function () {
         $(".modal").removeClass("open");
     });
 
+    $('.faq-group').on('click', '.faq-item', function() {
+        $(this).toggleClass('open');
+        // $(this).toggleClass('open').siblings().removeClass('open');
+    });
 });

@@ -149,3 +149,109 @@
         }
     }
 }
+
+.trading-cta-banner {
+    padding: 80px 80px 80px;
+    position: relative;
+    @include touch {
+        padding: 80px 80px 90px;
+    }
+    @include mobile {
+        padding: 20px 20px 30px;
+    }
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -45px;
+        left: 12px;
+        right: 12px;
+        height: 264px;
+        background: transparent url('../img/trading-cta-mask.svg') left top no-repeat;
+        background-size: 1178px 264px;
+        z-index: 1;
+        @include touch {
+            background-image:  url('../img/trading-cta-mask-tablet.svg');
+            background-size: 100% 100%;
+        }
+        @include mobile {
+            top: -18px;
+            left: 6px;
+            right: 6px;
+            height: 108px;
+        }
+    }
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        top: -35px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent url('../img/trading-cta-banner.png') left top no-repeat;
+        background-size: 1200px 377px;
+        z-index: 2;
+        @include touch {
+            background-image: url('../img/trading-cta-banner-tablet.png');
+            background-size: 100% 100%;
+        }
+    }
+    .cta-inner {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        @include touch {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .cta-text {
+        width: 50%;
+        max-width: 490px;
+        position: relative;
+        @include touch {
+            width: 100%;
+        }
+    }
+    .cta-title {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 47px;
+        @include mobile {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    .cta-descr {
+        margin-top: 30px;
+        font-size: 18px;
+        line-height: 1.44;
+        color: #b3b3b3;
+        max-width: 380px;
+        @include mobile {
+            margin-top: 24px;
+            font-size: 16px;
+            line-height: 19px;
+            max-width: 100%;
+        }
+        span {
+            color: $blue;
+        }
+    }
+    .btn {
+        margin: 0 auto;
+        // height: 60px;
+        // min-width: 306px;
+        @include touch {
+            margin: 50px 0 0;
+        }
+        @include mobile {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 375px;
+        }
+    }
+}

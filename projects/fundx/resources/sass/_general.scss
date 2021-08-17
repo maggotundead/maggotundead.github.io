@@ -141,6 +141,10 @@ main {
     font-size: 26px;
     line-height: 31px;
     font-weight: 600;
+    &.page-title {
+        font-size: 40px;
+        line-height: 47px;
+    }
     @include mobile {
         font-size: 20px;
         line-height: 1.15;

@@ -189,6 +189,8 @@
     }
     .descr {
         margin-top: 30px;
+        font-size: 13px;
+        line-height: 20px;
         @include mobile {
             margin-top: 14px;
         }
@@ -535,8 +537,13 @@
             margin-top: 20px;
             width: 100%;
             color: rgba($black-text, .7);
+            font-size: 13px;
+            line-height: 1.54;
             @include mobile {
                 margin-top: 14px;
+                font-size: 12px;
+                line-height: 1.5;
+                color: rgba($black-text, .5);
             }
         }
     }
@@ -782,111 +789,7 @@
         padding-top: 35px;
         padding-bottom: 30px;
     }
-    .trading-cta-banner {
-        padding: 80px 80px 80px;
-        position: relative;
-        @include touch {
-            padding: 80px 80px 90px;
-        }
-        @include mobile {
-            padding: 20px 20px 30px;
-        }
-        &::before {
-            display: block;
-            content: '';
-            position: absolute;
-            top: -45px;
-            left: 12px;
-            right: 12px;
-            height: 264px;
-            background: transparent url('../img/trading-cta-mask.svg') left top no-repeat;
-            background-size: 1178px 264px;
-            z-index: 1;
-            @include touch {
-                background-image:  url('../img/trading-cta-mask-tablet.svg');
-                background-size: 100% 100%;
-            }
-            @include mobile {
-                top: -18px;
-                left: 6px;
-                right: 6px;
-                height: 108px;
-            }
-        }
-        &::after {
-            display: block;
-            content: '';
-            position: absolute;
-            top: -35px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: transparent url('../img/trading-cta-banner.png') left top no-repeat;
-            background-size: 1200px 377px;
-            z-index: 2;
-            @include touch {
-                background-image: url('../img/trading-cta-banner-tablet.png');
-                background-size: 100% 100%;
-            }
-        }
-        .cta-inner {
-            position: relative;
-            z-index: 3;
-            display: flex;
-            align-items: center;
-            @include touch {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-        .cta-text {
-            width: 50%;
-            max-width: 490px;
-            position: relative;
-            @include touch {
-                width: 100%;
-            }
-        }
-        .cta-title {
-            color: #fff;
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 47px;
-            @include mobile {
-                font-size: 24px;
-                line-height: 28px;
-            }
-        }
-        .cta-descr {
-            margin-top: 30px;
-            font-size: 18px;
-            line-height: 1.44;
-            color: #b3b3b3;
-            max-width: 380px;
-            @include mobile {
-                margin-top: 24px;
-                font-size: 16px;
-                line-height: 19px;
-                max-width: 100%;
-            }
-            span {
-                color: $blue;
-            }
-        }
-        .btn {
-            margin: 0 auto;
-            // height: 60px;
-            // min-width: 306px;
-            @include touch {
-                margin: 50px 0 0;
-            }
-            @include mobile {
-                margin-top: 30px;
-                width: 100%;
-                max-width: 375px;
-            }
-        }
-    }
+
     .compare-list {
         margin-top: 96px;
         width: 100%;
@@ -1193,6 +1096,7 @@
             color: #fff;
             margin: -1px;
             grid-column: span 3;
+            overflow: visible;
             @include touch {
                 grid-column: initial;
                 padding-right: 0;
@@ -1228,12 +1132,14 @@
                 border: 0;
                 grid-column: span 2;
                 grid-row: 1;
+                padding-bottom: 0;
                 &::after {
                     content: initial;
                 }
                 @include touch {
                     display: flex;
                     justify-content: space-between;
+                    padding-block-end: 20px;
                     border-bottom: 1px solid rgba($grey-text, .3);
                 }
             }
@@ -1376,10 +1282,9 @@
             border-bottom: 1px solid $grey-border;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            padding-block-end: 20px;
+            padding-bottom: 20px;
             position: relative;
             @include touch {
-                padding-bottom: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -1944,5 +1849,470 @@
                 margin-right: 10px;
             }
         }
+    }
+}
+
+.block-inner-page {
+    padding-top: 150px;
+    padding-bottom: 90px;
+    .page-title {
+        margin-bottom: 30px;
+    }
+}
+
+.block-about {
+
+    .about-contacts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        // grid-auto-rows: 252px;
+        border: 1px solid $grey-border;
+        grid-gap: 1px;
+        background-color: $grey-border;
+    }
+    .contact-item {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        min-height: 250px;
+        padding: 50px 45px 50px 50px;
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+        }
+        &.general-item {
+            &::before {
+                display: block;
+                content: '';
+                width: 160px;
+                height: 150px;
+                background: transparent url("../img/trader-arrow-bg.svg") center no-repeat;
+                background-size: contain;
+                position: absolute;
+                top: calc(50% - 75px);
+                right: 30px;
+            }
+        }
+        &.address-item {
+            grid-column: span 2;
+            background: $grey-bg url('../img/advantages-head-bg.png') right bottom no-repeat;
+            &::before {
+                content: initial;
+            }
+        }
+        &.social-item {
+            align-items: center;
+            &::before {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: calc(50% - 60px);
+                background: transparent url('../img/program-item-arrow-bg.svg') center no-repeat;
+                background-size: contain;
+                width: 121px;
+                height: 51px;
+                @include mobile {
+                    width: 80px;
+                    height: 34px;
+                    left: calc(50% - 17px);
+                    top: 0;
+                }
+            }
+        }
+        > div {
+            position: relative;
+            z-index: 2;
+        }
+        &-icon {
+            height: 40px;
+            svg {
+                height: 40px;
+                width: 40px;
+                &.address {
+                    width: 32px;
+                }
+                &.vk {
+                    width: 56px;
+                    height: 31px;
+                }
+                &.telegram {
+                    width: 50px;
+                    height: 45px;
+                }
+            }
+
+            + .contact-item-value {
+                padding-top: 36px;
+            }
+        }
+        &-title {
+            margin-top: 20px;
+            font-size: 13px;
+            line-height: 15px;
+            color: $grey-text;
+        }
+        &-value {
+            padding-top: 8px;
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 600;
+        }
+        &-annotation {
+            margin-top: 12px;
+            font-size: 13px;
+            line-height: 15px;
+            color: $grey-text;
+        }
+
+        address {
+            font-style: normal;
+        }
+    }
+
+    .about-text {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        .text-group {
+            position: relative;
+            z-index: 2;
+            &:nth-child(1) {
+                padding-bottom: 60px;
+                padding-right: 126px;
+            }
+            &:nth-child(3) {
+                border-top: 1px solid $grey-border;
+                padding-top: 60px;
+                padding-right: 126px;
+                padding-bottom: 50px;
+            }
+            &:nth-child(4) {
+                border: 1px solid $grey-border;
+                padding: 50px;
+            }
+
+            h2 {
+                + * {
+                    margin-top: 30px;
+                }
+            }
+            h3 {
+                font-size: 20px;
+                line-height: 1.15;
+                font-weight: 600;
+                + * {
+                    margin-top: 24px;
+                }
+            }
+            p {
+                font-size: 14px;
+                line-height: 1.86;
+                + h3 {
+                    margin-top: 40px;
+                }
+            }
+        }
+        .banner-group {
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            z-index: 1;
+            img {
+                // width: calc(100% + 142px);
+                width: 129.2%;
+                max-width: initial;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .about-documents {
+        margin-top: 80px;
+        .docs-list {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background-color: $grey-border;
+            border: 1px solid $grey-border;
+            width: 100%;
+            grid-gap: 1px;
+        }
+
+        .doc-item {
+            background-color: #fff;
+            min-height: 114px;
+            padding: 36px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 44px;
+            &.check-item {
+                background-color: $grey-bg;
+            }
+            &-link {
+                display: flex;
+                align-items: center;
+                svg {
+                    width: 30px;
+                    height: 36px;
+                    flex-shrink: 0;
+                    margin-right: 14px;
+                }
+                span {
+                    font-size: 18px;
+                    line-height: 21px;
+                    font-weight: 600;
+                }
+            }
+            .btn {
+                max-width: 480px;
+            }
+        }
+    }
+
+    .trading-cta-banner {
+        margin-top: 110px;
+    }
+}
+
+.block-help {
+    .block-title-descr {
+        font-size: 14px;
+        line-height: 1.86;
+        max-width: 996px;
+    }
+    .help-steps-group {
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 30px;
+    }
+    .help-step {
+        counter-increment: step-counter;
+        position: relative;
+        width: 40%;
+        border: 1px solid $grey-border;
+        transition: $duration;
+        &:hover {
+            border-color: $green;
+        }
+        &:nth-child(2n + 1) {
+            &::after {
+                top: 80px;
+                transform: rotate(-180deg);
+                right: -20px;
+            }
+            &:not(:last-child) {
+
+                .help-step-inner {
+                    &::after {
+                        display: block;
+                        content: '';
+                        width: calc(50% - 80px);
+                        // padding-bottom: 165%;
+                        position: absolute;
+                        left: calc(100% + 40px);
+                        top: 104px;
+                        bottom: -134px;
+                        background: transparent url('../img/help-step-line.svg') center no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+        }
+        &:nth-child(2n) {
+            top: 50px;
+            &::after {
+                bottom: 80px;
+                left: -20px;
+            }
+        }
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 65px;
+            background: transparent url('../img/program-item-arrow-bg.svg') center no-repeat;
+            background-size: contain;
+            width: 121px;
+            height: 51px;
+            @include mobile {
+                width: 80px;
+                height: 34px;
+                left: 32px;
+                top: 0;
+            }
+        }
+        &::after {
+            display: block;
+            content: '';
+            position: relative;
+            width: 53px;
+            height: 50px;
+            background: transparent url('../img/list-arrow-divider.svg') center no-repeat;
+            background-size: contain;
+            z-index: 2;
+            position: absolute;
+        }
+        &-inner {
+            position: relative;
+            padding: 50px;
+        }
+        &-number {
+            font-size: 18px;
+            line-height: 21px;
+            color: $grey-text;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            &::before {
+                content: '0'counter(step-counter);
+            }
+        }
+        &-title {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+            font-size: 20px;
+            line-height: 1.15;
+            font-weight: 600;
+            svg {
+                display: block;
+                margin-right: 16px;
+                flex-shrink: 0;
+            }
+        }
+        &-descr {
+            margin-top: 17px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: rgba($black-text, .7);
+        }
+
+        .icon {
+            &.help-1 {
+                width: 30px;
+                height: 30px;
+            }
+            &.help-2 {
+                width: 30px;
+                height: 35px;
+            }
+            &.help-3 {
+                width: 30px;
+                height: 30px;
+            }
+            &.help-4 {
+                width: 27px;
+                height: 30px;
+            }
+            &.help-5 {
+                width: 30px;
+                height: 30px;
+            }
+            &.help-6 {
+                width: 30px;
+                height: 28px;
+            }
+            &.help-7 {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .faq-group {
+        margin-top: 90px;
+        &-head {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 20px 50px;
+            min-height: 110px;
+            background-color: $black-bg;
+            color: #fff;
+            &::before {
+                display: block;
+                content: '';
+                position: absolute;
+                bottom: 100%;
+                left: 10px;
+                right: 10px;
+                background-color: $green;
+                height: 10px;
+            }
+            .icon {
+                width: 30px;
+                height: 30px;
+                margin-right: 20px;
+            }
+        }
+        &-body {
+            padding: 24px 50px;
+            border: 1px solid $grey-bg;
+            border-top: 0;
+        }
+
+    }
+
+    .faq-item {
+        padding: 31px 0;
+        cursor: pointer;
+        &:not(:last-child) {
+            border-bottom: 1px solid $grey-border;
+        }
+        &.open {
+            .faq-item-title {
+                color: $grey-text;
+                &::before {
+                    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='14' stroke='%23E1E1E1' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 14H19C19.5523 14 20 14.4477 20 15C20 15.5523 19.5523 16 19 16H11C10.4477 16 10 15.5523 10 15C10 14.4477 10.4477 14 11 14Z' fill='%23E1E1E1'/%3E%3C/svg%3E%0A");
+                }
+            }
+            .faq-item-text {
+                display: block;
+            }
+        }
+        &-title {
+            font-size: 18px;
+            line-height: 21px;
+            font-weight: 600;
+            position: relative;
+            padding-left: 44px;
+            &::before {
+                display: block;
+                width: 30px;
+                height: 30px;
+                content: '';
+                position: absolute;
+                top: calc(50% - 15px);
+                left: 0;
+                background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='15' cy='15' r='14' stroke='url(%23paint0_linear)' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 10C16 9.44772 15.5523 9 15 9C14.4477 9 14 9.44772 14 10V14H10C9.44772 14 9 14.4477 9 15C9 15.5523 9.44772 16 10 16H14V20C14 20.5523 14.4477 21 15 21C15.5523 21 16 20.5523 16 20V16H20C20.5523 16 21 15.5523 21 15C21 14.4477 20.5523 14 20 14H16V10Z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='0.11583' y1='0' x2='0.11583' y2='29.7683' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300EB9B'/%3E%3Cstop offset='1' stop-color='%2307DCF8'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='9.04633' y1='9' x2='9.04633' y2='20.9073' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2300EB9B'/%3E%3Cstop offset='1' stop-color='%2307DCF8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+            }
+        }
+        &-text {
+            margin-top: 16px;
+            padding-left: 44px;
+            font-size: 14px;
+            line-height: 1.86;
+            color: $grey-text;
+            display: none;
+        }
+    }
+
+    .trading-cta-banner {
+        margin-top: 110px;
     }
 }
