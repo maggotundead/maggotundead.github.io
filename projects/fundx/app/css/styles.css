@@ -1871,6 +1871,8 @@ main {
   padding-bottom: 90px; }
   .block-inner-page .page-title {
     margin-bottom: 30px; }
+  .block-inner-page .trading-cta-banner {
+    margin-top: 110px; }
 
 .block-about .about-contacts {
   display: grid;
@@ -2040,9 +2042,6 @@ main {
         font-weight: 600; }
     .block-about .about-documents .doc-item .btn {
       max-width: 480px; }
-
-.block-about .trading-cta-banner {
-  margin-top: 110px; }
 
 .block-help .block-title-descr {
   font-size: 14px;
@@ -2223,8 +2222,103 @@ main {
     color: #8C8C8C;
     display: none; }
 
-.block-help .trading-cta-banner {
-  margin-top: 110px; }
+.block-reviews .reviews-head {
+  margin-top: 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 50px;
+  position: relative;
+  background: #F9F9F9 url("../img/reviews-head-bg.png") center no-repeat;
+  background-size: auto 100%;
+  padding: 50px; }
+  .block-reviews .reviews-head::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 100%;
+    height: 10px;
+    background-color: #00EA9D; }
+  .block-reviews .reviews-head .descr {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.71; }
+  .block-reviews .reviews-head .annotation {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 14px;
+    line-height: 1.71; }
+    .block-reviews .reviews-head .annotation svg {
+      width: 30px;
+      height: 30px;
+      margin-right: 14px; }
+    .block-reviews .reviews-head .annotation-title {
+      font-weight: 700; }
+
+.block-reviews .reviews-restrictions {
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .block-reviews .reviews-restrictions::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -33px;
+    background: transparent url("../img/reviews-restrictions-mask.svg") center no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    content: ''; }
+  .block-reviews .reviews-restrictions-title {
+    font-size: 20px;
+    line-height: 1.15;
+    font-weight: 600;
+    position: relative;
+    z-index: 2; }
+    .block-reviews .reviews-restrictions-title::after {
+      display: block;
+      content: '';
+      position: absolute;
+      background-image: url("data:image/svg+xml,%3Csvg width='88' height='80' viewBox='0 0 88 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' d='M40.6332 80L65.1429 80V56.5237L49.5786 40.4863L65.1429 24.4487L65.1429 0L40.605 0L0 40.5187L40.6332 80ZM57.9428 59.282V73.0337H43.6237L10.0938 40.4538L43.6519 6.96689H57.9428V21.6912L39.7023 40.4862L57.9428 59.282Z' fill='url(%23paint0_linear)'/%3E%3Cpath opacity='0.1' fill-rule='evenodd' clip-rule='evenodd' d='M63.4906 80L88.0003 80V56.5237L72.436 40.4863L88.0003 24.4487L88.0003 0L63.4625 0L22.8574 40.5187L63.4906 80ZM80.8003 59.282V73.0337H66.4811L32.9512 40.4538L66.5093 6.96689H80.8003V21.6912L62.5597 40.4862L80.8003 59.282Z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='43.8735' y1='66.7181' x2='0.864149' y2='66.7181' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='1' stop-color='%23BCBCBC'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='66.7309' y1='66.7181' x2='23.7216' y2='66.7181' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='white'/%3E%3Cstop offset='1' stop-color='%23BCBCBC'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+      background-size: contain;
+      position: absolute;
+      left: calc(100% + 30px);
+      top: calc(50% - 40px);
+      width: 88px;
+      height: 80px; }
+  .block-reviews .reviews-restrictions-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px 40px;
+    position: relative;
+    z-index: 2;
+    list-style: none; }
+  .block-reviews .reviews-restrictions li {
+    position: relative;
+    padding-left: 40px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: rgba(27, 27, 27, 0.7); }
+    .block-reviews .reviews-restrictions li::before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 26px;
+      background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='13' cy='13' r='12.1333' stroke='%23FF3F3F' stroke-width='1.73333'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.0641 11.1615C16.4026 10.8231 16.4026 10.2743 16.0641 9.93586C15.7257 9.59741 15.1769 9.59741 14.8385 9.93586L13 11.7743L11.1615 9.93586C10.8231 9.59741 10.2743 9.59741 9.93587 9.93586C9.59742 10.2743 9.59742 10.8231 9.93587 11.1615L11.7743 13L9.93587 14.8385C9.59742 15.1769 9.59742 15.7257 9.93587 16.0641C10.2743 16.4026 10.8231 16.4026 11.1615 16.0641L13 14.2256L14.8385 16.0641C15.1769 16.4026 15.7257 16.4026 16.0641 16.0641C16.4026 15.7257 16.4026 15.1769 16.0641 14.8385L14.2257 13L16.0641 11.1615Z' fill='%23FF3F3F'/%3E%3C/svg%3E%0A");
+      background-size: 100%; }
+
+.block-reviews .reviews-body {
+  margin-top: 50px; }
 
 .footer {
   background-color: #0D1319;
